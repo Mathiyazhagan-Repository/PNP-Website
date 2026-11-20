@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================
+       PNP WEBSITE - SCREEN 01: HOMEPAGE
+       Technology: HTML5, CSS3, Vanilla JS
+       File: index.html
+  ========================================== -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#1D3A6B">
+
+  <meta name="description"
+        content="Praja Nishchaya Party official website. Explore party information, policies, news, events, membership, donations and citizen support.">
+
+  <title>Praja Nishchaya Party | Official Website</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JavaScript -->
+  <script src="./shared-layout.js?v=global-newsroom-1" defer></script>
+  <script src="./script.js?v=newsroom-footer-dock-3" defer></script>
+</head>
+
+<body>
+
+  <!-- SKIP NAVIGATION -->
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+  <!-- =========================================
+       01. TOP BAR
+  ========================================== -->
+
+  <div data-site-header></div>
+
+  <!-- =========================================
+       03. BREAKING NEWS
+  ========================================== -->
+
+
+
+  <!-- =========================================
+       MAIN CONTENT
+  ========================================== -->
+
+  <main id="main-content">
+
+    <!-- =====================================
+         04. HERO CAROUSEL
+    ====================================== -->
+
+    <section class="hero-section"
+             aria-label="Featured party information">
+
+      <div class="hero-carousel"
+           id="heroCarousel"
+           aria-roledescription="carousel">
+
+        <!-- SLIDE 1 -->
+        <article class="hero-slide active"
+                 data-slide="0"
+                 aria-label="Slide 1 of 3">
+
+          <div class="container hero-layout">
+
+            <div class="hero-content">
+              <span class="hero-eyebrow">
+                PRAJA NISHCHAYA PARTY
+              </span>
+
+              <h1>
+                Clean Leadership.
+                <span>Accountable Action.</span>
+              </h1>
+
+              <p>
+                A people-first political movement for transparent governance,
+                inclusive development and greater public participation.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="pages/About PNP/index.html"
+                   class="btn btn-primary btn-large">
+                  Explore Our Vision &#8594;
+                </a>
+
+                <a href="pages/join.html"
+                   class="btn btn-outline-light btn-large">
+                  Become a Member
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="hero-slide"
+                 data-slide="1"
+                 aria-label="Slide 2 of 3"
+                 hidden>
+
+          <div class="container hero-layout">
+
+            <div class="hero-content">
+              <span class="hero-eyebrow">
+                PUBLIC PARTICIPATION
+              </span>
+
+              <h2>
+                Your Voice.
+                <span>Your Participation.</span>
+              </h2>
+
+              <p>
+                Learn how citizens can connect with
+                local party teams, participate in events
+                and access public support services.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="pages/districts.html"
+                   class="btn btn-primary btn-large">
+                  Find Your District &#8594;
+                </a>
+
+                <a href="pages/events/events.html"
+                   class="btn btn-outline-light btn-large">
+                  Explore Events
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="hero-slide"
+                 data-slide="2"
+                 aria-label="Slide 3 of 3"
+                 hidden>
+
+          <div class="container hero-layout">
+
+            <div class="hero-content">
+              <span class="hero-eyebrow">
+                TRANSPARENCY &amp; ACCOUNTABILITY
+              </span>
+
+              <h2>
+                Information You Can
+                <span>Verify.</span>
+              </h2>
+
+              <p>
+                Discover official policy information,
+                documented achievements and publicly
+                available financial summaries.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="pages/transparency.html"
+                   class="btn btn-primary btn-large">
+                  Transparency Portal &#8594;
+                </a>
+
+                <a href="pages/manifesto.html"
+                   class="btn btn-outline-light btn-large">
+                  Explore Policies
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CAROUSEL CONTROLS -->
+      <div class="container hero-controls">
+
+        <div class="hero-dots" id="heroDots">
+          <button type="button"
+                  class="hero-dot active"
+                  data-index="0"
+                  aria-label="Go to slide 1"
+                  aria-current="true"></button>
+
+          <button type="button"
+                  class="hero-dot"
+                  data-index="1"
+                  aria-label="Go to slide 2"></button>
+
+          <button type="button"
+                  class="hero-dot"
+                  data-index="2"
+                  aria-label="Go to slide 3"></button>
+        </div>
+
+        <div class="hero-arrows">
+
+          <button type="button"
+                  id="prevSlide"
+                  class="hero-arrow"
+                  aria-label="Previous banner">&#8592;</button>
+
+          <button type="button"
+                  id="nextSlide"
+                  class="hero-arrow"
+                  aria-label="Next banner">&#8594;</button>
+
+          <button type="button"
+                  id="pauseSlide"
+                  class="hero-pause"
+                  aria-label="Pause banner rotation"
+                  aria-pressed="false">
+            Pause
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         05. LIVE STATISTICS
+    ====================================== -->
+
+    <section class="statistics-section" id="statistics" aria-labelledby="statisticsHeading">
+      <div class="container">
+        <div class="statistics-heading"><div><span class="statistics-eyebrow">PEOPLE. PURPOSE. PROGRESS.</span><h2 id="statisticsHeading">A growing movement.<span class="statistics-title-accent">A shared purpose.</span></h2></div></div>
+        <div class="statistics-grid">
+          <article class="stat-card stat-members">
+            <div class="stat-card-top"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span><span class="stat-card-index">01</span></div>
+            <strong class="stat-number" data-stat="members">24,850</strong>
+            <h3>Registered Members</h3>
+            <span class="stat-description">People connected to the movement</span>
+          </article>
+          <article class="stat-card stat-volunteers">
+            <div class="stat-card-top"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M16 9l2 2 4-4"/></svg></span><span class="stat-card-index">02</span></div>
+            <strong class="stat-number" data-stat="volunteers">3,240</strong>
+            <h3>Active Volunteers</h3>
+            <span class="stat-description">Giving their time for change</span>
+          </article>
+          <article class="stat-card stat-resolved">
+            <div class="stat-card-top"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4ZM8 12l3 3 5-6"/></svg></span><span class="stat-card-index">03</span></div>
+            <strong class="stat-number" data-stat="resolved">1,875</strong>
+            <h3>Grievances Resolved</h3>
+            <span class="stat-description">Public concerns addressed</span>
+          </article>
+          <article class="stat-card stat-donations">
+            <div class="stat-card-top"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12M6 8h12M8 4c8 0 8 8 0 8H6l10 9"/></svg></span><span class="stat-card-index">04</span></div>
+            <strong class="stat-number" data-stat="donations">&#8377;18,60,000</strong>
+            <h3>Donations Received</h3>
+            <span class="stat-description">Contributions supporting our work</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         06. QUICK ACTIONS
+    ====================================== -->
+
+    <section class="section quick-actions-section" id="quickActions" aria-labelledby="participationHeading">
+      <div class="container participation-layout">
+        <div class="participation-content">
+          <div class="section-heading">
+            <span class="section-eyebrow">GET INVOLVED<span class="participation-rule" aria-hidden="true"></span></span>
+            <h2 id="participationHeading">How would you like to <span>participate?</span></h2>
+            <p>Explore membership, donations, citizen support<br class="participation-break"> and local participation opportunities.</p>
+          </div>
+          <div class="quick-actions-grid">
+          <a class="quick-action-card action-join" href="pages/join.html">
+            <span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
+            <h3>Join PNP</h3>
+            <span class="action-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="quick-action-card action-donate" href="pages/donate.html">
+            <span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h10M9 6h10M11 3c6 0 6 6 0 6H9l7 6M2 16h4l4-3 6 1c2 1 1 3-1 3h-4M6 16l6 5 10-6M2 15v7h4v-7Z"/></svg></span>
+            <h3>Donate Online</h3>
+            <span class="action-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="quick-action-card action-hotline" href="#contact" data-next="Official hotline">
+            <span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-3a8 8 0 0 1 16 0v3M4 12H2v7h4v-7ZM20 12h2v7h-4v-7ZM20 19c0 3-4 3-7 3M10 21h4v2h-4Z"/></svg></span>
+            <h3>Call Hotline</h3>
+            <span class="action-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="quick-action-card action-grievance" href="pages/grievance.html">
+            <span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 21H4V3h14v9M7 7h8M7 11h6M7 15h3M17 13l5 8H12l5-8ZM17 16v2M17 20h.01"/></svg></span>
+            <h3>Report a Grievance</h3>
+            <span class="action-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+          </a>
+          </div>
+        </div>
+        <div class="participation-art" aria-hidden="true"><div class="collage-motion">
+            <img class="collage-piece collage-top" src="assets/hero/participation-collage-clean.png" alt="" loading="lazy" width="1402" height="1122">
+            <img class="collage-piece collage-left" src="assets/hero/participation-collage-clean.png" alt="" loading="lazy" width="1402" height="1122">
+            <img class="collage-piece collage-right" src="assets/hero/participation-collage-clean.png" alt="" loading="lazy" width="1402" height="1122">
+            <img class="collage-piece collage-bottom" src="assets/hero/participation-collage-clean.png" alt="" loading="lazy" width="1402" height="1122">
+          </div></div>
+      </div>
+      <svg class="participation-wave" viewBox="0 0 1600 100" preserveAspectRatio="none" aria-hidden="true"><path fill="#ff8e00" d="M0 39C350-50 606 118 1050 72 1320 62 1470 36 1600 0V100H0Z"/><path fill="#fff" d="M0 65C360-24 640 130 1070 87 1330 72 1470 59 1600 31V100H0Z"/><path fill="#058914" d="M0 92C350 12 627 128 1060 101 1330 94 1480 83 1600 62V100H0Z"/></svg>
+    </section>
+
+    <!-- =====================================
+         07. WHY PNP
+    ====================================== -->
+
+    <section class="section why-pnp-section" id="whyPNP" aria-labelledby="whyHeading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">WHY PNP<span class="why-heading-rule" aria-hidden="true"></span></span>
+          <h2 id="whyHeading">Clean. Capable. <span>Connected.</span></h2>
+          <p>Explore the values and evidence supporting the party?s public commitments.</p>
+        </div>
+        <div class="pillars-grid">
+          <article class="pillar-card pillar-clean">
+            <div class="pillar-photo"><img src="assets/hero/why-clean.png" alt="" width="1536" height="768" loading="lazy"></div>
+            <span class="pillar-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4ZM8 12l3 3 5-6"/></svg></span>
+            <div class="pillar-body">
+              <h3>Clean</h3>
+              <p>Learn about the party?s stated approach to integrity, transparency and accountability.</p>
+              <div class="pillar-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4ZM8 12l3 3 5-6"/></svg><span>Integrity & transparency</span></div>
+              <a class="pillar-button" href="pages/About PNP/index.html">Learn More <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="pillar-card pillar-capable">
+            <div class="pillar-photo"><img src="assets/hero/why-capable.png" alt="" width="1536" height="768" loading="lazy"></div>
+            <span class="pillar-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM10 2h4l1 3 3 1 3-1 2 4-2 2v3l2 2-2 4-3-1-3 1-1 3h-4l-1-3-3-1-3 1-2-4 2-2v-3L1 9l2-4 3 1 3-1 1-3Z"/></svg></span>
+            <div class="pillar-body">
+              <h3>Capable</h3>
+              <p>Explore documented priorities, policy proposals and public-service commitments.</p>
+              <div class="pillar-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM10 2h4l1 3 3 1 3-1 2 4-2 2v3l2 2-2 4-3-1-3 1-1 3h-4l-1-3-3-1-3 1-2-4 2-2v-3L1 9l2-4 3 1 3-1 1-3Z"/></svg><span>Policies for public progress</span></div>
+              <a class="pillar-button" href="pages/manifesto.html">View Policies <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="pillar-card pillar-connected">
+            <div class="pillar-photo"><img src="assets/hero/why-connected.png" alt="" width="1536" height="768" loading="lazy"></div>
+            <span class="pillar-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
+            <div class="pillar-body">
+              <h3>Connected</h3>
+              <p>Find information about local units, public programmes and engagement channels.</p>
+              <div class="pillar-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Local teams. Shared priorities.</span></div>
+              <a class="pillar-button" href="pages/districts.html">Find Local Units <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         08. LATEST NEWS
+    ====================================== -->
+
+    <section class="section news-section" id="latestNews" aria-labelledby="latestNewsHeading">
+      <div class="container">
+        <div class="section-heading-row">
+          <div><span class="section-eyebrow">OFFICIAL UPDATES<span class="news-heading-rule" aria-hidden="true"></span></span><h2 id="latestNewsHeading">Latest <span>News</span></h2><p>Verified statements, releases and party announcements.</p></div>
+          <a href="pages/newsroom.html" class="section-view-all">View All News <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="news-grid">
+          <article class="news-card news-press">
+            <div class="news-card-photo"><img src="assets/hero/news-press.png" alt="" width="1536" height="864" loading="lazy"></div>
+            <div class="news-card-content">
+              <span class="content-tag">PRESS RELEASE</span>
+              <h3>PNP outlines its vision for accountable governance</h3>
+              <p>A people-first roadmap puts transparency, public service and inclusive development at its heart.</p>
+              <div class="news-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg><time datetime="2026-11-18">18 Nov 2026</time></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>Press Desk</span></div>
+              <a class="news-read-more" href="pages/newsroom.html">Read More <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="news-card news-statement">
+            <div class="news-card-photo"><img src="assets/hero/news-statement.png" alt="" width="1536" height="864" loading="lazy"></div>
+            <div class="news-card-content">
+              <span class="content-tag">PARTY STATEMENT</span>
+              <h3>A stronger voice for every community</h3>
+              <p>Local teams invite citizens to share their priorities and shape the conversations that matter.</p>
+              <div class="news-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg><time datetime="2026-11-17">17 Nov 2026</time></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>PNP Media</span></div>
+              <a class="news-read-more" href="pages/newsroom.html">Read More <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="news-card news-public">
+            <div class="news-card-photo"><img src="assets/hero/news-public.png" alt="" width="1536" height="864" loading="lazy"></div>
+            <div class="news-card-content">
+              <span class="content-tag">PUBLIC UPDATE</span>
+              <h3>Digital tools to bring public services closer</h3>
+              <p>Explore a simpler approach to sharing feedback, following local initiatives and tracking progress.</p>
+              <div class="news-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg><time datetime="2026-11-16">16 Nov 2026</time></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>Public Affairs</span></div>
+              <a class="news-read-more" href="pages/newsroom.html">Read More <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+          <article class="news-card news-programme">
+            <div class="news-card-photo"><img src="assets/hero/news-programme.png" alt="" width="1536" height="864" loading="lazy"></div>
+            <div class="news-card-content">
+              <span class="content-tag">PROGRAMME UPDATE</span>
+              <h3>Greener neighbourhoods start with us</h3>
+              <p>Volunteers and residents come together for a community-led tree planting and awareness drive.</p>
+              <div class="news-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg><time datetime="2026-11-15">15 Nov 2026</time></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>Community Desk</span></div>
+              <a class="news-read-more" href="pages/newsroom.html">Read More <span aria-hidden="true">&#8594;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <svg class="news-section-wave" viewBox="0 0 1600 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#c70058" d="M0 4C220 20 250 85 800 78 1330 86 1420 24 1600 9V80H0Z"/><path fill="#fff" d="M0 24C200 35 280 94 800 85 1320 95 1430 40 1600 30V80H0Z"/><path fill="#05418b" d="M0 40C210 42 280 110 800 92 1330 100 1450 51 1600 44V80H0Z"/></svg>
+    </section>
+
+    <!-- =====================================
+         09. UPCOMING EVENTS
+    ====================================== -->
+
+    <section class="section events-section" id="upcomingEvents" aria-labelledby="eventsHeading">
+      <div class="container">
+        <div class="section-heading-row">
+          <div><span class="section-eyebrow"><span class="events-label-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg></span>PUBLIC PROGRAMMES<span class="events-title-rule" aria-hidden="true"></span></span><h2 id="eventsHeading">Upcoming <span>Events</span></h2><p>Discover upcoming meetings, programmes and live events.</p></div>
+          <div class="events-calendar-action"><span class="events-handwritten">Stay Informed<br>Stay Connected</span><a href="pages/events/events.html" class="section-view-all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg>View Event Calendar <span aria-hidden="true">&#8594;</span></a></div>
+        </div>
+        <div class="events-grid">
+          <article class="event-card event-district" style="--event-order:0">
+            <div class="event-card-top"><img class="event-photo" src="assets/hero/news-press.png" width="120" height="180" alt="" loading="lazy"><div class="event-card-date"><time datetime="2026-11-25"><strong>25</strong><span>Nov</span></time><span class="content-tag">DISTRICT EVENT</span></div><span class="event-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg></span></div>
+            <div class="event-details"><h3>District Dialogue & Public Meeting</h3><p>Meet local teams and discuss priorities for better neighbourhoods.</p><ul class="event-facts"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/></svg><span>Bengaluru, Karnataka</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 6v6l4 2"/></svg><span>10:00 AM ? 04:00 PM</span></li></ul><a href="pages/events/events.html">View Details <span aria-hidden="true">&#8594;</span></a></div>
+          </article>
+          <article class="event-card event-public" style="--event-order:1">
+            <div class="event-card-top"><img class="event-photo" src="assets/hero/news-statement.png" width="120" height="180" alt="" loading="lazy"><div class="event-card-date"><time datetime="2026-11-28"><strong>28</strong><span>Nov</span></time><span class="content-tag">PUBLIC EVENT</span></div><span class="event-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span></div>
+            <div class="event-details"><h3>Public Engagement Programme</h3><p>Share your ideas and connect with community volunteers.</p><ul class="event-facts"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/></svg><span>Mysuru, Karnataka</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 6v6l4 2"/></svg><span>11:00 AM ? 03:00 PM</span></li></ul><a href="pages/events/events.html">View Details <span aria-hidden="true">&#8594;</span></a></div>
+          </article>
+          <article class="event-card event-live" style="--event-order:2">
+            <div class="event-card-top"><img class="event-photo" src="assets/hero/news-public.png" width="120" height="180" alt="" loading="lazy"><div class="event-card-date"><time datetime="2026-12-02"><strong>02</strong><span>Dec</span></time><span class="content-tag">LIVE PROGRAMME</span></div><span class="event-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM10 7l7 5-7 5V7Z"/></svg></span></div>
+            <div class="event-details"><h3>Live Conversation on Public Priorities</h3><p>Join an interactive discussion on public services and local progress.</p><ul class="event-facts"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/></svg><span>Online (Live)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 6v6l4 2"/></svg><span>04:00 PM ? 06:00 PM</span></li></ul><a href="pages/events/events.html">View Details <span aria-hidden="true">&#8594;</span></a></div>
+          </article>
+          <article class="event-card event-green" style="--event-order:3">
+            <div class="event-card-top"><img class="event-photo" src="assets/hero/news-programme.png" width="120" height="180" alt="" loading="lazy"><div class="event-card-date"><time datetime="2026-12-07"><strong>07</strong><span>Dec</span></time><span class="content-tag">COMMUNITY PROGRAMME</span></div><span class="event-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3C5 2 1 11 6 17s16 1 14-14ZM5 21 17 7"/></svg></span></div>
+            <div class="event-details"><h3>Green Neighbourhood Drive</h3><p>Plant a tree and help create a cleaner, greener community.</p><ul class="event-facts"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/></svg><span>Bengaluru, Karnataka</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 6v6l4 2"/></svg><span>09:00 AM ? 12:00 PM</span></li></ul><a href="pages/events/events.html">View Details <span aria-hidden="true">&#8594;</span></a></div>
+          </article>
+        </div>
+      </div>
+      <div class="events-crowd" aria-hidden="true"></div>
+    </section>
+
+    <!-- =====================================
+         10. CITIZEN STORIES
+    ====================================== -->
+
+    <section class="section citizen-stories-section" id="citizenStories" aria-labelledby="citizenStoriesHeading">
+      <div class="container">
+        <div class="section-heading center"><span class="section-eyebrow">CITIZEN STORIES</span><h2 id="citizenStoriesHeading">Voices from the Community</h2><p>Everyday experiences. Shared hopes. Stronger communities.</p></div>
+        <div class="citizen-stories-grid">
+          <article class="citizen-story-card">
+            <div class="citizen-story-photo"><img src="assets/hero/story-volunteer.png" width="1536" height="864" alt="" loading="lazy"></div>
+            <div class="citizen-story-panel">
+              <span class="story-quote-mark" aria-hidden="true">&#8220;</span>
+              <figure class="story-testimonial"><blockquote><p>Volunteering for the community cleanliness drives has been a rewarding experience. It?s amazing to see our neighbourhood cleaner, safer and more welcoming for everyone.</p></blockquote><figcaption><strong>Priya Nair</strong><span> ? Youth Volunteer</span></figcaption></figure>
+              <div class="story-highlights"><span class="story-highlight story-highlight-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span>Youth<br>Volunteering</span></span><span class="story-highlight story-highlight-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3C5 2 1 11 6 17s16 1 14-14ZM5 21 17 7"/></svg><span>Cleaner<br>Neighbourhoods</span></span></div>
+            </div>
+          </article>
+          <article class="citizen-story-card">
+            <div class="citizen-story-photo"><img src="assets/hero/story-community.png" width="1536" height="864" alt="" loading="lazy"></div>
+            <div class="citizen-story-panel">
+              <span class="story-quote-mark" aria-hidden="true">&#8220;</span>
+              <figure class="story-testimonial"><blockquote><p>The community hall has brought people together like never before. We now have a space for meetings, events and skill-building activities for all age groups.</p></blockquote><figcaption><strong>Suresh Patil</strong><span> ? Community Member</span></figcaption></figure>
+              <div class="story-highlights"><span class="story-highlight story-highlight-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Community<br>Participation</span></span><span class="story-highlight story-highlight-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4H3v13h5v4l5-4h8V4ZM7 8h10M7 12h6"/></svg><span>Local<br>Conversations</span></span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         11. DISTRICT SELECTOR (P2)
+    ====================================== -->
+
+    <section class="section district-section" id="districtFinder" aria-labelledby="districtHeading">
+      <div class="container">
+        <div class="district-box">
+          <div class="district-content"><span class="section-eyebrow">FIND YOUR LOCAL UNIT</span><h2 id="districtHeading">Your District. <span>Your Team.</span></h2><p>Explore local leaders, district news, office information and nearby events.</p></div>
+          <div class="district-network" aria-hidden="true"><img class="district-map" src="assets/hero/district-map.png" width="768" height="1024" alt="" loading="lazy"><svg class="district-connectors" viewBox="0 0 400 220" preserveAspectRatio="none"><g fill="none" stroke="#11d9ff" stroke-width="2"><path d="M80 115C175 115 140 30 220 30H390M80 115C180 115 160 83 220 83H390M80 115C180 115 160 137 220 137H390M80 115C175 115 140 190 220 190H390"/></g></svg><div class="district-features"><div class="district-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Local Leadership</span></div><div class="district-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h8M8 18h5"/></svg><span>District News</span></div><div class="district-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2"/></svg><span>Events & Programmes</span></div><div class="district-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 11v6M12 7h.01"/></svg><span>Citizen Information</span></div></div></div>
+          <form id="districtForm" class="district-form"><label for="districtSelect">Choose your district</label><div class="district-select-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/></svg><select id="districtSelect" required><option value="">Select District</option><option value="bengaluru-urban">Bengaluru Urban</option><option value="bengaluru-rural">Bengaluru Rural</option><option value="mysuru">Mysuru</option><option value="mandya">Mandya</option><option value="tumakuru">Tumakuru</option><option value="hassan">Hassan</option><option value="mangaluru">Dakshina Kannada</option><option value="belagavi">Belagavi</option><option value="dharwad">Dharwad</option><option value="kalaburagi">Kalaburagi</option></select></div><button type="submit" class="btn btn-primary">Explore District <span aria-hidden="true">&#8594;</span></button></form>
+        </div>
+        <div id="districtResult" class="district-result" role="status" hidden></div>
+      </div>
+    </section>
+
+    <!-- =====================================
+         12. MOBILE APP DOWNLOAD
+    ====================================== -->
+
+    <section class="section mobile-app-section" id="mobileApps" aria-labelledby="phoneHeading">
+      <div class="container mobile-app-layout">
+        <div class="mobile-app-visual"><img class="phone-app-mockup" src="assets/hero/pnp-phone-mockup.png" width="1024" height="1024" alt="PNP mobile app phone preview with a scan-to-download panel" loading="lazy"></div>
+        <div class="mobile-app-content"><span class="section-eyebrow">STAY CONNECTED<span aria-hidden="true"></span></span><h2 id="phoneHeading">PNP on <span>Your Phone</span></h2><p>Your direct link to updates,<br>programmes and services<br>across Karnataka.</p><div class="phone-feature-grid"><a class="phone-feature phone-feature-updates" href="pages/newsroom.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 18 4v16L4 14v-4ZM4 10H2v4h2M7 15l2 6h4l-3-5M21 8l2-1M21 16l2 1"/></svg><span>Updates</span></a><a class="phone-feature phone-feature-members" href="pages/join.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Membership</span></a><a class="phone-feature phone-feature-events" href="pages/events/events.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2M14 17h2"/></svg><span>Events</span></a><a class="phone-feature phone-feature-info" href="pages/About PNP/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 11v6M12 7h.01"/></svg><span>Information</span></a></div><div class="app-download-buttons"><span class="app-badge"><svg class="app-store-icon" viewBox="0 0 40 44" aria-hidden="true"><path fill="#21d69c" d="M3 1 24 22 3 43Z"/><path fill="#38bdf1" d="m3 1 26 15-5 6Z"/><path fill="#ffcf2b" d="m24 22 5-6 9 5q3 1 0 3l-9 5Z"/><path fill="#f33973" d="m3 43 21-21 5 7Z"/></svg><span><strong>Android App</strong><small>Get it on Google Play</small></span></span><span class="app-badge"><svg class="app-store-icon" viewBox="0 0 40 44" fill="white" aria-hidden="true"><path d="M25 8c3-3 3-6 3-8-4 0-8 4-8 8h5ZM32 23c0-5 3-7 4-8-3-4-7-4-8-4-4 0-6 2-8 2s-4-2-7-2C5 11 2 18 3 25c1 8 6 17 10 17 3 0 4-2 7-2s4 2 7 2c4 0 8-7 10-12-3-1-5-4-5-7Z"/></svg><span><strong>iOS App</strong><small>Download on App Store</small></span></span></div></div>
+      </div>
+      <svg class="phone-section-wave" viewBox="0 0 1600 100" preserveAspectRatio="none" aria-hidden="true"><path fill="#ffe000" d="M0 90C300-8 460 2 720 69s600-9 880-69v100H0Z"/><path fill="#dd006e" d="M0 100C320 20 480 17 720 84s570-4 880-48v64H0Z"/><path fill="#05234e" d="M0 100C330 68 480 35 720 93s550 7 880-21v28H0Z"/></svg>
+    </section>
+
+    <!-- =====================================
+         13. VERIFIED SOCIAL HANDLES
+    ====================================== -->
+
+    <section class="section social-section" id="officialSocial" aria-labelledby="channelsHeading">
+      <div class="container"><div class="section-heading center"><span class="section-eyebrow">OFFICIAL CHANNELS</span><h2 id="channelsHeading">Connect Through<span>Verified Channels <svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></span></h2><p>Follow official updates, programmes, events<br>and important announcements.</p></div><div class="social-grid"><div class="social-card channel-facebook"><svg class="channel-hexagon" viewBox="0 0 180 200" preserveAspectRatio="none" aria-hidden="true"><path d="M100 5 166 43Q177 49 177 63V137Q177 151 166 157L101 194Q90 201 79 194L14 157Q3 151 3 137V63Q3 49 14 43L79 5Q90-2 100 5Z"/></svg><span class="channel-logo"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#1379fa"/><path fill="white" d="M36 62V37h9l2-11H36v-6q0-5 6-5h6V5h-9Q25 5 25 20v6h-8v11h8v25Z"/></svg></span><strong>Facebook<svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></strong></div><div class="social-card channel-instagram"><svg class="channel-hexagon" viewBox="0 0 180 200" preserveAspectRatio="none" aria-hidden="true"><path d="M100 5 166 43Q177 49 177 63V137Q177 151 166 157L101 194Q90 201 79 194L14 157Q3 151 3 137V63Q3 49 14 43L79 5Q90-2 100 5Z"/></svg><span class="channel-logo"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="socialInsta" cx=".15" cy="1" r="1.2"><stop stop-color="#ffe078"/><stop offset=".3" stop-color="#ff8135"/><stop offset=".58" stop-color="#f32a78"/><stop offset="1" stop-color="#7922d4"/></radialGradient></defs><rect x="1" y="1" width="62" height="62" rx="18" fill="url(#socialInsta)"/><rect x="12" y="12" width="40" height="40" rx="12" fill="none" stroke="white" stroke-width="4"/><circle cx="32" cy="32" r="10" fill="none" stroke="white" stroke-width="4"/><circle cx="45" cy="19" r="3" fill="white"/></svg></span><strong>Instagram<svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></strong></div><div class="social-card channel-youtube"><svg class="channel-hexagon" viewBox="0 0 180 200" preserveAspectRatio="none" aria-hidden="true"><path d="M100 5 166 43Q177 49 177 63V137Q177 151 166 157L101 194Q90 201 79 194L14 157Q3 151 3 137V63Q3 49 14 43L79 5Q90-2 100 5Z"/></svg><span class="channel-logo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="0" y="10" width="64" height="45" rx="13" fill="#f0000b"/><path fill="white" d="m26 21 19 11-19 11Z"/></svg></span><strong>YouTube<svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></strong></div><div class="social-card channel-x"><svg class="channel-hexagon" viewBox="0 0 180 200" preserveAspectRatio="none" aria-hidden="true"><path d="M100 5 166 43Q177 49 177 63V137Q177 151 166 157L101 194Q90 201 79 194L14 157Q3 151 3 137V63Q3 49 14 43L79 5Q90-2 100 5Z"/></svg><span class="channel-logo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#050505" d="M5 5h15l39 54H44ZM12 9l35 46h5L17 9Z" fill-rule="evenodd"/><path stroke="#050505" stroke-width="5" d="M56 5 8 59"/></svg></span><strong>X<svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></strong></div><div class="social-card channel-whatsapp"><svg class="channel-hexagon" viewBox="0 0 180 200" preserveAspectRatio="none" aria-hidden="true"><path d="M100 5 166 43Q177 49 177 63V137Q177 151 166 157L101 194Q90 201 79 194L14 157Q3 151 3 137V63Q3 49 14 43L79 5Q90-2 100 5Z"/></svg><span class="channel-logo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#10ca2a" d="M61 31a29 29 0 0 1-42 26L3 61l4-16A29 29 0 1 1 61 31Z"/><path d="M51 31a20 20 0 0 1-29 18l-9 2 2-9a20 20 0 1 1 36-11Z" fill="none" stroke="white" stroke-width="3"/><path fill="white" d="m23 19 4 8-3 3q3 7 10 9l3-4 8 4q-1 7-7 7-16-2-22-18-1-7 7-9Z"/></svg></span><strong>WhatsApp<svg class="channel-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="#098cff" d="m12 0 3 2 4 .2 1 4 3 3-2 4-.2 4-4 1-3 3-4-2-4-.2-1-4-3-3 2-4 .2-4 4-1Z"/><path fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m7 12 3 3 7-7"/></svg></strong></div></div><nav class="channel-quick-links" aria-label="Explore PNP"><a href="pages/newsroom.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 18 4v16L4 14v-4ZM4 10H2v4h2M7 15l2 6h4l-3-5M21 8l2-1M21 16l2 1"/></svg><span>Latest Updates</span></a><a href="pages/events/events.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h2M14 14h2M8 17h2"/></svg><span>Events</span></a><a href="pages/join.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 4a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Membership</span></a><a href="pages/About PNP/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 0-18 0 9 9 0 0 0 18 0ZM12 11v6M12 7h.01"/></svg><span>Information</span></a></nav></div>
+      <svg class="channels-wave" viewBox="0 0 1600 100" preserveAspectRatio="none" aria-hidden="true"><path fill="#bceaff" d="M0 25C300-55 360 105 850 70 1190 40 1380 45 1600 0v100H0Z"/><path fill="#6cccff" d="M0 48C280-14 400 120 850 82 1190 73 1400 50 1600 20v80H0Z"/><path fill="#22aff4" d="M0 67C280 8 410 133 850 92 1190 85 1410 70 1600 44v56H0Z"/></svg>
+    </section>
+
+    <div data-site-newsroom></div>
+  </main>
+
+  <!-- =========================================
+       14. FOOTER
+  ========================================== -->
+
+  <div data-site-footer></div>
+
+  <!-- =========================================
+       15. MOBILE STICKY ACTION BAR
+  ========================================== -->
+
+  <nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="pages/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+</body>
+</html>

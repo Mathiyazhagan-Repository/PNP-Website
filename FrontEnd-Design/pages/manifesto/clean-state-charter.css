@@ -1,0 +1,78 @@
+﻿/* Clean State Charter: purple sunset, Karnataka flag and four public values. */
+.clean-charter-banner{position:relative;isolation:isolate;overflow:hidden;min-height:275px;padding:21px 5% 23px;background:linear-gradient(110deg,#25225e,#4e438b 68%,#b58aaa);color:white}
+.clean-charter-community{position:absolute;inset:0 0 0 auto;z-index:-3;width:72%;height:100%;object-fit:cover;object-position:center 50%;opacity:.9}
+.clean-charter-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#292663 0%,#292663fa 31%,#393271d9 47%,#45347555 68%,#26235010),linear-gradient(0deg,#13103e9c,transparent 50%)}
+.clean-charter-flag{position:absolute;right:7%;top:12px;width:26%;height:100%;object-fit:contain;object-position:center top;z-index:-1;filter:drop-shadow(4px 5px 7px #28193b50)}
+.clean-charter-copy{position:relative;z-index:1;width:63%;max-width:710px}
+.clean-charter-eyebrow{font-size:15px;font-weight:800;line-height:1.25;letter-spacing:.5px;color:#faf8ff;margin:0}
+.clean-charter-rule{width:62px;height:4px;border-radius:3px;background:#ffdd00;margin:8px 0 11px}
+.clean-charter-copy h2{color:white;font-size:clamp(29px,3.4vw,47px);font-weight:850;letter-spacing:-1px;line-height:1.1;margin:0 0 9px}
+.clean-charter-copy h2 span{color:#ffda0b}
+.clean-charter-introduction{font-size:clamp(13px,1.5vw,20px);line-height:1.25;color:#faf8ff;margin:0 0 16px}
+.clean-charter-values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;padding:0;margin:0 0 19px;max-width:580px}
+.clean-charter-values li{display:flex;align-items:center;flex-direction:column;gap:7px;min-width:0;border-right:1px solid #dedbf99c;padding:0 9px}
+.clean-charter-values li:first-child{padding-left:0}.clean-charter-values li:last-child{border:0}
+.clean-charter-values svg{width:29px;height:29px;fill:none;stroke:#f4f2ff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.clean-charter-values span{font-size:12px;font-weight:650;color:#f4f1ff;white-space:nowrap;line-height:1.25}
+.clean-charter-view{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-width:205px;min-height:41px;border:1px solid #d7dbee;border-radius:30px;background:linear-gradient(#fff,#edf3fa);color:#102849;text-decoration:none;padding:9px 20px;font-size:15px;font-weight:850;box-shadow:0 5px 12px #0d113629}
+.clean-charter-view svg{width:23px;height:23px;fill:none;stroke:#253e79;stroke-width:1.7;stroke-linejoin:round}.clean-charter-view>span{font-size:24px;line-height:1}
+.clean-charter-view:hover{background:#fff;box-shadow:0 6px 16px #0d113645}
+.clean-charter-banner :focus-visible{outline:3px solid #ffdc00;outline-offset:4px}
+.charter-information{padding:26px 5% 34px;background:#f7faff;color:#102849}.charter-information h1{font-size:28px;color:#193865;margin:12px 0}.charter-information p{font-size:14px;line-height:1.6;max-width:740px}.charter-publication-status{display:inline-block;font-size:11px;font-weight:700;border-radius:20px;background:#fff0c1;color:#75611f;padding:6px 12px}.charter-information dl{display:flex;gap:35px;flex-wrap:wrap;margin:22px 0}.charter-information dt{font-size:11px;font-weight:800}.charter-information dd{font-size:12px;margin:6px 0;color:#61738b}.charter-information>a{display:inline-block;padding:9px 15px;border-radius:25px;background:#1d3a6b;color:white;text-decoration:none;font-size:12px;font-weight:700}
+body.policy-drawer-open .clean-charter-copy{width:72%}body.policy-drawer-open .clean-charter-copy h2{font-size:30px}body.policy-drawer-open .clean-charter-values span{font-size:10px}body.policy-drawer-open .clean-charter-introduction{font-size:14px}
+@media(max-width:850px){.clean-charter-banner{padding:22px 4%;min-height:260px}.clean-charter-copy{width:69%}.clean-charter-eyebrow{font-size:12px}.clean-charter-copy h2{font-size:33px}.clean-charter-introduction{font-size:15px}.clean-charter-values li{padding-inline:7px}.clean-charter-values span{font-size:10px}.clean-charter-values svg{width:27px;height:27px}.clean-charter-flag{right:2%;width:31%;top:7px}.clean-charter-community{width:80%;object-position:63% center}.clean-charter-view{min-width:180px;min-height:39px;font-size:13px}}
+@media(max-width:550px){.clean-charter-banner{padding:21px 5%;min-height:300px}.clean-charter-copy,body.policy-drawer-open .clean-charter-copy{width:100%}.clean-charter-copy h2,body.policy-drawer-open .clean-charter-copy h2{font-size:30px;max-width:240px}.clean-charter-eyebrow{font-size:11px}.clean-charter-introduction{max-width:230px;font-size:13px;margin-bottom:19px}.clean-charter-shade{background:linear-gradient(90deg,#292663fa,#292663d9 48%,#29266355),linear-gradient(0deg,#1a1648,transparent 75%)}.clean-charter-flag{right:-8%;top:4px;width:48%;height:220px;opacity:.85}.clean-charter-community{width:100%;object-position:66% center;opacity:.65}.clean-charter-values{max-width:100%;margin-bottom:21px;gap:0}.clean-charter-values li{padding-inline:5px}.clean-charter-values span{font-size:10px}.clean-charter-values svg{width:25px;height:25px}.clean-charter-view{min-height:41px;min-width:180px}.charter-information h1{font-size:25px}}
+/* The supplied composite image is used directly, without added flags or colour overlays. */
+.clean-charter-banner { background:#192b85; }
+.clean-charter-community {
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:1;
+  mask-image:none;
+}
+@media(max-width:850px){.clean-charter-community{width:100%;object-position:center;opacity:1}}
+@media(max-width:550px){.clean-charter-community{width:100%;object-position:65% center;opacity:1}}
+/* Fill the complete banner with the supplied image, including its padded edges. */
+.clean-charter-banner {
+  background-color: #192b85;
+  background-image: url('../../assets/hero/clean-state-charter-background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.clean-charter-banner > .clean-charter-community { display: none; }
+@media (max-width: 550px) {
+  .clean-charter-banner { background-position: 65% center; }
+}
+/* Preserve the complete supplied artwork instead of cropping it with cover. */
+.clean-charter-banner {
+  aspect-ratio: 2168 / 725;
+  min-height: 0;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+@media (max-width: 850px) {
+  .clean-charter-banner {
+    min-height: 310px;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+}
+@media (max-width: 550px) {
+  .clean-charter-banner {
+    aspect-ratio: auto;
+    min-height: 390px;
+    align-items: flex-start;
+    padding-bottom: 105px;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+}

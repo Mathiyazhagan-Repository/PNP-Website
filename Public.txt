@@ -1,0 +1,294 @@
+1) Public website 
+
+(includes the user’s My Account area)	Visitors, members, donors, volunteers, citizens raising grievances	All public pages, the Join / Donate / Grievance flows, the login modal and My Account. Logging in only adds the My Account section; it is not a separate site.
+
+## **Screen 01: Homepage (PUB-001)**
+
+| #  | Section / Feature       | Requirements                                                                                                         |
+| -- | ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 1  | Top Bar                 | Clickable hotline number, five-language switcher, WhatsApp icon, verified official website badge                     |
+| 2  | Header & Navigation     | Party logo, 10 navigation items, Get Involved dropdown, global search, Join Now, Donate, Call Hotline, Login/Sign Up |
+| 3  | Breaking News Strip     | Scrolling news headline, clickable announcement link, admin show/hide control                                        |
+| 4  | Hero Banner Carousel    | 3–5 rotating slides, headline, CTA on each, separate mobile creatives, previous/next controls                        |
+| 5  | Live Statistics         | Total members, total volunteers, grievances resolved, donations received                                             |
+| 6  | Quick Action Cards      | Join, Donate, Call Hotline, Report Grievance                                                                         |
+| 7  | Why PNP                 | Clean, Capable, Connected pillars with proof points and supporting document links                                    |
+| 8  | Latest News             | News cards with headlines, dates, images and links to news details                                                   |
+| 9  | Upcoming Events         | Event cards, dates, venues and event detail links                                                                    |
+| 10 | Citizen Stories         | Testimonials and real citizen stories with written consent                                                           |
+| 11 | District Selector (P2)  | Select a district and display relevant local party information                                                       |
+| 12 | App Download            | Android and iOS download badges                                                                                      |
+| 13 | Verified Social Handles | Official social media accounts and links                                                                             |
+| 14 | Footer                  | Party introduction, navigation, policies, contact information, grievance officer, corrections log, social links      |
+| 15 | Mobile Sticky Bar       | Call, WhatsApp, Donate buttons fixed at the bottom on mobile                                                         |
+
+# **PNP Website: About PNP (Module 02) Requirements**
+
+| No. | Section / Feature                | Requirements                                                                                                          | Priority |
+| --- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------- |
+| 1   | **Top Bar**                      | Clickable party hotline, five-language switcher, WhatsApp icon and official website verification badge.               | P1       
+| 2   | **Main Header & Navigation**     | Party logo, 10 navigation items, global search, Login/Sign Up, Join Now, Donate and Call Hotline.                     | P1       
+| 3   | **Page Hero Banner**             | About PNP heading, introductory text and approved party image or artwork.                                             | P1       
+| 4   | **Party Introduction**           | Overview of Praja Nishchaya Party, its background, purpose and organisational identity.                               | P1       
+| 5   | **Our Vision**                   | Explain the party's long-term vision and objectives using approved content.                                           | P1       
+| 6   | **Ideology & Core Values**       | Explain the party's ideology and principles. May use the Clean, Capable and Connected message framework.              | P1       
+| 7   | **Party History**                | Present the party's history, formation and key milestones with dates and sources.                                     | P1       
+| 8   | **Organisational Structure**     | Explain the structure of the party, including State, district and constituency units, with relevant leadership links. | P1       
+| 9   | **Party Constitution Downloads** | Provide a downloadable PDF of the party constitution in each of the five supported languages.                         | P1       
+| 10  | **Footer**                       | Party information, navigation, policies, grievance support, official social links and verified contact details.       | P1       
+
+Now that **Module 02: About PNP** is complete, the next module is **Module 03: Leadership Directory**.
+
+## **Module 03: Leadership Directory (P1)**
+
+| # | Page / Feature         | Requirements                                                                                                          | Priority |
+| - | ---------------------- | --------------------------------------------------------------------------------------------------------------------- | -------- |
+| 1 | Leadership Directory   | Display State, district and constituency office-bearers with photos, names and roles.                                 | P1       |
+| 2 | Leader Profile         | Individual leader page with approved photograph, biography, designation and consent-based public contact information. | P1       |
+| 3 | Leadership Filters     | Filter leaders by role and district.                                                                                  | P1       |
+| 4 | Organisation Chart     | Dynamic hierarchy showing the party's organisational structure.                                                       | P2       |
+| 5 | Eminent Voices Council | Council member profiles, published with written consent and withdrawal support.                                       | P2       |
+
+## **Module 04: Manifesto and Policy Hub**
+
+| # | Page / Feature          | Requirements                                                                                        | Priority |
+| - | ----------------------- | --------------------------------------------------------------------------------------------------- | -------- |
+| 1 | Manifesto & Policy Hub  | Main page displaying party policies and manifesto information.                                      | P1       |
+| 2 | Policy Issue Pages      | Dedicated policy information for Jobs, Education, Farmers, Women, Health and Cities.                | P1       |
+| 3 | Manifesto PDF Downloads | Download the approved manifesto in all five supported languages, with version and publication date. | P1       |
+| 4 | Suggest a Policy        | Citizen suggestion form with consent checkbox, spam protection and moderation.                      | P2       |
+| 5 | Clean State Charter     | Dedicated page for the approved Clean State Charter.                                                | P2       |
+
+
+## **Module 05: Newsroom and Press**
+
+| # | Page / Feature            | Requirements                                                                                                  | Priority |
+| - | ------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
+| 1 | **Newsroom Listing**      | Display press releases, party statements, speeches and news articles.                                         | P1       |
+| 2 | **News Detail Page**      | Display full articles with headlines, dates, images, categories, tags and supporting sources.                 | P1       |
+| 3 | **News Search & Filters** | Search and filter by category, language, tags and district.                                                   | P1       |
+| 4 | **Media Kit**             | Download approved party profiles, leadership biographies, photographs, fact sheets and achievements dossiers. | P1       |
+| 5 | **Corrections Log**       | Publicly record what was corrected, when it was corrected and where.                                          | P1       |
+| 6 | **News Sharing & RSS**    | Social sharing, RSS feed and scheduled publishing through the CMS.                                            | P1       |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 0. Global components (shown on every screen, design once)
+
+| Component | Features |
+|---|---|
+| **Top bar** | Hotline number you can tap to call · language switcher (5) · WhatsApp icon · "Verified official website" badge |
+| **Header** | Logo · 10-item menu (Get Involved opens a dropdown: Join / Volunteer / Youth & Campus) · search icon · **Join Now** and **Donate** (magenta) · Call Hotline · Login / Sign Up; after login: member name + My Account dropdown |
+| **Mobile header** | Hamburger menu drawer · language switcher · sticky bottom bar: **Call · WhatsApp · Donate** |
+| **Breaking-news strip** | Scrolling headline with a link (admin can switch it on or off) |
+| **Footer** | Short party intro · quick links · Privacy, Terms, Donation & Refund, FAQ, Accessibility · Grievance Officer · Corrections Log · verified social handles · app badges · hotline |
+| **Login modal** | Mobile number → OTP (6 boxes, resend timer) → CAPTCHA · new number → "Join PNP" prompt · error and too-many-attempts states |
+| **Cookie banner** | Accept / Reject / Customise · social embeds stay blocked until the user accepts |
+| **Shared UI pieces** | Breadcrumbs · share sheet · "AI-generated" label · source/evidence link chip · "Last updated" stamp · empty and loading states |
+
+## 1. Home & core (2)
+
+| # | Screen | Features |
+|---|---|---|
+| 1 | **Home** | Banner carousel (3–5 slides, CTA on each, separate mobile images) · breaking news · **4 live counters** (members, volunteers, grievances resolved, donations) · quick-action tiles (Join, Donate, Call, Report grievance) · **Why PNP**: Clean / Capable / Connected with proof and document links · latest news (cards) · upcoming events · citizen stories · district selector (P2) · app badges · verified handles block |
+| 2 | **Search Results** | Search box · tabs: All / Pages / News / Events / Leaders · language filter · result cards with type tag · "no results" state |
+
+## 2. About (2)
+
+| # | Screen | Features |
+|---|---|---|
+| 3 | **About PNP** | Vision · ideology · history (timeline) · organisation structure (diagram) · **Constitution PDF** download per language · links to Leadership and Achievements |
+| 4 | **Achievements** | List or timeline: date + summary + **evidence link or document (mandatory)** · filter by year · share |
+
+## 3. Leadership (4)
+
+| # | Screen | Features |
+|---|---|---|
+| 5 | **Leadership Directory** | Filters: role (State / District / Constituency) and district · search by name · cards: photo, name, role, district |
+| 6 | **Leader Profile** | Photo · bio · role · district/constituency · public contact (only if the leader consented) · related news and events · share |
+| 7 | **Org Chart** (P2) | Interactive tree built from the data; tap a person → profile |
+| 8 | **Eminent Voices Council** (P2) | Intro text · profiles (only those with written consent) |
+
+## 4. Manifesto & Policy (4)
+
+| # | Screen | Features |
+|---|---|---|
+| 9 | **Manifesto & Policy Hub** | Issue tiles (Jobs, Education, Farmers, Women, Health, Cities, plus any admin adds) · **Manifesto PDF** per language with version and date · Suggest a Policy button (P2) · Clean Charter link (P2) |
+| 10 | **Issue Detail** | Problem → commitments → sources · related news · download · share |
+| 11 | **Suggest a Policy** (P2) | Name, contact, district, issue, suggestion · consent · CAPTCHA · success: "Under review" |
+| 12 | **Clean State Charter** (P2) | Charter text · Eminent Voices endorsements · PDF · publish date |
+
+## 5. Newsroom (4)
+
+| # | Screen | Features |
+|---|---|---|
+| 13 | **Newsroom List** | Filters: category (press release, statement, speech, news), tag, language, district, date · search · cards · pagination · RSS link |
+| 14 | **News Detail** | Title · date · category · district · body + images/video · **source documents** · correction note (if edited) · AI label · share · related articles |
+| 15 | **Media Kit** | Download cards: party profile, leadership bios, photo pack (ZIP), fact sheet, achievements dossier · press contact |
+| 16 | **Corrections Log** | Table: date, page, what was corrected, link |
+
+## 6. Events (6)
+
+| # | Screen | Features |
+|---|---|---|
+| 17 | **Events List** | **Calendar / List / Map** toggle · filters: district, date, type · cards · "LIVE now" badge |
+| 18 | **Event Detail** | Banner · date and time · venue + map + Get Directions · description · speakers · **RSVP** · Add to calendar (ICS) · share · live link · reminder opt-in (P2) · gallery link (P2) |
+| 19 | **RSVP** (modal) | Logged in: one tap · guest: name, mobile, OTP, district, consent · CAPTCHA |
+| 20 | **RSVP Confirmation** | **QR entry pass** · event summary · add to calendar · download / WhatsApp share · "Also saved in My Account" |
+| 21 | **Live** | Embedded YouTube / Facebook / Instagram stream (shown after cookie consent) · LIVE badge · upcoming streams · past recordings |
+| 22 | **Event Gallery** (P2) | Photo and video grid · full-screen viewer · download / share · AI label |
+
+## 7. Get Involved (1)
+
+| # | Screen | Features |
+|---|---|---|
+| 23 | **Get Involved Landing** | Cards: Join · Volunteer · Youth & Campus · Donate · live counters |
+
+## 8. Membership (4)
+
+| # | Screen | Features |
+|---|---|---|
+| 24 | **Join: Step 1, Details** | Progress bar (1/3) · **required:** name, mobile, district, language · optional fields collapsed · referral code (P2) |
+| 25 | **Join: Step 2, Consent & OTP** | Privacy notice summary + link to the full policy · **consent checkbox** · OTP input + resend · CAPTCHA |
+| 26 | **Join: Success / ID Card** | **Digital ID card** (name, member no., district, QR, optional photo) · download · WhatsApp share · referral link (P2) · CTAs: Volunteer, Donate, My Account |
+| 27 | **Already a Member** (suggested) | "This number is already registered" · Login · View my card |
+
+## 9. Donate (7)
+
+| # | Screen | Features |
+|---|---|---|
+| 28 | **Donate: Step 1** | **One-time / Monthly** toggle · amount chips + custom amount · campaign dropdown · trust strip (receipted, Indian citizens only, published in Transparency Portal) · policy link |
+| 29 | **Donate: Step 2, Details** | Name · mobile (OTP) · email · **PAN** · ☑ **Indian-citizen declaration** · notice for amounts over ₹20,000 · summary panel · Proceed to Pay |
+| 30 | **Processing** | "Confirming payment, don't close this page" (the payment page itself belongs to the gateway) |
+| 31 | **Donation Success** | Receipt no. · amount, mode, date, tax section · **Download receipt** · "Sent by email, SMS and WhatsApp" · Make it monthly · Create account · share |
+| 32 | **Donation Failed** | Reason · "money will be refunded automatically if deducted" · Retry · change payment method · help contact |
+| 33 | **Campaign List** (P2) | Cards: campaign, amount raised, progress bar |
+| 34 | **Campaign Detail** (P2) | Story · total raised · updates · Donate button with this campaign pre-selected |
+
+## 10. Transparency (1)
+
+| # | Screen | Features |
+|---|---|---|
+| 35 | **Transparency Portal** | Summary cards · charts by period, campaign and district · data tables · **CSV/XLS download** · documents (audited accounts, contribution reports, candidate declarations) with "last updated" · note that no donor personal data is shown |
+
+## 11. Volunteer (5)
+
+| # | Screen | Features |
+|---|---|---|
+| 36 | **Volunteer Sign-up** | Details pre-filled if logged in · skills (chips) · availability · district · languages · consent · CAPTCHA |
+| 37 | **Volunteer Success + Campaign Kits** | Thank-you message · kit downloads (posters, templates, talking points) |
+| 38 | **Task Board** (P2) | Task cards · status · Accept · proof upload · Done |
+| 39 | **Leaderboard** (P2) | Opt-in ranking · district filter |
+| 40 | **Certificate Verify** (P2) | Enter certificate no. or scan the QR → valid or invalid + details |
+
+## 12. Youth & Campus Zone (5, all P2)
+
+| # | Screen | Features |
+|---|---|---|
+| 41 | **Youth Zone Landing** | Cards: Chapters, Contests, Fellowship, Ambassador · resources |
+| 42 | **Campus Chapters** | List by college or district · join a chapter |
+| 43 | **Contests** | Reel, Debate, Hackathon · rules, dates · submit entry |
+| 44 | **SATYA Fellowship Application** | Multi-step form · **resume upload** · consent · application status |
+| 45 | **Ambassador Sign-up** | College, course, city · consent · "We never ask your political views" note |
+
+## 13. Grievance & Help (6)
+
+| # | Screen | Features |
+|---|---|---|
+| 46 | **Grievance Landing** | 🚨 **112 emergency notice** · expectation text (listen, record, route, follow up) · cards: Submit / Track / Call / Call-back · "How it works" steps |
+| 47 | **Submit Grievance** | **Category icon tiles** (Water, Roads, Power, Pensions, Certificates, Corruption, Other) · district · location · description · **photo** · **voice note** · mobile + OTP · consent · CAPTCHA |
+| 48 | **Ticket Created** | **Ticket no.** (large, with a copy button) · "SMS/WhatsApp sent" · first update within 72 hours · Track link |
+| 49 | **Track Ticket** | Ticket no. + mobile OTP |
+| 50 | **Ticket Status** | **Timeline** (Received → Routed → In Progress → Closed) · officer updates · attachments · ⭐ **rating** on closure |
+| 51 | **Request Call-back** | Name · mobile · language · preferred time · topic · consent |
+
+## 14. Districts (3)
+
+| # | Screen | Features |
+|---|---|---|
+| 52 | **District Directory** | Map or list of about 30 districts · search · "Set as my district" |
+| 53 | **District Page** | Local leaders · works done · events · office contacts + map · local news · list of constituencies |
+| 54 | **Constituency Page** | Same template, constituency level |
+
+## 15. Media Library (2)
+
+| # | Screen | Features |
+|---|---|---|
+| 55 | **Media Library** | Filters: type (photo, video, podcast, poster, template), pillar, language, district · grid · AI label |
+| 56 | **Asset Detail** | Preview · credit · usage rights · AI label · download (sizes) · share |
+
+## 16. Fact Check & FAQ (5)
+
+| # | Screen | Features |
+|---|---|---|
+| 57 | **Fact Check List** | Search · verdict filter · cards: claim + verdict badge (False / Misleading / True) + date |
+| 58 | **Fact Check Detail** | Claim · verdict · explanation · **evidence links** · date · share · Report misinformation button |
+| 59 | **Report Misinformation** (P2) | Link or screenshot · platform · description · optional contact · consent |
+| 60 | **FAQ / Answer Pages List** | Questions grouped by topic · accordion · language |
+| 61 | **Answer Page Detail** | Question as the heading · short direct answer · details · **sources** · last updated · related questions |
+
+## 17. Contact (1)
+
+| # | Screen | Features |
+|---|---|---|
+| 62 | **Contact Us** | Hotline · WhatsApp · email · **district offices list + Google Map + Get Directions** · enquiry form (name, mobile, email, subject, message, consent, CAPTCHA) · Grievance Officer details |
+
+## 18. Policy pages (5, one template)
+
+| # | Screen | Features |
+|---|---|---|
+| 63–67 | **Privacy · Terms · Donation & Refund · Accessibility · Grievance Officer** | Table of contents sidebar · content · last updated · language versions · print / download |
+
+## 19. My Account (9, after login)
+
+| # | Screen | Features |
+|---|---|---|
+| 68 | **Account Dashboard** | Greeting · tiles: ID Card, Donations, Tickets, RSVPs, Volunteer, Preferences, Privacy |
+| 69 | **Profile** | Edit name, district, language, email, photo · change mobile (needs OTP) |
+| 70 | **Membership ID Card** | View · download · share · referral link + count (P2) |
+| 71 | **My Donations & Receipts** | Table (date, amount, campaign, receipt no.) · year filter · download receipt |
+| 72 | **Recurring Donations** | Active mandate · amount · next date · **Pause / Change / Cancel** |
+| 73 | **My Grievance Tickets** | List with status chips → opens Ticket Status (#50) |
+| 74 | **My RSVPs** (suggested) | Upcoming events with QR passes · past events |
+| 75 | **Preferences** | Language · district · notification channels (SMS, WhatsApp, email, push) |
+| 76 | **Privacy & Consent** | Consent list with **Withdraw** · access or correction request · **Delete my data** (OTP confirm) · request status |
+
+## 20. System (2)
+
+| # | Screen | Features |
+|---|---|---|
+| 77 | **404** | Message · search · links back to Home, Grievance and Contact |
+| 78 | **Offline (PWA)** | "You're offline" · cached pages · hotline number (works without internet) |
+
+---
+
+| Summary | Count |
+|---|---|
+| P1 (launch) | 62 |
+| P2 (later) | 16 |
+| **Total** | **78** |
+| Global components | 8 |
+
+Want me to put this in a doc your team can share and design from?

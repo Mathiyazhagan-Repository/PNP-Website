@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1D3A6B">
+
+  <title>Search Results | Praja Nishchaya Party</title>
+
+  <meta name="description"
+        content="Search official PNP pages, news, events and leaders.">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- Shared Homepage CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Search Page CSS -->
+  <link rel="stylesheet" href="./search.css">
+
+  <!-- Shared Homepage JavaScript -->
+  <script src="../shared-layout.js" defer></script>
+  <script src="../script.js?v=sample-counts-2" defer></script>
+
+  <!-- Search Page JavaScript -->
+  <script src="./search.js" defer></script>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+  <!-- ===================================
+       GLOBAL TOP BAR
+  ==================================== -->
+
+  <div data-site-header></div>
+
+  <!-- ===================================
+       MAIN CONTENT
+  ==================================== -->
+
+  <main id="main-content">
+
+    <!-- BREADCRUMBS -->
+
+    <div class="search-breadcrumb">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">
+            Search Results
+          </span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- PAGE INTRO -->
+
+    <section class="search-hero">
+      <div class="container">
+
+        <div class="search-hero-content">
+
+          <span class="search-eyebrow">
+            PNP INFORMATION CENTRE
+          </span>
+
+          <h1>What are you looking for?</h1>
+
+          <p>
+            Find information across official party pages,
+            news, events and leadership profiles.
+          </p>
+
+          <!-- MAIN SEARCH FORM -->
+
+          <form id="mainSearchForm"
+                class="main-search-form"
+                role="search">
+
+            <label for="mainSearchInput"
+                   class="sr-only">
+              Search website
+            </label>
+
+            <div class="search-input-wrap">
+              <span class="search-input-icon"
+                    aria-hidden="true">⌕</span>
+
+              <input type="search"
+                     id="mainSearchInput"
+                     name="q"
+                     placeholder="Search by keyword..."
+                     autocomplete="off"
+                     enterkeyhint="search">
+
+              <button type="button"
+                      id="clearSearch"
+                      class="clear-search"
+                      aria-label="Clear search"
+                      hidden>
+                ×
+              </button>
+            </div>
+
+            <button type="submit"
+                    class="btn btn-primary search-submit">
+              Search
+            </button>
+
+          </form>
+
+          <p class="search-helper">
+            Search across pages, news, events and leaders.
+            Additional languages will be indexed when
+            approved translations are available.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS AREA -->
+
+    <section class="search-results-section">
+      <div class="container">
+
+        <!-- RESULT HEADING -->
+
+        <div class="results-heading">
+
+          <div>
+            <span class="section-eyebrow">
+              SEARCH DIRECTORY
+            </span>
+
+            <h2 id="resultsTitle">
+              Search Results
+            </h2>
+
+            <p id="searchSummary"
+               role="status"
+               aria-live="polite">
+              Browse the available website pages.
+            </p>
+          </div>
+
+          <!-- LANGUAGE FILTER -->
+
+          <div class="language-filter">
+            <label for="resultLanguage">
+              Result Language
+            </label>
+
+            <select id="resultLanguage">
+              <option value="all">All Languages</option>
+              <option value="en">English</option>
+              <option value="state">State Language (TBC)</option>
+              <option value="hi">Hindi</option>
+              <option value="regional-1">Regional Language 1</option>
+              <option value="regional-2">Regional Language 2</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- FIVE RESULT TABS -->
+
+        <div class="results-toolbar">
+
+          <div class="result-tabs"
+               role="tablist"
+               aria-label="Search result types">
+
+            <button type="button"
+                    class="result-tab active"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                    data-type="all">
+              All
+              <span data-count="all">0</span>
+            </button>
+
+            <button type="button"
+                    class="result-tab"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    data-type="page">
+              Pages
+              <span data-count="page">0</span>
+            </button>
+
+            <button type="button"
+                    class="result-tab"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    data-type="news">
+              News
+              <span data-count="news">0</span>
+            </button>
+
+            <button type="button"
+                    class="result-tab"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    data-type="event">
+              Events
+              <span data-count="event">0</span>
+            </button>
+
+            <button type="button"
+                    class="result-tab"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    data-type="leader">
+              Leaders
+              <span data-count="leader">0</span>
+            </button>
+
+          </div>
+
+          <div class="result-total"
+               id="resultTotal">
+            0 results
+          </div>
+
+        </div>
+
+        <!-- LOADING STATE -->
+
+        <div class="results-loading"
+             id="resultsLoading"
+             role="status"
+             hidden>
+
+          <div class="loading-spinner"
+               aria-hidden="true"></div>
+
+          <p>Searching website content...</p>
+        </div>
+
+        <!-- RESULT CARDS -->
+
+        <div id="resultsPanel"
+             role="tabpanel"
+             aria-label="Search results">
+
+          <div class="results-list"
+               id="resultsList">
+            <!-- Cards inserted by search.js -->
+          </div>
+
+        </div>
+
+        <!-- EMPTY / NO RESULTS -->
+
+        <div class="search-empty"
+             id="noResults"
+             hidden>
+
+          <div class="empty-symbol"
+               aria-hidden="true">⌕</div>
+
+          <h3>No matching results found</h3>
+
+          <p id="emptyMessage">
+            Try another keyword or change the filters.
+          </p>
+
+          <div class="empty-actions">
+            <button type="button"
+                    class="btn btn-primary"
+                    id="resetSearch">
+              Clear Filters
+            </button>
+
+            <a href="../index.html"
+               class="btn btn-outline">
+              Back to Homepage
+            </a>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+
+        <nav class="search-pagination"
+             id="searchPagination"
+             aria-label="Search results pagination"
+             hidden>
+        </nav>
+
+        <!-- PROTOTYPE DATA NOTICE -->
+
+        <div class="search-data-notice">
+          <strong>Prototype search data</strong>
+          <p>
+            This screen currently searches a small local
+            index of planned website pages. Real news,
+            event, and leader records will appear only
+            after approved CMS content is connected.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================
+       SHARED FOOTER
+  ==================================== -->
+
+  <div data-site-footer></div>
+
+  <!-- MOBILE STICKY BAR -->
+
+  <nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#"
+       data-next="Call Hotline">
+      <span>☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#"
+       data-next="WhatsApp integration">
+      <span>◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="./donate.html">
+      <span>₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- ===================================
+       SHARED LOGIN MODAL
+  ==================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 inputmode="numeric"
+                 placeholder="Enter mobile number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA integration pending
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+      </form>
+
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <label for="loginOtp">
+          Six-digit OTP
+        </label>
+
+        <input id="loginOtp"
+               type="text"
+               maxlength="6"
+               pattern="[0-9]{6}"
+               inputmode="numeric"
+               autocomplete="one-time-code"
+               required>
+
+        <button type="button"
+                class="resend-otp"
+                id="resendOtp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">Join PNP</a>
+        </p>
+        <p>
+          View our
+          <a href="./privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================================
+       COOKIE CONSENT
+  ==================================== -->
+
+  <div id="cookieBanner"
+       class="cookie-banner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support site functionality.
+          Optional analytics and social media embeds
+          need your consent.
+          <a href="./privacy-policy.html">
+            Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE SETTINGS MODAL -->
+
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>Choose the optional categories you allow.</p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Always required</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help improve website usage</small>
+          </span>
+          <input id="analyticsConsent"
+                 type="checkbox">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow external media content</small>
+          </span>
+          <input id="socialConsent"
+                 type="checkbox">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+</body>
+</html>

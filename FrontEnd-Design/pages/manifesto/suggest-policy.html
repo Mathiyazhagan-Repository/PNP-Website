@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b3060"><title>Suggest a Policy | PNP</title><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="./suggest-policy.css"><script src="../../shared-layout.js" defer></script><script src="../../script.js" defer></script><script src="./suggest-policy.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a><div data-site-header></div><main id="main-content"><section class="policy-suggestion-section" id="suggestPolicy" aria-labelledby="suggestPolicyHeading">
+<header class="suggestion-section-heading"><span>CITIZEN PARTICIPATION</span><h2 id="suggestPolicyHeading">Suggest a Policy</h2><p>Share an idea for your community and Karnataka.</p></header>
+<form class="policy-suggestion-form" id="policySuggestionForm" novalidate>
+<div class="suggestion-fields">
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="4"/><path d="M4 22v-4a8 8 0 0 1 16 0v4"/></svg></span><div><label for="suggestionName">Full Name <span>*</span></label><input id="suggestionName" name="name" autocomplete="name" placeholder="Enter your full name" maxlength="100" required aria-describedby="suggestionNameError"><span class="suggestion-error" id="suggestionNameError"></span></div></div>
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 9L22 5"/></svg></span><div><label for="suggestionEmail">Email Address <span>*</span></label><input id="suggestionEmail" name="email" type="email" autocomplete="email" placeholder="Enter your email address" maxlength="150" required aria-describedby="suggestionEmailError"><span class="suggestion-error" id="suggestionEmailError"></span></div></div>
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 2 4 6-3 3q2 4 5 5l3-3 6 4q0 5-5 5C8 20 3 15 2 7q0-5 5-5Z"/></svg></span><div><label for="suggestionMobile">Mobile Number <span>*</span></label><input id="suggestionMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="Enter 10-digit mobile number" maxlength="10" pattern="[6-9][0-9]{9}" required aria-describedby="suggestionMobileError"><span class="suggestion-error" id="suggestionMobileError"></span></div></div>
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 9c0 6-8 13-8 13S4 15 4 9a8 8 0 1 1 16 0Z"/><circle cx="12" cy="9" r="3"/></svg></span><div><label for="suggestionDistrict">District <span>*</span></label><select id="suggestionDistrict" name="district" required aria-describedby="suggestionDistrictError"><option value="">Select your district</option><option>Bengaluru Urban</option><option>Bengaluru Rural</option><option>Mysuru</option><option>Belagavi</option><option>Other district</option></select><span class="suggestion-error" id="suggestionDistrictError"></span></div></div>
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/></svg></span><div><label for="suggestionArea">Policy Area <span>*</span></label><select id="suggestionArea" name="category" required aria-describedby="suggestionAreaError"><option value="">Select policy area</option><option value="jobs">Jobs</option><option value="education">Education</option><option value="farmers">Farmers</option><option value="women">Women</option><option value="health">Health</option><option value="cities">Cities</option><option value="other">Other</option></select><span class="suggestion-error" id="suggestionAreaError"></span></div></div>
+<div class="suggestion-field"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 13 13 2h9v9L11 22 2 13Z"/><circle cx="17" cy="7" r="1"/></svg></span><div><label for="suggestionTitle">Suggestion Title <span>*</span></label><input id="suggestionTitle" name="title" placeholder="Enter a short title for your idea" minlength="5" maxlength="120" required aria-describedby="suggestionTitleError"><span class="suggestion-error" id="suggestionTitleError"></span></div></div>
+<div class="suggestion-field suggestion-full-width"><span class="suggestion-field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2h11l5 5v15H4ZM14 2v6h6M8 12h8M8 16h8"/></svg></span><div><label for="suggestionDescription">Your Suggestion <span>*</span></label><div class="suggestion-textarea-wrap"><textarea id="suggestionDescription" name="description" placeholder="Describe your policy idea, suggestion or concern in detail…" minlength="30" maxlength="1000" required aria-describedby="suggestionDescriptionError suggestionCharacterCount"></textarea><span id="suggestionCharacterCount">0 / 1000</span></div><span class="suggestion-error" id="suggestionDescriptionError"></span></div></div>
+</div>
+<div class="suggestion-consent"><label><input type="checkbox" id="suggestionConsent" name="consent" required aria-describedby="suggestionConsentError"><span>I agree to the <button class="suggestion-privacy-link" type="button" id="suggestionPrivacyOpen">Privacy Notice</button> and consent to the use of my information for policy review and communication. <b>*</b></span></label><span class="suggestion-error" id="suggestionConsentError"></span></div>
+<div class="suggestion-honeypot" aria-hidden="true"><label>Leave this field blank<input name="website" id="suggestionWebsite" tabindex="-1" autocomplete="off"></label></div>
+<div class="suggestion-security"><div class="suggestion-security-copy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4ZM7 12l4 4 6-7"/></svg><div><h3>Security Check</h3><p>Enter the code shown in the image.</p></div></div><div class="suggestion-code-tools"><canvas id="suggestionCaptchaCanvas" width="220" height="52" role="img" aria-label="Security code"></canvas><button type="button" id="suggestionCaptchaRefresh" aria-label="Get a new security code">⟳</button><button class="suggestion-code-read" type="button" id="suggestionCaptchaRead" aria-label="Read security code aloud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 5 0 5-5v16l-5-5H3V9ZM17 8q4 4 0 8M20 5q7 7 0 14"/></svg></button></div><div class="suggestion-code-entry"><label class="sr-only" for="suggestionCaptcha">Security code</label><input id="suggestionCaptcha" name="securityCode" placeholder="Enter the code" autocomplete="off" spellcheck="false" maxlength="6" required aria-describedby="suggestionCaptchaError"><span class="suggestion-error" id="suggestionCaptchaError"></span></div></div>
+<div class="suggestion-submit-row"><p><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v7M12 6v2"/></svg>All submissions are reviewed before consideration.</p><button class="suggestion-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 10 20-8-8 20-4-8-8-4ZM10 14 22 2"/></svg><span>Submit Suggestion</span><span aria-hidden="true">→</span></button></div>
+<p class="suggestion-form-status" id="suggestionFormStatus" role="status" aria-live="polite">Submissions are not open yet. This form is available to preview.</p>
+</form>
+<dialog class="suggestion-privacy-dialog" id="suggestionPrivacyDialog" aria-labelledby="suggestionPrivacyTitle"><button class="suggestion-privacy-close" type="button" aria-label="Close privacy notice">×</button><h2 id="suggestionPrivacyTitle">Privacy Notice</h2><p>The requested information is intended for reviewing your policy suggestion and communicating with you about it. Do not include sensitive personal information in your suggestion.</p><p>This preview does not transmit or store your form information. Submission will be enabled after the privacy terms, secure processing and moderation service are approved.</p><button class="suggestion-privacy-back" type="button">Back to form</button></dialog>
+</section></main><div data-site-footer></div>  <nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+
+</body></html>
+

@@ -1,0 +1,4 @@
+Karnataka state outline derived from polygon geometry in:
+https://github.com/inosaint/StatesOfIndia/blob/master/karnataka.geojson
+Repository describes the geometries as extracted from GADM.
+Only the outer silhouette is displayed; historic district polygons are not labelled.
