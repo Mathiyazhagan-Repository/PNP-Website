@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
     'use strict';
     const grid = document.querySelector('.events-grid');
     if (!grid) return;
@@ -30,25 +30,37 @@
         if (!markers) return;
         markers.replaceChildren();
         const available = calendar.hidden ? matching : monthCards;
-        const districts = [...new Set(available.map(card => card.dataset.district))];
-        districts.forEach(district => {
-            const city = cities[district]; if (!city) return;
-            const x = 19.3 + (city.lon - 74.057357788086) / (78.57746887207026 - 74.057357788086) * 104;
+        const cardsByDistrict = new Map();
+        for (const card of available) {
+            const district = card.dataset.district;
+            if (!Object.hasOwn(cities, district)) continue;
+            if (!cardsByDistrict.has(district)) cardsByDistrict.set(district, []);
+            cardsByDistrict.get(district).push(card);
+        }
+        for (const [district, localCards] of cardsByDistrict) {
+            const city = cities[district];
+            const centerX = 19.3 + (city.lon - 74.057357788086) / (78.57746887207026 - 74.057357788086) * 104;
             const y = 11.1 + (18.455120086669922 - city.lat) / (18.455120086669922 - 11.574480056762695) * 165.1;
-            const selected = active?.dataset.district === district;
-            const group = document.createElementNS(ns, 'g');
-            group.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
-            group.classList.add('events-city-marker');
-            if (selected) group.classList.add('is-active');
-            group.innerHTML = `<title>${district}${selected ? ', current event' : ''}</title><circle class="events-pin-halo" cy="-9" r="10" fill="none" stroke="${selected ? '#c50054' : '#2072aa'}" stroke-width="1"/><path d="M0 0C-3-4-6-7-6-11a6 6 0 1 1 12 0C6-7 3-4 0 0Z" fill="${selected ? '#c50054' : '#3986b9'}" stroke="#fff" stroke-width="1.2"/><circle cy="-11" r="2" fill="#fff"/>`;
-            markers.append(group);
-        });
+            localCards.forEach((card, index) => {
+                // Separate events around their shared approximate city centre.
+                const x = centerX + (index - (localCards.length - 1) / 2) * 16;
+                const selected = card === active;
+                const group = document.createElementNS(ns, 'g');
+                group.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+                group.classList.add('events-city-marker');
+                if (selected) group.classList.add('is-active');
+                group.innerHTML = `<title></title><circle class="events-pin-halo" cy="-9" r="10" fill="none" stroke="${selected ? '#c50054' : '#2072aa'}" stroke-width="1"/><path d="M0 0C-3-4-6-7-6-11a6 6 0 1 1 12 0C6-7 3-4 0 0Z" fill="${selected ? '#c50054' : '#3986b9'}" stroke="#fff" stroke-width="1.2"/><circle cy="-11" r="2" fill="#fff"/>`;
+                group.querySelector('title').textContent = card.querySelector('h2').textContent + (selected ? ', current event' : '');
+                markers.append(group);
+            });
+        }
         const district = active?.dataset.district;
-        mapCurrent.textContent = district ? `${district}, Karnataka` : 'No events this month';
+        const location = active?.dataset.mapLocation || (district && `${district}, Karnataka`);
+        mapCurrent.textContent = location || 'No events this month';
         map.classList.toggle('events-map-unavailable', !district);
         if (district && cities[district]) {
-            map.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(district+', Karnataka')}`;
-            map.setAttribute('aria-label', `View ${district}, Karnataka on Google Maps. ${districts.join(' and ')} event locations shown.`);
+            map.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+            map.setAttribute('aria-label', `View ${location} on Google Maps. Pins show approximate city locations for each event.`);
             map.removeAttribute('aria-disabled');
         } else {
             map.removeAttribute('href'); map.setAttribute('aria-disabled','true'); map.setAttribute('aria-label','No event location available');

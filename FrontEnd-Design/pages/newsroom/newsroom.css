@@ -61,3 +61,12 @@
 .press-feature-pagination button::after{content:'';display:block;width:6px;height:6px;border-radius:50%;background:#ffffff70;box-shadow:0 1px 2px #0004;transition:width .25s,background .25s}
 .press-feature-pagination button[aria-current=true]::after{width:16px;border-radius:6px;background:#ffd137}
 @media(prefers-reduced-motion:reduce){.press-feature .press-feature-photo,.press-feature-copy,.press-feature-pagination button::after{transition:none}}
+/* Compact RSS entry point beside the newsroom result count. */
+.news-directory-heading-actions{display:flex;align-items:center;gap:13px;flex-shrink:0}
+.news-directory-heading-actions>p{margin:0;font-size:10px;color:#6883a1;white-space:nowrap}
+.newsroom-rss-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:6px 11px;min-height:32px;border:1px solid #f2c299;border-radius:20px;background:#fff5e9;color:#ab510d;font:800 10px 'DM Sans',sans-serif;cursor:pointer}
+.newsroom-rss-button svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.newsroom-rss-button:hover,.newsroom-rss-button[aria-expanded=true]{background:#ffead1;border-color:#df9a5a}
+.newsroom-rss-notice{max-width:650px;padding:10px 13px;border:1px solid #ead5b7;border-radius:9px;background:#fff9f0;font-size:11px;line-height:1.5;color:#705530;margin:0 0 12px}
+.newsroom-rss-notice[hidden]{display:none}
+@media(max-width:480px){.news-directory-topline{flex-wrap:wrap;gap:10px}.news-directory-heading-actions{gap:10px}.newsroom-rss-button{min-height:35px}.news-directory-heading-actions>p{font-size:9px}}

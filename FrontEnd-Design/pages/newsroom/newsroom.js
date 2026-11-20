@@ -58,3 +58,16 @@
  render();
 })();
 
+/* RSS belongs with newsroom controls; article sharing stays on News Detail. */
+(() => {
+ 'use strict';
+ const button=document.getElementById('newsroomRssButton');
+ const notice=document.getElementById('newsroomRssNotice');
+ if(!button||!notice)return;
+ // Add a real RSS alternate link only after the backend feed is published.
+ const feed=document.querySelector('link[rel="alternate"][type="application/rss+xml"]');
+ button.addEventListener('click',()=>{
+  if(feed){const url=new URL(feed.href,location.href);if(['https:','http:'].includes(url.protocol)){location.assign(url.href);return;}}
+  const expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!expanded));notice.hidden=expanded;
+ });
+})();

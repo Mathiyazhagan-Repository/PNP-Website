@@ -34,7 +34,7 @@
       template.content.querySelectorAll('nav a').forEach(link => {
         const destination = new URL(link.href).pathname;
         const current = location.pathname;
-        const moduleFolders = ['newsroom', 'leadership', 'manifesto', 'About%20PNP', 'search'];
+        const moduleFolders = ['newsroom', 'leadership', 'manifesto', 'About%20PNP', 'search', 'events'];
         const active = destination === current || moduleFolders.some(folder => {
           const base = '/pages/' + folder + '/';
           return destination.includes(base) && current.includes(base);

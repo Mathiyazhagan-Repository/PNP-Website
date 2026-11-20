@@ -16,7 +16,7 @@
  function cover(title,dossier=false){return `<svg viewBox="0 0 90 95" aria-hidden="true"><rect width="90" height="95" fill="${dossier?'#dceff7':'#d6e8f5'}"/><g transform="translate(14 5) rotate(-7 30 40)"><rect x="3" y="2" width="60" height="82" rx="2" fill="#0b3765"/><rect x="7" y="0" width="60" height="82" rx="2" fill="#f9fcff" stroke="#a1b6c9"/><path d="M7 2h60v7H7Z" fill="#0d4f83"/><text x="37" y="31" text-anchor="middle" fill="#163865" font-family="Arial" font-size="16" font-weight="900">PNP</text><path d="M20 36q15-6 34 0" stroke="#fa9f17" stroke-width="2"/><path d="M20 39q15-6 34 0" stroke="#17a149" stroke-width="2"/><text x="37" y="51" text-anchor="middle" fill="#163865" font-family="Arial" font-size="6" font-weight="700">${title}</text><path d="M7 71q18-12 32-1t28-4v16H7Z" fill="${dossier?'#8bbd58':'#ffac2d'}"/><path d="M7 77q18-10 32-1t28-5v11H7Z" fill="#0d547c"/></g></svg>`;}
  resources.forEach(record=>{
   const card=document.createElement('article');card.className='media-resource-card';
-  const thumbnail=document.createElement('div');thumbnail.className='media-resource-thumbnail';
+  const thumbnail=document.createElement('div');thumbnail.className='media-resource-thumbnail';thumbnail.dataset.mediaCrop=record.thumbnail;
   if(record.thumbnail==='profile')thumbnail.innerHTML=cover('Party Profile');
   else if(record.thumbnail==='dossier')thumbnail.innerHTML=cover('Achievements Dossier',true);
   else if(record.thumbnail==='photographs'){const image=document.createElement('img');image.src='../../assets/hero/news-statement.png';image.alt='';image.loading='lazy';thumbnail.append(image);}
@@ -33,4 +33,35 @@
   if(canDownload){button.href=record.url;button.setAttribute('download','');}else{button.type='button';button.disabled=true;button.title='Approved file not yet available';button.setAttribute('aria-label',`${record.title}: download pending approval`);}
   footer.append(meta,button);card.append(thumbnail,content,footer);grid.append(card);
  });
+ // Exact crop rectangles from the supplied 1536 × 1024 source collage.
+ // Existing illustrations remain as fallback until media-kit-source.png is available.
+ const sourceImage=new Image();
+ sourceImage.onload=()=>{
+  const regions={camera:[0,0,520,450],kit:[530,0,536,450],profile:[1076,0,460,450],photographs:[0,458,520,324],people:[530,458,485,566],chart:[1024,458,512,566],dossier:[0,790,520,234]};
+  const scaleX=sourceImage.naturalWidth/1536,scaleY=sourceImage.naturalHeight/1024;
+  function crop(key){
+   const [x,y,w,h]=regions[key];const canvas=document.createElement('canvas');
+   canvas.width=Math.round(w*scaleX);canvas.height=Math.round(h*scaleY);
+   canvas.getContext('2d').drawImage(sourceImage,x*scaleX,y*scaleY,w*scaleX,h*scaleY,0,0,canvas.width,canvas.height);
+   return canvas.toDataURL('image/png');
+  }
+  grid.querySelectorAll('[data-media-crop]').forEach(thumbnail=>{
+   const key=thumbnail.dataset.mediaCrop;if(!regions[key])return;
+   const image=document.createElement('img');image.src=crop(key);image.alt='';image.className='media-kit-source-thumbnail';thumbnail.replaceChildren(image);
+  });
+
+ };
+ sourceImage.onerror=()=>{ /* Keep the existing local artwork; never show broken images. */ };
+ sourceImage.src='../../assets/hero/media-kit-source.png';
+ // Use a single supplied full-panel image, independently of the thumbnail collage.
+ const visual=document.querySelector('.media-kit-visual > img');
+ if(visual){
+  const fullPanel=new Image();
+  fullPanel.onload=()=>{visual.src=fullPanel.src;visual.alt='PNP media kit, press pass and camera';};
+  fullPanel.src='../../assets/hero/media-kit-visual-clean.png';
+ }
+
 })();
+
+
+

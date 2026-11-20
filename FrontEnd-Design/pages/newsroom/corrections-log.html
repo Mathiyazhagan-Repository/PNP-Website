@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#076434"><meta name="description" content="The public PNP corrections log records what was corrected, when and where."><title>Corrections &amp; Updates | PNP Newsroom</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="./corrections-log.css"><script src="../../shared-layout.js" defer></script><script src="../../script.js" defer></script><script src="./corrections-log.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a><div data-site-header></div><main id="main-content"><section class="public-corrections" id="publicCorrectionsLog" aria-labelledby="correctionsTitle">
+<div class="corrections-intro"><a class="corrections-brand" href="../../index.html"><strong>PNP<i></i></strong><span>Praja Nishchaya<br>Party</span></a><h2 id="correctionsTitle">Corrections <span>Log</span></h2><p>Keeping information accurate,<br>current and trustworthy.</p><img class="corrections-document-art" src="../../assets/hero/corrections-documents.png" alt="AI-generated illustration of documents with a green check mark" loading="lazy"><span class="corrections-art-credit">AI-generated illustration</span><svg class="corrections-corner-ribbon" viewBox="0 0 350 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C70 60 180 115 350 120H0Z" fill="#ff9c00"/><path d="M0 25C70 78 180 120 350 120H0Z" fill="white"/><path d="M0 50C70 95 180 125 350 120H0Z" fill="#008e36"/></svg></div>
+<div class="corrections-content"><ul class="corrections-trust"><li><svg viewBox="0 0 32 34" aria-hidden="true"><path d="m16 1 14 6v9c0 9-14 17-14 17S2 25 2 16V7l14-6Z" fill="currentColor" stroke="none"/><path d="m9 16 5 5 10-12" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Accuracy</strong><small>We correct errors promptly</small></span></li><li><svg viewBox="0 0 32 34" aria-hidden="true"><circle cx="16" cy="8" r="5" fill="currentColor"/><circle cx="5" cy="12" r="4" fill="currentColor"/><circle cx="27" cy="12" r="4" fill="currentColor"/><path d="M7 31v-6a9 9 0 0 1 18 0v6ZM0 28v-7a6 6 0 0 1 8-5M32 28v-7a6 6 0 0 0-8-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><span><strong>Transparency</strong><small>Changes are publicly recorded</small></span></li><li><svg viewBox="0 0 32 34" aria-hidden="true"><circle cx="16" cy="17" r="14" fill="currentColor"/><path d="m8 17 6 6 10-13" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Accountability</strong><small>We maintain a clear history</small></span></li></ul>
+<div class="corrections-table-surface"><div class="corrections-table-scroll"><table class="corrections-table"><caption class="sr-only">Public corrections: what changed, when, and where</caption><thead><tr><th scope="col">#</th><th scope="col">Correction Summary</th><th scope="col">Corrected On</th><th scope="col">Published At</th><th scope="col">Details</th></tr></thead><tbody id="publicCorrectionsBody"><tr><td colspan="5" class="corrections-empty">No public corrections have been recorded.</td></tr></tbody></table></div></div></div>
+</section></main><div data-site-footer></div>  <nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+
+</body></html>
+
