@@ -320,24 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 06. LANGUAGE SWITCHER
   // ====================================================
 
-  const languageSelect = get("languageSelect");
-
-  if (languageSelect) {
-    languageSelect.addEventListener("change", () => {
-      const language = languageSelect.value;
-
-      if (language === "en") {
-        showToast("English is the current prototype language.");
-      } else {
-        showToast(
-          "This language will be available after approved translations are integrated."
-        );
-
-        // Keep English selected until translations exist.
-        languageSelect.value = "en";
-      }
-    });
-  }
+  // Language selection is managed globally by languages.js.
 
   // ====================================================
   // 07. DISTRICT SELECTOR
