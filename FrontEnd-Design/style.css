@@ -4387,3 +4387,126 @@ p {
 .site-header .mobile-more .more-toggle-copy{max-width:none;align-items:flex-start;gap:4px}
 .site-header .mobile-more .more-current-section{max-width:none;color:#244a75;font-size:11px}
 @media(min-width:1251px){.site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy){padding:calc(7 * var(--hu)) calc(16 * var(--hu))}.site-header .desktop-nav:has(.more-toggle-copy){gap:calc(5 * var(--hu))}}
+/* Shared reference navbar: blue brand wing, compact white controls and sharp top corners. */
+.site-header { --nav-corner-radius:26px; margin:0; border:0; border-radius:0 0 26px 26px; background:#fff; box-shadow:0 4px 12px #102e5c20; }
+.site-header .top-bar { border-radius:0; }
+.site-header .header-inner { position:relative; display:grid; grid-template-columns:minmax(0,1fr) auto; min-height:76px; height:76px; width:100%; max-width:none; padding:0 15px 0 0; margin:0; gap:12px; background:linear-gradient(110deg,#fff,#f9fbff);border-radius:0 0 26px 26px; }
+.site-header .site-brand { position:relative;isolation:isolate;display:flex;align-items:center;gap:0;width:100%;height:76px;min-height:76px;min-width:0;padding:0 30px 0 15px;overflow:hidden;box-sizing:border-box;text-decoration:none;border-radius:0 0 0 26px; }
+.site-header .nav-brand-panel { position:absolute;inset:0;width:100%;height:100%;z-index:-1; }
+.site-header .nav-state-flag { position:relative;display:block;width:44px;height:53px;object-fit:contain;flex-shrink:0;margin-right:13px;z-index:2; }
+.site-header .brand-text { position:relative;z-index:3;padding:0 0 0 12px;margin:0;border-left:1px solid #d5e6ff99;min-width:0; }
+.site-header .brand-text strong { color:#fff;font-size:14px;letter-spacing:-.4px;line-height:1.2;font-weight:800;white-space:nowrap; }
+.site-header .brand-text small { display:block;color:#ecf3ff;font-size:11px;line-height:1.3;margin-top:4px;font-weight:500; }
+.site-header .nav-brand-landmark { position:absolute;right:26px;bottom:0;width:84px;height:57px;object-fit:contain;object-position:center bottom;filter:brightness(0) invert(1);opacity:.75;z-index:1; }
+.site-header .nav-corner-tricolour { position:absolute;right:0;bottom:0;width:64%;height:17px;border-radius:0 0 26px 0;pointer-events:none; }
+.site-header .desktop-nav > a.active,
+.site-header .desktop-nav .dropdown-toggle.active { background:linear-gradient(#076bd4,#00377d);color:#fff;box-shadow:0 3px 6px #093f8124; }
+.site-header .desktop-nav > a.active::after,
+.site-header .desktop-nav .dropdown-toggle.active::after { height:4px;bottom:-5px;left:9px;right:5px;background:#ffb300;border-radius:50%;transform:rotate(-3deg); }
+@media(min-width:1100px){
+ .site-header .header-inner { grid-template-columns:minmax(0,25fr) minmax(0,36fr) minmax(0,39fr);gap:10px;height:76px;min-height:76px;padding-right:12px; }
+ .site-header .site-brand { height:76px;min-height:76px;padding-left:13px;padding-right:31px; }
+ .site-header .brand-text strong {font-size:clamp(12px,1.08vw,16px)}
+ .site-header .brand-text small {font-size:clamp(9px,.83vw,12px)}
+ .site-header .nav-state-flag {width:43px;height:51px;margin-right:11px}
+ .site-header .nav-brand-landmark {width:clamp(65px,6.7vw,98px);height:55px;right:25px}
+ .site-header .desktop-nav {display:flex;width:100%;min-width:0;justify-content:space-between;align-items:center;padding:0 5px 0 0;margin:0;gap:clamp(6px,.7vw,12px);box-sizing:border-box}
+ .site-header .desktop-nav > a,
+ .site-header .desktop-nav .dropdown-toggle {font-size:clamp(10px,.91vw,13px);line-height:1.2;font-weight:750;letter-spacing:-.35px;padding:8px 0;white-space:nowrap}
+ .site-header .desktop-nav > a.active,
+ .site-header .desktop-nav .dropdown-toggle.active,
+ .site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy) {padding:8px 13px;border-radius:24px;min-height:32px;box-sizing:border-box}
+ .site-header .desktop-nav:has(.more-toggle-copy){gap:clamp(5px,.6vw,10px)}
+ .site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy){padding:5px 10px}
+ .site-header .more-current-section{font-size:8px;max-width:56px;line-height:1.1}
+ .site-header .more-toggle-copy{max-width:56px;gap:1px}
+ .site-header .header-actions {display:flex;align-items:center;justify-content:space-between;width:100%;min-width:0;padding:0 0 0 9px;margin:0;gap:clamp(6px,.65vw,11px);box-sizing:border-box;border-left:1px solid #c3d5ef}
+ .site-header .header-actions .search-toggle {width:32px;height:32px;min-height:32px;padding:7px;border:0;border-radius:50%;background:#e9efff;color:#102d77;flex-shrink:0;box-sizing:border-box}
+ .site-header .search-toggle .header-icon {width:20px;height:20px}
+ .site-header .header-actions .btn,
+ .site-header .header-actions .login-button {height:34px;min-height:34px;padding:0 clamp(8px,.85vw,13px);border-radius:15px;font-size:clamp(9px,.8vw,12px);font-weight:750;line-height:1;letter-spacing:-.3px;gap:5px;white-space:nowrap;box-sizing:border-box;flex-shrink:0}
+ .site-header .header-actions .header-icon {width:17px;height:17px;flex-shrink:0}
+ .site-header .header-actions .login-button {border:1px solid #759bdf;background:#fbfcff;color:#112b76}
+ .site-header .header-actions .btn-call {border:1px solid #dce8ff;background:linear-gradient(#d6e6ff,#bad3ff);color:#102e77;box-shadow:0 3px 6px #214c8a15}
+ .site-header .header-actions .btn-primary:not(.btn-call):not(.btn-donate) {background:linear-gradient(#f20066,#c90050);color:#fff;border:1px solid #ef397d;box-shadow:0 3px 6px #bd005125}
+ .site-header .header-actions .btn-donate {background:linear-gradient(#063a7b,#001f4c);color:#fff;border:1px solid #14437b;box-shadow:0 3px 6px #00275d25}
+ .site-header #menuToggle {display:none}
+}
+@media(min-width:1600px){.site-header .header-inner,.site-header .site-brand{height:84px;min-height:84px}.site-header .desktop-nav>a,.site-header .desktop-nav .dropdown-toggle{font-size:14px}.site-header .header-actions .btn,.site-header .header-actions .login-button{height:38px;min-height:38px;font-size:12px}.site-header .header-actions .search-toggle{width:36px;height:36px}}
+@media(max-width:1099px){
+ .site-header .header-inner{grid-template-columns:minmax(0,1fr) auto;padding-right:18px;height:72px;min-height:72px}
+ .site-header .site-brand{height:72px;min-height:72px;max-width:350px;padding-right:38px}
+ .site-header .desktop-nav,.site-header .header-actions{display:none}
+ .site-header #menuToggle{display:inline-flex;align-items:center;justify-content:center;width:37px;height:37px;margin:0;border:1px solid #d6e3f3;border-radius:50%;color:#153c73;background:#edf4fe;font-size:20px}
+ .site-header .nav-brand-landmark{right:26px;width:82px;height:51px}
+}
+@media(max-width:550px){
+ .site-header{margin:0;border-radius:0 0 22px 22px}
+ .site-header .header-inner{height:66px;min-height:66px;padding-right:12px;border-radius:0 0 22px 22px;gap:7px}
+ .site-header .site-brand{height:66px;min-height:66px;padding-left:9px;padding-right:26px;border-radius:0 0 0 22px;max-width:300px}
+ .site-header .nav-state-flag{width:34px;height:44px;margin-right:8px}
+ .site-header .brand-text{padding-left:8px}
+ .site-header .brand-text strong{font-size:12px;letter-spacing:-.45px;white-space:normal}
+ .site-header .brand-text small{font-size:9px;margin-top:3px}
+ .site-header .nav-brand-landmark{width:59px;height:43px;right:20px;opacity:.5}
+ .site-header .nav-corner-tricolour{height:13px;width:60%;border-radius:0 0 22px 0}
+ .site-header .top-bar{border-radius:0}
+}
+/* Preserve the supplied wide flag image without stretching or cropping it. */
+.site-header .nav-state-flag { width:52px; height:48px; object-fit:contain; object-position:center; }
+@media(min-width:1100px){.site-header .nav-state-flag{width:50px;height:48px;margin-right:10px}}
+@media(max-width:550px){.site-header .nav-state-flag{width:40px;height:38px;margin-right:8px}}
+/* Larger Karnataka flag within the shared brand panel. */
+.site-header .nav-state-flag { width:64px; height:58px; }
+@media(min-width:1100px){.site-header .nav-state-flag{width:64px;height:58px;margin-right:9px}}
+@media(max-width:550px){.site-header .nav-state-flag{width:48px;height:44px;margin-right:8px}}
+/* Increase the navbar flag further. */
+.site-header .nav-state-flag { width:78px; height:66px; }
+@media(min-width:1100px){.site-header .nav-state-flag{width:78px;height:66px;margin-right:8px}}
+@media(max-width:550px){.site-header .nav-state-flag{width:56px;height:50px;margin-right:7px}}
+/* More prominent flag within the existing navbar height. */
+.site-header .nav-state-flag { width:92px; height:70px; }
+@media(min-width:1100px){.site-header .nav-state-flag{width:92px;height:70px;margin-right:7px}}
+@media(max-width:550px){.site-header .nav-state-flag{width:64px;height:54px;margin-right:6px}}
+/* Make the flag more prominent while preserving its original proportions. */
+.site-header .nav-state-flag { width:108px; height:72px; }
+@media(min-width:1100px){.site-header .nav-state-flag{width:108px;height:72px;margin-right:5px}}
+@media(max-width:550px){.site-header .nav-state-flag{width:74px;height:58px;margin-right:5px}}
+/* Remove the decorative tricolour ribbons from both navbar corners. */
+.site-header .header-corner-ribbon,
+.site-header .nav-corner-tricolour { display:none; }
+.site-header .top-bar::before { display:none; }
+/* Match the utility bar to the blue navbar brand panel. */
+.site-header .top-bar { background:linear-gradient(135deg,#0644a7,#002b74); }
+/* Protect the complete party name from the gold divider and enlarged flag. */
+@media(min-width:1100px){
+ .site-header .header-inner{grid-template-columns:minmax(0,28fr) minmax(0,35fr) minmax(0,37fr)}
+ .site-header .site-brand{padding-right:44px}
+ .site-header .brand-text{flex:1;min-width:0;padding-left:10px}
+ .site-header .brand-text strong{font-size:clamp(12px,.98vw,14px);letter-spacing:-.3px}
+ .site-header .nav-brand-landmark{right:28px;width:72px;height:49px;opacity:.45}
+ .site-header .header-actions{gap:clamp(5px,.5vw,9px);padding-left:7px}
+ .site-header .header-actions .btn,.site-header .header-actions .login-button{padding-inline:clamp(7px,.7vw,11px)}
+}
+@media(min-width:1100px) and (max-width:1250px){
+ .site-header .brand-text strong{display:block;white-space:normal;font-size:12px;line-height:1.12}
+ .site-header .brand-text small{font-size:9px;margin-top:3px}
+}
+/* The curved navbar reveals the page hero colour, not a white corner patch. */
+.site-header{--header-corner-bg:#001a38;background:var(--header-corner-bg);border-radius:0}
+.site-header .header-inner{background:linear-gradient(110deg,#fff,#f9fbff);border-radius:0 0 26px 26px}
+.site-header .site-brand{background:var(--header-corner-bg);border-radius:0}
+.site-header .nav-brand-panel{border-radius:0 0 0 26px}
+@media(max-width:550px){.site-header .header-inner{border-radius:0 0 22px 22px}.site-header .site-brand{border-radius:0}.site-header .nav-brand-panel{border-radius:0 0 0 22px}.site-header .brand-text strong{display:block;white-space:normal;line-height:1.15}}
+
+/* Reveal the scrolling page behind the curved corners after leaving the hero top. */
+.site-header:not(.at-page-top){background:transparent}
+.site-header:not(.at-page-top) .site-brand{background:transparent}
+/* Let the actual hero artwork sit behind the navbar's curved lower corners. */
+.site-header,.site-header.at-page-top{background:transparent}
+.site-header .site-brand,.site-header.at-page-top .site-brand{background:transparent;border-radius:0 0 0 26px}
+body:has(.site-header) main{margin-top:-26px}
+@media(max-width:550px){
+ body:has(.site-header) main{margin-top:-22px}
+ .site-header .site-brand{border-radius:0 0 0 22px}
+}

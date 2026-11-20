@@ -21,5 +21,20 @@ const tabs=[...document.querySelectorAll('[data-policy-tab]')];
 function activate(tab,focus=false){tabs.forEach(item=>{const active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!active;});if(focus)tab.focus();}
 tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%tabs.length;if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();activate(tabs[next],true);}});});
 document.querySelector('.policy-details-cta').addEventListener('click',()=>activate(tabs[0]));
-Object.entries(issues).filter(([key])=>key!==slug).forEach(([key,item])=>{const link=document.createElement('a');link.href=`./policy-detail.html?issue=${key}`;link.textContent=item.title;document.getElementById('relatedPolicyIssues').append(link);});
+const relatedStyles={
+ jobs:{color:'#1769af',subtitle:'Employment & skills',icon:'M3 7h18v14H3ZM8 7V3h8v4M3 12h18M10 11v3h4v-3'},
+ education:{color:'#7152bd',subtitle:'Learning & opportunity',icon:'m2 8 10-5 10 5-10 5L2 8Zm4 3v7q6 5 12 0v-7M22 8v9'},
+ farmers:{color:'#278a43',subtitle:'Agriculture & livelihoods',icon:'M12 22V9M12 16C3 16 2 10 2 5c7 0 10 4 10 11ZM12 13C12 4 17 2 22 2c0 7-3 11-10 11Z'},
+ women:{color:'#c2185b',subtitle:'Participation & inclusion',icon:'M7 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM1 22v-3a6 6 0 0 1 12 0v3ZM15 14q7-1 8 5v3h-7'},
+ health:{color:'#d05052',subtitle:'Care & wellbeing',icon:'M12 21S0 14 2 7q3-7 10-1 7-6 10 1 2 7-10 14ZM12 7v9M8 11h8'},
+ cities:{color:'#00858f',subtitle:'Urban life & infrastructure',icon:'M2 22V8h6v14M8 22V2h8v20M16 22V10h6v12M5 12v1M5 16v1M11 6h2M11 10h2M11 14h2M19 14v2M1 22h22'}
+};
+Object.entries(issues).filter(([key])=>key!==slug).forEach(([key,item])=>{
+ const theme=relatedStyles[key];const link=document.createElement('a');link.href=`./policy-detail.html?issue=${key}`;link.className='related-policy-card';link.style.setProperty('--related-accent',theme.color);
+ const icon=document.createElement('span');icon.className='related-policy-icon';icon.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${theme.icon}"/></svg>`;
+ const copy=document.createElement('span');copy.className='related-policy-copy';const title=document.createElement('strong');title.textContent=item.title;const subtitle=document.createElement('small');subtitle.textContent=theme.subtitle;copy.append(title,subtitle);
+ const footer=document.createElement('span');footer.className='related-policy-action';footer.textContent='Explore policy';const arrow=document.createElement('span');arrow.textContent='→';arrow.setAttribute('aria-hidden','true');footer.append(arrow);
+ link.append(icon,copy,footer);document.getElementById('relatedPolicyIssues').append(link);
+});
 })();
+
