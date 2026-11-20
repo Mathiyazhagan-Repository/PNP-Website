@@ -4510,3 +4510,23 @@ body:has(.site-header) main{margin-top:-26px}
  body:has(.site-header) main{margin-top:-22px}
  .site-header .site-brand{border-radius:0 0 0 22px}
 }
+/* Slightly shorter shared navigation row. */
+.site-header .header-inner,.site-header .site-brand{height:70px;min-height:70px}
+.site-header .nav-state-flag{height:66px}
+@media(min-width:1600px){.site-header .header-inner,.site-header .site-brand{height:78px;min-height:78px}}
+@media(max-width:1099px){.site-header .header-inner,.site-header .site-brand{height:66px;min-height:66px}.site-header .nav-state-flag{height:62px}}
+@media(max-width:550px){.site-header .header-inner,.site-header .site-brand{height:60px;min-height:60px}.site-header .nav-state-flag{height:52px}.site-header .nav-brand-landmark{height:39px}}
+/* Further compact the shared navbar. */
+.site-header .header-inner,.site-header .site-brand{height:64px;min-height:64px}
+.site-header .nav-state-flag{height:60px}
+.site-header .nav-brand-landmark{height:43px}
+@media(min-width:1600px){.site-header .header-inner,.site-header .site-brand{height:72px;min-height:72px}}
+@media(max-width:1099px){.site-header .header-inner,.site-header .site-brand{height:60px;min-height:60px}.site-header .nav-state-flag{height:56px}}
+@media(max-width:550px){.site-header .header-inner,.site-header .site-brand{height:56px;min-height:56px}.site-header .nav-state-flag{height:48px}.site-header .nav-brand-landmark{height:36px}}
+/* Keep hero content clear of the shared navbar. */
+body:has(.site-header) main{margin-top:0}
+@media(max-width:550px){body:has(.site-header) main{margin-top:0}}
+/* Extend only the hero backdrop into the corner cutouts; content stays below the navbar. */
+body:has(.site-header) main{position:relative}
+body:has(.site-header) main::before{content:"";position:absolute;left:0;right:0;top:-26px;height:26px;pointer-events:none;background-color:var(--hero-corner-color,#001a38);background-image:var(--hero-corner-image,none);background-size:var(--hero-corner-size,cover);background-position:center top;background-repeat:no-repeat}
+@media(max-width:550px){body:has(.site-header) main::before{top:-22px;height:22px}}

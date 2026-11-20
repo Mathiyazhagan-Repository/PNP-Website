@@ -96,6 +96,17 @@
     const gradientColors = style.backgroundImage.match(/rgba?\([^)]*\)|#[\da-f]{3,8}/gi) || [];
     const color = !transparent(style.backgroundColor) ? style.backgroundColor : gradientColors.find(value => !transparent(value));
     header.style.setProperty('--header-corner-bg', color || getComputedStyle(document.body).backgroundColor || '#001a38');
+    const main = hero.closest('main');
+    const syncCornerArtwork = () => {
+      const artwork = hero.querySelector('.hero-slide.active') || hero;
+      const artworkStyle = getComputedStyle(artwork);
+      main.style.setProperty('--hero-corner-image', artworkStyle.backgroundImage);
+      main.style.setProperty('--hero-corner-color', color || '#001a38');
+      main.style.setProperty('--hero-corner-size', '100% ' + artwork.getBoundingClientRect().height + 'px');
+    };
+    syncCornerArtwork();
+    window.addEventListener('resize', syncCornerArtwork, { passive: true });
+    if (hero.querySelector('.hero-slide')) new MutationObserver(syncCornerArtwork).observe(hero, { subtree: true, attributes: true, attributeFilter: ['class'] });
     const updateCornerState = () => header.classList.toggle('at-page-top', window.scrollY <= 1);
     updateCornerState();
     window.addEventListener('scroll', updateCornerState, { passive: true });
