@@ -1,0 +1,164 @@
+.donor-hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: clamp(.65rem, 1.25vw, 1.15rem);
+    overflow: hidden;
+    padding: clamp(.75rem, 1.25vw, 1.3rem);
+    background: linear-gradient(145deg, #03265f, #084c9e 54%, #042760);
+    color: #fff;
+}
+
+.donor-hero::before {
+    position: absolute;
+    z-index: -1;
+    bottom: -2rem;
+    left: -3rem;
+    width: 50%;
+    height: 3.45rem;
+    border-top: .65rem solid #ffdd00;
+    border-radius: 60% 100% 0 0;
+    background: #e90066;
+    content: "";
+    transform: rotate(6deg);
+}
+
+.donor-story {
+    display: grid;
+    grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+    align-self: stretch;
+    padding-inline-start: clamp(.25rem, 2vw, 1.5rem);
+    align-items: center;
+    gap: clamp(.45rem, .75vw, .75rem);
+    min-width: 0;
+}
+.donor-back {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: 2rem;
+    padding: .3rem .75rem;
+    border: 1px solid #b8dcff80;
+    border-radius: 2rem;
+    background: #072657;
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 750;
+    text-decoration: none;
+}
+.donor-back::before {
+    width: .48rem;
+    height: .48rem;
+    border: solid currentColor;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+    content: "";
+}
+.donor-back:hover { background: #164681; }
+.donor-back:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.donor-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    width: fit-content;
+    margin: 1.15rem 0 .65rem;
+    font-size: clamp(.7rem, 1.15vw, .9rem);
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+.donor-eyebrow::before, .donor-eyebrow::after {
+    width: clamp(.75rem, 2vw, 1.75rem);
+    height: 1px;
+    background: #c9dfff;
+    content: "";
+}
+.donor-intro h1 {
+    margin: 0;
+    font-size: clamp(1.55rem, 2.85vw, 2.85rem);
+    font-weight: 850;
+    line-height: 1.04;
+    letter-spacing: -.045em;
+}
+.donor-intro h1 span {
+    display: block;
+    font-size: 1.23em;
+    color: #ffdf08;
+}
+.donor-intro p:last-child {
+    max-width: 25ch;
+    margin: .8rem 0 0;
+    font-size: clamp(.95rem, 1.45vw, 1.15rem);
+    line-height: 1.4;
+}
+
+.donor-collage { position: relative; width: 100%; min-height: clamp(17rem, 29vw, 27rem); align-self: stretch; container-type: size; transform: translateX(-4%); }
+.donor-collage figure {
+    position: absolute;
+    aspect-ratio: 1;
+    margin: 0;
+    overflow: hidden;
+    border: 3px solid #f4faff;
+    border-radius: 1rem;
+    background: #113875;
+    box-shadow: 0 .35rem .9rem #02204888;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.donor-collage figure:nth-child(1) { top: 23%; left: 50%; width: min(56%, 31cqh); z-index: 2; }
+.donor-collage figure:nth-child(2) { top: 51%; left: 25%; width: min(37%, 27cqh); }
+.donor-collage figure:nth-child(3) { top: 51%; left: 75%; width: min(37%, 27cqh); }
+.donor-collage figure:nth-child(4) { top: 80%; left: 50%; width: min(35%, 27cqh); }
+.donor-collage img {
+    position: absolute;
+    inset: -22%;
+    width: 144%;
+    max-width: none;
+    height: 144%;
+    object-fit: cover;
+    transform: rotate(-45deg);
+}
+.donor-collage figure:first-child img { object-position: 58% 24%; }
+
+.donor-card { min-width: 0; padding: clamp(.85rem, 2vw, 1.65rem); border: 1px solid #bed7f6; border-radius: 1.4rem; background: linear-gradient(120deg, #fbfcff, #eaf2fb); box-shadow: 0 .6rem 1.6rem #001d5766; color: #102554; }
+.donor-card header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem; }
+.donor-card h2 { display: flex; align-items: center; gap: .6rem; margin: 0; font-size: clamp(1.35rem, 2.3vw, 2rem); }
+.donor-card h2 svg { width: 1.7rem; height: 1.7rem; fill: none; stroke: #cc004e; stroke-width: 1.8; }
+.donor-badge { padding: .22rem .7rem; border-radius: 2rem; background: #d9f2da; font-size: .875rem; font-weight: 750; }
+.donor-summary { margin: .4rem 0 .7rem; font-weight: 750; }
+.donor-card form { display: grid; gap: .65rem; margin-top: .65rem; }
+.donor-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+.donor-field {
+    display: flex;
+    align-items: center;
+    gap: .58rem;
+    min-width: 0;
+    min-height: 2.65rem;
+    padding: .28rem .65rem;
+    border: 1px solid #bccde7;
+    border-radius: .55rem;
+    background: #f8faff;
+    font-size: .875rem;
+    font-weight: 750;
+}
+.donor-field-content { flex: 1; min-width: 0; }
+.donor-field-content input { display: block; width: 100%; min-height: 1.3rem; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 500; }
+.donor-field-label b, .donor-declaration b { color: #c50050; }
+.donor-field svg, .donor-badge svg { width: 1.23rem; height: 1.23rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.donor-badge { display: inline-flex; align-items: center; gap: .35rem; }
+.donor-badge svg { width: 1rem; height: 1rem; color: #2d7736; }
+.donor-declaration { display: flex; align-items: start; gap: .55rem; padding: .25rem .5rem; line-height: 1.35; }
+.donor-declaration input { margin-top: .2rem; accent-color: #cb0053; }
+.donor-privacy, #donor-status { margin: 0; font-size: .875rem; }
+.donor-card button { justify-self: center; width: min(94%, 33rem); min-height: 2.75rem; padding: .45rem .75rem; border: 0; border-radius: .7rem; background: linear-gradient(#ed0066, #b40049); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.donor-card [hidden], #donor-status:empty { display: none; }
+.donor-card :focus-visible { outline: 2px solid #1a70c4; outline-offset: 2px; }
+@media (max-width: 850px) {
+    .donor-hero { grid-template-columns: minmax(0, 1fr); }
+    .donor-collage { width: min(100%, 20rem); min-height: clamp(12rem, 42vw, 20rem); justify-self: end; }
+}
+@media (max-width: 440px) {
+    .donor-fields { grid-template-columns: 1fr; }
+    .donor-intro h1 { font-size: 1.65rem; }
+}

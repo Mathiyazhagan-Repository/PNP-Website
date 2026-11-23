@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063458">
+  <title>Invite Others | PNP Membership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./referral.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./membership-local.js" defer></script>
+  <script src="./referral.js" defer></script>
+</head>
+<body class="membership-referral-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="membership-referral" aria-labelledby="referralHeading">
+      <div class="referral-layout">
+        <a class="referral-brand" href="../../index.html" aria-label="PNP homepage"><span translate="no">PNP<svg viewBox="0 0 80 13" aria-hidden="true"><path d="M0 8Q20 1 40 6T80 2L77 8Q60 15 40 10T0 12Z" fill="#ffce00"/><path d="M0 4Q20 0 40 3T80 0L78 3Q60 9 40 7T0 8Z" fill="#f10e72"/></svg></span><strong>Praja Nishchaya<br>Party</strong></a>
+        <header class="referral-intro">
+          <svg class="referral-people" viewBox="0 0 68 46" aria-hidden="true"><circle cx="34" cy="10" r="9"/><circle cx="12" cy="16" r="7"/><circle cx="56" cy="16" r="7"/><path d="M20 46V34a14 14 0 0 1 28 0v12ZM0 44V33a12 12 0 0 1 18-10q-3 5-3 11v10ZM53 44V34q0-6-3-11a12 12 0 0 1 18 10v11Z"/></svg>
+          <h1 id="referralHeading"><span>Invite Others,</span><strong>Grow the<br>Movement!</strong></h1>
+        </header>
+        <div class="referral-panel" aria-labelledby="referralPanelHeading">
+          <h2 id="referralPanelHeading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10 18 4v16L4 14v-4ZM4 10H2v4h2M7 15l2 6h4l-3-5M21 8l2-1M21 16l2 1"/></svg>Your Referral Link</h2>
+          <div class="referral-link-control"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 13 4-4M8 16l-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" transform="translate(1 0) scale(.92)"/></svg><label class="sr-only" for="referralLink">Your referral link</label><input id="referralLink" type="url" readonly placeholder="Your referral link" autocomplete="off" translate="no"><button type="button" id="referralCopy" aria-label="Copy referral link" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="6" width="13" height="16" rx="2"/><path d="M16 6V2H3v16h4M10 10h7M10 14h7"/></svg></button></div>
+          <div class="referral-share-row"><strong>Share &amp; Invite</strong><nav class="referral-socials" aria-label="Share your referral link">
+            <a id="referralWhatsApp" class="referral-social whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M27 15.4a11.3 11.3 0 0 1-16.7 10L4 28l2.3-6.2A11.3 11.3 0 1 1 27 15.4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 8.4c-.8-.4-1.8.2-2.1 1.3-1 3.3 1.5 7.8 5 10.1 3.2 2.2 6.2 2.7 7.5.8.6-.9.3-2-.4-2.4l-3-1.5c-.6-.3-1 .1-1.6 1-.6.7-1 .5-2.6-.6s-2.6-2.2-2.7-3c-.1-.5 1.4-1.3 1.1-2Z"/></svg></a>
+            <a id="referralTelegram" class="referral-social telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m5 14 22-8-5 21-8-7-4 4 .7-8 12-7-15 9Z"/></svg></a>
+            <a id="referralFacebook" class="referral-social facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19 30V18h4l1-5h-5V9q0-2 3-2h3V2h-4q-8 0-8 7v4H9v5h4v12Z"/></svg></a>
+            <a id="referralX" class="referral-social x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 4h6l16 24h-6ZM26 4 6 28" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+            <button type="button" id="referralShare" class="referral-social share" aria-label="More sharing options" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="4" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="20" r="3"/><path d="m8 10 7-4M8 14l7 4"/></svg></button>
+          </nav></div>
+          <div class="referral-metrics" id="referralMetrics" hidden>
+            <div class="referral-metric"><svg class="referral-metric-people" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="6" r="3"/><circle cx="5" cy="9" r="2.5"/><circle cx="23" cy="9" r="2.5"/><path d="M8 25v-7a6 6 0 0 1 12 0v7ZM1 23v-6a4 4 0 0 1 5-4M27 23v-6a4 4 0 0 0-5-4"/></svg><div><strong id="referralPeopleCount">12</strong><span>People Referred</span></div></div>
+            <div class="referral-metric joined"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#1ea52f"/><path d="m8 15 5 5 10-11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong id="referralJoinedCount">8</strong><span>Successful Join</span></div></div>
+          </div>
+          <p id="referralPanelStatus" class="referral-panel-status" role="status" aria-live="polite">Loading your referral link…</p>
+        </div>
+      </div>
+      <div class="referral-bottom"><p id="referralFeedback" role="status" aria-live="polite"></p><a href="./membership-card.html">← My Membership Card</a></div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+</body>
+</html>

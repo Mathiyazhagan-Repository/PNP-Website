@@ -1,0 +1,46 @@
+/* Module 07: sunset photograph and navy membership confirmation banner. */
+.membership-confirmation{position:relative;isolation:isolate;overflow:hidden;background:#063458 url('../../assets/hero/membership-success-background.png') center/100% 100% no-repeat;min-height:clamp(320px,29vw,510px);padding:19px 5% 24px;color:#fff;display:flex;align-items:center}
+.confirmation-content{width:53%;margin-left:auto;text-align:center;position:relative;z-index:1}
+.confirmation-brand{display:flex;align-items:center;justify-content:center;gap:16px;width:max-content;max-width:100%;margin:0 auto 13px;color:white;text-decoration:none}
+.confirmation-wordmark{position:relative;display:inline-block;font:900 italic 34px/.95 Manrope,sans-serif;letter-spacing:-1.7px;padding:0 2px 8px}
+.confirmation-wordmark svg{position:absolute;bottom:0;left:0;width:100%;height:9px}
+.confirmation-brand>span:last-child{border-left:1px solid #9dc7df99;padding-left:16px;font-size:12px;font-weight:700;text-align:left}
+.confirmation-preview-label{display:table;margin:0 auto 12px;border:1px solid #8ad5ec70;background:#133b5b99;padding:4px 10px;border-radius:30px;font-size:10px;font-weight:600;color:#d3f4ff;line-height:1.4}
+.confirmation-preview-label[hidden]{display:none}
+.confirmation-title-row{display:flex;align-items:center;justify-content:center;gap:14px}
+.confirmation-seal{width:86px;height:86px;flex-shrink:0;filter:drop-shadow(0 0 14px #a2e5ff66)}
+.confirmation-title-row h1{color:#fff;margin:0;line-height:1.08;letter-spacing:-.5px;font-family:Manrope,sans-serif}
+.confirmation-title-row h1>span{display:block;font-weight:800;font-size:clamp(21px,2.2vw,35px)}
+.confirmation-title-row h1>strong{display:block;color:#ffde00;font-size:clamp(29px,3.15vw,49px);font-weight:900;margin-top:3px}
+.confirmation-title-row p{font-size:clamp(11px,1.1vw,16px);line-height:1.45;margin:7px 0 0;color:#fff}
+.confirmation-number{display:flex;align-items:center;justify-content:center;gap:19px;max-width:530px;width:88%;margin:19px auto 13px;background:linear-gradient(#fff,#eef4fc);border:1px solid #c6d6e8;border-radius:12px;box-shadow:0 4px 14px #00183130;padding:10px 15px;color:#183963;line-height:1.3}
+.confirmation-number[hidden]{display:none}
+.confirmation-number>span{font-size:13px;font-weight:600}
+.confirmation-number>strong{border-left:1px solid #7b96ba;padding-left:19px;color:#ba1151;font-family:Manrope,sans-serif;font-weight:900;font-size:clamp(19px,2vw,29px);white-space:nowrap}
+.confirmation-status{font-size:11px;line-height:1.5;color:#ddf1ff;max-width:490px;margin:7px auto 10px;min-height:16px}
+.confirmation-status:empty{display:none}
+.confirmation-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:88%;max-width:510px;margin:13px auto 0}
+.confirmation-actions button{display:flex;align-items:center;flex-direction:column;justify-content:center;gap:7px;min-height:57px;padding:2px 9px;border:0;background:transparent;color:white;font:500 12px/1.35 'DM Sans',sans-serif;cursor:pointer}
+.confirmation-actions button+button{border-left:1px solid #9bc7df99}
+.confirmation-actions button:hover:not(:disabled){color:#ffe641}
+.confirmation-actions button:disabled{opacity:.5;cursor:not-allowed}
+.confirmation-actions svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.confirmation-next{display:inline-block;margin-top:13px;padding:5px 10px;color:#caf0ff;font-size:11px;text-underline-offset:3px}
+.confirmation-next[hidden]{display:none}
+.membership-confirmation :focus-visible{outline:3px solid #ffdf36;outline-offset:5px;border-radius:5px}
+.confirmation-card-dialog{width:min(490px,calc(100% - 28px));max-height:85dvh;overflow:auto;padding:25px;border:1px solid #b7d4e7;border-radius:20px;box-shadow:0 20px 70px #001a3c66;color:#17395c;background:#f3f8ff}
+.confirmation-card-dialog::backdrop{background:#01172fc9;backdrop-filter:blur(4px)}
+.confirmation-card-dialog h2{font-size:20px;padding-right:30px;margin:4px 0 20px;color:#183b67}
+.confirmation-preview-card{background:linear-gradient(145deg,#0d457b,#061d43 80%);border:1px solid #4a80b2;box-shadow:0 6px 15px #163d6825;color:white;padding:22px;border-radius:17px;position:relative;overflow:hidden}
+.confirmation-preview-card::after{content:"";position:absolute;bottom:-24px;right:-20px;left:0;height:30px;border-top:6px solid #ffcb00;background:#c2185b;transform:rotate(-4deg);pointer-events:none}
+.preview-card-label{display:block;color:#d5ecff;font-size:9px;letter-spacing:.5px;margin-bottom:15px}
+.preview-card-party{font-size:37px;font-style:italic;font-family:Manrope,sans-serif;line-height:1}
+.confirmation-preview-card p{font-size:12px;margin:7px 0;line-height:1.45;color:#eef7ff}
+.confirmation-preview-card hr{border:0;border-top:1px solid #cbeaff55;margin:16px 0}
+.confirmation-preview-card h3{font-size:22px;color:white;margin:0 0 12px}
+.preview-card-number{font-size:24px;color:#ffda26;font-family:Manrope,sans-serif}
+#confirmationDialogDownload{display:block;width:100%;padding:12px;margin-top:18px;border:0;border-radius:10px;background:#bd1459;color:#fff;font:700 14px/1.4 'DM Sans',sans-serif;cursor:pointer}
+@media(min-width:1600px){.confirmation-brand{margin-bottom:19px}.confirmation-wordmark{font-size:43px}.confirmation-brand>span:last-child{font-size:16px}.confirmation-seal{width:108px;height:108px}.confirmation-number{padding:13px 20px;margin-top:24px}.confirmation-number>span{font-size:16px}.confirmation-actions{margin-top:19px}.confirmation-actions button{font-size:15px;min-height:65px}.confirmation-actions svg{width:30px;height:30px}.confirmation-status{font-size:13px}}
+@media(max-width:1000px){.membership-confirmation{min-height:340px;padding:22px 3%}.confirmation-content{width:57%}.confirmation-title-row{gap:9px}.confirmation-seal{width:65px;height:65px}.confirmation-title-row h1>span{font-size:22px}.confirmation-title-row h1>strong{font-size:30px}.confirmation-number{width:96%;gap:12px;padding-inline:10px}.confirmation-number>strong{padding-left:12px;font-size:22px}.confirmation-number>span{font-size:11px}.confirmation-actions{width:96%}}
+@media(max-width:700px){.membership-confirmation{min-height:510px;align-items:flex-end;padding:160px 5% 25px;background-size:auto 100%;background-position:20% top}.membership-confirmation::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent,#043254b8 27%,#043254f5 52%)}.confirmation-content{width:100%;margin:0 auto;max-width:490px}.confirmation-brand{margin-bottom:13px}.confirmation-title-row{gap:12px}.confirmation-seal{width:72px;height:72px}.confirmation-title-row h1>span{font-size:24px}.confirmation-title-row h1>strong{font-size:32px}.confirmation-title-row p{font-size:12px}.confirmation-number{width:100%;margin-top:18px}.confirmation-actions{width:100%}.confirmation-status{font-size:11px}.confirmation-number>span{font-size:12px}.confirmation-actions button{min-height:62px;font-size:12px}.confirmation-next{min-height:35px}}
+@media(max-width:390px){.confirmation-title-row{gap:8px}.confirmation-seal{width:58px;height:58px}.confirmation-title-row h1>span{font-size:22px}.confirmation-title-row h1>strong{font-size:29px}.confirmation-number{gap:10px}.confirmation-number>strong{font-size:20px;padding-left:10px}.confirmation-number>span{font-size:11px}.confirmation-brand>span:last-child{font-size:11px}}

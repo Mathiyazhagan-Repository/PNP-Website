@@ -1,0 +1,97 @@
+.register-hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+    gap: .75rem;
+    overflow: hidden;
+    padding: clamp(.5rem, .8vw, .85rem) clamp(.75rem, 1.65vw, 1.6rem) .7rem;
+    background: radial-gradient(ellipse at 45% 80%, #c5e7fd, #edf8ff 73%);
+    color: #102451;
+}
+.register-hero::after { position: absolute; z-index: -1; inset: auto -5% -.8rem; height: 1.65rem; border-top: .45rem solid #ffcf09; border-radius: 50%; background: #e30055; content: ""; }
+.register-story { display: grid; grid-template-columns: minmax(0, .71fr) minmax(0, 1.09fr); align-items: center; gap: .35rem; min-width: 0; background: url("../../assets/hero/navbar-vidhana.png") left bottom / 62% auto no-repeat; }
+.register-intro { align-self: start; padding: .55rem 0 0 clamp(.3rem, 2vw, 1.3rem); }
+.register-intro p { margin: .75rem 0 0; font-size: clamp(1.15rem, 2.8vw, 3rem); font-weight: 850; line-height: 1.03; letter-spacing: -.045em; }
+.register-intro p span { color: #a50038; }
+.register-intro p::after { display: block; width: 64%; height: .3rem; margin-top: .55rem; border-radius: 65%; background: #ffba00; content: ""; transform: rotate(-7deg); }
+.register-collage { position: relative; align-self: center; justify-self: center; width: min(100%, 22rem); aspect-ratio: 1.06; }
+.register-collage::before, .register-collage::after { position: absolute; width: 9%; aspect-ratio: 1; border-radius: .3rem; background: #ffc800; content: ""; transform: rotate(45deg); }
+.register-collage::before { left: 12%; top: 10%; }
+.register-collage::after { right: 16%; top: 6%; }
+.register-collage > div { position: absolute; width: 36%; aspect-ratio: 1; overflow: hidden; border: 3px solid #fff; border-radius: 13%; box-shadow: 0 .2rem .6rem #1e4d6f38; transform: translate(-50%, -50%) rotate(45deg); }
+.register-collage > div:nth-child(1) { top: 23%; left: 50%; }
+.register-collage > div:nth-child(2) { top: 51%; left: 26%; width: 37%; }
+.register-collage > div:nth-child(3) { top: 51%; left: 74%; width: 37%; }
+.register-collage > div:nth-child(4) { top: 78%; left: 50%; }
+.register-collage span { position: absolute; inset: -23%; background-image: url("../../assets/hero/volunteer-registration-collage.png"); background-size: 200% 200%; transform: rotate(-45deg); }
+.register-collage > div:nth-child(2) span { background-position: top right; }
+.register-collage > div:nth-child(3) span { background-position: bottom left; }
+.register-collage > div:nth-child(4) span { background-position: bottom right; }
+.register-card { align-self: center; min-width: 0; padding: clamp(.5rem, .72vw, .8rem) clamp(.75rem, 1.5vw, 1.45rem); border: 1px solid #d7e8f6; border-radius: 1.3rem; background: linear-gradient(120deg, #fcfdff, #edf6fc); box-shadow: 0 .4rem .8rem #173b6b24; }
+.register-card h1 { display: flex; align-items: center; gap: .55rem; margin: 0; font-size: clamp(1.25rem, 2.3vw, 2.15rem); line-height: 1.1; letter-spacing: -.035em; }
+.register-card h1 svg { width: 1.2em; height: 1.2em; fill: none; stroke: #b30040; stroke-width: 1.8; stroke-linecap: round; }
+.register-steps { display: grid; grid-template-columns: .95fr 1.3fr .5fr; gap: .35rem; margin: .4rem 0 .5rem; padding: 0; list-style: none; }
+.register-steps li { display: flex; align-items: center; gap: .3rem; padding-bottom: .22rem; border-bottom: 2px solid #dbe3ec; font-size: .75rem; font-weight: 800; }
+.register-steps span { display: grid; place-items: center; width: 1.35rem; aspect-ratio: 1; flex: none; border-radius: 50%; background: #62718b; color: #fff; }
+.register-steps [aria-current] { border-color: #b30040; }
+.register-steps [aria-current] span { background: #b30040; }
+#register-form { display: grid; gap: .28rem; }
+.register-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .48rem; }
+.register-fields label, .register-language, .register-options legend { font-size: .82rem; font-weight: 800; }
+.register-card b { color: #b30040; }
+.register-fields input, .register-fields select, .register-language select { display: block; width: 100%; min-height: 2.05rem; padding: .25rem .45rem; border: 1px solid #bccfe6; border-radius: .45rem; background: #fff; color: inherit; font: inherit; font-weight: 500; }
+.register-phone { display: flex; align-items: center; border: 1px solid #bccfe6; border-radius: .45rem; background: #fff; }
+.register-phone > span { padding: 0 .32rem; border-right: 1px solid #d5e1ee; }
+.register-phone input { min-width: 0; border: 0; }
+.register-options { display: grid; min-width: 0; margin: 0; padding: 0; border: 0; }
+.register-options legend { margin-bottom: .12rem; padding: 0; }
+.register-options legend small { font-weight: 500; }
+.register-options > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .2rem; }
+.register-options label, .register-consent { display: flex; align-items: center; gap: .3rem; font-size: .8rem; line-height: 1.2; }
+.register-options label { padding: .22rem; border-radius: .35rem; background: #e8f1fc; }
+.register-card input[type="checkbox"], .register-card input[type="radio"] { flex: none; accent-color: #b0003d; }
+.register-language { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
+.register-language select { width: auto; min-width: 9rem; }
+.register-privacy { font-size: .8rem; }
+.register-privacy summary { cursor: pointer; text-decoration: underline; }
+.register-privacy p { margin: .28rem 0 0; }
+.register-primary { justify-self: center; min-height: 2.35rem; padding: .45rem 1.1rem; border: 0; border-radius: 2rem; background: linear-gradient(#d50051, #91002e); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.register-card [hidden] { display: none !important; }
+.register-card :focus-visible { outline: 2px solid #146bb7; outline-offset: 2px; }
+.register-review h2 { margin: .65rem 0; }
+.register-review dl > div { display: flex; gap: .6rem; padding: .32rem 0; border-bottom: 1px solid #d4e1ef; }
+.register-review dt { font-weight: 800; }
+.register-review dd { margin: 0; }
+.register-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+#register-edit { border: 1px solid #a9c1e4; border-radius: 2rem; background: #f7fbff; color: inherit; padding: .35rem .75rem; cursor: pointer; }
+@media (max-width: 900px) {
+    .register-hero { grid-template-columns: minmax(0, 1fr); }
+    .register-story { grid-template-columns: 1fr minmax(0, 22rem); background-size: 48% auto; }
+}
+@media (max-width: 530px) {
+    .register-fields { grid-template-columns: 1fr; }
+    .register-story { grid-template-columns: .8fr 1fr; min-height: 11rem; }
+    .register-options > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1100px) {
+    .register-options { display: block; }
+    .register-options legend { float: left; width: 28%; margin: .22rem 0 0; padding-right: .35rem; }
+    .register-options > div { margin-inline-start: 28%; }
+}
+
+.register-otp { display: grid; gap: .55rem; width: min(100%, 26rem); margin: .45rem auto 0; }
+.register-otp h2 { display: flex; align-items: center; gap: .45rem; margin: 0; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.1; }
+.register-otp h2 svg { width: 1.5em; height: 1.5em; fill: none; stroke: #c20043; stroke-width: 1.8; stroke-linecap: round; }
+.register-otp-intro { margin: 0; font-size: .9rem; }
+.register-code { display: grid; grid-template-columns: repeat(6, minmax(0, 2.65rem)); gap: clamp(.25rem, 1vw, .6rem); }
+.register-code input { width: 100%; aspect-ratio: 1.05; padding: 0; border: 1px solid #99aac5; border-radius: .45rem; background: #fff; color: #102451; font: inherit; font-size: 1.2rem; font-weight: 750; text-align: center; box-shadow: 0 2px 4px #153b6919; }
+.register-code input:focus { border-color: #146bb7; }
+.register-otp .register-primary { width: min(100%, 19rem); }
+.register-otp-footer { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .25rem; font-size: .8rem; }
+#register-resend { padding: 0; border: 0; background: transparent; color: #0954a8; font: inherit; font-weight: 750; text-decoration: underline; cursor: pointer; }
+#register-resend:disabled { color: #405574; cursor: default; }
+#register-otp-status { margin: 0; color: #a00036; font-size: .85rem; text-align: center; }
+#register-otp-status:empty { display: none; }
+.register-opportunity { margin: .35rem 0; padding: .35rem .55rem; border-radius: .45rem; background: #e1effc; font-size: .85rem; font-weight: 750; }

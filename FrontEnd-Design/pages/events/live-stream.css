@@ -1,1 +1,143 @@
-﻿
+.live-layout {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: .7fr 1.48fr 1.08fr;
+    align-items: start;
+    gap: clamp(1rem, 2.2vw, 2rem);
+    overflow: hidden;
+    padding: clamp(1rem, 3.5vw, 3rem) clamp(1rem, 3.8vw, 3.5rem);
+    background: radial-gradient(ellipse at 20% 0%, #f3e7f6, transparent 45%), #edf2fb;
+    color: #102451;
+}
+
+.live-layout::before {
+    position: absolute;
+    z-index: -1;
+    inset: -35% 65% -8% -17%;
+    border: 2px solid #fff9;
+    border-radius: 48%;
+    background: #fff6;
+    box-shadow: 0 1.5rem 3rem #28467b16;
+    content: "";
+    transform: rotate(24deg);
+}
+
+.live-icons { position: absolute; width: 0; height: 0; }
+.live-layout svg:not(.live-icons) {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    flex: none;
+}
+
+.live-intro { align-self: center; }
+.live-intro p { max-width: 26ch; margin: 0; line-height: 1.3; font-size: clamp(1rem, 1.55vw, 1.25rem); }
+.live-intro .live-eyebrow { margin-bottom: .8rem; font-size: .9rem; font-weight: 800; letter-spacing: .28em; text-transform: uppercase; }
+.live-intro h1 { margin: 0; font-size: clamp(2.55rem, 4.25vw, 4.25rem); line-height: .96; letter-spacing: -.045em; font-weight: 850; }
+.live-intro h1 span { color: #e00059; }
+.live-intro h1::after { display: block; width: 3.8rem; height: .56rem; margin: .85rem 0; border-radius: 1rem; background: #f5c205; content: ""; }
+
+.live-player {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 3px solid #f8fbff;
+    border-radius: 1.12rem;
+    background: #081831;
+    box-shadow: 0 .45rem 1.15rem #203c712b;
+    color: #fff;
+}
+
+.live-player img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+.live-player:fullscreen img { object-fit: contain; }
+.live-player button { display: grid; place-items: center; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.live-player .live-play { position: absolute; inset: 50% auto auto 50%; width: 3rem; aspect-ratio: 1; border-radius: 50%; background: #0a183b80; transform: translate(-50%, -50%); }
+.live-badge {
+    position: absolute;
+    inset: .85rem auto auto .85rem;
+    padding: .3rem .65rem;
+    border-radius: .48rem;
+    background: #ce0019;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.live-badge span, .live-preview-label::before { display: inline-block; width: .55rem; height: .55rem; margin-right: .35rem; border-radius: 50%; background: currentColor; content: ""; }
+.live-controls { position: absolute; inset: auto 0 0; display: flex; align-items: center; gap: .65rem; padding: .6rem .8rem; background: linear-gradient(transparent, #000e); }
+.live-controls button { padding: .25rem; }
+.live-preview-label { font-size: .85rem; font-weight: 750; }
+.live-preview-label::before { color: #ef2642; }
+.live-track { flex: 1; height: 3px; border-radius: 1rem; background: #fffa; }
+
+.live-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin-top: .7rem; }
+.live-actions button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .45rem;
+    padding: .6rem clamp(.65rem, 1vw, 1.1rem);
+    border: 1px solid #e7edf7;
+    border-radius: 2rem;
+    background: #fff;
+    box-shadow: 0 .35rem .9rem #2c4c8617;
+    color: #102451;
+    font: inherit;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.live-actions button[aria-pressed="true"] { background: #fce9f2; color: #a30048; }
+.live-status {
+    margin: .75rem 0 0;
+    padding: .65rem .8rem;
+    border-left: 3px solid #c70051;
+    border-radius: .45rem;
+    background: #fff;
+    color: #102451;
+    font-size: .9rem;
+}
+.live-status:empty { display: none; }
+.live-share-fallback input { width: 100%; }
+
+.live-chat {
+    min-width: 0;
+    padding: 1.15rem;
+    border: 1px solid #d8e4f4;
+    border-radius: 1.3rem;
+    background: #fbfcffcc;
+    box-shadow: 0 .6rem 1.2rem #19396e24;
+}
+
+.live-chat header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding-bottom: .7rem; border-bottom: 1px solid #dce5f2; }
+.live-chat header span { font-size: .875rem; font-weight: 650; }
+.live-chat h2 { display: flex; align-items: center; gap: .55rem; margin: 0; font-size: 1.2rem; }
+.live-chat h2 svg { color: #dd005c; }
+.live-messages { list-style: none; max-height: 12rem; overflow: auto; margin: .35rem 0 .85rem; padding: 0; }
+.live-messages li { display: flex; align-items: center; gap: .6rem; padding: .35rem 0; }
+.live-messages li p { flex: 1; margin: 0; padding: .4rem 0; border-bottom: 1px solid #dce5f2; font-size: .925rem; overflow-wrap: anywhere; }
+.live-avatar { display: grid; place-items: center; flex: 0 0 2rem; height: 2rem; border-radius: 50%; font-weight: 750; background: #7833bf; color: white; font-size: .8rem; }
+.live-messages li:nth-child(4n+2) .live-avatar { background: #cc1473; }
+.live-messages li:nth-child(4n+3) .live-avatar { background: #ab4d00; }
+.live-messages li:nth-child(4n+4) .live-avatar { background: #0677b8; }
+
+.live-chat-form { display: flex; gap: .3rem; padding: .22rem; border: 1px solid #bfcfe6; border-radius: .85rem; background: #edf3fc; }
+.live-chat-form input { flex: 1; min-width: 0; padding: .4rem .6rem; border: 0; border-radius: .6rem; background: transparent; color: inherit; font: inherit; }
+.live-chat-form button { display: grid; place-items: center; width: 2.4rem; aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: #d90059; color: white; cursor: pointer; }
+.live-layout :is(button, input):focus-visible { outline: 2px solid #2358ac; outline-offset: 2px; }
+
+@media (max-width: 1000px) {
+    .live-layout { grid-template-columns: .58fr 1.42fr; }
+    .live-chat { grid-column: 2; }
+}
+
+@media (max-width: 620px) {
+    .live-layout { grid-template-columns: minmax(0, 1fr); }
+    .live-chat { grid-column: auto; }
+    .live-intro h1 br { display: none; }
+    .live-intro h1 span { display: inline-block; }
+}

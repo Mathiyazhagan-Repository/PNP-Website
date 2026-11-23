@@ -1,15 +1,78 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Event Gallery | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="event-gallery.css">
+    <link rel="stylesheet" href="events-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
     <script src="event-gallery.js" defer></script>
 </head>
 <body>
-    <main>
-        <h1>Event Gallery</h1>
+    <div data-site-header></div>
+    <main id="main-content">
+        <section class="gallery-banner" aria-labelledby="gallery-title">
+            <svg class="gallery-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <symbol id="gallery-camera" viewBox="0 0 24 24"><path d="M3 6h4l2-3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13.5" r="4"/></symbol>
+                <symbol id="gallery-play" viewBox="0 0 24 24"><rect x="1" y="3" width="22" height="18" rx="5"/><path d="m10 8 6 4-6 4Z" fill="currentColor" stroke="none"/></symbol>
+            </svg>
+            <header class="gallery-intro">
+                <a class="events-back-button" href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6M8 12h12"/></svg>Back to Events</a>
+                <span class="gallery-kicker">Gallery</span>
+                <h1 id="gallery-title">Event <span>Gallery</span></h1>
+                <p>Real moments. Real people. Real impact.</p>
+                <div class="gallery-switch" role="group" aria-label="Gallery media">
+                    <button type="button" data-gallery-view="photos" aria-pressed="true"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Photos</button>
+                    <button type="button" data-gallery-view="videos" aria-pressed="false"><svg aria-hidden="true"><use href="#gallery-play"/></svg> Videos</button>
+                </div>
+                <div class="gallery-counts">
+                    <div><svg aria-hidden="true"><use href="#gallery-camera"/></svg><span><strong>5</strong> Photos</span></div>
+                    <div><svg aria-hidden="true"><use href="#gallery-play"/></svg><span><strong>1</strong> Video preview</span></div>
+                </div>
+            </header>
+            <div class="gallery-media">
+                <div class="gallery-grid" id="gallery-grid" data-view="photos">
+                    <button class="gallery-tile gallery-feature" type="button">
+                        <img src="../../assets/hero/story-community.png" alt="An outdoor community gathering">
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Event Photos</span>
+                    </button>
+                    <button class="gallery-tile gallery-video" type="button">
+                        <img src="../../assets/hero/event-dialogue-preview.png" alt="">
+                        <span class="gallery-date"><strong>25</strong> Nov</span>
+                        <span class="gallery-play-screen" aria-hidden="true">&#9654;</span>
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-play"/></svg> Event Video Preview</span>
+                    </button>
+                    <button class="gallery-tile" type="button">
+                        <img src="../../assets/hero/story-volunteer.png" alt="A community volunteer">
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Community</span>
+                    </button>
+                    <button class="gallery-tile" type="button">
+                        <img src="../../assets/hero/event-dialogue-preview.png" alt="A public discussion in Bengaluru">
+                        <span class="gallery-date"><strong>25</strong> Nov</span>
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Discussion</span>
+                    </button>
+                    <button class="gallery-tile" type="button">
+                        <img src="../../assets/hero/news-public.png" alt="A public event">
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Public Events</span>
+                    </button>
+                    <button class="gallery-tile gallery-extra" type="button" hidden>
+                        <img src="../../assets/hero/news-programme.png" alt="A PNP programme">
+                        <span class="gallery-caption"><svg aria-hidden="true"><use href="#gallery-camera"/></svg> Programme</span>
+                    </button>
+                </div>
+                <button type="button" class="gallery-more" aria-expanded="false" aria-controls="gallery-grid">View More <span aria-hidden="true">&rarr;</span></button>
+            </div>
+        </section>
+        <dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title">
+            <form method="dialog"><button>Close</button></form>
+            <h2 id="gallery-dialog-title"></h2>
+            <img alt="">
+            <p hidden>Video preview. Playback will be available when an event recording is added.</p>
+        </dialog>
     </main>
+    <div data-site-footer></div>
 </body>
 </html>

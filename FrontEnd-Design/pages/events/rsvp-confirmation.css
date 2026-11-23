@@ -1,1 +1,143 @@
-﻿
+.confirmation-page { padding: clamp(.8rem, 3vw, 2rem); }
+
+.confirmation-banner {
+    --ticket-blue: #05264d;
+    display: grid;
+    grid-template-columns: .84fr 1fr;
+    align-items: center;
+    width: min(100%, 78rem);
+    min-height: clamp(20rem, 32vw, 26rem);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #b6cfec;
+    border-radius: 1.8rem;
+    background: radial-gradient(ellipse at 44% 27%, #064f8a, transparent 55%), var(--ticket-blue);
+    color: #fff;
+}
+
+.confirmation-banner[hidden] { display: none; }
+
+.confirmation-message {
+    position: relative;
+    isolation: isolate;
+    align-self: stretch;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    padding: 4.5rem 1rem 5.2rem clamp(2rem, 10vw, 9rem);
+    text-align: center;
+}
+
+.confirmation-message::before, .confirmation-message::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.confirmation-message::before {
+    background: url("../../assets/hero/navbar-vidhana.png") right top / min(95%, 26rem) auto no-repeat;
+    opacity: .23;
+    mask-image: linear-gradient(#000 28%, transparent 78%);
+}
+
+.confirmation-message::after {
+    inset: auto 0 0;
+    height: 48%;
+    background: url("../../assets/hero/events-crowd.svg") left bottom / 76% auto no-repeat;
+    filter: brightness(0) invert(1);
+    mask-image: linear-gradient(90deg, #000 38%, transparent 79%);
+}
+
+.confirmation-brand {
+    position: absolute;
+    top: 1.5rem;
+    left: clamp(1.4rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0 .35rem;
+    text-align: left;
+}
+
+.confirmation-brand svg { width: 2rem; height: 2rem; }
+.confirmation-brand strong { font-size: 1.9rem; line-height: 1; }
+.confirmation-brand span { grid-column: span 2; font-weight: 700; font-size: .875rem; }
+.confirmation-flag { position: absolute; z-index: -2; left: 0; bottom: .4rem; width: clamp(4rem, 12vw, 10rem); }
+.confirmation-seal { width: clamp(4rem, 8vw, 6rem); }
+.confirmation-message h1 {
+    margin: 0 0 .3rem;
+    color: #fff;
+    font-size: clamp(2rem, 4.1vw, 3.6rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+}
+
+.confirmation-message h1 span { color: #ffc322; }
+.confirmation-message p { margin: .4rem 0; line-height: 1.35; }
+
+.confirmation-ticket {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    margin: 1.4rem 1.4rem 1.4rem 0;
+    border: 1px solid #d2e2f4;
+    border-radius: 1.15rem;
+    background: #fff;
+    color: #10224a;
+}
+
+.confirmation-details {
+    position: relative;
+    padding: clamp(.8rem, 2vw, 1.7rem);
+    border-right: 2px dashed #899ab9;
+    border-radius: 1.1rem 0 0 1.1rem;
+    background: linear-gradient(135deg, #fff, #edf3fb);
+}
+
+.confirmation-details::before, .confirmation-details::after {
+    position: absolute;
+    right: -.8rem;
+    width: 1.5rem;
+    height: .75rem;
+    background: var(--ticket-blue);
+    content: "";
+}
+
+.confirmation-details::before { top: -1px; border-radius: 0 0 1rem 1rem; }
+.confirmation-details::after { bottom: -1px; border-radius: 1rem 1rem 0 0; }
+.confirmation-details h2, .confirmation-details li { display: flex; align-items: center; gap: .65rem; }
+.confirmation-details h2 { margin: 0 0 .75rem; font-size: clamp(1.15rem, 1.8vw, 1.6rem); line-height: 1.24; }
+.confirmation-details ul { margin: 0; padding: 0; list-style: none; }
+.confirmation-details li { padding: .5rem 0; font-weight: 650; line-height: 1.25; }
+.confirmation-details li + li { border-top: 1px solid #d5e0ef; }
+.confirmation-details svg { width: 1.45rem; height: 1.45rem; flex: none; fill: none; stroke: #d71d54; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.confirmation-details h2 svg { width: 2rem; height: 2rem; }
+
+.confirmation-checkin {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    padding: .9rem .65rem;
+    text-align: center;
+}
+
+.confirmation-checkin h2, .confirmation-checkin strong { padding: .36rem .75rem; border-radius: .65rem; font-size: .92rem; }
+.confirmation-checkin h2 { margin: 0; background: #d91f56; color: #fff; }
+.confirmation-checkin img { width: clamp(7rem, 13vw, 10rem); height: auto; display: block; }
+.confirmation-checkin strong { background: #ffe08c; }
+.confirmation-checkin p { max-width: 18ch; margin: .4rem 0 0; font-size: .875rem; line-height: 1.25; }
+.confirmation-back { text-align: center; }
+
+@media (max-width: 820px) {
+    .confirmation-banner { grid-template-columns: 1fr; }
+    .confirmation-message { padding: 5.2rem 1rem 3.7rem; }
+    .confirmation-ticket { margin: 0 1rem 1rem; }
+}
+
+@media (max-width: 420px) {
+    .confirmation-ticket { grid-template-columns: 1fr; }
+    .confirmation-details { border-right: 0; border-bottom: 2px dashed #899ab9; border-radius: 1rem 1rem 0 0; }
+    .confirmation-details::before, .confirmation-details::after { display: none; }
+}

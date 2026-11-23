@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer Tasks &amp; Assignments | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="stylesheet" href="volunteer-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="tasks.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content">
+        <section class="vol-tasks" aria-labelledby="tasks-title">
+            <svg class="task-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <symbol id="task-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m7 12 3 3 7-7"/></symbol>
+                <symbol id="task-clipboard" viewBox="0 0 24 24"><path d="M8 5H4v17h16V5h-4M8 3h8v5H8zm-1 11 2 2 4-4m1 5h3"/></symbol>
+                <symbol id="task-grid" viewBox="0 0 24 24"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></symbol>
+                <symbol id="task-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+                <symbol id="task-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M8 3v4c0 3 4 3 4 5s-4 2-4 5v4m8-18v4c0 3-4 3-4 5s4 2 4 5v4"/></symbol>
+                <symbol id="task-pin" viewBox="0 0 24 24"><path d="M19 9c0 5-7 12-7 12S5 14 5 9a7 7 0 1 1 14 0Z"/><circle cx="12" cy="9" r="2"/></symbol>
+                <symbol id="task-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 10h18"/></symbol>
+            </svg>
+            <header class="tasks-intro">
+                <div class="tasks-hero-image" aria-hidden="true"></div>
+                <a class="volunteer-back" href="dashboard.html">Back to Dashboard</a>
+                <div class="tasks-intro-content">
+                    <p class="tasks-kicker"><svg aria-hidden="true"><use href="#task-check"/></svg>My Tasks</p>
+                    <h1 id="tasks-title">Volunteer Tasks &amp; Assignments</h1>
+                    <p class="tasks-intro-copy">Track your assigned tasks, update progress and contribute towards our shared goals.</p>
+                    <dl class="tasks-totals">
+                        <div><svg aria-hidden="true"><use href="#task-clipboard"/></svg><div><dt>Total Tasks</dt><dd>5</dd></div></div>
+                        <div><dt>Completed</dt><dd id="tasks-total-completed">2</dd></div>
+                        <div><dt>In Progress</dt><dd id="tasks-total-active">2</dd></div>
+                    </dl>
+                </div>
+            </header>
+            <div class="tasks-panel">
+                <div class="tasks-filters" role="group" aria-label="Filter featured tasks">
+                    <button type="button" data-task-filter="all" aria-pressed="true"><svg aria-hidden="true"><use href="#task-grid"/></svg>All Tasks (5)</button>
+                    <button type="button" data-task-filter="active" aria-pressed="false"><svg aria-hidden="true"><use href="#task-clock"/></svg>In Progress (<span id="tasks-filter-active">2</span>)</button>
+                    <button type="button" data-task-filter="completed" aria-pressed="false"><svg aria-hidden="true"><use href="#task-check"/></svg>Completed (<span id="tasks-filter-completed">2</span>)</button>
+                    <button type="button" data-task-filter="pending" aria-pressed="false"><svg aria-hidden="true"><use href="#task-hourglass"/></svg>Pending (1)</button>
+                </div>
+                <p class="tasks-note">Dashboard preview showing three featured assignments.</p>
+                <div class="task-grid">
+                    <article class="task-card" data-task-state="completed">
+                        <div class="task-card-photo task-photo-green" aria-hidden="true"></div>
+                        <div class="task-card-body">
+                            <span class="task-state"><svg aria-hidden="true"><use href="#task-check"/></svg><span>Completed</span></span>
+                            <h2>Green Karnataka Drive</h2>
+                            <p><svg aria-hidden="true"><use href="#task-pin"/></svg>Bengaluru, KA</p>
+                            <p><svg aria-hidden="true"><use href="#task-calendar"/></svg><time datetime="2025-05-20">20 May 2025</time></p>
+                            <div class="task-progress"><progress max="100" value="100" aria-label="Green Karnataka Drive progress"></progress><span>100%</span></div>
+                            <button type="button" class="task-open">View Details <span aria-hidden="true">&rarr;</span></button>
+                        </div>
+                    </article>
+                    <article class="task-card" data-task-state="active">
+                        <div class="task-card-photo task-photo-awareness" aria-hidden="true"></div>
+                        <div class="task-card-body">
+                            <span class="task-state"><svg aria-hidden="true"><use href="#task-clock"/></svg><span>In Progress</span></span>
+                            <h2>Awareness Campaign</h2>
+                            <p><svg aria-hidden="true"><use href="#task-pin"/></svg>Mysuru, KA</p>
+                            <p><svg aria-hidden="true"><use href="#task-calendar"/></svg><time datetime="2025-05-24">24 May 2025</time></p>
+                            <div class="task-progress"><progress max="100" value="70" aria-label="Awareness Campaign progress"></progress><span>70%</span></div>
+                            <button type="button" class="task-open">Update Progress <span aria-hidden="true">&rarr;</span></button>
+                        </div>
+                    </article>
+                    <article class="task-card" data-task-state="pending">
+                        <div class="task-card-photo task-photo-meeting" aria-hidden="true"></div>
+                        <div class="task-card-body">
+                            <span class="task-state"><svg aria-hidden="true"><use href="#task-hourglass"/></svg><span>Pending</span></span>
+                            <h2>Public Meeting Support</h2>
+                            <p><svg aria-hidden="true"><use href="#task-pin"/></svg>Hubballi, KA</p>
+                            <p><svg aria-hidden="true"><use href="#task-calendar"/></svg><time datetime="2025-05-28">28 May 2025</time></p>
+                            <div class="task-progress"><progress max="100" value="0" aria-label="Public Meeting Support progress"></progress><span>0%</span></div>
+                            <button type="button" class="task-open">View Details <span aria-hidden="true">&rarr;</span></button>
+                        </div>
+                    </article>
+                </div>
+                <p id="tasks-status" class="tasks-note" role="status"></p>
+                <p id="tasks-empty" hidden>No featured assignments match this filter.</p>
+            </div>
+        </section>
+        <dialog class="task-dialog" id="task-dialog" aria-labelledby="task-dialog-title">
+            <form method="dialog"><button>Close</button></form>
+            <h2 id="task-dialog-title"></h2>
+            <p id="task-dialog-info"></p>
+            <form id="task-progress-form" hidden>
+                <label>Progress (%) <input id="task-progress-input" type="number" min="0" max="100" step="1" required></label>
+                <button type="submit">Update Preview</button>
+            </form>
+            <p>Changes apply to this preview only.</p>
+        </dialog>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

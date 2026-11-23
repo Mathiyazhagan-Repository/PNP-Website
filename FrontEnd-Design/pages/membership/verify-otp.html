@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#052747">
+  <meta name="description" content="Verify your mobile number to continue your Praja Nishchaya Party membership application.">
+  <title>Verify Your Mobile | PNP Membership</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./join.css">
+  <link rel="stylesheet" href="./verify-otp.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./membership-local.js" defer></script>
+  <script src="./verify-otp.js" defer></script>
+</head>
+<body class="membership-page membership-otp-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="membership-otp" aria-labelledby="otpHeading">
+      <div class="otp-scene">
+        <header class="otp-intro">
+          <a class="membership-brand otp-brand" href="../../index.html" aria-label="PNP homepage">
+            <svg viewBox="0 0 90 76" aria-hidden="true"><path d="M4 58C23 12 54 26 88 3L72 29C44 38 29 21 4 58" fill="#ef128d"/><path d="M2 66C24 30 54 48 79 31L66 48C42 57 23 41 2 66" fill="#ffd000"/><path d="M0 75C22 48 47 65 70 49L61 64C41 75 22 60 0 75" fill="#19b62b"/></svg>
+            <div><strong translate="no">PNP</strong><span>Praja Nishchaya Party</span></div>
+          </a>
+          <p class="membership-eyebrow"><span aria-hidden="true"></span>ONLINE MEMBERSHIP</p>
+          <h1 id="otpHeading">Verify Your<br>Mobile Number</h1>
+          <p class="otp-introduction">Enter the 6-digit OTP sent to your registered mobile number to verify and continue with your membership registration.</p>
+          <ol class="membership-progress otp-progress" aria-label="Membership registration steps">
+            <li><span class="membership-step-icon details"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></svg></span><strong>Enter Details</strong></li>
+            <li aria-current="step"><span class="membership-step-icon verify"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg></span><strong>Verify Mobile</strong></li>
+            <li><span class="membership-step-icon receive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M5 16q3-5 6 0M14 9h5M14 13h5M14 16h3"/></svg></span><strong>Receive ID</strong></li>
+          </ol>
+        </header>
+        <div class="otp-shield-space" aria-hidden="true"></div>
+        <form id="membershipOtpForm" class="otp-panel" novalidate aria-label="Mobile OTP verification">
+          <div class="otp-mobile-row"><span id="otpMobileCaption">Mobile verification</span><span class="otp-mobile-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg><strong id="otpMaskedMobile">Your registered mobile</strong></span></div>
+          <label for="membershipOtpCode" class="sr-only">Six-digit verification code</label>
+          <div class="otp-code-control" id="otpCodeControl">
+            <div class="otp-code-boxes" aria-hidden="true"><span>–</span><span>–</span><span>–</span><span>–</span><span>–</span><span>–</span></div>
+            <input id="membershipOtpCode" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" required aria-describedby="otpCodeHint otpCodeError" aria-invalid="false" spellcheck="false">
+          </div>
+          <p class="sr-only" id="otpCodeHint">Enter or paste the six-digit OTP. Use Backspace to correct a digit.</p>
+          <p class="otp-field-error" id="otpCodeError"></p>
+          <p class="otp-local-hint" id="otpLocalHint" hidden></p>
+          <p class="otp-consent-note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 10v7M12 6v1"/></svg><span>Your registration consent will be recorded when your membership is confirmed.</span></p>
+          <label class="otp-consent" for="otpRegistrationConsent"><input id="otpRegistrationConsent" type="checkbox" required aria-describedby="otpConsentError"><span>I agree to the <button type="button" class="otp-notice-link" data-otp-notice="privacy">Privacy Notice</button> and <button type="button" class="otp-notice-link" data-otp-notice="terms">Terms</button>, and consent to recording my registration details for membership.</span></label>
+          <p class="otp-field-error" id="otpConsentError"></p>
+          <p class="otp-status" id="otpStatus" role="status" aria-live="polite" tabindex="-1">Start registration to receive an OTP. Verification is available once the registration service is connected.</p>
+          <button class="otp-verify-button" id="otpVerifyButton" type="submit"><span>Verify &amp; Continue</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M14 5l7 7-7 7"/></svg></button>
+          <div class="otp-secondary-actions"><button type="button" id="otpResendButton" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a9 9 0 1 0 1 9M20 2v6h-6"/></svg><span id="otpResendText">Resend OTP</span></button><a href="./join.html" id="otpEditMobile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5L8 21H3v-5ZM13 6l5 5"/></svg><span>Edit Mobile Number</span></a></div>
+          <div class="otp-help"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 12H1v7h5v-7ZM21 12h2v7h-5v-7ZM21 19q0 4-9 3"/></svg><span>Need help? <a href="./join.html">Return to membership registration</a></span></div>
+          <a href="./join.html" class="otp-restart" id="otpRestart" hidden>Start a new registration →</a>
+        </form>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <dialog id="otpNotice" class="membership-notice" aria-labelledby="otpNoticeTitle"><button type="button" class="membership-notice-close" aria-label="Close notice">×</button><h2 id="otpNoticeTitle">Privacy Notice</h2><div id="otpNoticeBody"></div><button type="button" class="membership-notice-back">Back to verification</button></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+</body>
+</html>

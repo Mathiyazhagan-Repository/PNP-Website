@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer Opportunities | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="opportunities.css">
+    <link rel="stylesheet" href="volunteer-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="opportunities.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content">
+        <section class="opportunities-hero" aria-labelledby="opportunities-title">
+            <header class="opportunities-intro">
+                <a class="volunteer-back" href="volunteer.html">Back to Volunteer</a>
+                <h1 id="opportunities-title">Explore <span>Volunteer Opportunities</span></h1>
+                <p>Choose a cause, contribute your skills and be part of PNP&rsquo;s people-first initiatives.</p>
+                <ul class="opportunities-values">
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 4-5 5 2m11 3-4-5-5 2-4 4 2 2 4-3 6 6-6 6-9-6-3-4Z"/></svg>Serve the Community</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 7 1 10-5v14l-10-4-7 1Zm5 7 2 5h3l-2-6m9-6h2m-2 7h2"/></svg>Support PNP Campaigns</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3ZM4 6a2 2 0 1 0 0 4m16-4a2 2 0 1 1 0 4M1 19v-2a4 4 0 0 1 4-4m18 6v-2a4 4 0 0 0-4-4"/></svg>Be Part of Events</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-9M12 16C5 16 2 12 2 6c6 0 10 3 10 10Zm0-3C12 6 16 3 22 2c0 7-4 11-10 11Z"/></svg>Create Positive Change</li>
+                </ul>
+            </header>
+            <div class="opportunities-panel">
+                <h2><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3ZM4 6a2 2 0 1 0 0 4m16-4a2 2 0 1 1 0 4M1 19v-2a4 4 0 0 1 4-4m18 6v-2a4 4 0 0 0-4-4"/></svg>Find an Opportunity That Fits You</h2>
+                <form class="opportunities-filters" id="opportunities-filters">
+                    <label>Category<select name="category"><option value="">All Categories</option><option value="environment">Environment</option><option value="outreach">Community Outreach</option><option value="digital">Digital Support</option><option value="events">Event Support</option></select></label>
+                    <label>District<select name="district"><option value="">All Districts</option><option value="bengaluru">Bengaluru</option><option value="mysuru">Mysuru</option><option value="statewide">Statewide / Multiple Districts</option></select></label>
+                    <label>Mode<select name="mode"><option value="">All (On-site / Online)</option><option value="onsite">On-site</option><option value="online">Online</option></select></label>
+                    <button type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg>Search</button>
+                </form>
+                <p class="opportunities-status" id="opportunities-status" role="status">Showing 4 preview opportunities</p>
+                <div class="opportunities-grid">
+                    <article data-category="environment" data-district="bengaluru" data-mode="onsite">
+                        <div class="opportunity-photo opportunity-clean" aria-hidden="true"></div>
+                        <div class="opportunity-content"><h3>Clean Karnataka Drive</h3><p><span>Bengaluru</span><strong>On-site</strong></p><a href="register.html?opportunity=clean">Express Interest <span aria-hidden="true">&rarr;</span></a></div>
+                    </article>
+                    <article data-category="outreach" data-district="mysuru" data-mode="onsite">
+                        <div class="opportunity-photo opportunity-outreach" aria-hidden="true"></div>
+                        <div class="opportunity-content"><h3>Public Outreach Program</h3><p><span>Mysuru</span><strong>On-site</strong></p><a href="register.html?opportunity=outreach">Express Interest <span aria-hidden="true">&rarr;</span></a></div>
+                    </article>
+                    <article data-category="digital" data-district="statewide" data-mode="online">
+                        <div class="opportunity-photo opportunity-digital" aria-hidden="true"></div>
+                        <div class="opportunity-content"><h3>Content &amp; Media Support</h3><p><span>Statewide</span><strong>Online</strong></p><a href="register.html?opportunity=media">Express Interest <span aria-hidden="true">&rarr;</span></a></div>
+                    </article>
+                    <article data-category="events" data-district="statewide" data-mode="onsite">
+                        <div class="opportunity-photo opportunity-events" aria-hidden="true"></div>
+                        <div class="opportunity-content"><h3>Event Management</h3><p><span>Multiple Districts</span><strong>On-site</strong></p><a href="register.html?opportunity=events">Express Interest <span aria-hidden="true">&rarr;</span></a></div>
+                    </article>
+                </div>
+                <div class="opportunities-empty" id="opportunities-empty" hidden><p>No opportunities match these filters.</p><button type="button" id="opportunities-reset">Clear Filters</button></div>
+            </div>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

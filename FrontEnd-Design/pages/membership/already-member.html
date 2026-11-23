@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063458">
+  <title>Already a Member? | PNP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./join.css">
+  <link rel="stylesheet" href="./already-member.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./membership-local.js" defer></script>
+  <script src="./already-member.js" defer></script>
+</head>
+<body class="membership-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="already-member-section" aria-labelledby="alreadyMemberHeading">
+      <a class="already-member-brand" href="../../index.html" aria-label="PNP homepage"><span translate="no">PNP<svg viewBox="0 0 80 13" aria-hidden="true"><path d="M0 8Q20 1 40 6T80 2L77 8Q60 15 40 10T0 12Z" fill="#ffce00"/><path d="M0 4Q20 0 40 3T80 0L78 3Q60 9 40 7T0 8Z" fill="#f10e72"/></svg></span><strong>Praja Nishchaya<br>Party</strong></a>
+      <div class="already-member-layout">
+        <header class="already-member-intro">
+          <svg class="already-member-person" viewBox="0 0 90 76" aria-hidden="true"><g fill="none" stroke="#f3faff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="19" r="14"/><path d="M9 62v-7a26 26 0 0 1 52 0v7Z"/></g><circle cx="66" cy="51" r="18" fill="#62ad33" stroke="#efffe1" stroke-width="3"/><path d="m57 51 6 6 12-13" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h1 id="alreadyMemberHeading">Already a<strong>Member?</strong></h1>
+          <p>Access your membership card<br>and manage your account.</p>
+        </header>
+        <form class="already-member-form" id="memberLoginForm" novalidate>
+          <span class="already-member-lock" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 10V6a4 4 0 0 1 8 0v4"/><rect x="5" y="9" width="14" height="13" rx="2" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.5" fill="#ffdb22" stroke="none"/><path d="M12 15v3" stroke="#ffdb22" stroke-width="1.6"/></svg></span>
+          <h2>Login to Continue</h2>
+          <label class="sr-only" for="memberLoginMobile">Mobile number</label>
+          <div class="member-login-input"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 2 4 6-3 3q2 4 5 5l3-3 6 4q0 5-5 5C8 20 3 15 2 7q0-5 5-5Z"/></svg><input id="memberLoginMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="Enter Mobile Number" required aria-describedby="memberLoginMobileError"></div>
+          <p id="memberLoginMobileError" class="member-login-error"></p>
+          <label class="sr-only" for="memberLoginPassword">Password</label>
+          <div class="member-login-input"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v4"/></svg><input id="memberLoginPassword" name="password" type="password" autocomplete="current-password" maxlength="128" placeholder="Enter Password" required aria-describedby="memberLoginPasswordError"><button type="button" id="memberLoginShowPassword" aria-label="Show password" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path id="memberLoginEyeSlash" d="m3 3 18 18"/></svg></button></div>
+          <p id="memberLoginPasswordError" class="member-login-error"></p>
+          <p class="member-login-status" id="memberLoginStatus" role="status" aria-live="polite" tabindex="-1" hidden></p>
+          <button type="submit" id="memberLoginSubmit" class="member-login-submit"><span>Login to My Account</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M14 5l7 7-7 7"/></svg></button>
+          <div class="member-login-footer"><button type="button" id="memberForgotPassword">Forgot Password?</button><span>Not a Member? <a href="./join.html">Join Now</a></span></div>
+        </form>
+      </div>
+      <p class="member-login-preview" id="memberLoginPreview" hidden>Local preview · Mobile: <strong translate="no">9876543210</strong> ? Password: <strong translate="no">PNP12345</strong></p>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <dialog id="memberPasswordHelp" class="membership-notice" aria-labelledby="memberPasswordHelpTitle"><button type="button" class="membership-notice-close" aria-label="Close password help">×</button><h2 id="memberPasswordHelpTitle">Password Help</h2><p id="memberPasswordHelpText"></p><button type="button" class="membership-notice-back">Back to Login</button></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+</body>
+</html>

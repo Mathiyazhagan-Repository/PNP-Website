@@ -1,0 +1,21 @@
+.failed-page { padding: clamp(1rem, 4vw, 3rem); background: linear-gradient(135deg, #f2f8ff, #edf2fc); color: #102451; }
+.failed-card { width: min(100%, 62rem); margin: auto; padding: clamp(.75rem, 2vw, 1.5rem); border: 1px solid #d9e5f4; border-radius: 1.3rem; background: #fbfdff; box-shadow: 0 .5rem 1.5rem #17376315; }
+.failed-banner { display: flex; align-items: center; gap: .85rem; padding: 1rem; border-radius: .9rem; background: #fff2d9; }
+.failed-banner p { margin: 0; }
+#failed-label { font-size: .85rem; font-weight: 800; }
+.failed-banner h1 { margin: .2rem 0; font-size: clamp(1.35rem, 3vw, 2.35rem); line-height: 1.1; }
+.failed-icon { display: grid; place-items: center; flex: 0 0 2.8rem; aspect-ratio: 1; border-radius: 50%; background: #9a590c; color: #fff; }
+.failed-icon svg { width: 1.55rem; height: 1.55rem; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; }
+.failed-page[data-state="failed"] .failed-banner { background: linear-gradient(110deg, #fdecf3, #fbe3ec); }
+.failed-page[data-state="failed"] .failed-icon { background: #bd004c; }
+.failed-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: .85rem 0; }
+.failed-summary div { padding: .65rem .8rem; border: 1px solid #dce8f8; border-radius: .75rem; background: #edf5ff; }
+.failed-summary dt { font-size: .875rem; }
+.failed-summary dd { margin: 0; font-weight: 800; overflow-wrap: anywhere; }
+.failed-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.failed-actions a, .failed-actions button { display: inline-flex; align-items: center; padding: .5rem .85rem; border: 1px solid #b8cbea; border-radius: 2rem; background: #f1f6ff; color: #102451; font: inherit; font-weight: 750; cursor: pointer; }
+.failed-actions .failed-primary { border-color: #bd004c; background: linear-gradient(#e00061, #af0045); color: #fff; }
+.failed-actions [hidden] { display: none; }
+.failed-actions :focus-visible { outline: 2px solid #176abe; outline-offset: 2px; }
+.failed-help { margin: .75rem 0 0; font-size: .875rem; }
+@media (max-width: 495px) { .failed-summary { grid-template-columns: 1fr; } }

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer Dashboard | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="volunteer-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="vol-dashboard">
+        <svg class="dashboard-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="dash-home" viewBox="0 0 24 24"><path d="m2 11 10-9 10 9M5 10v11h5v-6h4v6h5V10"/></symbol>
+            <symbol id="dash-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 10h18M8 15h2m4 0h2"/></symbol>
+            <symbol id="dash-task" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m7 12 3 3 7-7"/></symbol>
+            <symbol id="dash-bell" viewBox="0 0 24 24"><path d="M4 17c2-2 2-4 2-8a6 6 0 0 1 12 0c0 4 0 6 2 8H4Zm5 3a3 3 0 0 0 6 0m-3-18V1"/></symbol>
+            <symbol id="dash-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M3 22a9 9 0 0 1 18 0"/></symbol>
+            <symbol id="dash-team" viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3ZM4 6a2 2 0 1 0 0 4m16-4a2 2 0 1 1 0 4M1 19v-2a4 4 0 0 1 4-4m18 6v-2a4 4 0 0 0-4-4"/></symbol>
+            <symbol id="dash-star" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z"/></symbol>
+            <symbol id="dash-exit" viewBox="0 0 24 24"><path d="M11 4H4v16h7m-2-8h12m-4-4 4 4-4 4"/></symbol>
+            <symbol id="dash-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="white"/><circle cx="15" cy="17" r="2" fill="white"/></symbol>
+        </svg>
+        <aside class="dashboard-sidebar">
+            <a class="volunteer-back" href="volunteer.html">Back to Volunteer</a>
+            <a class="dashboard-brand" href="volunteer.html"><span><strong>PNP</strong><img src="../../assets/hero/navbar-karnataka-flag.png" alt=""></span>Praja Nishchaya Party</a>
+            <div class="dashboard-profile">
+                <img src="../../assets/hero/volunteer-success-portrait.png" alt="">
+                <strong>Priya Nair</strong><small>Volunteer ID: PNPV001567</small><span>Active</span>
+            </div>
+            <nav class="dashboard-nav" aria-label="Volunteer dashboard">
+                <a href="dashboard.html" aria-current="page"><svg aria-hidden="true"><use href="#dash-home"/></svg>Dashboard</a>
+                <button type="button" data-dashboard-panel="opportunities"><svg aria-hidden="true"><use href="#dash-calendar"/></svg>My Opportunities</button>
+                <a href="tasks.html"><svg aria-hidden="true"><use href="#dash-task"/></svg>My Tasks</a>
+                <button type="button" data-dashboard-panel="notifications"><svg aria-hidden="true"><use href="#dash-bell"/></svg>Notifications</button>
+                <button type="button" data-dashboard-panel="settings"><svg aria-hidden="true"><use href="#dash-settings"/></svg>Settings</button>
+                <a class="dashboard-logout" href="volunteer.html"><svg aria-hidden="true"><use href="#dash-exit"/></svg>Logout</a>
+            </nav>
+        </aside>
+
+        <div class="dashboard-main">
+            <header class="dashboard-heading">
+                <div><h1>Welcome, Priya!</h1><p>Your commitment helps build a better Karnataka.</p></div>
+                <p class="dashboard-last"><svg aria-hidden="true"><use href="#dash-calendar"/></svg><span><strong>Last Activity</strong><br><time datetime="2025-05-20">20 May 2025</time></span></p>
+            </header>
+            <div class="dashboard-layout">
+                <div>
+                    <div class="dashboard-overview">
+                        <section class="dashboard-hero" aria-label="Volunteer message">
+                            <div class="dashboard-project-photo" aria-hidden="true"></div>
+                            <h2>Together<br> for a Better<br> Tomorrow</h2>
+                        </section>
+                        <ul class="dashboard-metrics" aria-label="Volunteer totals">
+                            <li><svg aria-hidden="true"><use href="#dash-team"/></svg><strong>3</strong> Opportunities</li>
+                            <li><svg aria-hidden="true"><use href="#dash-task"/></svg><strong>2</strong> Active Tasks</li>
+                            <li><svg aria-hidden="true"><use href="#dash-star"/></svg><strong>12</strong> Hours Served</li>
+                            <li><svg aria-hidden="true"><use href="#dash-bell"/></svg><strong>5</strong> New Updates</li>
+                        </ul>
+                    </div>
+                    <section class="dashboard-activities" aria-labelledby="recent-activities">
+                        <header><h2 id="recent-activities">My Recent Activities</h2><button type="button" data-dashboard-panel="activities">View All <span aria-hidden="true">&rarr;</span></button></header>
+                        <button class="dashboard-activity" type="button" data-dashboard-panel="activities">
+                            <span><svg aria-hidden="true"><use href="#dash-team"/></svg></span><span><strong>Community Awareness Drive</strong><small>Bengaluru, Karnataka &middot; <time datetime="2025-05-24">24 May 2025</time></small></span><span aria-hidden="true">&rsaquo;</span>
+                        </button>
+                    </section>
+                </div>
+                <aside class="dashboard-quick" aria-labelledby="quick-actions">
+                    <h2 id="quick-actions">Quick Actions</h2>
+                    <a class="dashboard-primary" href="opportunities.html">Explore Opportunities <span aria-hidden="true">&rarr;</span></a>
+                    <a href="tasks.html"><svg aria-hidden="true"><use href="#dash-task"/></svg>View My Tasks</a>
+                    <button type="button" data-dashboard-panel="profile"><svg aria-hidden="true"><use href="#dash-person"/></svg>Update Profile</button>
+                </aside>
+            </div>
+            <p class="dashboard-preview">Dashboard preview. The profile and activity figures shown are example data.</p>
+        </div>
+        <dialog class="dashboard-dialog" id="dashboard-dialog" aria-labelledby="dashboard-dialog-title">
+            <form method="dialog"><button>Close</button></form>
+            <h2 id="dashboard-dialog-title"></h2>
+            <p id="dashboard-dialog-copy"></p>
+            <a id="dashboard-dialog-link" href="opportunities.html" hidden>Explore Opportunities</a>
+        </dialog>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

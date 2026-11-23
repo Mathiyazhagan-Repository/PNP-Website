@@ -6,8 +6,10 @@
     <title>Event Details | PNP</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="event-detail.css">
+    <link rel="stylesheet" href="events-back.css">
     <script src="../../shared-layout.js" defer></script>
     <script src="../../script.js" defer></script>
+    <script src="event-data.js" defer></script>
     <script src="event-detail.js" defer></script>
 </head>
 <body>
@@ -19,6 +21,7 @@
                 <span aria-hidden="true">›</span><a href="events.html">Events</a>
                 <span aria-hidden="true">›</span><span aria-current="page">Event Details</span>
             </nav>
+            <div class="detail-back-row"><a class="events-back-button" href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6M8 12h12"/></svg>Back to Events</a></div>
             <div class="detail-grid" id="detail-preview">
                 <div class="detail-visual">
                     <img class="detail-photo" src="../../assets/hero/event-dialogue-preview.png" alt="Illustrative outdoor public meeting with a speaker addressing a seated audience">
@@ -40,14 +43,14 @@
                     <div class="detail-actions">
                         <button type="button" class="detail-calendar" data-preview-message="Calendar downloads will be available once the event schedule is approved."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 3v4m8-4v4M8 14h2m4 0h2m-8 3h2m4 0h2"/></svg>Add to Calendar</button>
                         <a class="detail-directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=Town+Hall+Bengaluru" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c3-6 8-8 17-8m-6-5 6 5-5 5"/></svg>Get Directions</a>
-                        <button type="button" class="detail-rsvp" data-preview-message="RSVP will open once event registration is approved."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m17 0v-2a4 4 0 0 0-3-4M13 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm4-3a3 3 0 0 1 0 6"/></svg>RSVP Now</button>
+                        <a class="detail-rsvp" href="event-rsvp.html?event=district-dialogue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m17 0v-2a4 4 0 0 0-3-4M13 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm4-3a3 3 0 0 1 0 6"/></svg>RSVP Now</a>
+                        <a class="detail-directions" id="detail-reminders" href="event-reminders.html?event=district-dialogue">Event Reminders</a>
                     </div>
                     <p class="detail-status" role="status"></p>
                 </div>
             </div>
             <div class="detail-unavailable" id="detail-unavailable" hidden>
                 <h1>Event details unavailable</h1>
-                <a href="events.html">Back to Events</a>
             </div>
         </section>
     </main>

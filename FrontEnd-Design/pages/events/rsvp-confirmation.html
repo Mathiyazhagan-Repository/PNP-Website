@@ -1,15 +1,61 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RSVP Confirmation | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="rsvp-confirmation.css">
+    <link rel="stylesheet" href="events-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="event-data.js" defer></script>
     <script src="rsvp-confirmation.js" defer></script>
 </head>
 <body>
-    <main>
-        <h1>RSVP Confirmation</h1>
+    <div data-site-header></div>
+    <main id="main-content" class="confirmation-page">
+        <section class="confirmation-banner" aria-labelledby="confirmation-title" id="confirmation-banner" hidden>
+            <div class="confirmation-message">
+                <div class="confirmation-brand">
+                    <svg viewBox="0 0 32 28" aria-hidden="true"><path fill="#ff981a" d="M1 17C4 3 23 9 31 0c-2 13-21 11-30 17Z"/><path fill="#8cce59" d="M1 27C4 13 23 19 31 10c-2 13-21 11-30 17Z"/></svg>
+                    <strong>PNP</strong>
+                    <span>Praja Nishchaya Party</span>
+                </div>
+                <svg class="confirmation-seal" viewBox="0 0 80 80" aria-hidden="true">
+                    <path fill="#57aa42" stroke="#e4f5c6" stroke-width="2" d="M40 5l8 5 10-1 4 9 9 4-1 10 5 8-5 8 1 10-9 4-4 9-10-1-8 5-8-5-10 1-4-9-9-4 1-10-5-8 5-8-1-10 9-4 4-9 10 1Z"/>
+                    <path fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="m27 40 9 10 17-20"/>
+                </svg>
+                <h1 id="confirmation-title">You&rsquo;re <span>All Set!</span></h1>
+                <p>RSVP preview complete.<br>We look forward to your participation!</p>
+                <svg class="confirmation-flag" viewBox="0 0 145 155" aria-hidden="true">
+                    <path fill="#ff9218" d="M0 29C43 25 76-18 122 4l2 22C79 5 45 49 0 50Z"/>
+                    <path fill="#fff" d="M0 50C45 49 79 5 124 26l2 22C81 27 45 70 0 70Z"/>
+                    <path fill="#398e3c" d="M0 70C45 70 81 27 126 48l2 23C83 50 45 92 0 91Z"/>
+                    <path d="m122 4 15 150" stroke="#f2f7ff" stroke-width="3"/>
+                </svg>
+            </div>
+            <div class="confirmation-ticket">
+                <div class="confirmation-details">
+                    <h2><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v16H3zM3 10h18M7 2v6m10-6v6M7 14h2m3 0h2m-7 4h2m3 0h2"/></svg><span id="confirmation-event"></span></h2>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v16H3zM3 10h18M7 2v6m10-6v6M7 14h2m3 0h2m-7 4h2m3 0h2"/></svg><time id="confirmation-date"></time></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><span id="confirmation-time"></span></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9c0 5-7 12-7 12S5 14 5 9a7 7 0 0 1 14 0Z"/><circle cx="12" cy="9" r="2"/></svg><span id="confirmation-venue"></span></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 6 6-3 8 3 6-3v15l-6 3-8-3-6 3Zm6-3v15m8-12v15"/></svg><span id="confirmation-district"></span></li>
+                    </ul>
+                </div>
+                <div class="confirmation-checkin">
+                    <h2>Event Check-In QR</h2>
+                    <img src="../../assets/hero/rsvp-preview-qr.svg" alt="Sample event check-in QR code" width="128" height="128">
+                    <strong>PNP-EVT-10458</strong>
+                    <p>Sample ticket for preview only</p>
+                </div>
+            </div>
+        </section>
+        <p class="confirmation-back" id="confirmation-unavailable" hidden>Event confirmation unavailable.</p>
+        <p class="confirmation-back"><a class="events-back-button" href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6M8 12h12"/></svg>Back to Events</a></p>
     </main>
+    <div data-site-footer></div>
 </body>
 </html>

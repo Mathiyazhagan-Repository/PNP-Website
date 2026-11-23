@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8f3fa">
+  <title>Donation Disclosures | PNP Transparency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./donations.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./donations.js" defer></script>
+</head>
+<body class="donations-disclosure-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="donations-disclosure" aria-labelledby="donationsHeading">
+<a class="transparency-section-back" href="./transparency.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>Back to Transparency</a>
+      <header class="donations-heading"><img src="../../assets/hero/navbar-vidhana.png" alt="" aria-hidden="true" width="1650" height="700"><svg class="donations-heading-ribbon" viewBox="0 0 160 60" aria-hidden="true"><path d="M0 0h160C89 8 47 27 15 53 53 10 81 6 0 0Z" fill="#ec0c6c"/><path d="M70 0h90c-31 17-52 34-70 60 12-32 34-49 52-56Z" fill="#ffda1b"/></svg><h1 id="donationsHeading">Donation Disclosures</h1><p>Approved aggregate donation information and reporting summaries,<br>published for transparency and public accountability.</p><span class="donations-preview-tag" id="donationsPreviewTag" hidden>Illustrative preview</span></header>
+      <div class="donations-toolbar" aria-label="Reporting controls"><span class="donations-period-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="17" rx="2"/><path d="M3 10h18M7 2v6M17 2v6M7 14h3M14 14h3M7 18h3M14 18h3"/></svg><strong>Reporting Period:</strong></span><div id="donationsPeriodButtons" class="donations-period-buttons" role="group" aria-label="Financial year"></div><div class="donations-view-buttons" role="group" aria-label="Trend view"><button type="button" data-donation-view="quarterly" aria-pressed="false">Quarterly</button><button type="button" data-donation-view="annual" aria-pressed="false">Annual</button></div></div>
+      <div class="donations-workspace">
+        <aside class="donations-summary" aria-label="Donation summary">
+          <article class="donations-summary-card contribution"><svg viewBox="0 0 36 36" aria-hidden="true"><g fill="#d9f3ff" stroke="#1b5e9b" stroke-width="1.8"><path d="M17 7v16c0 7 17 7 17 0V7Z"/><ellipse cx="25.5" cy="7" rx="8.5" ry="4"/><path d="M17 13c0 6 17 6 17 0M17 19c0 6 17 6 17 0M2 21v10c0 6 17 6 17 0V21Z"/><ellipse cx="10.5" cy="21" rx="8.5" ry="4"/><path d="M2 27c0 6 17 6 17 0"/></g></svg><h2>Total Reported<br>Contributions</h2><div><strong id="donationsTotal">Not published</strong><small class="donations-sample-note" hidden>(Sample Data)</small></div></article>
+          <article class="donations-summary-card period"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="6" width="30" height="28" rx="3"/><path d="M3 14h30M11 2v9M25 2v9M9 19h4M17 19h4M25 19h3M9 25h4M17 25h4M25 25h3M9 30h4M17 30h4"/></svg><h2>Reporting Period</h2><div><strong id="donationsSelectedPeriod">Unavailable</strong><small class="donations-sample-note" hidden>(Illustrative Preview)</small></div></article>
+          <article class="donations-summary-card statements"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 2h16l8 8v24H7ZM23 2v9h8M12 17h14M12 23h14M12 29h9"/></svg><h2>Published<br>Statements</h2><div><strong id="donationsStatementCount">Not published</strong><small class="donations-sample-note" hidden>(Sample Data)</small></div></article>
+          <article class="donations-summary-card source"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="m18 2 15 6v11c0 10-15 16-15 16S3 29 3 19V8Z"/><path d="m10 18 6 6 12-13"/></svg><h2>Source Status</h2><div><strong id="donationsSourceStatus">Awaiting<br>publication</strong></div></article>
+        </aside>
+        <figure class="donations-chart-panel" aria-labelledby="donationsChartHeading"><figcaption id="donationsChartHeading">Donation Trend <span id="donationsChartMode"></span></figcaption><div class="donations-chart-wrap"><svg id="donationsChart" viewBox="0 0 390 210" role="img" aria-labelledby="donationsChartTitle donationsChartDescription"><title id="donationsChartTitle">Donation trend</title><desc id="donationsChartDescription">Select an available reporting period to view published data.</desc></svg><span class="donations-chart-preview" id="donationsChartPreview" hidden>Illustrative Preview</span><div id="donationsChartTooltip" class="donations-chart-tooltip" role="status" hidden></div></div><p id="donationsChartScope" class="donations-chart-scope">No published trend data is available.</p><table class="sr-only" id="donationsChartTable"><caption>Donation trend data in Indian rupees</caption><thead><tr><th scope="col">Period</th><th scope="col">Contributions</th></tr></thead><tbody id="donationsChartTableBody"></tbody></table></figure>
+        <section class="donations-reports" aria-labelledby="donationsReportsHeading"><h2 id="donationsReportsHeading">Published Donation Reports</h2><div class="donations-table-scroll" tabindex="0" role="region" aria-label="Donation reports table"><table><thead><tr><th scope="col">Report Title</th><th scope="col">Reporting Period</th><th scope="col">Publication Date</th><th scope="col">File Type</th><th scope="col">Actions</th></tr></thead><tbody id="donationsReportRows"></tbody></table></div><p id="donationsReportsEmpty" class="donations-empty">No published donation reports are available.</p><div id="donationsReportPager" class="donations-report-pager" hidden><span id="donationsReportPageLabel"></span><button type="button" id="donationsReportsPrevious" aria-label="Previous reports">‹</button><button type="button" id="donationsReportsNext" aria-label="Next reports">›</button></div></section>
+      </div>
+      <footer class="donations-section-footer"><p><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 10v7M12 6v1"/></svg><span id="donationsDisclosureNote">Only approved aggregate donation information is shown. Personal donor information is not published.</span></p><button id="donationsDownloadStatement" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v14M6 10l6 6 6-6M3 17v5h18v-5"/></svg>Download Statement</button></footer>
+      <div class="donations-source-line"><p id="donationsDataStatus" role="status" aria-live="polite"></p><a id="donationsSourceLink" target="_blank" rel="noopener noreferrer" hidden>View source</a><button id="donationsRetry" type="button" hidden>Try again</button><a href="./transparency.html">← Transparency overview</a></div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <dialog class="donations-document-dialog" id="donationsDocumentDialog" aria-labelledby="donationsDocumentTitle"><button type="button" class="donations-dialog-close" aria-label="Close document preview">×</button><span id="donationsDocumentMode">Published record</span><h2 id="donationsDocumentTitle">Donation Report</h2><p id="donationsDocumentDescription"></p><dl id="donationsDocumentMetadata"></dl><p id="donationsDocumentStatus" role="status" aria-live="polite"></p><a id="donationsDocumentView" target="_blank" rel="noopener noreferrer" hidden>Open published document</a><button type="button" class="donations-dialog-back">Back to reports</button></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../membership/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation Payment | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="payment-processing.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="campaigns.js" defer></script>
+    <script src="payment-processing.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content">
+        <section id="payment-selection" class="payment-hero" aria-labelledby="payment-title">
+            <nav class="payment-navigation" aria-label="Donation steps"><a id="payment-back" href="donate.html">Back to Donate</a></nav>
+            <header class="payment-art">
+                <h1 id="payment-title" class="sr-only">Your Contribution Matters</h1>
+                <img src="../../assets/hero/donation-payment-hero.png" width="1360" height="1156"
+                     alt="Make a secure payment to support people-first initiatives across Karnataka.">
+            </header>
+            <section class="payment-card payment-methods" aria-labelledby="payment-method-title">
+                <header><h2 id="payment-method-title"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 4 8 8 10 4-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></svg> Pay Securely</h2><span>Select a Payment Option</span></header>
+                <div class="payment-options" role="group" aria-label="Payment method">
+                    <button type="button" data-method="upi" aria-pressed="true"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4H17a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H8l-5 3v-6l5-7"/><path d="m11 8 5 4-5 4"/></svg> UPI</button>
+                    <button type="button" data-method="card" aria-pressed="false"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h5"/></svg> Card</button>
+                    <button type="button" data-method="bank" aria-pressed="false"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9h20L12 3 2 9Zm1 12h18M5 9v9m5-9v9m4-9v9m5-9v9M3 18h18"/></svg> Net Banking</button>
+                    <button type="button" data-method="wallet" aria-pressed="false"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8V5a2 2 0 0 0-2-2L5 6A3 3 0 0 0 2 9v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9H5"/><path d="M22 13h-5v4h5"/></svg> Wallets</button>
+                </div>
+                <div class="payment-panel" data-panel="upi">
+                    <h3>Pay using UPI</h3>
+                    <p id="payment-upi-info">Scan or open a UPI app when checkout is connected.</p>
+                    <div class="payment-upi">
+                        <div class="payment-qr"><span class="payment-qr-art" aria-hidden="true"><b>UPI</b></span><small>QR preview</small></div>
+                        <span class="payment-or" aria-hidden="true">or</span>
+                        <ul aria-label="Example UPI apps"><li><strong class="payment-phonepe" aria-hidden="true">&#2346;&#2375;</strong><small>PhonePe</small></li><li><strong><span class="payment-g">G</span> Pay</strong><small>Google Pay</small></li><li><strong class="payment-paytm">pay<span>tm</span></strong><small>Paytm</small></li><li><strong class="payment-bhim">BHIM</strong><small>BHIM UPI</small></li></ul>
+                    </div>
+                </div>
+                <div class="payment-panel" data-panel="card" hidden><h3>Pay by card</h3><p>The approved payment gateway will handle card entry.</p></div>
+                <div class="payment-panel" data-panel="bank" hidden><h3>Pay through Net Banking</h3><p>Supported banks will appear at the payment gateway.</p></div>
+                <div class="payment-panel" data-panel="wallet" hidden><h3>Pay with a wallet</h3><p>Supported wallets will appear at the payment gateway.</p></div>
+            </section>
+            <aside class="payment-card payment-summary" aria-labelledby="payment-summary-title">
+                <h2 id="payment-summary-title"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="4"/><path d="M8 11H6a3 3 0 0 0-3 3v6h18v-6a3 3 0 0 0-3-3h-2M9 16h6"/></svg> Your Donation</h2>
+                <dl>
+                    <div><dt>Amount</dt><dd id="payment-amount">Choose an amount</dd></div>
+                    <div><dt>Type</dt><dd id="payment-frequency">&mdash;</dd></div>
+                    <div><dt>Campaign</dt><dd id="payment-campaign">General Support</dd></div>
+                </dl>
+                <button type="button" id="payment-proceed" disabled>Proceed to Pay <span aria-hidden="true">&rarr;</span></button>
+                <a class="payment-failure-preview" href="donation-failed.html?preview=1">Preview a failed payment</a>
+            </aside>
+        </section>
+        <section id="payment-processing-preview" class="processing-preview" aria-labelledby="processing-title" hidden>
+            <div class="processing-main">
+                <div class="processing-spinner" aria-hidden="true">
+                    <svg viewBox="0 0 80 80"><defs><linearGradient id="processing-spinner-color" x2=".1" y2="1"><stop stop-color="#d90046"/><stop offset="1" stop-color="#f8c8d9"/></linearGradient></defs><circle cx="40" cy="40" r="31" pathLength="120" fill="none" stroke="url(#processing-spinner-color)" stroke-width="8" stroke-dasharray="1 9" stroke-linecap="round"/></svg>
+                    <span>&#8377;</span>
+                </div>
+                <h1 id="processing-title" tabindex="-1">Processing Your Payment</h1>
+                <p>This is a checkout preview. No payment was started.</p>
+                <ol class="processing-steps" aria-label="Checkout preview steps">
+                    <li class="processing-done">Details</li>
+                    <li class="processing-done">Payment</li>
+                    <li aria-current="step">Processing</li>
+                    <li>Complete</li>
+                </ol>
+                <button type="button" class="processing-back" id="processing-back">Back to Payment Options</button>
+            </div>
+            <aside class="processing-summary" aria-labelledby="processing-summary-title">
+                <h2 id="processing-summary-title"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5zM9 9h5m-5 4h6m-6 4h4"/></svg> Donation Summary</h2>
+                <dl>
+                    <div><dt>Amount</dt><dd id="processing-amount"></dd></div>
+                    <div><dt>Type</dt><dd id="processing-frequency"></dd></div>
+                    <div><dt>Method</dt><dd id="processing-method"></dd></div>
+                    <div><dt>Campaign</dt><dd id="processing-campaign">General Support</dd></div>
+                </dl>
+                <p class="processing-notice"><svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 4 8 8 10 4-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></svg> Live payments require the approved gateway.</p>
+            </aside>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

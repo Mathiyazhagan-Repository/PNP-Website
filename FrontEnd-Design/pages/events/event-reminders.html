@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Reminders | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="event-reminders.css">
+    <link rel="stylesheet" href="events-back.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="event-data.js" defer></script>
+    <script src="event-reminders.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content">
+        <section class="reminders" aria-labelledby="reminders-title">
+            <div>
+                <header class="reminders-intro">
+                    <a class="events-back-button" href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6M8 12h12"/></svg>Back to Events</a>
+                    <p class="reminders-kicker">Event Reminders</p>
+                    <h1 id="reminders-title">Get Alerts for <span>Upcoming Events</span></h1>
+                    <p>Choose how and when to get reminders about PNP public programmes.</p>
+                </header>
+                <article class="reminders-event">
+                    <img id="reminders-photo" src="../../assets/hero/event-dialogue-preview.png" alt="Public meeting in Bengaluru">
+                    <div class="reminders-event-copy">
+                        <h2 id="reminders-event-title">District Dialogue &amp; Public Meeting</h2>
+                        <ul>
+                            <li><span aria-hidden="true">&#9638;</span><time id="reminders-date" datetime="2026-11-25">25 Nov 2026</time></li>
+                            <li><span aria-hidden="true">&#9719;</span><span>10:00 AM</span></li>
+                            <li><span aria-hidden="true">&#9678;</span><span id="reminders-venue">Town Hall, Bengaluru</span></li>
+                        </ul>
+                        <p class="reminders-note">Choose a reminder time before the event starts.</p>
+                    </div>
+                </article>
+            </div>
+            <form class="reminders-settings" id="reminders-form">
+                <h2><span aria-hidden="true">&#9881;</span> Reminder Settings</h2>
+                <div class="reminders-form-body">
+                    <fieldset>
+                        <legend>Your Details</legend>
+                        <div class="reminders-details">
+                            <label>Mobile Number<input id="reminders-phone" type="tel" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Enter mobile number"></label>
+                            <label>Email (optional)<input id="reminders-email" type="email" autocomplete="email" placeholder="Enter email address"></label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Reminder Channel <small>(Select one or more)</small></legend>
+                        <div class="reminders-options reminders-channels">
+                            <label><input type="checkbox" name="channel" value="SMS" checked> SMS</label>
+                            <label><input type="checkbox" name="channel" value="WhatsApp" checked> WhatsApp</label>
+                            <label><input type="checkbox" name="channel" value="Email"> Email</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Reminder Timing</legend>
+                        <div class="reminders-options reminders-timing">
+                            <label><input type="radio" name="timing" value="1 day before" required> 1 day before</label>
+                            <label><input type="radio" name="timing" value="3 hours before" checked> 3 hours before</label>
+                            <label><input type="radio" name="timing" value="1 hour before"> 1 hour before</label>
+                            <label><input type="radio" name="timing" value="At start time"> At start time</label>
+                        </div>
+                    </fieldset>
+                    <p class="reminders-preview">Local preview. Use sample contact details. No alerts are sent.</p>
+                    <div class="reminders-submit">
+                        <label><input type="checkbox" required> I agree to receive PNP event reminders on my selected channels.</label>
+                        <button type="submit" disabled>Enable Reminders</button>
+                    </div>
+                    <p id="reminders-status" role="status"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

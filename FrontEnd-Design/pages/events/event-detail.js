@@ -1,57 +1,15 @@
-﻿(() => {
-    const events = {
-        'peoples-unity-rally': {
-            title: "People's Unity Rally",
-            description: 'A public gathering in Bengaluru focused on community participation.',
-            date: '2026-11-12',
-            end: '01:00 PM',
-            city: 'Bengaluru',
-            district: 'Bengaluru Urban',
-            photo: 'story-community.png',
-            alt: 'Illustration of a speaker addressing an outdoor community gathering'
-        },
-        'district-dialogue': {
-            title: 'District Dialogue & Public Meeting',
-            description: 'A community dialogue to listen to citizens, discuss local priorities and shape actionable solutions for the district.',
-            date: '2026-11-25',
-            end: '04:00 PM',
-            venue: 'Town Hall',
-            city: 'Bengaluru',
-            district: 'Bengaluru Urban',
-            photo: 'event-dialogue-preview.png',
-            alt: 'Illustrative outdoor public meeting with a speaker addressing a seated audience'
-        },
-        'bengaluru-community-meet': {
-            title: 'Bengaluru Community Meet',
-            description: 'A community meeting for Bengaluru residents to discuss neighbourhood priorities.',
-            date: '2026-12-08',
-            end: '01:00 PM',
-            city: 'Bengaluru',
-            district: 'Bengaluru Urban',
-            photo: 'story-volunteer.png',
-            alt: 'Illustrative community volunteer'
-        },
-        'mysuru-public-dialogue': {
-            title: 'Mysuru Public Dialogue',
-            description: 'A public dialogue for Mysuru residents to share local concerns and discuss district priorities.',
-            date: '2026-12-19',
-            end: '01:00 PM',
-            city: 'Mysuru',
-            district: 'Mysuru',
-            photo: 'story-community.png',
-            alt: 'Illustration of a speaker addressing an outdoor community gathering'
-        }
-    };
-
+(() => {
     const eventId = new URLSearchParams(window.location.search).get('event') || 'district-dialogue';
     const preview = document.querySelector('#detail-preview');
-    if (!Object.hasOwn(events, eventId)) {
+    if (!Object.hasOwn(pnpEvents, eventId)) {
         preview.hidden = true;
         document.querySelector('#detail-unavailable').hidden = false;
         return;
     }
 
-    const event = events[eventId];
+    const event = pnpEvents[eventId];
+    preview.querySelector('.detail-rsvp').href = 'event-rsvp.html?event=' + encodeURIComponent(eventId);
+    preview.querySelector('#detail-reminders').href = 'event-reminders.html?event=' + encodeURIComponent(eventId);
     const location = [event.venue || event.city, event.venue ? event.city : 'Karnataka'].join(', ');
     const title = preview.querySelector('#detail-title');
     if (eventId !== 'district-dialogue') title.textContent = event.title;

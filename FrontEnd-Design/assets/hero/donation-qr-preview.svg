@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" shape-rendering="crispEdges">
+    <rect width="44" height="44" fill="#fff"/>
+    <path fill="#111821" fill-rule="evenodd" d="M2 2h11v11H2Zm2 2v7h7V4Zm2 2h3v3H6ZM31 2h11v11H31Zm2 2v7h7V4Zm2 2h3v3h-3ZM2 31h11v11H2Zm2 2v7h7v-7Zm2 2h3v3H6Z"/>
+    <path fill="#111821" d="M15 2h5v3h-5zm7 0h3v6h-3zm5 3h2v7h-2zM16 7h4v5h-4zm5 4h4v4h-4zM2 15h3v4H2zm5 0h8v3H7zm28 0h7v4h-7zm-6 3h4v4h-4zM2 21h5v3H2zm7 0h4v5H9zm26 0h7v5h-7zM3 26h4v3H3zm12 0h4v5h-4zm6 0h6v3h-6zm9-2h3v6h-3zm5 5h5v4h-5zm-14 2h7v4h-7zm-6 2h3v4h-3zm16-2h3v5h-3zm7 4h4v7h-4zm-9 3h5v4h-5zm-7 0h5v3h-5zm-7 2h5v2h-5z"/>
+</svg>

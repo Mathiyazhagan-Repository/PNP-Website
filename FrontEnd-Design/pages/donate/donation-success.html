@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation Confirmation | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="donation-success.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="donation-success.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="donation-result" data-status-endpoint="">
+        <svg class="result-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="result-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+            <symbol id="result-document" viewBox="0 0 24 24"><path d="M4 2h10l6 6v14H4zM14 2v6h6M7 11h10m-10 4h10m-10 4h7"/></symbol>
+            <symbol id="result-download-icon" viewBox="0 0 24 24"><path d="M12 2v13m-5-5 5 5 5-5M3 16v5h18v-5"/></symbol>
+            <symbol id="result-print-icon" viewBox="0 0 24 24"><path d="M6 8V3h12v5M6 17H3V8h18v9h-3m-12-3h12v7H6z"/></symbol>
+            <symbol id="result-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+            <symbol id="result-sms" viewBox="0 0 24 24"><path d="M20 3H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h2v4l5-4h9a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/><path d="M7 11h.01m5 0h.01m5 0h.01"/></symbol>
+            <symbol id="result-whatsapp" viewBox="0 0 24 24"><path d="M4 18a10 10 0 1 1 4 3l-6 1Z"/><path d="m8 7 2 3-1 1a8 8 0 0 0 4 4l1-1 3 2-1 2C11 18 6 13 6 8Z"/></symbol>
+        </svg>
+
+        <ol class="result-steps" aria-label="Donation progress">
+            <li><span class="result-step-icon"><svg aria-hidden="true"><use href="#result-check"/></svg></span><strong>Donate</strong></li>
+            <li><span class="result-step-icon"><svg aria-hidden="true"><use href="#result-check"/></svg></span><strong id="result-step-verify">Verify Payment</strong></li>
+            <li><span class="result-step-icon"><svg aria-hidden="true"><use href="#result-check"/></svg></span><strong id="result-step-complete">Donation Complete</strong></li>
+        </ol>
+        <section class="result-card" aria-labelledby="result-title">
+            <div class="receipt-layout">
+                <div class="receipt-left">
+                    <header class="receipt-brand">
+                        <img class="receipt-flag" src="../../assets/hero/navbar-karnataka-flag.png" alt="">
+                        <div><strong>PNP</strong><span>Praja Nishchaya Party</span><span lang="kn">&#3242;&#3277;&#3248;&#3228;&#3262; &#3240;&#3263;&#3254;&#3277;&#3226;&#3247; &#3242;&#3221;&#3277;&#3255;</span></div>
+                    </header>
+                    <div class="receipt-thanks">
+                        <span class="receipt-seal"><svg aria-hidden="true"><use href="#result-check"/></svg></span>
+                        <div><h2>Thank You!</h2><p>Your contribution strengthens our mission for a better Karnataka.</p></div>
+                    </div>
+                </div>
+                <div class="receipt-right">
+                    <header class="receipt-heading">
+                        <svg aria-hidden="true"><use href="#result-document"/></svg>
+                        <div><h1 id="result-title">Donation Receipt</h1><p id="result-subtitle">Receipt Status</p></div>
+                    </header>
+                    <dl class="receipt-details">
+                        <div><dt>Receipt No.</dt><dd id="result-receipt">&mdash;</dd></div>
+                        <div><dt>Donor Name</dt><dd id="result-name">&mdash;</dd></div>
+                        <div><dt>Amount</dt><dd id="result-amount">&mdash;</dd></div>
+                        <div><dt>Date</dt><dd id="result-date">&mdash;</dd></div>
+                        <div><dt>Payment Mode</dt><dd id="result-mode">&mdash;</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <div class="result-actions">
+                <a id="result-download" class="result-primary" aria-disabled="true"><svg aria-hidden="true"><use href="#result-download-icon"/></svg>Download PDF</a>
+                <a id="result-print" aria-disabled="true"><svg aria-hidden="true"><use href="#result-print-icon"/></svg>Print</a>
+                <button type="button" disabled><svg aria-hidden="true"><use href="#result-mail"/></svg>Email</button>
+                <button type="button" disabled><svg aria-hidden="true"><use href="#result-sms"/></svg>SMS</button>
+                <button type="button" disabled><svg aria-hidden="true"><use href="#result-whatsapp"/></svg>WhatsApp</button>
+            </div>
+            <p id="result-status" role="status">A verified payment is required to display an official receipt.</p>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

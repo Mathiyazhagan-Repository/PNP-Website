@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063458">
+  <title>My PNP Membership Card | PNP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./join.css">
+  <link rel="stylesheet" href="./membership-card.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="../../assets/vendor/qrcode.js" defer></script>
+  <script src="./membership-local.js" defer></script>
+  <script src="./membership-card.js" defer></script>
+</head>
+<body class="membership-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="membership-card-section" aria-labelledby="memberCardHeading">
+      <div class="membership-card-layout">
+        <header class="member-card-intro">
+          <a class="member-card-brand" href="../../index.html" aria-label="PNP homepage"><span class="member-card-wordmark" translate="no">PNP<svg viewBox="0 0 80 13" aria-hidden="true"><path d="M0 8Q20 1 40 6T80 2L77 8Q60 15 40 10T0 12Z" fill="#ffce00"/><path d="M0 4Q20 0 40 3T80 0L78 3Q60 9 40 7T0 8Z" fill="#f10e72"/></svg></span><span>Praja Nishchaya<br>Party</span></a>
+          <h1 id="memberCardHeading"><span>My</span><strong translate="no">PNP</strong><b>Membership</b><strong>Card</strong></h1>
+          <p class="member-card-mode" id="memberCardMode" hidden>Local design preview</p>
+        </header>
+        <div class="member-card-stage" id="memberCardStage" hidden>
+          <div class="member-card-clip" aria-hidden="true"><span></span></div>
+          <article class="digital-member-card" id="digitalMemberCard" aria-label="Digital membership card">
+            <div class="digital-card-shine" aria-hidden="true"></div>
+            <header class="digital-card-header"><div class="digital-card-brand"><svg viewBox="0 0 70 63" aria-hidden="true"><path d="M0 52C17 13 41 27 70 1L59 23C35 36 20 24 0 52" fill="#c3136a"/><path d="M0 58C18 30 40 45 63 26L54 43C35 53 18 39 0 58" fill="#f7ce00"/><path d="M0 63C20 43 37 58 56 44L48 57C32 65 17 54 0 63" fill="#12993f"/></svg><div><strong translate="no">PNP</strong><span>Praja Nishchaya Party</span></div></div><span class="digital-card-status" id="memberCardStatus">Member</span></header>
+            <div class="digital-card-body">
+              <div class="digital-card-photo"><img id="memberCardPhoto" src="../../assets/hero/membership-sample-portrait.png" alt="Fictional portrait for the sample card" width="1024" height="1024"><svg id="memberCardPhotoFallback" viewBox="0 0 70 90" aria-hidden="true" hidden><circle cx="35" cy="28" r="17"/><path d="M5 87V68a30 30 0 0 1 60 0v19Z"/></svg></div>
+              <div class="digital-card-details"><h2 id="memberCardName">Rahul Sharma</h2><dl><div><dt><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="4" r="2.5"/><path d="M3 14v-2a5 5 0 0 1 10 0v2Z"/></svg>Member ID</dt><dd id="memberCardNumber" translate="no">PNP0004587</dd></div><div><dt><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 6h12M5 1v4M11 1v4M5 9h2M9 9h2M5 12h2"/></svg>Member Since</dt><dd id="memberCardDate">20 Nov 2026</dd></div><div><dt>District</dt><dd id="memberCardDistrict">Bengaluru Urban</dd></div></dl></div>
+              <div class="digital-card-qr"><div id="memberCardQr" role="img" aria-label="QR preview"></div><span id="memberCardQrCaption">Scan preview</span></div>
+            </div>
+            <img class="digital-card-landmark" src="../../assets/hero/navbar-vidhana.png" alt="" aria-hidden="true" width="1650" height="700">
+            <p class="digital-card-preview-label" id="memberCardPreviewLabel">DESIGN PREVIEW · NOT A VALID MEMBERSHIP ID</p>
+            <svg class="digital-card-ribbons" viewBox="0 0 600 85" preserveAspectRatio="none" aria-hidden="true"><path d="M0 18C180 150 440-85 600 18V85H0Z" fill="#ffdc00"/><path d="M0 33C180 150 440-50 600 40V85H0Z" fill="#109d37"/><path d="M0 48C180 150 440-18 600 58V85H0Z" fill="#fff"/><path d="M0 66C240 145 420 0 600 68V85H0Z" fill="#c2185b"/></svg>
+          </article>
+        </div>
+        <nav class="member-card-actions" aria-label="Membership card actions">
+          <button id="memberCardDownload" type="button" disabled><span class="member-card-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v14M6 10l6 6 6-6M3 17v5h18v-5"/></svg></span><span>Download<br>ID Card</span></button>
+          <button id="memberCardShare" type="button" disabled><span class="member-card-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="4" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="20" r="3"/><path d="m8 10 7-4M8 14l7 4"/></svg></span><span>Share<br>Membership</span></button>
+          <button id="memberCardVerify" type="button" disabled><span class="member-card-action-icon verify"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 4v6c0 6-9 10-9 10S3 18 3 12V6Z"/><path d="m7 12 3 3 7-7"/></svg></span><span id="memberCardVerifyLabel">Verify<br>with QR</span></button>
+        <a id="memberCardReferral" class="member-card-referral-action" href="./referral.html"><span class="member-card-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="7" r="4"/><path d="M1 22v-4a7 7 0 0 1 14 0v4M19 7v8M15 11h8"/></svg></span><span>Invite &amp;<br>Refer</span></a>
+        </nav>
+      </div>
+      <div class="member-card-bottom"><p id="memberCardFeedback" role="status" aria-live="polite">Loading your membership card…</p><a href="./membership-success.html" id="memberCardBack">← Membership summary</a></div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <dialog id="memberCardDialog" class="membership-notice" aria-labelledby="memberCardDialogTitle"><button type="button" class="membership-notice-close" aria-label="Close card information">×</button><h2 id="memberCardDialogTitle">Card Preview</h2><p id="memberCardDialogText"></p><button type="button" id="memberCardPrint" class="membership-notice-back">Print preview</button></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+</body>
+</html>

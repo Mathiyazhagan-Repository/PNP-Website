@@ -1,0 +1,37 @@
+.events-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    min-height: 2.65rem;
+    padding: .3rem .85rem .3rem .35rem;
+    border: 1px solid #becde3;
+    border-radius: 2rem;
+    background: #f9fbff;
+    box-shadow: 0 2px 8px #0b244020;
+    color: #122d56;
+    font-size: .875rem;
+    font-weight: 750;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.events-back-button svg {
+    box-sizing: content-box;
+    width: 1rem;
+    height: 1rem;
+    padding: .35rem;
+    border-radius: 50%;
+    background: #e0ebfa;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.events-back-button:hover { background: #e9f1fc; color: #122d56; }
+.events-back-button:focus-visible { outline: 2px solid #2384d8; outline-offset: 3px; }
+.detail-back-row, .gallery-intro .events-back-button, .live-intro .events-back-button { margin-bottom: .75rem; }
+.rsvp-intro .events-back-button { margin-top: .35rem; }
+.gallery-intro .events-back-button { display: flex; width: fit-content; }

@@ -192,7 +192,7 @@ span.events-day:nth-child(7n), span.events-day:nth-child(7n + 1) { background: #
     .events-days { grid-auto-rows: 42px; }
     .events-weekdays { grid-auto-rows: 32px; }
     .events-day { width: min(38px, 100%); height: 38px; }
-    .events-toggle button, .events-filter select, .events-filter button, .events-actions a { min-height: 44px; }
+    .events-live-link, .events-toggle button, .events-filter select, .events-filter button, .events-actions a { min-height: 44px; }
 }
 /* Balance the event details across the available card width. */
 .events-card { grid-template-columns: 44% minmax(0,1fr); }
@@ -241,3 +241,61 @@ span.events-day:nth-child(7n), span.events-day:nth-child(7n + 1) { background: #
 @keyframes events-location-pulse{0%{transform:scale(.65);opacity:.8}85%,100%{transform:scale(1.45);opacity:0}}
 @media(max-width:570px){.events-rotation-controls button{width:31px;height:31px}.events-map{min-height:235px}.events-map-current{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.events-city-marker.is-active .events-pin-halo{animation:none}}
+
+.events-heading-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .55rem;
+}
+
+.events-live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .45rem .8rem;
+    border-radius: 2rem;
+    background: #c70051;
+    color: #fff;
+    font-weight: 750;
+}
+
+.events-live-link:hover { background: #a80045; }
+
+
+.events-live-link::before {
+    width: .65rem;
+    height: .65rem;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .events-live-link { animation: events-stream-button 1.5s ease-in-out 3; }
+    .events-live-link::before { animation: events-stream-pulse 1.5s ease-out 3; }
+}
+
+@keyframes events-stream-pulse {
+    from { box-shadow: 0 0 0 0 #fff9; }
+    to { box-shadow: 0 0 0 .55rem #fff0; }
+}
+
+@keyframes events-stream-button {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); box-shadow: 0 .3rem .8rem #c7005155; }
+}
+
+.events-gallery-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: .35rem .8rem;
+    border: 1px solid #c8d9e8;
+    border-radius: 2rem;
+    background: #fff;
+    color: var(--navy);
+    font-weight: 750;
+}
+
+.events-gallery-link:hover { background: #e1ecfa; }

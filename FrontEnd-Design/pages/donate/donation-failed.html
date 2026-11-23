@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation Payment Status | PNP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="donation-failed.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="donation-failed.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="failed-page" data-status-endpoint="">
+        <section class="failed-card" aria-labelledby="failed-title">
+            <header class="failed-banner">
+                <span class="failed-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v7m0 4h.01"/></svg></span>
+                <div>
+                    <p id="failed-label">Payment Status</p>
+                    <h1 id="failed-title">Payment Status Unverified</h1>
+                    <p id="failed-message" role="status">Check the original payment status before you try again.</p>
+                </div>
+            </header>
+            <dl class="failed-summary">
+                <div><dt>Amount</dt><dd id="failed-amount">&mdash;</dd></div>
+                <div><dt>Payment Method</dt><dd id="failed-method">&mdash;</dd></div>
+                <div><dt>Reference</dt><dd id="failed-reference">&mdash;</dd></div>
+            </dl>
+            <div class="failed-actions">
+                <a id="failed-retry" class="failed-primary" href="donate.html" hidden>Retry Donation</a>
+                <button id="failed-recheck" type="button" hidden>Check Payment Status</button>
+                <a href="../../index.html">Back to Home</a>
+            </div>
+            <p class="failed-help">If your bank shows a debit, check with your bank or payment provider before retrying.</p>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

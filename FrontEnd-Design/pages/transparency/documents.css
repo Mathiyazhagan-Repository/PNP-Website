@@ -1,0 +1,7 @@
+.document-library-page .expenditure-workspace{grid-template-columns:25.5% 26% minmax(0,1fr)}
+.library-search{margin-left:auto}.library-search input{width:180px;max-width:100%;border:1px solid #bad4e9;border-radius:8px;padding:7px 10px;font:500 11px 'DM Sans',sans-serif;background:#fff;color:#17345b}
+.document-library-page .donations-summary-card.source strong{font-size:23px;color:#112e55}
+.library-category{display:inline-block;padding:4px 10px;min-width:65px;text-align:center;border-radius:8px;font-weight:700;background:#d4eaff;color:#15365d}
+.library-category.filings{background:#d6f2d8}.library-category.policies{background:#fff0ae}.library-category.compliance{background:#ffe0f1}.library-category.others{background:#e7d9ff}
+@media(max-width:1000px){.document-library-page .expenditure-workspace{grid-template-columns:1fr 1.25fr}.document-library-page .donations-reports{grid-column:1/-1}.library-search{margin-left:0}}
+@media(max-width:540px){.document-library-page .expenditure-workspace{grid-template-columns:1fr}.library-search,.library-search input{width:100%}.transparency-section-back{margin-top:8px}}

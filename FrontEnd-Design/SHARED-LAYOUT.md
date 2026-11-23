@@ -30,3 +30,6 @@ For every upcoming section and module, connect section backgrounds directly like
 ## Shared newsroom strip
 
 shared-layout.js automatically appends the Latest Update strip to every page with a main element. Include shared-layout.js before script.js. The strip stays at the screen bottom until its reserved slot above the footer is reached. Headlines and design are maintained centrally in the newsroom layout; do not copy its markup into individual modules.
+
+
+Section scrolling: shared-layout.js loads section-scroll.js for every module. Desktop wheel gestures visit direct main sections, tall-section reading stops and footer. Stops allow space for the sticky header and fixed newsroom strip. Native touch, keyboard, scrollbar, zoom, horizontal wheel gestures and scrollable panels remain available. The installer guards against duplicate listeners.

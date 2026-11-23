@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063458">
+  <meta name="description" content="Your PNP membership confirmation and digital membership card.">
+  <title>Membership Confirmation | PNP</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./join.css">
+  <link rel="stylesheet" href="./membership-success.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./membership-local.js" defer></script>
+  <script src="./membership-success.js" defer></script>
+</head>
+<body class="membership-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="membership-confirmation" aria-labelledby="confirmationHeading">
+      <div class="confirmation-content">
+        <a class="confirmation-brand" href="../../index.html" aria-label="PNP homepage"><span class="confirmation-wordmark" translate="no">PNP<svg viewBox="0 0 90 14" aria-hidden="true"><path d="M0 9Q23 1 45 6T90 2L86 8Q68 17 45 11T0 13Z" fill="#ffca00"/><path d="M0 4Q23 0 45 3T90 0L88 3Q68 10 45 7T0 8Z" fill="#ef1763"/></svg></span><span>Praja Nishchaya Party</span></a>
+        <span class="confirmation-preview-label" id="confirmationPreviewLabel" hidden>Local design preview · Not a valid membership</span>
+        <div class="confirmation-title-row">
+          <svg class="confirmation-seal" id="confirmationSeal" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="confirmationSealGreen" x2="1" y2="1"><stop stop-color="#efff83"/><stop offset=".5" stop-color="#68b624"/><stop offset="1" stop-color="#276d07"/></linearGradient><radialGradient id="confirmationSealInner"><stop stop-color="#fffdf3"/><stop offset="1" stop-color="#e5edb9"/></radialGradient></defs><path d="m50 0 9 6 11-1 6 9 10 4 2 11 9 7-2 11 5 10-7 9-1 11-11 4-6 9-11-1-9 6-10-6-11 1-6-9-10-4-2-11-9-7 2-11-5-10 7-9 1-11 11-4 6-9 11 1Z" fill="#d6eeb1"/><circle cx="50" cy="50" r="39" fill="url(#confirmationSealGreen)"/><circle cx="50" cy="50" r="29" fill="url(#confirmationSealInner)"/><path d="m34 49 11 11 22-24" fill="none" stroke="#5b9f14" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h1 id="confirmationHeading"><span id="confirmationTitle">Your Membership</span><strong id="confirmationHighlight">Confirmation</strong></h1><p id="confirmationWelcome">Complete mobile verification to continue.</p></div>
+        </div>
+        <div class="confirmation-number" id="confirmationNumberPanel" hidden><span id="confirmationNumberLabel">Membership Number</span><strong id="confirmationNumber" translate="no"></strong></div>
+        <p class="confirmation-status" id="confirmationStatus" role="status" aria-live="polite">Checking your membership details…</p>
+        <nav class="confirmation-actions" aria-label="Membership card actions">
+          <button type="button" id="confirmationView" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M5 16q3-5 6 0M14 9h5M14 13h5M14 16h3"/></svg><span>View Member ID</span></button>
+          <button type="button" id="confirmationDownload" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v14M6 10l6 6 6-6M3 17v5h18v-5"/></svg><span>Download</span></button>
+          <button type="button" id="confirmationShare" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="4" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="20" r="3"/><path d="m8 10 7-4M8 14l7 4"/></svg><span>Share</span></button>
+        </nav>
+        <a class="confirmation-next" id="confirmationNext" href="./verify-otp.html">Continue to mobile verification →</a>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <dialog id="confirmationCardDialog" class="confirmation-card-dialog" aria-labelledby="confirmationCardTitle">
+    <button type="button" class="membership-notice-close" aria-label="Close membership preview">×</button>
+    <h2 id="confirmationCardTitle">Membership Card Preview</h2>
+    <div class="confirmation-preview-card"><span class="preview-card-label">DESIGN PREVIEW — NOT VALID FOR IDENTIFICATION</span><strong class="preview-card-party" translate="no">PNP</strong><p>Praja Nishchaya Party</p><hr><h3>Preview Member</h3><p>Sample membership number</p><strong class="preview-card-number" translate="no">PNP0004587</strong><p>This is a sample card, not an issued membership ID.</p></div>
+    <button type="button" id="confirmationDialogDownload">Download preview</button>
+  </dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="./join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+</body>
+</html>

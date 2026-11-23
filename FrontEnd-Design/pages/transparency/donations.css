@@ -1,0 +1,89 @@
+.donations-disclosure-page{background:#eaf5fc}
+.donations-disclosure{position:relative;background:radial-gradient(ellipse at 75% 0,#c9ebfc77,transparent 55%),linear-gradient(120deg,#f8fcff,#e5f3fc);color:#13315a;padding-bottom:8px;overflow:hidden}
+.donations-heading{position:relative;isolation:isolate;padding:13px 2% 12px;min-height:91px;overflow:hidden}
+.donations-heading>img{position:absolute;right:0;top:-28%;width:37%;height:150%;object-fit:contain;object-position:right center;opacity:.3;z-index:-1;mask-image:linear-gradient(90deg,transparent,#000 30%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.donations-heading-ribbon{position:absolute;right:0;top:0;width:118px;height:45px;z-index:-1}
+.donations-heading h1{color:#133359;font:900 clamp(25px,2.6vw,38px)/1.1 Manrope,sans-serif;letter-spacing:-1px;margin:0 0 4px}
+.donations-heading>p{font-size:12px;line-height:1.35;margin:0;color:#18314e;font-weight:500}
+.donations-preview-tag{display:inline-block;position:absolute;right:3%;bottom:10px;background:#fff5fcbb;border:1px solid #e7b4d3;border-radius:14px;color:#a72c69;font-size:9px;font-weight:700;padding:3px 8px}
+.donations-preview-tag[hidden]{display:none}
+.donations-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 1% 10px;padding:8px 15px;background:#fff9;border:1px solid #e2f0fa;border-radius:13px;box-shadow:0 5px 12px #416d9121;min-height:43px}
+.donations-period-label{display:flex;align-items:center;gap:8px;font-size:11px;white-space:nowrap;margin-right:6px}
+.donations-period-label>svg{width:18px;height:18px;fill:none;stroke:#1d3a6b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.donations-period-buttons,.donations-view-buttons{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.donations-toolbar button{min-height:28px;padding:5px 15px;border:1px solid #b8cee4;border-radius:7px;background:linear-gradient(#fff,#eaf3fb);color:#1b365c;font:700 11px/1.2 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 1px 3px #547b9910}
+.donations-toolbar button[aria-pressed="true"]{color:#fff;background:linear-gradient(#1767b6,#06316c);border-color:#7cb8e5;box-shadow:0 1px 5px #1f6dad38}
+.donations-toolbar button:disabled{opacity:.5;cursor:not-allowed}
+.donations-workspace{display:grid;grid-template-columns:25.5% 29% minmax(0,1fr);gap:12px;margin:0 1%;align-items:stretch}
+.donations-summary,.donations-chart-panel,.donations-reports{border:1px solid #dcebf5;border-radius:14px;background:linear-gradient(#fff,#f8fcff);box-shadow:0 4px 12px #4b759a20;min-width:0;margin:0}
+.donations-summary{display:grid;gap:6px;padding:8px}
+.donations-summary-card{display:grid;grid-template-columns:31px minmax(0,1fr) minmax(0,.94fr);gap:10px;align-items:center;min-height:49px;border-radius:10px;padding:6px 10px;background:#e0f0fd}
+.donations-summary-card>svg{width:29px;height:30px;fill:none;stroke:#20883c;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.donations-summary-card h2{margin:0;font:800 10px/1.2 'DM Sans',sans-serif;letter-spacing:-.1px;color:#17345e}
+.donations-summary-card strong{display:block;font:900 clamp(13px,1.3vw,19px)/1.2 Manrope,sans-serif;white-space:nowrap;color:#163456}
+.donations-summary-card small{display:block;font-size:9px;line-height:1.25;color:#3c4e64;margin-top:2px}
+.donations-summary-card small[hidden]{display:none}
+.donations-summary-card.period{background:linear-gradient(110deg,#e3f7e9,#dcf0df)}
+.donations-summary-card.statements{background:linear-gradient(110deg,#fce8f4,#f6ddec)}
+.donations-summary-card.statements>svg{stroke:#c6186d}
+.donations-summary-card.source{background:linear-gradient(110deg,#fff8df,#fff3d6)}
+.donations-summary-card.source>svg{stroke:#9d7d0c}
+.donations-summary-card.source strong{font-size:12px;white-space:normal;max-width:110px;line-height:1.2}
+.donations-chart-panel{padding:12px 15px 8px;position:relative}
+.donations-chart-panel>figcaption{font:800 13px/1.3 Manrope,sans-serif;color:#152c50;margin-bottom:5px}
+.donations-chart-panel>figcaption>span{font:600 10px 'DM Sans',sans-serif}
+.donations-chart-wrap{position:relative;width:100%}
+#donationsChart{display:block;width:100%;height:auto;min-height:158px;overflow:visible}
+.donations-chart-preview{position:absolute;left:43%;top:22%;transform:translateX(-20%);border:1px solid #efaacf;border-radius:9px;background:#fff4fc;color:#a52f6d;font-size:9px;font-weight:700;line-height:1.2;padding:6px 9px;box-shadow:0 2px 5px #a72b6918;pointer-events:none}
+.donations-chart-preview[hidden]{display:none}
+.donations-chart-tooltip{position:absolute;z-index:4;background:#172e52;color:white;border-radius:6px;padding:6px 9px;font-size:11px;line-height:1.3;pointer-events:none;box-shadow:0 3px 9px #08213c30;max-width:190px}
+.donations-chart-tooltip[hidden]{display:none}
+.donations-chart-scope{font-size:9px;line-height:1.35;text-align:center;color:#5f7389;margin:1px 0 0}
+.donations-reports{padding:12px 12px 9px;display:flex;flex-direction:column}
+.donations-reports>h2{font:800 13px/1.3 Manrope,sans-serif;color:#152c50;margin:0 0 9px}
+.donations-table-scroll{overflow-x:auto;width:100%;border:1px solid #d5e3ef;border-radius:9px}
+.donations-table-scroll>table{width:100%;border-collapse:collapse;color:#1a2c43;font-size:9px;line-height:1.25;white-space:nowrap;text-align:left}
+.donations-table-scroll th{padding:7px 6px;background:#e9f0f6;color:#1d385b;font-weight:800}
+.donations-table-scroll td{padding:6px;border-top:1px solid #d9e5ee;font-weight:500;background:#fff}
+.donations-table-scroll tbody tr:nth-child(even) td{background:#f8fcff}
+.donations-report-actions{display:flex;gap:5px;align-items:center}
+.donations-report-actions button,.donations-report-actions a{display:inline-flex;align-items:center;justify-content:center;gap:3px;padding:4px 6px;min-height:24px;white-space:nowrap;border:1px solid #94c7ec;border-radius:5px;color:#0d5792;background:#f2f9ff;font:700 9px/1 'DM Sans',sans-serif;text-decoration:none;cursor:pointer}
+.donations-report-actions svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.donations-report-actions .donations-row-download{background:linear-gradient(#2aaf42,#16872e);color:#fff;border-color:#179d35}
+.donations-report-actions button:disabled{cursor:not-allowed;opacity:.58}
+.donations-report-pager{display:flex;gap:6px;align-items:center;justify-content:flex-end;font-size:9px;margin-top:7px;color:#5c7187}
+.donations-report-pager[hidden]{display:none}
+.donations-report-pager button{display:grid;place-items:center;min-width:23px;min-height:23px;border:1px solid #c7d9e9;border-radius:5px;background:#f1f7fc;color:#244b76;font-size:17px;line-height:1;cursor:pointer}
+.donations-report-pager button:disabled{opacity:.4;cursor:not-allowed}
+.donations-empty{font-size:12px;color:#5a7086;line-height:1.5;margin:10px 0}
+.donations-empty[hidden]{display:none}
+.donations-section-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:9px 1% 0 27%;min-height:35px}
+.donations-section-footer>p{display:flex;align-items:center;gap:7px;font-size:9px;line-height:1.4;color:#325171;margin:0}
+.donations-section-footer>p>svg{width:17px;height:17px;flex-shrink:0;fill:none;stroke:#1778bd;stroke-width:2}
+.donations-section-footer>button{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:34px;padding:7px 15px;border:1px solid #26913c;border-radius:8px;background:linear-gradient(#34b544,#12822c);color:#fff;white-space:nowrap;font:800 12px/1.3 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 2px 7px #208d3326}
+.donations-section-footer>button>svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.donations-section-footer>button:disabled{opacity:.6;cursor:not-allowed}
+.donations-source-line{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 14px;min-height:20px;padding:6px 2% 0;font-size:10px;color:#55718c;line-height:1.45}
+.donations-source-line p{margin:0}
+.donations-source-line a{color:#14629c}
+.donations-source-line button{border:1px solid #bfd3e7;border-radius:6px;background:#fff;color:#193d65;padding:6px 11px;cursor:pointer;font-size:11px}
+.donations-source-line [hidden]{display:none}
+.donations-disclosure :focus-visible{outline:3px solid #e7b314;outline-offset:3px;border-radius:5px}
+.donations-document-dialog{width:min(550px,calc(100% - 28px));max-height:80dvh;padding:25px;border:1px solid #c2d9eb;border-radius:17px;background:#f8fcff;color:#15385c;box-shadow:0 15px 55px #001c3a66}
+.donations-document-dialog::backdrop{background:#031b36bd;backdrop-filter:blur(3px)}
+.donations-dialog-close{position:absolute;right:12px;top:10px;border:0;border-radius:50%;background:#e7f1fa;color:#183b66;min-width:35px;min-height:35px;font-size:25px;cursor:pointer}
+#donationsDocumentMode{display:block;color:#b02f70;font-size:10px;font-weight:800;letter-spacing:.7px;margin-bottom:5px}
+.donations-document-dialog h2{color:#14355d;font:800 23px/1.25 Manrope,sans-serif;margin:0 30px 13px 0}
+.donations-document-dialog p{font-size:13px;line-height:1.5}
+.donations-document-dialog dl{display:grid;grid-template-columns:130px 1fr;gap:8px 12px;padding:14px;border-radius:8px;background:#eaf4fc;font-size:12px}
+.donations-document-dialog dt{font-weight:800}
+.donations-document-dialog dd{margin:0}
+.donations-document-dialog>a,.donations-dialog-back{display:inline-block;padding:10px 13px;background:#194976;color:#fff;border:0;border-radius:7px;text-decoration:none;font:700 12px 'DM Sans',sans-serif;margin:10px 8px 0 0;cursor:pointer}
+.donations-document-dialog>a[hidden]{display:none}
+@media(min-width:1600px){.donations-heading{padding-top:20px;padding-bottom:18px}.donations-heading>p{font-size:15px}.donations-toolbar{padding:10px 20px}.donations-toolbar button{font-size:13px;min-height:34px}.donations-period-label{font-size:13px}.donations-workspace{gap:16px}.donations-summary{gap:9px;padding:11px}.donations-summary-card{min-height:61px;gap:12px;padding:8px 13px;grid-template-columns:39px 1fr .94fr}.donations-summary-card>svg{width:35px;height:36px}.donations-summary-card h2{font-size:13px}.donations-summary-card small{font-size:11px}.donations-summary-card.source strong{font-size:15px}.donations-chart-panel>figcaption,.donations-reports>h2{font-size:16px}.donations-chart-panel>figcaption>span{font-size:12px}.donations-chart-scope,.donations-chart-preview{font-size:11px}.donations-table-scroll>table{font-size:11px}.donations-table-scroll th,.donations-table-scroll td{padding:9px 8px}.donations-report-actions button,.donations-report-actions a{font-size:11px;padding:5px 8px;min-height:29px}.donations-section-footer>p{font-size:11px}.donations-section-footer>button{font-size:15px;min-height:41px}}
+@media(max-width:1050px){.donations-workspace{grid-template-columns:27% 31% minmax(0,1fr);gap:9px}.donations-summary-card{gap:7px;padding:6px;grid-template-columns:25px 1fr .9fr}.donations-summary-card>svg{width:24px;height:25px}.donations-summary-card h2{font-size:9px}.donations-summary-card strong{font-size:14px}.donations-summary-card small{font-size:8px}.donations-summary-card.source strong{font-size:11px}.donations-chart-panel{padding-inline:10px}.donations-reports{padding-inline:9px}.donations-table-scroll>table{min-width:455px}.donations-section-footer{margin-left:29%}}
+@media(max-width:800px){.donations-workspace{grid-template-columns:1fr 1.2fr}.donations-reports{grid-column:1/-1}.donations-summary-card{min-height:58px;grid-template-columns:31px 1fr .94fr;padding:8px;gap:9px}.donations-summary-card>svg{width:28px;height:29px}.donations-summary-card h2{font-size:11px}.donations-summary-card strong{font-size:18px}.donations-summary-card small{font-size:10px}.donations-summary-card.source strong{font-size:13px}.donations-section-footer{margin-left:1%;padding-inline:5px}.donations-table-scroll>table{font-size:11px;min-width:540px}.donations-report-actions button,.donations-report-actions a{font-size:10px;min-height:30px}.donations-heading>img{width:45%;opacity:.2}.donations-preview-tag{position:static;margin-top:7px}.donations-heading{padding:16px 3% 12px}}
+@media(max-width:540px){.donations-heading h1{font-size:27px;letter-spacing:-.8px}.donations-heading>p{font-size:11px;max-width:88%}.donations-heading>p br{display:none}.donations-heading>img{width:65%;right:-15%}.donations-toolbar{padding:11px;gap:9px;margin-inline:3%}.donations-period-label{flex-basis:100%;font-size:12px}.donations-toolbar button{min-height:39px;font-size:11px;padding-inline:12px}.donations-period-buttons{gap:7px}.donations-view-buttons{gap:7px}.donations-workspace{grid-template-columns:1fr;margin-inline:3%;gap:13px}.donations-summary{grid-template-columns:1fr 1fr;gap:8px}.donations-summary-card{grid-template-columns:25px 1fr;gap:7px;min-height:100px;padding:10px 8px}.donations-summary-card>div{grid-column:1/-1;padding-left:4px}.donations-summary-card h2{font-size:10px}.donations-summary-card strong{font-size:19px}.donations-summary-card.source strong{font-size:14px;max-width:100%}.donations-summary-card small{font-size:9px}.donations-summary-card>svg{width:25px;height:27px}.donations-chart-panel{padding:15px 14px 11px}.donations-chart-panel>figcaption,.donations-reports>h2{font-size:15px}.donations-chart-panel>figcaption>span{font-size:11px}.donations-chart-preview{font-size:9px}.donations-chart-scope{font-size:10px}.donations-reports{grid-column:1;padding:14px 10px}.donations-reports>h2{margin-bottom:11px}.donations-table-scroll th,.donations-table-scroll td{padding:9px 7px}.donations-report-pager{font-size:11px;margin-top:10px}.donations-report-pager button{min-width:35px;min-height:35px}.donations-section-footer{margin:12px 3% 0;flex-direction:column;align-items:stretch;gap:12px}.donations-section-footer>p{font-size:10px}.donations-section-footer>button{min-height:44px;font-size:14px}.donations-source-line{font-size:10px;padding:10px 4%}.donations-document-dialog{padding:23px 17px}.donations-document-dialog dl{grid-template-columns:100px 1fr}}
+.transparency-section-back{display:inline-flex;align-items:center;gap:7px;margin:10px 2% 0;padding:7px 12px;border:1px solid #b8d6ee;border-radius:8px;background:linear-gradient(#fff,#edf7ff);box-shadow:0 2px 5px #174e7d17;color:#16477c;text-decoration:none;font:700 11px/1.2 'DM Sans',sans-serif;position:relative;z-index:1}
+.transparency-section-back svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.transparency-section-back:hover{background:#dceeff;border-color:#559ad1}.transparency-section-back:focus-visible{outline:3px solid #ffce20;outline-offset:3px}

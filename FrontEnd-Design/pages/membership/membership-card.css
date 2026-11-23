@@ -1,0 +1,134 @@
+/* Clipped PNP membership card, matching the supplied navy/flag reference. */
+.membership-card-section{position:relative;overflow:hidden;isolation:isolate;background:#063458 url('../../assets/hero/membership-card-background.png') center/100% 100% no-repeat;padding:24px 4% 15px;min-height:clamp(330px,29vw,490px);color:white}
+.membership-card-layout{display:grid;grid-template-columns:32% 43% 25%;align-items:center;gap:0;width:100%;max-width:1700px;margin:auto}
+.member-card-intro{align-self:stretch;position:relative;min-width:0;padding-top:0}
+.member-card-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;max-width:100%}
+.member-card-wordmark{position:relative;font:900 italic 32px/1 Manrope,sans-serif;letter-spacing:-1.5px;padding-bottom:6px}
+.member-card-wordmark>svg{position:absolute;bottom:0;left:0;width:100%;height:9px}
+.member-card-brand>span:last-child{font-size:11px;font-weight:700;border-left:1px solid #d1e8ff99;padding-left:10px;line-height:1.15}
+.member-card-intro h1{margin:28px 0 0 49%;color:white;font-family:Manrope,sans-serif;font-style:italic;line-height:1.06;letter-spacing:-.7px;position:relative;width:max-content;max-width:52%}
+.member-card-intro h1>span{display:block;font-size:clamp(19px,1.9vw,30px);font-weight:500}
+.member-card-intro h1>strong{display:block;font-size:clamp(31px,3.1vw,49px);font-weight:900}
+.member-card-intro h1>b{display:block;font-size:clamp(20px,2.05vw,32px);font-weight:800;letter-spacing:-.8px}
+.member-card-intro h1::after{content:"";position:absolute;bottom:-12px;left:0;width:90%;height:5px;transform:rotate(-7deg);border-radius:90% 10%;background:linear-gradient(90deg,transparent,#ffdd27 35%,#ffdc00)}
+.member-card-mode{display:table;padding:4px 7px;border:1px solid #cfebff55;border-radius:8px;background:#073252a8;font-size:9px;line-height:1.4;margin:25px 0 0 48%;color:#def3ff;max-width:52%}
+.member-card-mode[hidden]{display:none}
+.member-card-stage{position:relative;margin:12px 10px 4px 0;perspective:1000px;min-width:0}
+.member-card-stage[hidden]{display:none}
+.digital-member-card{position:relative;isolation:isolate;background:linear-gradient(120deg,#edf8ff,#fff 43%,#f0e9ff);border:2px solid #d6eaff;border-radius:23px;padding:17px 18px 43px;box-shadow:0 16px 26px #00172f88,inset 2px 2px 0 #fff;transform:rotate(-1.7deg) rotateY(-4deg);color:#153b67;overflow:hidden;width:100%;max-width:530px;margin:auto;min-height:245px}
+.digital-card-shine{position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-linear-gradient(125deg,transparent 0,transparent 19px,#fff8 20px,#b8dbf11a 21px,transparent 22px);opacity:.6}
+.member-card-clip{position:absolute;left:46%;top:-31px;width:30px;height:49px;z-index:5;border:2px solid #222f3b;background:linear-gradient(90deg,#53575c,#f0ead4 25%,#b1b5b8 40%,#3e4548 70%,#d0d1cf);border-radius:4px 4px 8px 8px;box-shadow:1px 3px 5px #00192f55}
+.member-card-clip::before{content:"";position:absolute;left:-7px;right:-7px;top:-7px;height:16px;border:3px solid #e8ba3b;border-radius:5px;background:linear-gradient(#141e29,#7e7a61);box-shadow:inset 0 2px 2px #fff8}
+.member-card-clip>span{position:absolute;bottom:4px;left:3px;right:3px;height:6px;border:1px solid #748087;border-radius:2px;background:#26343c}
+.digital-card-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:15px;min-width:0}
+.digital-card-brand{display:flex;align-items:center;gap:4px;min-width:0}
+.digital-card-brand>svg{width:39px;height:34px;flex-shrink:0}
+.digital-card-brand strong{font:900 italic 29px/1 Manrope,sans-serif;letter-spacing:-1px;display:block;color:#173866}
+.digital-card-brand span{display:block;font:700 8px/1.2 'DM Sans',sans-serif;color:#193c66;white-space:nowrap}
+.digital-card-status{padding:5px 16px;background:linear-gradient(#cd3673,#a80e4e);color:white;font-size:10px;font-weight:700;border-radius:20px 0 0 20px;margin-right:-18px;white-space:nowrap}
+.digital-card-body{display:grid;grid-template-columns:60px minmax(0,1fr) 85px;gap:9px;align-items:start;position:relative;z-index:2}
+.digital-card-photo{border:1px solid #bccbd9;border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:#deebf4}
+.digital-card-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.digital-card-photo img[hidden],.digital-card-photo svg[hidden]{display:none}
+.digital-card-photo svg{width:100%;height:100%;fill:#5c88ac}
+.digital-card-details h2{font:800 15px/1.25 Manrope,sans-serif;margin:0 0 8px;color:#16385f;overflow-wrap:anywhere;border-bottom:1px solid #b3c6dc;padding-bottom:4px}
+.digital-card-details dl{margin:0}
+.digital-card-details dl>div{margin:0 0 4px}
+.digital-card-details dt{font-size:8px;line-height:1.25;color:#35557b;font-weight:600}
+.digital-card-details dd{margin:1px 0 0;font-size:10px;font-weight:800;line-height:1.2;color:#193c65;overflow-wrap:anywhere}
+.digital-card-details dd#memberCardNumber{color:#bd1958;font-size:13px}
+.digital-card-qr{border:1px solid #afc6e1;border-radius:6px;background:#fff;padding:4px;text-align:center}
+#memberCardQr{width:100%;aspect-ratio:1;display:grid;place-items:center;background:#fff;overflow:hidden}
+#memberCardQr>svg{width:100%;height:100%;display:block}
+.digital-card-qr>span{font-size:8px;line-height:1.15;display:block;font-weight:700;color:#183c67;margin:3px 0 0}
+.digital-card-landmark{position:absolute;bottom:18px;left:5%;width:58%;height:65px;object-fit:contain;object-position:left bottom;opacity:.65;z-index:0}
+.digital-card-preview-label{position:relative;z-index:3;font-size:7px;line-height:1.3;letter-spacing:.2px;margin:8px 0 0;color:#284972;font-weight:700;text-align:center}
+.digital-card-preview-label[hidden]{display:none}
+.digital-card-ribbons{position:absolute;left:0;bottom:-1px;right:0;width:100%;height:39px;z-index:1;pointer-events:none}
+.member-card-actions{padding:0 0 0 25px;display:grid;gap:16px}
+.member-card-actions button{display:flex;align-items:center;gap:12px;min-height:47px;border:0;padding:0;background:none;color:#fff;text-align:left;font:600 clamp(12px,1.15vw,17px)/1.2 'DM Sans',sans-serif;cursor:pointer}
+.member-card-actions button:disabled{opacity:.5;cursor:not-allowed}
+.member-card-actions button:hover:not(:disabled){color:#ffe355}
+.member-card-action-icon{display:grid;place-items:center;width:43px;height:43px;flex-shrink:0;border-radius:50%;border:2px solid #ffe885;background:linear-gradient(135deg,#ffe729,#ffc300);box-shadow:0 3px 7px #001b3266;color:#143960}
+.member-card-action-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.member-card-action-icon.verify>svg{fill:#208b51;stroke:white;width:30px;height:30px}
+.member-card-bottom{display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap;margin:16px auto 0;color:#e2f3ff;font-size:10px;line-height:1.45;position:relative;z-index:1}
+.member-card-bottom p{margin:0;max-width:620px;text-align:center}
+.member-card-bottom a{color:#e6f8ff;text-underline-offset:3px}
+.membership-card-section :focus-visible{outline:3px solid #ffe455;outline-offset:5px;border-radius:5px}
+@media(min-width:1600px){.membership-card-section{padding-top:40px;padding-bottom:22px}.digital-member-card{padding:20px 22px 48px;min-height:290px}.digital-card-status{margin-right:-22px;font-size:12px}.digital-card-brand>svg{width:45px;height:39px}.digital-card-brand strong{font-size:34px}.digital-card-brand span{font-size:10px}.digital-card-body{grid-template-columns:73px minmax(0,1fr) 105px;gap:12px}.digital-card-details h2{font-size:19px}.digital-card-details dt{font-size:10px}.digital-card-details dd{font-size:12px}.digital-card-details dd#memberCardNumber{font-size:16px}.digital-card-qr>span{font-size:10px}.digital-card-preview-label{font-size:9px}.digital-card-landmark{height:78px}.member-card-action-icon{width:52px;height:52px}.member-card-actions{gap:22px;padding-left:40px}.member-card-actions button{gap:15px}.member-card-bottom{font-size:12px}}
+@media(max-width:1100px){.membership-card-layout{grid-template-columns:29% 46% 25%}.member-card-intro h1{margin-left:38%;max-width:65%}.member-card-mode{margin-left:38%;max-width:65%}.member-card-brand>span:last-child{font-size:9px}.member-card-wordmark{font-size:28px}.digital-member-card{padding:14px 13px 38px;min-height:228px}.digital-card-status{margin-right:-13px;padding-inline:10px;font-size:9px}.digital-card-body{grid-template-columns:48px minmax(0,1fr) 73px;gap:7px}.digital-card-details h2{font-size:12px}.digital-card-details dd#memberCardNumber{font-size:11px}.digital-card-brand>svg{width:31px;height:28px}.digital-card-brand strong{font-size:24px}.digital-card-brand span{font-size:7px}.member-card-actions{padding-left:18px;gap:14px}.member-card-actions button{gap:9px;font-size:12px}.member-card-action-icon{width:35px;height:35px}.member-card-action-icon svg{width:20px;height:20px}.member-card-action-icon.verify svg{width:25px;height:25px}}
+@media(max-width:768px){.membership-card-section{background-size:auto 100%;background-position:30% center;padding:21px 5% 24px;min-height:0}.membership-card-section::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#06345877,#063458ed 70%)}.membership-card-layout{grid-template-columns:1fr 1.55fr;gap:18px}.member-card-intro h1{margin:30px 0 0 0;max-width:100%}.member-card-intro h1>strong{font-size:34px}.member-card-intro h1>b{font-size:22px}.member-card-mode{margin:25px 0 0;max-width:100%}.member-card-stage{margin:24px 0 0}.member-card-actions{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));padding:8px 0 0;gap:8px}.member-card-actions button{font-size:12px;justify-content:center;gap:9px}.member-card-actions button+button{border-left:1px solid #80bdd655}.member-card-bottom{margin-top:14px}.member-card-brand>span:last-child{font-size:9px}}
+@media(max-width:540px){.membership-card-layout{grid-template-columns:1fr;gap:16px}.member-card-intro{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10px}.member-card-brand{align-self:start}.member-card-intro h1{margin:0;grid-row:1/3;grid-column:2}.member-card-intro h1>span{font-size:18px}.member-card-intro h1>strong{font-size:29px}.member-card-intro h1>b{font-size:19px}.member-card-mode{font-size:9px;margin:0;align-self:end;max-width:90%}.member-card-stage{margin:26px auto 0;width:100%;max-width:405px}.digital-member-card{min-height:236px;padding:15px 14px 39px}.digital-card-status{margin-right:-14px}.digital-card-body{grid-template-columns:53px minmax(0,1fr) 80px;gap:9px}.digital-card-details h2{font-size:14px}.digital-card-details dd#memberCardNumber{font-size:12px}.digital-card-details dd{font-size:10px}.digital-card-brand strong{font-size:27px}.digital-card-brand span{font-size:8px}.digital-card-brand>svg{width:35px;height:30px}.member-card-actions{grid-column:1;gap:0;padding-top:5px}.member-card-actions button{flex-direction:column;gap:7px;min-height:82px;text-align:center;font-size:11px}.member-card-action-icon{width:39px;height:39px}.member-card-bottom{gap:8px;font-size:10px}.digital-card-preview-label{font-size:7px}}
+@media print{body{background:white!important}body>:not(main){display:none!important}body main::before,main>:not(.membership-card-section){display:none!important}.membership-card-section{padding:20px!important;background:white!important;min-height:0!important;overflow:visible!important}.membership-card-layout{display:block!important}.member-card-intro,.member-card-actions,.member-card-bottom,.member-card-clip,.membership-card-section::before{display:none!important}.member-card-stage:not([hidden]){display:block!important;width:90mm!important;margin:0!important;perspective:none!important}.digital-member-card{transform:none!important;box-shadow:none!important;border:1px solid #537aa4!important;width:90mm!important;min-height:58mm!important;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+/* Scale the desktop composition directly from the supplied 964 × 292 reference. */
+.digital-card-details dt{position:relative}
+.digital-card-details dt svg{position:absolute;left:-15px;top:1px;width:10px;height:10px;fill:none;stroke:#155b98;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media screen and (min-width:769px){
+ .membership-card-section{container-type:inline-size;--mc-u:.103734cqw;min-height:0;padding:0;background-position:center;background-size:100% 100%}
+ .membership-card-layout{position:relative;display:block;width:100%;max-width:none;height:30.29cqw;margin:0}
+ .member-card-intro{position:absolute;inset:0;padding:0;pointer-events:none}
+ .member-card-brand{position:absolute;left:3.5%;top:4.2%;gap:calc(11 * var(--mc-u));pointer-events:auto}
+ .member-card-wordmark{font-size:calc(36 * var(--mc-u));letter-spacing:calc(-1.7 * var(--mc-u));padding-bottom:calc(8 * var(--mc-u))}
+ .member-card-wordmark>svg{height:calc(10 * var(--mc-u))}
+ .member-card-brand>span:last-child{font-size:calc(16.5 * var(--mc-u));line-height:1.04;padding-left:calc(11 * var(--mc-u));font-weight:800}
+ .member-card-intro h1{position:absolute;left:20.7%;top:22.8%;margin:0;width:max-content;max-width:17%;line-height:1.02;letter-spacing:calc(-.6 * var(--mc-u))}
+ .member-card-intro h1>span{font-size:calc(25 * var(--mc-u));font-weight:500}
+ .member-card-intro h1>strong{font-size:calc(39 * var(--mc-u));line-height:.98;font-weight:900}
+ .member-card-intro h1>b{font-size:calc(25.5 * var(--mc-u));line-height:1.07;letter-spacing:calc(-.8 * var(--mc-u))}
+ .member-card-intro h1::after{bottom:calc(-15 * var(--mc-u));width:88%;height:calc(6 * var(--mc-u));transform:rotate(-7deg)}
+ .member-card-mode{position:absolute;left:3.5%;bottom:calc(8 * var(--mc-u));margin:0;max-width:none;font-size:calc(8 * var(--mc-u));padding:calc(2 * var(--mc-u)) calc(5 * var(--mc-u));border-radius:calc(5 * var(--mc-u))}
+ .member-card-stage{position:absolute;left:37.4%;top:13.8%;width:37.2%;height:79.8%;margin:0;max-width:none;perspective:none}
+ .digital-member-card{width:100%;height:100%;max-width:none;min-height:0;margin:0;padding:calc(12 * var(--mc-u)) calc(16 * var(--mc-u)) calc(34 * var(--mc-u));border-width:calc(2.5 * var(--mc-u));border-radius:calc(20 * var(--mc-u));transform:rotate(-1.3deg);background:linear-gradient(125deg,#e4f5ff,#fff 48%,#f3eaf7);box-shadow:calc(3 * var(--mc-u)) calc(6 * var(--mc-u)) calc(8 * var(--mc-u)) #00162d70,inset 0 0 0 calc(2 * var(--mc-u)) #fff}
+ .member-card-clip{left:44%;top:calc(-39 * var(--mc-u));width:calc(25 * var(--mc-u));height:calc(51 * var(--mc-u));border-width:calc(2 * var(--mc-u));border-radius:calc(4 * var(--mc-u)) calc(4 * var(--mc-u)) calc(7 * var(--mc-u)) calc(7 * var(--mc-u))}
+ .member-card-clip::before{left:calc(-7 * var(--mc-u));right:calc(-7 * var(--mc-u));top:calc(-7 * var(--mc-u));height:calc(15 * var(--mc-u));border-width:calc(3 * var(--mc-u));border-radius:calc(5 * var(--mc-u))}
+ .member-card-clip>span{bottom:calc(4 * var(--mc-u));height:calc(6 * var(--mc-u))}
+ .digital-card-header{height:calc(43 * var(--mc-u));margin-bottom:calc(11 * var(--mc-u));gap:calc(4 * var(--mc-u))}
+ .digital-card-brand{gap:calc(4 * var(--mc-u))}
+ .digital-card-brand>svg{width:calc(43 * var(--mc-u));height:calc(38 * var(--mc-u))}
+ .digital-card-brand strong{font-size:calc(29 * var(--mc-u));letter-spacing:calc(-1 * var(--mc-u))}
+ .digital-card-brand span{font-size:calc(10 * var(--mc-u));line-height:1.1}
+ .digital-card-status{font-size:calc(13 * var(--mc-u));padding:calc(5 * var(--mc-u)) calc(20 * var(--mc-u));margin-right:calc(-16 * var(--mc-u));border-radius:calc(20 * var(--mc-u)) 0 0 calc(20 * var(--mc-u))}
+ .digital-card-body{grid-template-columns:calc(77 * var(--mc-u)) minmax(0,1fr) calc(85 * var(--mc-u));gap:calc(14 * var(--mc-u));align-items:start}
+ .digital-card-photo{height:calc(84 * var(--mc-u));aspect-ratio:auto;border-radius:calc(8 * var(--mc-u));border-color:#c5d5e6}
+ .digital-card-details h2{font-size:calc(14 * var(--mc-u));line-height:1.2;padding-bottom:calc(4 * var(--mc-u));margin:calc(2 * var(--mc-u)) 0 calc(6 * var(--mc-u));white-space:nowrap;letter-spacing:calc(-.2 * var(--mc-u))}
+ .digital-card-details dl>div{padding-left:calc(18 * var(--mc-u));margin-bottom:calc(10 * var(--mc-u))}
+ .digital-card-details dt{font-size:calc(8 * var(--mc-u));line-height:1.2}
+ .digital-card-details dt svg{left:calc(-17 * var(--mc-u));width:calc(11 * var(--mc-u));height:calc(11 * var(--mc-u));top:calc(1 * var(--mc-u))}
+ .digital-card-details dd{font-size:calc(10.5 * var(--mc-u));line-height:1.15;margin-top:calc(2 * var(--mc-u))}
+ .digital-card-details dd#memberCardNumber{font-size:calc(13.5 * var(--mc-u));white-space:nowrap}
+ .digital-card-details dl>div:last-child{display:none}
+ .digital-card-qr{margin-top:calc(18 * var(--mc-u));padding:calc(4 * var(--mc-u));border-radius:calc(6 * var(--mc-u))}
+ .digital-card-qr>span{font-size:calc(7.5 * var(--mc-u));margin-top:calc(2 * var(--mc-u));line-height:1.05}
+ .digital-card-landmark{left:5%;bottom:7%;width:52%;height:28%;opacity:.88}
+ .digital-card-ribbons{height:calc(37 * var(--mc-u))}
+ .digital-card-preview-label{position:absolute;left:0;right:0;bottom:calc(4 * var(--mc-u));font-size:calc(5.5 * var(--mc-u));line-height:1.1;margin:0;text-shadow:0 1px 1px white;color:#07315d}
+ .member-card-actions{position:absolute;left:79.6%;top:16.3%;padding:0;display:grid;gap:calc(16 * var(--mc-u));width:20%}
+ .member-card-actions button{gap:calc(16 * var(--mc-u));font-size:calc(17 * var(--mc-u));font-weight:700;line-height:1.08;min-height:calc(51 * var(--mc-u))}
+ .member-card-action-icon{width:calc(51 * var(--mc-u));height:calc(51 * var(--mc-u));border-width:calc(2 * var(--mc-u));box-shadow:0 calc(2 * var(--mc-u)) calc(5 * var(--mc-u)) #001b3266}
+ .member-card-action-icon svg{width:calc(29 * var(--mc-u));height:calc(29 * var(--mc-u))}
+ .member-card-action-icon.verify>svg{width:calc(34 * var(--mc-u));height:calc(34 * var(--mc-u))}
+ .member-card-bottom{margin:0;padding:5px 3%;min-height:24px;background:#032d4b;font-size:10px;gap:16px}
+}
+/* Give the membership-card banner slightly more vertical room. */
+@media screen and (min-width:769px){
+ .membership-card-layout{height:33cqw}
+ .member-card-stage{top:16%;height:73.2%}
+ .member-card-actions{top:20%}
+}
+@media screen and (max-width:768px){.membership-card-section{padding-top:30px;padding-bottom:32px}}
+/* Prominent referral entry point below the membership card. */
+.member-card-bottom{padding:12px 4%;gap:14px 24px;min-height:68px;flex-wrap:wrap}
+.member-card-bottom>p{font-size:11px}
+.member-card-bottom>a:not(.member-card-referral-button){font-size:13px;padding:9px 4px}
+.member-card-bottom .member-card-referral-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 20px;border:1px solid #ffe268;border-radius:10px;background:linear-gradient(#ffe54c,#ffc600);color:#11375f;font:800 15px/1.3 Manrope,sans-serif;text-decoration:none;box-shadow:0 4px 12px #000e2a40;white-space:nowrap}
+.member-card-referral-button>svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.member-card-bottom .member-card-referral-button:hover{background:#ffe66b;box-shadow:0 5px 16px #ffc80030}
+@media(max-width:540px){.member-card-bottom .member-card-referral-button{width:100%;max-width:340px}.member-card-bottom>p{flex-basis:100%;font-size:10px}}
+/* Fourth action in the existing membership-card action column. */
+.member-card-referral-action{display:flex;align-items:center;gap:12px;min-height:47px;padding:0;color:#fff;text-align:left;font:600 clamp(12px,1.15vw,17px)/1.2 'DM Sans',sans-serif;text-decoration:none}
+.member-card-referral-action:hover{color:#ffe355}
+.member-card-bottom{padding:6px 3%;gap:10px 16px;min-height:28px}
+@media screen and (min-width:769px){.member-card-actions{top:12%;gap:calc(10 * var(--mc-u))}.member-card-referral-action{gap:calc(16 * var(--mc-u));font-size:calc(17 * var(--mc-u));font-weight:700;line-height:1.08;min-height:calc(51 * var(--mc-u))}}
+@media(min-width:541px) and (max-width:768px){.member-card-actions{grid-template-columns:repeat(4,minmax(0,1fr))}.member-card-referral-action{font-size:12px;justify-content:center;gap:9px;border-left:1px solid #80bdd655}}
+@media(max-width:540px){.member-card-actions{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:8px}.member-card-referral-action{flex-direction:column;gap:7px;min-height:82px;justify-content:center;text-align:center;font-size:11px;border-left:1px solid #80bdd655}.member-card-actions button:nth-child(3){border-left:0}}
