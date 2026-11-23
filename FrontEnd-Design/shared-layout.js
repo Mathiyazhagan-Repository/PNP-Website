@@ -103,11 +103,18 @@
     const syncCornerArtwork = () => {
       const artwork = hero.querySelector('.hero-slide.active') || hero;
       const artworkStyle = getComputedStyle(artwork);
-      main.style.setProperty('--hero-corner-image', artworkStyle.backgroundImage);
+      const bannerImage = artwork.querySelector('.app-download-hero-art');
+      const backgroundImage = bannerImage
+        ? 'url(' + JSON.stringify(bannerImage.currentSrc || bannerImage.src) + ')'
+        : artworkStyle.backgroundImage;
+      main.style.setProperty('--hero-corner-image', backgroundImage);
       main.style.setProperty('--hero-corner-color', color || '#001a38');
       main.style.setProperty('--hero-corner-size', '100% ' + artwork.getBoundingClientRect().height + 'px');
     };
     syncCornerArtwork();
+    hero.querySelectorAll('.app-download-hero-art').forEach(image => {
+      image.addEventListener('load', syncCornerArtwork, { once: true });
+    });
     window.addEventListener('resize', syncCornerArtwork, { passive: true });
     if (hero.querySelector('.hero-slide')) new MutationObserver(syncCornerArtwork).observe(hero, { subtree: true, attributes: true, attributeFilter: ['class'] });
     const updateCornerState = () => header.classList.toggle('at-page-top', window.scrollY <= 1);

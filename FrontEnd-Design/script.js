@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let sliderPaused = false;
   let sliderTimer = null;
 
-  const slideDelay = 6500;
+  const slideDelay = 9000;
 
   function showSlide(index) {
     if (!heroSlides.length) return;

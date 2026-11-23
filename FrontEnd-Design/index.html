@@ -75,10 +75,18 @@
            id="heroCarousel"
            aria-roledescription="carousel">
 
-        <!-- SLIDE 1 -->
-        <article class="hero-slide active"
-                 data-slide="0"
-                 aria-label="Slide 1 of 3">
+        <!-- First slide: official app campaign -->
+        <article class="hero-slide app-download-hero active" data-slide="0" aria-label="Slide 1 of 4">
+          <img class="app-download-hero-art" src="assets/hero/app-download-hero.png" width="1862" height="845" fetchpriority="high" decoding="async" alt="Praja Nishchaya Party. Download the Official App. Latest updates, events and programmes, join the movement and support our mission. Karnataka flag and a hand holding the PNP app." />
+          <h1 class="sr-only">Download the Official PNP App</h1>
+          <a class="app-hero-download" href="#mobileApps" aria-label="Download Now: explore the PNP mobile app"><span class="sr-only">Download Now</span></a>
+          <a class="app-hero-stores" href="#mobileApps" aria-label="Explore Android and iOS app information"><span class="sr-only">Google Play and App Store information</span></a>
+        </article>
+
+        <!-- SLIDE 2: leadership -->
+        <article class="hero-slide"
+                 data-slide="1" hidden
+                 aria-label="Slide 2 of 4">
 
           <div class="container hero-layout">
 
@@ -87,10 +95,10 @@
                 PRAJA NISHCHAYA PARTY
               </span>
 
-              <h1>
+              <h2>
                 Clean Leadership.
                 <span>Accountable Action.</span>
-              </h1>
+              </h2>
 
               <p>
                 A people-first political movement for transparent governance,
@@ -115,8 +123,8 @@
 
         <!-- SLIDE 2 -->
         <article class="hero-slide"
-                 data-slide="1"
-                 aria-label="Slide 2 of 3"
+                 data-slide="2"
+                 aria-label="Slide 3 of 4"
                  hidden>
 
           <div class="container hero-layout">
@@ -155,8 +163,8 @@
 
         <!-- SLIDE 3 -->
         <article class="hero-slide"
-                 data-slide="2"
-                 aria-label="Slide 3 of 3"
+                 data-slide="3"
+                 aria-label="Slide 4 of 4"
                  hidden>
 
           <div class="container hero-layout">
@@ -214,6 +222,7 @@
                   class="hero-dot"
                   data-index="2"
                   aria-label="Go to slide 3"></button>
+          <button type="button" class="hero-dot" data-index="3" aria-label="Go to slide 4"></button>
         </div>
 
         <div class="hero-arrows">
