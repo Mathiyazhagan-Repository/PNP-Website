@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
     gap: clamp(6px, .9vw, 20px);
-    padding: clamp(14px, 1.4vw, 28px) clamp(7px, 1vw, 20px);
+    padding: clamp(20px, 1.8vw, 36px) clamp(7px, 1vw, 20px);
     color: white;
     background: radial-gradient(ellipse at 49% 35%, #60367e, transparent 55%), linear-gradient(145deg, #26265c, #201443);
 }
@@ -11,7 +11,7 @@
     position: relative;
     display: grid;
     align-items: center;
-    min-height: clamp(280px, 28vw, 525px);
+    min-height: clamp(330px, 32vw, 600px);
     background: linear-gradient(90deg, #24265bdb, #24265b62 47%, transparent 74%), url("youth-resources-hero.png") right center / cover no-repeat;
 }
 .resources-intro { padding-block: .3em .7em; }
@@ -19,7 +19,7 @@
 .resources-intro > p:not(.fellowship-brand) { max-width: 19ch; }
 .resources-explore { display: inline-flex; justify-content: center; align-items: center; gap: .7em; min-height: 44px; padding: .35em 1.3em; border: 0; border-radius: 2em; background: #ffe000; color: #151c40; font-size: clamp(.82rem, 1.12vw, 1.3rem); font-weight: 800; }
 .resources-credit { position: absolute; right: .45em; bottom: .28em; margin: 0; color: #fff; background: #101738c9; padding: .05em .35em; border-radius: .3em; font-size: .7rem; }
-.resources-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(7px, 1vw, 20px); min-width: 0; }
+.resources-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.35vw, 27px) clamp(7px, 1vw, 20px); min-width: 0; }
 .resources-tile {
     --resource-icon: #68e5ff;
     display: grid;

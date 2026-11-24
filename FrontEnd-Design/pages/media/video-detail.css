@@ -1,0 +1,57 @@
+.video-detail { padding: .22em clamp(8px, 1vw, 20px) .45em; background: #edf4fb; color: #0c1944; }
+.video-detail-crumb, .video-detail-crumb a { display: flex; align-items: center; flex-wrap: wrap; gap: .45em; }
+.video-detail-crumb { padding: 0 0 .4em; font-size: clamp(.76rem, .94vw, 1rem); font-weight: 700; }
+.video-detail-crumb svg { width: 1.1em; height: 1.1em; }
+.video-detail-layout { display: grid; grid-template-columns: minmax(0, 60fr) minmax(0, 40fr); gap: clamp(8px, 1vw, 20px); align-items: start; }
+.video-detail-main, .video-detail-panel { min-width: 0; border: 1px solid #dce8f3; border-radius: .85em; background: #fbfdff; box-shadow: 0 2px 7px #20477815; }
+.video-detail-main { overflow: hidden; padding: .42em; }
+.video-detail-player { position: relative; overflow: hidden; border-radius: .58em; background: #0d1b35; }
+.video-detail-player img { width: 100%; aspect-ratio: 2.05; object-fit: cover; object-position: center 28%; }
+.video-detail-play { position: absolute; top: 48%; left: 50%; display: grid; place-items: center; width: clamp(39px, 5.8vw, 96px); aspect-ratio: 1; border: 2px solid white; border-radius: 50%; background: #0a132cb0; color: #fff; transform: translate(-50%, -50%); }
+.video-detail-play svg { margin-left: .12em; fill: white; width: 48%; height: 48%; }
+.video-detail-controls { position: absolute; inset: auto 0 0; display: flex; align-items: center; gap: .55em; padding: .45em .55em .3em; background: linear-gradient(transparent, #050d21f2 28%); color: white; font-size: clamp(.69rem, .88vw, .95rem); }
+.video-detail-controls button, .video-detail-inactive { display: grid; place-items: center; padding: .12em; border: 0; background: none; color: white; }
+.video-detail-controls button:first-of-type svg { fill: white; }
+.video-detail-progress { position: absolute; inset: .1em .4em auto; height: 2px; background: #e4ecf3a8; }
+.video-detail-progress::before { content: ""; display: block; width: 10%; height: 100%; background: #e30670; }
+.video-detail-control-end { display: flex; align-items: center; gap: .55em; margin-left: auto; }
+.video-detail-control-end b { border: 1px solid white; border-radius: .2em; font-size: .8em; padding-inline: .12em; }
+.video-detail-caption { position: relative; isolation: isolate; padding: .32em .45em .18em; }
+.video-detail-caption::after { content: ""; position: absolute; z-index: -1; right: -.45em; bottom: -.42em; width: 17%; aspect-ratio: 1; background: linear-gradient(135deg, #fbd200 46%, #d50068 47% 63%, #129a51 64%); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.video-detail-caption h1 { margin: 0; color: #0c1944; font-size: clamp(1.35rem, 2.25vw, 2.8rem); }
+.video-detail-meta { display: flex; flex-wrap: wrap; gap: .43em .58em; padding: 0; margin: .35em 0; list-style: none; font-weight: 700; font-size: clamp(.75rem, .95vw, 1.05rem); }
+.video-detail-meta li { display: flex; align-items: center; gap: .3em; }
+.video-detail-meta li + li { border-left: 1px solid #d5e1ee; padding-left: .58em; }
+.video-detail-meta svg, .video-detail-panel dt svg, .video-detail-related h2 svg { color: #bf005c; }
+.video-detail-caption p { max-width: 88%; margin: .48em 0 .2em; line-height: 1.35; }
+.video-detail-sample { color: #405b79; font-size: .78rem; }
+.video-detail-caption summary { color: #ad0054; font-weight: 800; cursor: pointer; }
+.video-detail-side { display: grid; gap: .38em; }
+.video-detail-panel { padding: .48em .65em; }
+.video-detail-panel h2 { display: flex; align-items: center; gap: .4em; margin: 0; color: #101b44; font-size: clamp(1.05rem, 1.6vw, 1.85rem); }
+.video-detail-panel dl { margin: .45em 0 0; }
+.video-detail-panel dl > div { display: grid; grid-template-columns: minmax(95px, 36%) minmax(0, 1fr); gap: .3em; padding: .3em 0; border-top: 1px solid #dce6f0; font-size: clamp(.75rem, .94vw, 1.03rem); }
+.video-detail-panel dt { display: flex; align-items: center; gap: .38em; font-weight: 800; }
+.video-detail-panel dd { margin: 0; }
+.video-detail-tags { display: flex; flex-wrap: wrap; gap: .25em; }
+.video-detail-tags span { padding: .12em .38em; border: 1px solid #dae6f3; border-radius: 1em; background: #edf4fb; font-size: .88em; }
+.video-detail-actions { display: flex; flex-wrap: wrap; gap: .35em; }
+.video-detail-actions button { display: inline-flex; align-items: center; gap: .32em; padding: .32em .58em; border: 1px solid #d3e0ee; border-radius: 2em; background: #fff; color: #16254e; font-weight: 800; font-size: clamp(.75rem, .94vw, 1.02rem); box-shadow: 0 2px 3px #1f406519; }
+.video-detail-actions button:first-child { background: #bf005e; border-color: #bf005e; color: white; }
+.video-detail-actions button[aria-pressed="true"] { box-shadow: inset 0 0 0 2px #ec8fbd; }
+.video-detail-feedback { margin: 0; overflow-wrap: anywhere; }
+.video-detail-feedback:empty { display: none; }
+.video-detail-related header { display: flex; justify-content: space-between; align-items: center; gap: .4em; padding-bottom: .34em; border-bottom: 1px solid #dbe7f2; }
+.video-detail-related header a { display: flex; align-items: center; gap: .24em; color: #b10057; font-weight: 800; font-size: .82em; white-space: nowrap; }
+.video-detail-related ul { list-style: none; margin: .4em 0 0; padding: 0; }
+.video-detail-related li + li { margin-top: .34em; }
+.video-detail-related li a { display: grid; grid-template-columns: minmax(60px, 32%) minmax(0, 1fr); gap: .5em; align-items: center; line-height: 1.2; }
+.video-detail-related li a:hover { text-decoration: underline; }
+.video-detail-related small { display: flex; align-items: center; gap: .25em; margin-top: .2em; color: #314b70; font-size: .8em; }
+.video-detail-related-thumb { position: relative; overflow: hidden; border-radius: .48em; }
+.video-detail-related-thumb img { width: 100%; aspect-ratio: 2.12; object-fit: cover; }
+.video-detail-related-thumb small { position: absolute; right: .28em; bottom: .22em; padding: .1em .3em; border-radius: .25em; background: #071426dc; color: white; }
+@media (max-width: 760px) {
+    .video-detail-layout { grid-template-columns: minmax(0, 1fr); }
+    .video-detail-player img { aspect-ratio: 1.83; }
+}

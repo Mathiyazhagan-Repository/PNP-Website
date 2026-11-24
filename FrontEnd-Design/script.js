@@ -8,6 +8,8 @@
 
 "use strict";
 
+const accountEntryUrl = new URL("pages/account/login.html", document.currentScript.src);
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // ====================================================
@@ -399,26 +401,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function resetLoginForm() {
-    if (loginMobileForm) {
-      loginMobileForm.hidden = false;
-      loginMobileForm.reset();
-    }
-
-    if (loginOtpForm) {
-      loginOtpForm.hidden = true;
-      loginOtpForm.reset();
-    }
-
-    if (resendOtp) {
-      resendOtp.disabled = true;
-    }
-  }
-
   function openLogin() {
-    resetLoginForm();
     closeMobileMenu();
-    openModal(loginModal);
+    if (location.pathname === accountEntryUrl.pathname) {
+      get("account-mobile")?.focus();
+      return;
+    }
+    location.assign(accountEntryUrl.href);
   }
 
   if (loginOpen) {

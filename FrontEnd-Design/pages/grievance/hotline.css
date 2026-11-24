@@ -1,19 +1,21 @@
 .gr-hotline-page { grid-template-columns: minmax(0, 22.6fr) minmax(0, 77.4fr); background: linear-gradient(135deg, #004774, #00569b 71%, #034570); font-family: var(--font-body); }
 .gr-hotline-page :is(.gr-submission-headline, h1, h2, .gr-support-channels strong) { font-family: var(--font-heading); }
 .gr-hotline-page .gr-submission-intro {
-    padding-bottom: clamp(112px, 10.5vw, 216px);
+    padding-bottom: clamp(133px, 12vw, 245px);
     background: #075780 url("hotline-support-artwork.png") center bottom / 100% 100% no-repeat;
 }
 .gr-hotline-page .gr-submission-intro::after { content: none; }
 .gr-hotline-page .gr-submission-brand { margin-bottom: .48em; }
-.gr-hotline-page .gr-submission-copy { margin-block: .45em .5em; }
-.gr-hotline-label { align-self: flex-start; margin: 0 0 .35em clamp(0px, 1.9vw, 39px); padding: .3em .9em; border-radius: 2em; background: #ffe400; color: #08153e; font-weight: 850; }
-.gr-hotline-page .gr-submission-headline { font-size: clamp(2rem, 3.35vw, 4.35rem); }
-.gr-hotline-card { gap: clamp(8px, .75vw, 15px); margin-block: clamp(5px, .4vw, 9px); padding-block: clamp(22px, 1.6vw, 33px); font-size: clamp(.85rem, 1vw, 1.25rem); }
+.gr-hotline-page .gr-submission-brand { font-size: .88rem; }
+.gr-hotline-page .gr-submission-brand strong { font-size: clamp(1.5rem, 2.55vw, 3rem); }
+.gr-hotline-page .gr-submission-copy { margin-block: .45em .5em; font-size: clamp(.9rem, 1.2vw, 1.5rem); }
+.gr-hotline-label { align-self: flex-start; margin: 0 0 .35em clamp(0px, 1.9vw, 39px); padding: .25em .75em; border-radius: 2em; background: #ffe400; color: #08153e; font-size: .85rem; font-weight: 850; }
+.gr-hotline-page .gr-submission-headline { font-size: clamp(1.65rem, 2.75vw, 3.5rem); }
+.gr-hotline-card { gap: clamp(11px, 1vw, 20px); margin-block: clamp(5px, .4vw, 9px); padding-block: clamp(29px, 2.1vw, 44px); font-size: clamp(.85rem, 1vw, 1.25rem); }
 .gr-hotline-card header { display: flex; gap: .7em; align-items: center; }
 .gr-hotline-card header h1 { margin: 0; color: #081344; font-size: clamp(1.35rem, 1.9vw, 2.5rem); }
 .gr-hotline-card header p { margin: .13em 0 0; }
-.gr-hotline-page .gr-hotline-card header svg { width: 2.8em; height: 2.8em; color: #075fc8; }
+.gr-hotline-page .gr-hotline-card header svg { width: 2.3em; height: 2.3em; color: #075fc8; }
 .gr-support-channels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7em; margin: 0; padding: 0; list-style: none; }
 .gr-support-channels li { border: 1px solid #a9d2ff; border-radius: .8em; background: linear-gradient(#eef7ff, #dceeff); }
 .gr-support-channels a { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .65em; height: 100%; padding: .8em; border-radius: inherit; color: #081344; text-decoration: none; }
@@ -22,7 +24,7 @@
 .gr-support-channels li:nth-child(3) { border-color: #d6b9f7; background: linear-gradient(#fbf5ff, #eadefb); }
 .gr-support-channels strong, .gr-support-channels span { display: block; }
 .gr-support-channels a > span > span { margin-top: .12em; color: #081344; font-size: clamp(.9rem, 1.35vw, 1.75rem); font-weight: 850; overflow-wrap: anywhere; }
-.gr-hotline-page .gr-support-channels svg:first-child { box-sizing: content-box; width: 1.65em; height: 1.65em; padding: .6em; border-radius: .62em; color: #fff; background: linear-gradient(#087cff, #034387); }
+.gr-hotline-page .gr-support-channels svg:first-child { box-sizing: content-box; width: 1.4em; height: 1.4em; padding: .46em; border-radius: .62em; color: #fff; background: linear-gradient(#087cff, #034387); }
 .gr-hotline-page .gr-support-channels li:nth-child(2) svg:first-child { background: linear-gradient(#13c344, #067221); }
 .gr-hotline-page .gr-support-channels li:nth-child(3) svg:first-child { background: linear-gradient(#a13be0, #64178e); }
 .gr-hotline-page .gr-support-channels a > svg:last-child { width: 1em; height: 1em; }
@@ -51,7 +53,7 @@
 .gr-hotline-guide h2 { padding: 0; background: none; }
 .gr-hotline-guide p { margin: .5em 0 0; }
 .gr-hotline-guide img { display: block; width: 100%; }
-.gr-support-channels a { padding-block: .42em; }
+.gr-support-channels a { min-height: 44px; padding-block: .35em; }
 .gr-hotline-panels { row-gap: clamp(8px, .75vw, 15px); }
 .gr-hotline-panel h2 { padding-block: .25em; }
 .gr-hotline-schedule { padding-block: .48em; }

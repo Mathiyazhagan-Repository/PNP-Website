@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Gallery | Praja Nishchaya Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="photos.css">
+    <link rel="stylesheet" href="videos.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="videos.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="media-library photo-gallery video-gallery">
+        <section class="photo-hero video-hero" aria-labelledby="video-title">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg>
+            <div><h1 id="video-title">Video <em>Gallery</em></h1><p>Watch videos, interviews, event recordings and highlights from PNP’s public programmes, community initiatives and leadership interactions.</p></div>
+        </section>
+        <div class="photo-categories video-categories">
+            <nav aria-label="Video categories">
+                <button type="button" data-video-category="" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg> All Videos</button>
+                <button type="button" data-video-category="Events" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM7 2v6m10-6v6M3 10h18"/></svg> Events</button>
+                <button type="button" data-video-category="Interviews" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5a3 3 0 0 1 6 0v7a3 3 0 0 1-6 0ZM5 11v1a7 7 0 0 0 14 0v-1M12 19v3m-4 0h8"/></svg> Interviews</button>
+                <button type="button" data-video-category="Public Talks" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2M3 5a3 3 0 0 0 0 6m18-6a3 3 0 0 1 0 6"/></svg> Public Talks</button>
+                <button type="button" data-video-category="Programmes" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10h5l11-6v16L8 14H3zm5 4 2 6h3l-2-5"/></svg> Programmes</button>
+                <button type="button" data-video-category="Campaigns" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21v-5h4v5m3 0v-8h4v8m3 0V9h4v12M3 11l6-5 4 2 7-6"/></svg> Campaigns</button>
+                <button type="button" data-video-category="Karnataka" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m13 2 3 2-1 4 4 2-2 6 1 3-5 3-4-4-4-2 1-5 4-2z"/></svg> Karnataka</button>
+            </nav>
+            <label class="photo-search"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 16l6 6M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg><span class="media-sr">Search videos</span><input id="video-search" type="search" placeholder="Search videos..."></label>
+        </div>
+        <div class="photo-filters" role="group" aria-label="Video gallery filters">
+            <label>Sort by: <select id="video-sort"><option value="latest">Latest</option><option value="oldest">Oldest</option><option value="name">Name</option></select></label>
+            <label>Category: <select id="video-category"><option value="">All Categories</option><option value="Events">Events</option><option value="Interviews">Interviews</option><option value="Public Talks">Public Talks</option><option value="Programmes">Programmes</option><option value="Campaigns">Campaigns</option><option value="Karnataka">Karnataka</option></select></label>
+            <label>District: <select id="video-district"><option value="">All Districts</option><option value="Mysuru">Mysuru</option><option value="Bengaluru Urban">Bengaluru Urban</option><option value="Udupi">Udupi</option><option value="Dharwad">Dharwad</option><option value="Vijayanagara">Vijayanagara</option></select></label>
+            <label>Duration: <select id="video-duration"><option value="">Any Duration</option><option value="short">Under 5 minutes</option><option value="medium">5–10 minutes</option><option value="long">Over 10 minutes</option></select></label>
+            <label>Date: <input id="video-date" type="date"></label>
+        </div>
+        <div class="photo-layout video-layout">
+            <div>
+                <div class="photo-grid video-grid" id="video-grid">
+                    <article id="meeting" class="video-card" data-category="Events" data-district="Mysuru" data-date="2025-01-12" data-duration="08:24" data-views="12.4K">
+                        <button type="button" aria-label="Preview PNP Public Meeting – Mysuru"><span class="video-thumb"><img src="../../assets/hero/news-public.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>08:24</small></span><span class="video-card-info"><strong>PNP Public Meeting – Mysuru</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 12.4K views · 12 Jan 2025</small></span></button>
+                    </article>
+                    <article id="campus" class="video-card" data-category="Interviews" data-district="Bengaluru Urban" data-date="2025-01-09" data-duration="06:18" data-views="8.7K">
+                        <button type="button" aria-label="Preview Youth &amp; Campus Interaction"><span class="video-thumb"><img src="../../assets/hero/policy-education-campus.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>06:18</small></span><span class="video-card-info"><strong>Youth &amp; Campus Interaction</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 8.7K views · 09 Jan 2025</small></span></button>
+                    </article>
+                    <article id="dialogue" class="video-card" data-category="Public Talks" data-district="Bengaluru Urban" data-date="2025-01-06" data-duration="10:32" data-views="15.1K">
+                        <button type="button" aria-label="Preview Policy Dialogue – Education"><span class="video-thumb"><img src="../../assets/hero/news-statement.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>10:32</small></span><span class="video-card-info"><strong>Policy Dialogue – Education</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 15.1K views · 06 Jan 2025</small></span></button>
+                    </article>
+                    <article id="green" class="video-card" data-category="Campaigns" data-district="Udupi" data-date="2025-01-04" data-duration="04:56" data-views="9.8K">
+                        <button type="button" aria-label="Preview Community Initiative – Green Drive"><span class="video-thumb"><img src="../../assets/hero/story-community.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>04:56</small></span><span class="video-card-info"><strong>Community Initiative – Green Drive</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 9.8K views · 04 Jan 2025</small></span></button>
+                    </article>
+                    <article id="leadership" class="video-card" data-category="Interviews" data-district="Dharwad" data-date="2024-12-31" data-duration="12:40" data-views="11.6K">
+                        <button type="button" aria-label="Preview Leadership Interaction – Hubballi"><span class="video-thumb"><img src="../../assets/hero/news-programme.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>12:40</small></span><span class="video-card-info"><strong>Leadership Interaction – Hubballi</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 11.6K views · 31 Dec 2024</small></span></button>
+                    </article>
+                    <article id="culture" class="video-card" data-category="Events" data-district="Vijayanagara" data-date="2024-12-28" data-duration="07:22" data-views="18.3K">
+                        <button type="button" aria-label="Preview Karnataka Cultural Celebration"><span class="video-thumb"><img src="../../assets/hero/news-public.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>07:22</small></span><span class="video-card-info"><strong>Karnataka Cultural Celebration</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 18.3K views · 28 Dec 2024</small></span></button>
+                    </article>
+                    <article id="journey" class="video-card" data-category="Karnataka" data-district="Bengaluru Urban" data-date="2024-12-25" data-duration="03:48" data-views="36.2K">
+                        <button type="button" aria-label="Preview PNP in Karnataka – Our Journey"><span class="video-thumb"><img src="../../assets/hero/navbar-vidhana.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>03:48</small></span><span class="video-card-info"><strong>PNP in Karnataka – Our Journey</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 36.2K views · 25 Dec 2024</small></span></button>
+                    </article>
+                    <article id="volunteer" class="video-card" data-category="Programmes" data-district="Bengaluru Urban" data-date="2024-12-22" data-duration="05:26" data-views="14.9K">
+                        <button type="button" aria-label="Preview Volunteer Drive – Bengaluru"><span class="video-thumb"><img src="../../assets/hero/story-volunteer.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>05:26</small></span><span class="video-card-info"><strong>Volunteer Drive – Bengaluru</strong><small><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h14v14H2zm14 5 6-3v10l-6-3"/></svg> 14.9K views · 22 Dec 2024</small></span></button>
+                    </article>
+                </div>
+                <p id="video-empty" hidden>No videos match the selected filters.</p>
+                <p id="video-count" class="photo-count" role="status">Showing 8 sample videos</p>
+            </div>
+            <dialog class="photo-preview photo-preview-dialog video-feature" aria-labelledby="video-feature-title">
+                <header><h2><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg> Video Preview</h2><form method="dialog"><button class="gallery-preview-close" type="submit" aria-label="Close video preview"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form></header>
+                <button type="button" class="video-feature-thumb" id="video-feature-play" aria-label="Open video preview"><span class="video-thumb"><img src="../../assets/hero/news-press.png" alt="" loading="lazy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg><small>14:27</small></span></button>
+                <h3 id="video-feature-title">PNP Vision for a Stronger Karnataka</h3>
+                <p id="video-feature-meta" class="video-feature-meta">52.4K views · 15 Jan 2025</p>
+                <p id="video-feature-description">A vision for inclusive growth, better governance and a people-first Karnataka.</p>
+                <div class="photo-preview-actions video-feature-actions">
+                    <button type="button" id="video-watch"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM10 8l6 4-6 4z"/></svg> Watch Full Video</button>
+                    <button type="button" disabled><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M3 16v5h18v-5"/></svg> Download</button>
+                    <button type="button" id="video-share"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 12l10-6M7 12l10 6M7 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm14-7a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm0 14a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg> Share</button>
+                </div>
+                <p id="video-share-status" role="status"></p>
+            </dialog>
+        </div>
+        <p class="photo-credit">Design preview · Illustrative thumbnails and sample video metadata · AI-generated banner illustration</p>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

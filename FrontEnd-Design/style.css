@@ -4380,12 +4380,10 @@ p {
   .site-header .desktop-nav .dropdown-toggle.active::after { height: calc(6 * var(--hu)); bottom: calc(-3 * var(--hu)); }
 }
 /* Show the selected More destination without widening the navigation into search. */
-.site-header .more-toggle-copy{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;vertical-align:middle;max-width:64px;line-height:1.1}
-.site-header .more-toggle-heading{display:flex;align-items:center;justify-content:center;gap:5px;font-size:inherit;font-weight:inherit;line-height:1.1}
+.site-header .more-toggle-copy{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;max-width:8em;line-height:1.15}
+.site-header .more-toggle-heading{display:flex;align-items:center;justify-content:center;gap:5px;font-size:inherit;font-weight:800;line-height:1.15;white-space:normal;text-align:center}
 .site-header .more-toggle-chevron{font-size:13px;line-height:1}
-.site-header .more-current-section{display:block;max-width:64px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#e1edff;font-size:9px;font-weight:650;letter-spacing:0;line-height:1.2}
-.site-header .mobile-more .more-toggle-copy{max-width:none;align-items:flex-start;gap:4px}
-.site-header .mobile-more .more-current-section{max-width:none;color:#244a75;font-size:11px}
+.site-header .mobile-more .more-toggle-copy{max-width:none;justify-content:flex-start}
 @media(min-width:1251px){.site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy){padding:calc(7 * var(--hu)) calc(16 * var(--hu))}.site-header .desktop-nav:has(.more-toggle-copy){gap:calc(5 * var(--hu))}}
 /* Shared reference navbar: blue brand wing, compact white controls and sharp top corners. */
 .site-header { --nav-corner-radius:26px; margin:0; border:0; border-radius:0 0 26px 26px; background:#fff; box-shadow:0 4px 12px #102e5c20; }
@@ -4418,8 +4416,6 @@ p {
  .site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy) {padding:8px 13px;border-radius:24px;min-height:32px;box-sizing:border-box}
  .site-header .desktop-nav:has(.more-toggle-copy){gap:clamp(5px,.6vw,10px)}
  .site-header .desktop-nav .dropdown-toggle.active:has(.more-toggle-copy){padding:5px 10px}
- .site-header .more-current-section{font-size:8px;max-width:56px;line-height:1.1}
- .site-header .more-toggle-copy{max-width:56px;gap:1px}
  .site-header .header-actions {display:flex;align-items:center;justify-content:space-between;width:100%;min-width:0;padding:0 0 0 9px;margin:0;gap:clamp(6px,.65vw,11px);box-sizing:border-box;border-left:1px solid #c3d5ef}
  .site-header .header-actions .search-toggle {width:32px;height:32px;min-height:32px;padding:7px;border:0;border-radius:50%;background:#e9efff;color:#102d77;flex-shrink:0;box-sizing:border-box}
  .site-header .search-toggle .header-icon {width:20px;height:20px}

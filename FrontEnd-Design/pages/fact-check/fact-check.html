@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08365f"><meta name="description" content="Search published PNP fact checks, frequently asked questions and official clarifications."><title>Fact Check &amp; FAQs | PNP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="./fact-check.css"><script src="../../shared-layout.js" defer></script><script src="../../script.js" defer></script><script src="./fact-check.js" defer></script>
+</head><body class="fact-check-page"><a class="skip-link" href="#main-content">Skip to main content</a><div data-site-header></div>
+<svg class="fc-icon-defs" aria-hidden="true"><defs>
+<symbol id="fc-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 7 7"/></symbol>
+<symbol id="fc-facts" viewBox="0 0 48 48"><path d="M8 3h23l7 7v14M8 3v38h20M30 3v9h8M13 12h10M13 18h17M13 24h11M13 30h7"/><circle cx="33" cy="32" r="9"/><path d="m39 39 7 7"/></symbol>
+<symbol id="fc-faq" viewBox="0 0 48 48"><path d="M42 21c0 11-12 17-23 14l-9 7 1-12C-7 11 13-3 29 4c9 3 13 8 13 17Z"/><path d="M19 15c0-7 12-7 12 0 0 4-7 5-7 10M24 30v2"/></symbol>
+<symbol id="fc-clarify" viewBox="0 0 48 48"><path d="M10 20 35 7v31L10 28ZM10 20H4v8h6M16 31l4 13h8l-6-17M40 12l5-4M41 32l5 3M40 22h7"/></symbol>
+</defs></svg>
+<main id="main-content"><section class="fc-hero" aria-labelledby="fcHeading"><div class="fc-intro"><nav class="fc-breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">Fact Check &amp; FAQs</span></nav><h1 id="fcHeading">Fact Check &amp; <span>FAQs</span></h1><i class="fc-title-accent" aria-hidden="true"></i><p>Get clear, accurate and official<br>information from PNP.</p><ul class="fc-checklist"><li><span aria-hidden="true">✓</span>Check Information</li><li><span aria-hidden="true">✓</span>Find Answers</li><li><span aria-hidden="true">✓</span>Read Clarifications</li></ul></div>
+<div class="fc-search-panel"><h2>Search for Facts, Answers and Clarifications</h2><form class="fc-search" id="fcSearchForm" role="search"><label for="fcSearch" class="sr-only">Search fact checks, FAQs and clarifications</label><svg aria-hidden="true"><use href="#fc-search"/></svg><input type="search" id="fcSearch" placeholder="Search fact checks, FAQs or clarifications..." autocomplete="off"><button type="button" class="fc-clear" id="fcClear" aria-label="Clear search" hidden>×</button><button type="submit" class="fc-submit" aria-label="Search public information"><svg aria-hidden="true"><use href="#fc-search"/></svg></button></form>
+<nav class="fc-category-cards" aria-label="Public information categories"><button type="button" data-fc-category="factChecks" class="fc-category"><svg class="fc-facts-icon" aria-hidden="true"><use href="#fc-facts"/></svg><strong>Fact Checks</strong><span class="fc-category-description">Published<br>fact-check articles</span><i aria-hidden="true">→</i></button><button type="button" data-fc-category="faqs" class="fc-category"><svg class="fc-faq-icon" aria-hidden="true"><use href="#fc-faq"/></svg><strong>Frequently<br>Asked Questions</strong><span class="fc-category-description">Answers to<br>common questions</span><i aria-hidden="true">→</i></button><button type="button" data-fc-category="clarifications" class="fc-category"><svg class="fc-clarify-icon" aria-hidden="true"><use href="#fc-clarify"/></svg><strong>Official<br>Clarifications</strong><span class="fc-category-description">Official updates<br>and clarifications</span><i aria-hidden="true">→</i></button></nav><p id="fcLoadStatus" class="fc-load-status" role="status" aria-live="polite"></p></div><svg class="fc-corner-ribbon" viewBox="0 0 250 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0c78 28 144 31 250 35H0Z" fill="#ffd516"/></svg></section>
+<section class="fc-results" id="fcResultsSection" aria-labelledby="fcResultsHeading" hidden><div class="fc-results-top"><h2 id="fcResultsHeading">Search Results</h2><button type="button" id="fcShowAll">All categories</button></div><p id="fcResultStatus" class="fc-result-status" role="status" aria-live="polite"></p><div id="fcResults" class="fc-results-grid"></div><div id="fcEmpty" class="fc-empty" hidden><h3 id="fcEmptyHeading">No published information found</h3><p id="fcEmptyText">Try another search or choose a different category.</p><button type="button" id="fcReset">Clear search</button></div><button id="fcLoadMore" class="fc-load-more" type="button" hidden>Load more results</button><button id="fcRetry" class="fc-retry" type="button" hidden>Try again</button></section></main><div data-site-footer></div>
+<dialog class="fc-detail-dialog" id="fcDialog" aria-labelledby="fcDialogTitle"><button type="button" id="fcClose" class="fc-dialog-close" aria-label="Close public information">×</button><span id="fcDialogType" class="fc-dialog-type"></span><h2 id="fcDialogTitle"></h2><div id="fcDialogContent"></div></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../membership/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+
+
+</body></html>

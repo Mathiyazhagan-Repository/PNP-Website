@@ -86,6 +86,19 @@
 .gr-tracking-security > div { padding-left: clamp(12px, 1.9vw, 38px); border-left: 1px solid #438051; }
 .gr-tracking-security h2 { margin: 0; color: #07551a; font-size: 1.45em; }
 .gr-tracking-security p { margin: .2em 0 0; }
+.gr-tracking-page .gr-submission-brand { font-size: .88rem; }
+.gr-tracking-page .gr-submission-brand strong { font-size: clamp(1.5rem, 2.55vw, 3rem); }
+.gr-tracking-page .gr-submission-headline { font-size: clamp(1.65rem, 2.75vw, 3.5rem); }
+.gr-tracking-page .gr-submission-copy { font-size: clamp(.9rem, 1.2vw, 1.5rem); }
+.gr-tracking-page .gr-submission-guide li { font-size: clamp(.73rem, .95vw, 1.1rem); }
+.gr-tracking-page.gr-tracking .gr-submission-guide li svg { width: 1.45em; height: 1.45em; padding: .51em; }
+.gr-tracking-page .gr-tracking-card { font-size: clamp(.85rem, 1.08vw, 1.35rem); }
+.gr-tracking-header h1 { font-size: clamp(1.4rem, 2.4vw, 3.1rem); }
+.gr-tracking-page .gr-tracking-header h1 svg { width: 1.15em; height: 1.15em; }
+.gr-tracking-actions button { gap: .5em; padding: .4em .55em; font-size: 1.05em; }
+.gr-tracking-page .gr-tracking-actions button svg { width: 1.15em; height: 1.15em; }
+.gr-tracking-page.gr-tracking .gr-tracking-security svg { width: 2.4em; height: 2.4em; }
+.gr-tracking-security h2 { font-size: 1.3em; }
 @media (max-width: 850px) {
     .gr-tracking { grid-template-columns: minmax(0, 1fr); padding-inline: 8px; }
     .gr-tracking .gr-submission-intro { background-size: cover; background-position: center 78%; }

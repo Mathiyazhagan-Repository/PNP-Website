@@ -12,7 +12,7 @@
 .district-palace-art{inset:0;width:100%;height:100%;mask-image:none;-webkit-mask-image:none}
 .district-palace-art img{inset:0;width:100%;height:100%;object-fit:fill;object-position:center;max-width:100%}
 @media(min-width:701px){
-  .district-detail-hero{height:14.2cqw;min-height:170px;max-height:245px;padding:1.25cqw 3.2% 1cqw;background:#eaf5fd}
+  .district-detail-hero{height:14.2cqw;min-height:170px;max-height:245px;padding:1.25cqw 3.2% 1.65cqw;background:#eaf5fd}
   .district-detail-breadcrumb{font-size:clamp(10px,1.1cqw,15px);margin-bottom:.5cqw;gap:.6cqw}
   .district-detail-hero h1{font-size:clamp(33px,3.55cqw,54px);line-height:1.05;margin-bottom:1cqw;letter-spacing:-1.6px}
   .district-fact-strip{width:43%;max-width:640px;min-width:352px;padding:.75cqw .3cqw;border-radius:12px;background:#fffffff5}
@@ -41,6 +41,21 @@
   .district-detail-bottom{padding-top:.7cqw;font-size:clamp(9px,.75cqw,11px)}
 }
 @media(max-width:700px){.district-detail-hero{min-height:235px}.district-palace-art{opacity:1}.district-palace-art img{object-position:62% center}.district-detail-hero h1{font-size:32px}.district-fact-strip{margin-top:64px;background:#fffffff5}.district-local-leaders{margin-top:12px}.district-detail-panels>.district-detail-card{padding-block:16px}.district-overview-copy{padding-left:30px}}
-.district-detail-bottom{align-items:center}
-.district-detail-bottom .district-constituencies-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:34px;padding:8px 17px;border:1px solid #bd0046;border-radius:20px;background:linear-gradient(#ed0754,#b80039);box-shadow:0 3px 7px #b0003726;color:white;text-decoration:none;font:800 12px 'DM Sans',sans-serif}
-.district-detail-bottom .district-constituencies-link:hover{background:linear-gradient(#f91a65,#c30046)}
+.district-detail-bottom{align-items:center;justify-content:flex-end}
+.district-detail-breadcrumb{margin-left:0}
+.district-detail-hero h1{margin-bottom:.55cqw}
+.district-fact-strip{transform:translateY(-.35cqw);margin-bottom:1.1cqw}
+.district-fact-strip #districtDetailConstituencies{position:relative;justify-content:flex-start;gap:.55cqw;padding:.25cqw .65cqw}
+.district-fact-strip #districtDetailConstituencies .district-fact-copy{display:grid;grid-template-columns:auto;align-items:start;line-height:1}
+.district-fact-strip #districtDetailConstituencies small{margin:.12cqw 0 .42cqw}
+.district-fact-action{display:inline-flex;align-items:center;justify-content:center;gap:.35cqw;width:max-content;max-width:100%;min-height:30px;padding:5px 12px;border-radius:16px;background:linear-gradient(135deg,#ed0754,#b80039);box-shadow:0 3px 8px #b0003726;color:#fff;font:800 clamp(9px,.78cqw,12px)/1 'DM Sans',sans-serif;white-space:nowrap}
+.district-fact-action b{font-size:12px;line-height:1}
+.district-fact-strip #districtDetailConstituencies:hover .district-fact-action{background:linear-gradient(135deg,#f91a65,#c30046);box-shadow:0 3px 8px #b0003738}
+@media(max-width:700px){
+  .district-detail-breadcrumb{margin-left:0}
+  .district-detail-hero h1{margin-bottom:8px}
+  .district-fact-strip{transform:translateY(-10px)}
+  .district-fact-strip #districtDetailConstituencies{gap:5px;padding:4px 5px}
+  .district-fact-strip #districtDetailConstituencies small{margin:2px 0 5px}
+  .district-fact-action{min-height:20px;padding-inline:7px;font-size:7px}
+}

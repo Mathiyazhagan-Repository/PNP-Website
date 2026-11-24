@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Library | Praja Nishchaya Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="media.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="media-library media-hub">
+        <nav class="hub-breadcrumb" aria-label="Breadcrumb"><a href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 11 12 3l10 8M5 10v11h5v-6h4v6h5V10"/></svg> Home</a><span aria-hidden="true">›</span><span aria-current="page">Media Library</span></nav>
+        <section class="hub-hero" aria-labelledby="media-title">
+            <div class="hub-intro">
+                <h1 id="media-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zm7 4 6 4-6 4z"/></svg> <span>Media <em>Library</em></span></h1>
+                <p>Explore photos, videos and albums from our programmes, events and community initiatives.</p>
+                <div class="hub-actions"><a href="photos.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM3 16l5-5 4 4 3-3 6 5M17 8h.01"/></svg> Explore Photos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a><a href="videos.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg> Watch Videos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a></div>
+            </div>
+            <figure class="hub-art"><img src="media-hub-hero.png" alt="A camera operator filming a gathering in front of Vidhana Soudha"><figcaption>AI-generated illustration</figcaption></figure>
+        </section>
+        <ul class="hub-stats" aria-label="Illustrative media library totals">
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM3 16l5-5 4 4 3-3 6 5M17 8h.01"/></svg><span><strong>3,280+</strong>Photos</span></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zm7 4 6 4-6 4z"/></svg><span><strong>620+</strong>Videos</span></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/></svg><span><strong>180+</strong>Albums</span></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h5l2-3h4l2 3h5v14H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg><span><strong>50+</strong>Events Covered</span></li>
+        </ul>
+        <form class="hub-search" id="hub-search-form" aria-label="Search media library">
+            <div class="hub-query"><label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 16l6 6M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg><span class="media-sr">Search photos, videos or albums</span><input type="search" id="hub-query" placeholder="Search photos, videos or albums..."></label><button type="submit">Search</button></div>
+            <div class="hub-filters">
+                <label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/></svg><span>Category<select id="hub-category"><option value="">All Categories</option><option value="Events">Events</option><option value="Community">Community</option><option value="Youth &amp; Campus">Youth &amp; Campus</option><option value="Programmes">Programmes</option><option value="Karnataka">Karnataka</option></select></span></label>
+                <label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zm7 4 6 4-6 4z"/></svg><span>Media Type<select id="hub-kind"><option value="">All Media</option><option value="photo">Photos</option><option value="video">Videos</option><option value="album">Albums</option></select></span></label>
+                <label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg><span>District<select id="hub-district"><option value="">All Districts</option><option value="Bengaluru">Bengaluru</option><option value="Mysuru">Mysuru</option><option value="Udupi">Udupi</option><option value="Hampi">Hampi</option></select></span></label>
+                <label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM7 2v6m10-6v6M3 10h18m-14 4h2m3 0h2m3 0h1"/></svg><span>Date Range<select id="hub-year"><option value="">All Dates</option><option value="2025">2025</option><option value="2024">2024</option></select></span></label>
+            </div>
+        </form>
+        <section class="hub-search-results" id="hub-search-results" aria-labelledby="hub-results-title" hidden>
+            <h2 id="hub-results-title">Search Results</h2><p id="hub-results-count" role="status"></p><ul id="hub-results-list"></ul><button type="button" id="hub-clear-search">Clear Search</button>
+        </section>
+        <nav class="hub-shortcuts" aria-label="Media collections">
+            <a class="hub-shortcut hub-shortcut-photos" href="photos.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM3 16l5-5 4 4 3-3 6 5M17 8h.01"/></svg><strong>Photo Gallery</strong><span>Events, people and initiatives in pictures.</span><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
+            <a class="hub-shortcut hub-shortcut-videos" href="videos.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zm7 4 6 4-6 4z"/></svg><strong>Video Gallery</strong><span>Speeches, interviews and event recordings.</span><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
+            <a class="hub-shortcut hub-shortcut-albums" href="album-detail.html" data-hub-item data-title="Janata Samvada – Mysuru" data-kind="album" data-category="Events" data-district="Mysuru" data-year="2025"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/></svg><strong>Albums</strong><span>Curated collections from key programmes and campaigns.</span><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
+        </nav>
+        <div class="hub-featured">
+            <section class="hub-panel"><header><h2><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM3 16l5-5 4 4 3-3 6 5M17 8h.01"/></svg> Featured Photos</h2><a href="photos.html">View All Photos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a></header><div class="hub-mosaic hub-photo-mosaic">
+                        <a class="hub-preview hub-preview-main" href="photos.html#landmarks" aria-label="Karnataka Landmarks" data-hub-item data-title="Karnataka Landmarks" data-kind="photo" data-category="Karnataka" data-district="Hampi" data-year="2025"><img src="../../assets/hero/navbar-vidhana.png" alt="" loading="lazy"></a>
+                        <a class="hub-preview " href="photos.html#green" aria-label="Green Karnataka Campaign" data-hub-item data-title="Green Karnataka Campaign" data-kind="photo" data-category="Community" data-district="Udupi" data-year="2025"><img src="../../assets/hero/story-community.png" alt="" loading="lazy"></a>
+                        <a class="hub-preview " href="photos.html#youth" aria-label="Youth Leadership Meet" data-hub-item data-title="Youth Leadership Meet" data-kind="photo" data-category="Youth &amp; Campus" data-district="Bengaluru" data-year="2025"><img src="../../assets/hero/policy-education-campus.png" alt="" loading="lazy"></a>
+            </div></section>
+            <section class="hub-panel"><header><h2><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg> Featured Videos</h2><a href="videos.html">View All Videos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a></header><div class="hub-mosaic hub-video-mosaic">
+                        <a class="hub-preview hub-preview-main" href="video-detail.html" aria-label="PNP Janata Samvada – Mysuru" data-hub-item data-title="PNP Janata Samvada – Mysuru" data-kind="video" data-category="Events" data-district="Mysuru" data-year="2025"><img src="mysuru-album-cover.png" alt="" loading="lazy"><span class="hub-play"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg></span><small>14:27</small></a>
+                        <a class="hub-preview " href="videos.html#dialogue" aria-label="Policy Dialogue – Education" data-hub-item data-title="Policy Dialogue – Education" data-kind="video" data-category="Programmes" data-district="Bengaluru" data-year="2025"><img src="../../assets/hero/news-statement.png" alt="" loading="lazy"><span class="hub-play"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg></span><small>10:32</small></a>
+                        <a class="hub-preview " href="videos.html#volunteer" aria-label="Volunteer Drive – Bengaluru" data-hub-item data-title="Volunteer Drive – Bengaluru" data-kind="video" data-category="Community" data-district="Bengaluru" data-year="2024"><img src="../../assets/hero/story-volunteer.png" alt="" loading="lazy"><span class="hub-play"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg></span><small>05:26</small></a>
+                        <a class="hub-preview " href="videos.html#journey" aria-label="PNP in Karnataka – Our Journey" data-hub-item data-title="PNP in Karnataka – Our Journey" data-kind="video" data-category="Karnataka" data-district="Bengaluru" data-year="2024"><img src="../../assets/hero/navbar-vidhana.png" alt="" loading="lazy"><span class="hub-play"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3l14 9-14 9z"/></svg></span><small>03:48</small></a>
+            </div></section>
+        </div>
+        <section class="hub-panel hub-categories"><header><h2><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/></svg> Browse by Category</h2><a href="photos.html">View All <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a></header>
+            <div>
+                <a href="photos.html?category=Events"><img src="../../assets/hero/news-public.png" alt="" loading="lazy"><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM7 2v6m10-6v6M3 10h18m-14 4h2m3 0h2m3 0h1"/></svg><strong>Events</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span></a>
+                <a href="photos.html?category=Community"><img src="../../assets/hero/story-community.png" alt="" loading="lazy"><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2M3 5a3 3 0 0 0 0 6m18-6a3 3 0 0 1 0 6"/></svg><strong>Community</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span></a>
+                <a href="photos.html?category=Youth%20%26%20Campus"><img src="../../assets/hero/policy-education-campus.png" alt="" loading="lazy"><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5-10-5Zm4 2v6c3 3 9 3 12 0v-6m4-2v7"/></svg><strong>Youth &amp; Campus</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span></a>
+                <a href="photos.html?category=Programmes"><img src="../../assets/hero/news-programme.png" alt="" loading="lazy"><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10h5l11-6v16L8 14H3zm5 4 2 6h3l-2-5"/></svg><strong>Programmes</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span></a>
+                <a href="photos.html?category=Karnataka"><img src="../../assets/hero/navbar-vidhana.png" alt="" loading="lazy"><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h5l2-3h4l2 3h5v14H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg><strong>Karnataka</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span></a>
+            </div>
+        </section>
+        <p class="hub-credit">Design preview · Sample media and totals</p>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

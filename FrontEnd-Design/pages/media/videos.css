@@ -1,0 +1,28 @@
+.video-hero { position: relative; }
+:is(.video-gallery, .album-page) .video-hero > svg { position: absolute; top: 50%; left: 2.5%; width: clamp(28px, 6vw, 120px); height: auto; color: #a2c8ed35; transform: translateY(-50%) rotate(-10deg); stroke-width: 1.2; }
+.video-categories nav { gap: .5em; }
+.video-categories button { box-shadow: 0 2px 5px #20385b20; }
+.video-categories button:nth-child(3) svg, .video-categories button:nth-child(6) svg { color: #be005d; }
+.video-categories button:nth-child(4) svg { color: #b27b00; }
+.video-categories button:nth-child(7) svg { color: #4a810c; }
+.video-categories button[aria-pressed="true"] svg { color: #fff; }
+.video-grid { align-items: stretch; }
+.video-layout { grid-template-columns: minmax(0, 1fr); }
+.video-card { min-width: 0; overflow: hidden; border: 1px solid #dfebf3; border-radius: .72em; background: #fff; box-shadow: 0 3px 7px #19365019; }
+.video-card button, .video-feature-thumb { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; }
+.video-thumb { display: block; position: relative; overflow: hidden; border-radius: .65em; background: #12315a; }
+.video-thumb img { display: block; width: 100%; aspect-ratio: 1.9; object-fit: cover; }
+.video-thumb > svg { position: absolute; top: 50%; left: 50%; width: 2.5em; height: 2.5em; border-radius: 50%; color: #fff; background: #111c34b5; transform: translate(-50%, -50%); }
+.video-gallery .video-thumb > svg path { stroke-width: 1.4; }
+.video-thumb small { position: absolute; right: .4em; bottom: .4em; padding: .04em .36em; border-radius: .38em; background: #081229dd; color: #fff; font-weight: 800; }
+.video-card-info { display: grid; gap: .23em; padding: .42em .52em; font-size: clamp(.76rem, .98vw, 1.08rem); line-height: 1.2; }
+.video-card-info small { display: flex; align-items: center; gap: .35em; color: #344963; }
+.video-card-info small svg { width: 1em; height: 1em; }
+.video-feature { background: #fff; padding: .7em; }
+.video-feature h2 { display: flex; align-items: center; gap: .35em; margin: 0; font-size: clamp(1.1rem, 1.65vw, 1.8rem); }
+.video-feature h2 svg { color: #c10060; }
+.video-feature h3 { margin-top: .44em; font-size: 1.18em; }
+.video-feature p { margin: .25em 0 .55em; line-height: 1.3; }
+.video-feature-meta { color: #344963; }
+.video-feature-actions button:first-child { border-color: #bf005e; background: #bf005e; }
+#video-share-status:empty { display: none; }
