@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grievance Status Details | Praja Nishchaya Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="grievance.css">
+    <link rel="stylesheet" href="submit-grievance.css">
+    <link rel="stylesheet" href="track-grievance.css">
+    <link rel="stylesheet" href="grievance-details.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="grievance-details.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="grievance-page">
+        <section class="gr-submission gr-tracking gr-status" aria-labelledby="gr-status-title">
+            <div class="gr-submission-intro">
+                <div class="gr-submission-brand"><strong>PNP</strong><span>Praja Nishchaya Party</span></div>
+                <p class="gr-submission-headline">Grievance <strong>Status Details</strong></p>
+                <p class="gr-submission-copy">View the current status, progress and updates of your submitted grievance.</p>
+                <img class="gr-status-illustration" src="grievance-status-illustration.png" alt="">
+            </div>
+            <div class="gr-tracking-card gr-status-card">
+                <header class="gr-status-header">
+                    <div>
+                        <h1 id="gr-status-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8m-8 4h8"/></svg> Grievance Status Details</h1>
+                        <p>Track the progress and view complete details of your grievance.</p>
+                        <p class="gr-status-preview">Design preview · Sample grievance</p>
+                    </div>
+                    <div class="gr-status-reference">
+                        <div>Tracking Reference Number<br><strong id="gr-status-reference">PNP-GRV-2026-000458</strong></div>
+                        <button type="button" id="gr-status-copy" aria-label="Copy sample tracking reference"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7h12v14H8zM4 17V3h12"/></svg></button>
+                    </div>
+                </header>
+                <ol class="gr-status-timeline" aria-label="Grievance progress">
+                    <li class="gr-stage-complete"><span class="gr-stage-dot"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><strong>Submitted</strong><span>15 Apr 2026 · 11:24 AM</span></li>
+                    <li class="gr-stage-complete"><span class="gr-stage-dot"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><strong>Under Review</strong><span>16 Apr 2026 · 02:30 PM</span></li>
+                    <li aria-current="step"><span class="gr-stage-dot"></span><strong>In Progress</strong><span>18 Apr 2026 · 10:15 AM</span></li>
+                    <li><span class="gr-stage-dot"></span><strong>Resolved</strong></li>
+                    <li><span class="gr-stage-dot"></span><strong>Closed</strong></li>
+                </ol>
+                <div class="gr-status-panels">
+                    <section class="gr-status-panel" aria-labelledby="gr-details-title">
+                        <h2 id="gr-details-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8m-8 4h8"/></svg> Grievance Details</h2>
+                        <dl class="gr-status-fields">
+                            <div><dt>Subject</dt><dd>Road repair required in my area</dd></div>
+                            <div><dt>Category</dt><dd>Roads</dd></div>
+                            <div><dt>District</dt><dd>Bengaluru Urban</dd></div>
+                            <div><dt>Submitted On</dt><dd>15 Apr 2026, 11:24 AM</dd></div>
+                            <div><dt>Description</dt><dd>There are multiple potholes on the main road near the community centre, which are causing difficulty to commuters.</dd></div>
+                            <div><dt>Attachments</dt><dd><button class="gr-status-attachment" type="button" id="gr-status-attachment"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 13 7-7a2 2 0 0 1 3 3l-9 9a4 4 0 0 1-6-6L13 2a6 6 0 0 1 8 8L11 20"/></svg> <span>view-attachment.pdf <small>(1.2 MB)</small></span> <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M3 16v5h18v-5"/></svg></button></dd></div>
+                        </dl>
+                    </section>
+                    <section class="gr-status-panel gr-status-history" aria-labelledby="gr-history-title">
+                        <h2 id="gr-history-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 4 7M3 7v5h5m4-5v5l4 2"/></svg> Update History</h2>
+                        <ol>
+                            <li class="gr-stage-complete"><span class="gr-stage-dot"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>15 Apr 2026, 11:24 AM</strong><p>Grievance submitted successfully.</p></div></li>
+                            <li class="gr-stage-complete"><span class="gr-stage-dot"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><strong>16 Apr 2026, 02:30 PM</strong><p>Your grievance is under review by the concerned team.</p></div></li>
+                            <li aria-current="step"><span class="gr-stage-dot"></span><div><strong>18 Apr 2026, 10:15 AM</strong><p>Action is in progress. Updates will be shared here.</p></div></li>
+                            <li><span class="gr-stage-dot"></span><div><p>Further updates will appear here.</p></div></li>
+                        </ol>
+                    </section>
+                </div>
+                <div class="gr-status-actions">
+                    <a href="track-grievance.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12H3m7-7-7 7 7 7"/></svg> Back to Track</a>
+                    <button id="gr-status-download" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M3 16v5h18v-5"/></svg> Download Acknowledgement</button>
+                    <button id="gr-status-alerts" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 17h14l-2-4V9a5 5 0 0 0-10 0v4zm5 3a2 2 0 0 0 4 0"/></svg> Get Update Alerts</button>
+                </div>
+                <p id="gr-status-feedback" role="status"></p>
+            </div>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.gr-hotline-page { grid-template-columns: minmax(0, 22.6fr) minmax(0, 77.4fr); background: linear-gradient(135deg, #004774, #00569b 71%, #034570); font-family: var(--font-body); }
+.gr-hotline-page :is(.gr-submission-headline, h1, h2, .gr-support-channels strong) { font-family: var(--font-heading); }
+.gr-hotline-page .gr-submission-intro {
+    padding-bottom: clamp(112px, 10.5vw, 216px);
+    background: #075780 url("hotline-support-artwork.png") center bottom / 100% 100% no-repeat;
+}
+.gr-hotline-page .gr-submission-intro::after { content: none; }
+.gr-hotline-page .gr-submission-brand { margin-bottom: .48em; }
+.gr-hotline-page .gr-submission-copy { margin-block: .45em .5em; }
+.gr-hotline-label { align-self: flex-start; margin: 0 0 .35em clamp(0px, 1.9vw, 39px); padding: .3em .9em; border-radius: 2em; background: #ffe400; color: #08153e; font-weight: 850; }
+.gr-hotline-page .gr-submission-headline { font-size: clamp(2rem, 3.35vw, 4.35rem); }
+.gr-hotline-card { gap: clamp(8px, .75vw, 15px); margin-block: clamp(5px, .4vw, 9px); padding-block: clamp(22px, 1.6vw, 33px); font-size: clamp(.85rem, 1vw, 1.25rem); }
+.gr-hotline-card header { display: flex; gap: .7em; align-items: center; }
+.gr-hotline-card header h1 { margin: 0; color: #081344; font-size: clamp(1.35rem, 1.9vw, 2.5rem); }
+.gr-hotline-card header p { margin: .13em 0 0; }
+.gr-hotline-page .gr-hotline-card header svg { width: 2.8em; height: 2.8em; color: #075fc8; }
+.gr-support-channels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7em; margin: 0; padding: 0; list-style: none; }
+.gr-support-channels li { border: 1px solid #a9d2ff; border-radius: .8em; background: linear-gradient(#eef7ff, #dceeff); }
+.gr-support-channels a { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .65em; height: 100%; padding: .8em; border-radius: inherit; color: #081344; text-decoration: none; }
+.gr-support-channels a:hover { background: #ffffff55; }
+.gr-support-channels li:nth-child(2) { border-color: #a7e5bf; background: linear-gradient(#f0fcf3, #d9f5e5); }
+.gr-support-channels li:nth-child(3) { border-color: #d6b9f7; background: linear-gradient(#fbf5ff, #eadefb); }
+.gr-support-channels strong, .gr-support-channels span { display: block; }
+.gr-support-channels a > span > span { margin-top: .12em; color: #081344; font-size: clamp(.9rem, 1.35vw, 1.75rem); font-weight: 850; overflow-wrap: anywhere; }
+.gr-hotline-page .gr-support-channels svg:first-child { box-sizing: content-box; width: 1.65em; height: 1.65em; padding: .6em; border-radius: .62em; color: #fff; background: linear-gradient(#087cff, #034387); }
+.gr-hotline-page .gr-support-channels li:nth-child(2) svg:first-child { background: linear-gradient(#13c344, #067221); }
+.gr-hotline-page .gr-support-channels li:nth-child(3) svg:first-child { background: linear-gradient(#a13be0, #64178e); }
+.gr-hotline-page .gr-support-channels a > svg:last-child { width: 1em; height: 1em; }
+.gr-hotline-panels { display: grid; grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); gap: clamp(9px, 1.3vw, 27px); }
+.gr-hotline-panel { min-width: 0; overflow: hidden; border-radius: .8em; background: #f5faff; box-shadow: 0 3px 6px #244a6e24; scroll-margin-top: 8rem; }
+.gr-hotline-panel h2 { display: flex; align-items: center; gap: .55em; margin: 0; padding: .35em .66em; background: #d8ebfd; color: #081344; font-size: clamp(1rem, 1.35vw, 1.75rem); }
+.gr-hotline-hours { background: #fffaeb; }
+.gr-hotline-hours h2 { background: #fff0cd; }
+.gr-hotline-schedule { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); padding: .95em .8em; }
+.gr-hotline-schedule > div { display: flex; align-items: center; gap: .6em; padding-inline: .55em; }
+.gr-hotline-schedule > div + div { border-left: 1px solid #a8aaa1; }
+.gr-hotline-hours p { margin: 0; font-weight: 750; }
+.gr-hotline-page .gr-hotline-schedule svg { width: 1.8em; height: 1.8em; color: #a66300; }
+.gr-hotline-help ul, .gr-hotline-tips ul { margin: 0; padding: .65em .75em; list-style: none; }
+.gr-hotline-help ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gr-hotline-help li + li { border-left: 1px solid #c0d9f3; }
+.gr-hotline-help a { display: grid; justify-items: center; gap: .3em; text-align: center; padding: .2em; color: #081944; text-decoration: none; }
+.gr-hotline-help a:hover { text-decoration: underline; }
+.gr-hotline-help svg, .gr-hotline-guide svg { color: #075fc8; }
+.gr-hotline-tips { background: #f0fbf5; }
+.gr-hotline-tips h2 { background: #d9f6e7; color: #08501b; }
+.gr-hotline-tips li { display: flex; align-items: center; gap: .5em; }
+.gr-hotline-tips li + li { margin-top: .3em; }
+.gr-hotline-page .gr-hotline-tips li svg { width: 1.06em; height: 1.06em; padding: .12em; border-radius: 50%; color: white; background: #087d22; stroke-width: 3; }
+.gr-hotline-guide { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 40%); align-items: center; gap: .25em; padding: .65em .75em; background: linear-gradient(120deg, #eff7ff, #dceeff); }
+.gr-hotline-guide h2 { padding: 0; background: none; }
+.gr-hotline-guide p { margin: .5em 0 0; }
+.gr-hotline-guide img { display: block; width: 100%; }
+.gr-support-channels a { padding-block: .42em; }
+.gr-hotline-panels { row-gap: clamp(8px, .75vw, 15px); }
+.gr-hotline-panel h2 { padding-block: .25em; }
+.gr-hotline-schedule { padding-block: .48em; }
+.gr-hotline-help ul, .gr-hotline-tips ul { padding-block: .34em; }
+.gr-hotline-tips li + li { margin-top: .2em; }
+.gr-hotline-guide h2 { padding: 0; }
+.gr-hotline-guide img { max-height: clamp(66px, 6.25vw, 130px); object-fit: contain; }
+@media (max-width: 1000px) {
+    .gr-hotline-page { grid-template-columns: minmax(0, 1fr); }
+    .gr-hotline-page .gr-submission-intro { background-size: auto 100%; background-position: right bottom; }
+    .gr-hotline-page .gr-submission-copy { max-width: 18em; }
+}
+@media (max-width: 650px) {
+    .gr-support-channels, .gr-hotline-panels { grid-template-columns: minmax(0, 1fr); }
+    .gr-hotline-help ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6em; }
+    .gr-hotline-help li:nth-child(3) { border-left: 0; }
+}

@@ -330,31 +330,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const districtSelect = get("districtSelect");
 
   if (districtForm && districtSelect) {
-    const districtExamples = {
-      "bengaluru-urban": ["Ananya Rao", "Bengaluru", 12],
-      "bengaluru-rural": ["Vikram Gowda", "Devanahalli", 6],
-      "mysuru": ["Kavya Prasad", "Mysuru", 8],
-      "mandya": ["Arun Kumar", "Mandya", 5],
-      "tumakuru": ["Meera Shankar", "Tumakuru", 7],
-      "hassan": ["Ravi Shetty", "Hassan", 4],
-      "mangaluru": ["Divya Rai", "Mangaluru", 6],
-      "belagavi": ["Sanjay Patil", "Belagavi", 8],
-      "dharwad": ["Nandini Desai", "Dharwad", 5],
-      "kalaburagi": ["Ajay Kulkarni", "Kalaburagi", 4]
-    };
     districtForm.addEventListener("submit", event => {
       event.preventDefault();
-      const details = districtExamples[districtSelect.value];
-      const result = get("districtResult");
-      if (!details || !result) return;
-      const district = districtSelect.selectedOptions[0].textContent;
-      result.replaceChildren();
-      const title = document.createElement("h3");
-      title.textContent = district + " District Unit";
-      const summary = document.createElement("p");
-      summary.textContent = "District coordinator: " + details[0] + " ? Local office: " + details[1] + " ? " + details[2] + " community programmes";
-      result.append(title, summary);
-      result.hidden = false;
+      const destination = new URL(districtForm.getAttribute("action") || "pages/districts/districts.html", document.baseURI);
+      const selectedDistrict = districtSelect.value === "mangaluru" ? "dakshina-kannada" : districtSelect.value;
+      if (selectedDistrict) destination.searchParams.set("district", selectedDistrict);
+      window.location.assign(destination.href);
     });
   }
 

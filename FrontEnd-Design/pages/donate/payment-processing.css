@@ -120,7 +120,7 @@
     padding: clamp(1.25rem, 3.55vw, 3rem) clamp(1rem, 3.4vw, 3rem);
     background: linear-gradient(110deg, #f6f9fa, #ebf4fd);
     box-shadow: inset 0 5px 14px -12px #163e77;
-    font: 400 .9375rem / 1.4 Arial, sans-serif;
+    font: 400 .9375rem / 1.4 var(--font-body);
     color: #132451;
 }
 .processing-main { text-align: center; }

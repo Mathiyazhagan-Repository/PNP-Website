@@ -1,0 +1,63 @@
+.gr-status { grid-template-columns: minmax(0, 24.3fr) minmax(0, 75.7fr); background: linear-gradient(135deg, #00447b, #043158 68%, #005477); }
+.gr-status .gr-submission-intro {
+    padding-top: 10px;
+    padding-bottom: clamp(72px, 5.5vw, 112px);
+    background-image: linear-gradient(180deg, #00548285, transparent 76%), url("grievance-confirmation-landmark.png");
+}
+.gr-status .gr-submission-headline { font-size: clamp(1.85rem, 2.95vw, 3.9rem); }
+.gr-status .gr-submission-copy { font-size: clamp(.95rem, 1.3vw, 1.65rem); }
+.gr-status .gr-submission-brand { margin-bottom: clamp(10px, .85vw, 18px); }
+.gr-status .gr-submission-copy { margin-block: .4em .5em; }
+.gr-status-illustration { position: absolute; left: 50%; bottom: clamp(12px, 1.6vw, 33px); transform: translateX(-50%); width: min(60%, 14vw); max-height: clamp(58px, 4.8vw, 98px); object-fit: contain; }
+.gr-status-card { gap: clamp(6px, .5vw, 10px); margin-block: clamp(5px, .4vw, 9px); padding-block: clamp(8px, .6vw, 12px); font-size: clamp(.9rem, 1vw, 1.25rem); }
+.gr-status-header { display: flex; align-items: start; justify-content: space-between; gap: .7em; flex-wrap: wrap; }
+.gr-status-header h1 { display: flex; align-items: center; gap: .45em; margin: 0; color: #081243; font-size: clamp(1.5rem, 2.15vw, 2.8rem); }
+.gr-status-header h1 svg, .gr-status-panel h2 svg { color: #120e80; }
+.gr-status-header p { margin: .2em 0 0; }
+.gr-status-header .gr-status-preview { color: #375575; font-size: .85em; }
+.gr-status-reference { display: flex; align-items: center; justify-content: space-between; gap: 1.2em; padding: .48em .7em; border: 1px solid #cce4ff; border-radius: .7em; background: #e2f1ff; font-weight: 750; }
+.gr-status-reference strong { font-size: clamp(1rem, 1.65vw, 2.15rem); overflow-wrap: anywhere; }
+.gr-status-reference button { display: grid; place-items: center; padding: .5em; border: 1px solid #d6eaff; border-radius: .55em; background: #fafdff; color: #120bb8; font: inherit; cursor: pointer; }
+.gr-status-timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0; margin: 0; list-style: none; text-align: center; }
+.gr-status-timeline li { position: relative; display: grid; justify-items: center; align-content: start; gap: .15em; min-width: 0; }
+.gr-status-timeline li + li::before { content: ""; position: absolute; top: .82em; right: 50%; width: 100%; height: 3px; background: #aab3c9; }
+.gr-status-timeline .gr-stage-complete::before { background: #008d1b; }
+.gr-status-timeline [aria-current]::before { background: linear-gradient(90deg, #008d1b 55%, #0049b9 85%); }
+.gr-stage-dot { display: grid; place-items: center; position: relative; z-index: 1; width: 1.75em; height: 1.75em; border: .24em solid #aab3c9; border-radius: 50%; background: #f9fcff; color: #fff; }
+.grievance-page .gr-stage-dot svg { width: 1.1em; height: 1.1em; }
+.gr-stage-complete .gr-stage-dot { border-color: #078b1f; background: linear-gradient(#18b737, #007a14); }
+[aria-current="step"] > .gr-stage-dot { border-color: #0959bb; box-shadow: 0 0 0 .15em #d6eaff; }
+.gr-status-timeline .gr-stage-complete strong { color: #085718; }
+.gr-status-timeline [aria-current] strong { padding: .12em .52em; border-radius: .55em; background: #064cae; color: #fff; }
+.gr-status-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.8vw, 36px); }
+.gr-status-panel { min-width: 0; overflow: hidden; border: 1px solid #d9e8f9; border-radius: .95em; background: #f8fbfd; box-shadow: 0 3px 5px #31507824; }
+.gr-status-panel h2 { display: flex; align-items: center; gap: .55em; margin: 0; padding: .24em .7em; background: #dfecff; color: #091441; font-size: clamp(1rem, 1.4vw, 1.8rem); }
+.gr-status-fields { margin: 0; padding: .22em .85em; }
+.gr-status-fields > div { display: grid; grid-template-columns: minmax(5.4em, 34%) minmax(0, 1fr); gap: .5em; padding: .22em 0; }
+.gr-status-fields > div + div { border-top: 1px solid #dfebf9; }
+.gr-status-fields dt { font-weight: 850; }
+.gr-status-fields dd { margin: 0; overflow-wrap: anywhere; }
+.gr-status-attachment { display: flex; align-items: center; justify-content: space-between; gap: .4em; width: 100%; padding: .27em .42em; border: 1px solid #adcdf3; border-radius: .55em; background: #fff; color: #084aa5; font: inherit; cursor: pointer; }
+.gr-status-attachment span { min-width: 0; text-decoration: underline; }
+.gr-status-history h2 { background: #fff1cf; }
+.gr-status-history h2 svg { color: #9a5d00; }
+.gr-status-history ol { padding: .25em .8em; margin: 0; list-style: none; }
+.gr-status-history li { display: grid; position: relative; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: .55em; padding-bottom: .12em; }
+.gr-status-history li:not(:last-child)::after { content: ""; position: absolute; left: .78em; top: .85em; bottom: -.85em; width: 3px; background: #aab3c9; }
+.gr-status-history .gr-stage-complete::after { background: #078b1f; }
+.gr-status-history li > div { padding: .18em .5em; }
+.gr-status-history [aria-current] > div { border: 1px solid #c6e0fb; border-radius: .6em; background: #deefff; }
+.gr-status-history p { margin: 0; }
+.gr-status-actions { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: clamp(8px, 2.1vw, 44px); }
+.gr-status-actions :is(a, button) { display: flex; justify-content: center; align-items: center; gap: .55em; min-height: 44px; padding: .5em; border: 1px solid #70aef5; border-radius: .55em; background: #fff; color: #083775; font: inherit; font-weight: 850; text-decoration: none; cursor: pointer; }
+.gr-status-actions button:last-child { border-color: #008313; background: linear-gradient(#099b15, #00760e); color: #fff; }
+#gr-status-feedback { margin: 0; }
+#gr-status-feedback:empty { display: none; }
+@media (max-width: 850px) {
+    .gr-status { grid-template-columns: minmax(0, 1fr); }
+    .gr-status-illustration { width: min(36%, 160px); }
+}
+@media (max-width: 650px) {
+    .gr-status-panels, .gr-status-actions { grid-template-columns: minmax(0, 1fr); }
+    .gr-status-timeline { font-size: .72rem; }
+}

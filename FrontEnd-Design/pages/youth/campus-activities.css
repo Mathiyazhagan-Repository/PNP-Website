@@ -1,0 +1,38 @@
+.campus-directory .youth-directory-header { padding-bottom: clamp(18px, 2.1vw, 46px); }
+.campus-directory .youth-directory-header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    width: clamp(70px, 13vw, 278px);
+    height: 80%;
+    background: linear-gradient(145deg, #ec087e 22%, #16b9ea 45%, #e8f000 68%);
+    clip-path: polygon(80% 0, 100% 0, 29% 57%, 78% 32%, 49% 70%, 73% 61%, 10% 100%, 0 100%, 43% 52%, 19% 58%);
+}
+.campus-directory .youth-directory-card { --programme-accent: #fd8ccd; --campus-badge: #bf0069; }
+.campus-directory article:nth-child(2) { --programme-accent: #a8dfff; --campus-badge: #0058d7; }
+.campus-directory article:is(:nth-child(3), :nth-child(4)) { --programme-accent: #ffe76d; }
+.campus-directory article:nth-child(3) { --campus-badge: #ffe000; }
+.campus-directory article:is(:nth-child(4), :nth-child(6)) { --campus-badge: #007629; }
+.campus-directory article:nth-child(6) { --programme-accent: #aff1b2; }
+.campus-card-image { aspect-ratio: 1.7 / 1; overflow: hidden; }
+.campus-card-image img {
+    position: absolute;
+    top: var(--photo-top, 0%);
+    left: var(--photo-left, 0%);
+    max-width: none;
+    width: 300%;
+    height: 200%;
+    aspect-ratio: auto;
+    object-fit: fill;
+}
+.campus-directory article:is(:nth-child(2), :nth-child(5)) { --photo-left: -100%; }
+.campus-directory article:is(:nth-child(3), :nth-child(6)) { --photo-left: -200%; }
+.campus-directory article:nth-child(n+4) { --photo-top: -100%; }
+.campus-directory .youth-directory-category { color: white; background: var(--campus-badge); }
+.campus-directory article:nth-child(3) .youth-directory-category { color: #091633; }
+.campus-directory .youth-directory-content button { min-height: 44px; }
+@media (max-width: 630px) {
+    .campus-directory .youth-directory-header::before { opacity: .45; }
+}

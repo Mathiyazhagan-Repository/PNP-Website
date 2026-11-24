@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8f3fa">
+  <meta name="description" content="Explore Karnataka constituencies and find published local PNP information.">
+  <title>Constituency Directory | PNP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./constituencies.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./geography-data.js" defer></script>
+  <script src="./constituencies.js" defer></script>
+</head>
+<body class="constituency-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+
+  <svg class="constituency-icons" aria-hidden="true">
+    <defs>
+      <symbol id="constituency-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>
+      </symbol>
+      <symbol id="constituency-search" viewBox="0 0 24 24">
+        <circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/>
+      </symbol>
+      <symbol id="constituency-reset" viewBox="0 0 24 24">
+        <path d="M20 11a8 8 0 1 1-2.3-5.7L20 8"/><path d="M20 3v5h-5"/>
+      </symbol>
+      <symbol id="constituency-building" viewBox="0 0 24 24">
+        <path d="m2 8 10-6 10 6M4 21h16M3 23h18M5 10v9M9 10v9M15 10v9M19 10v9"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main id="main-content">
+    <section class="constituency-directory" aria-labelledby="constituencyHeading">
+      <nav class="constituency-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a><span aria-hidden="true">›</span>
+        <a href="./districts.html">Districts</a><span aria-hidden="true">›</span>
+        <span aria-current="page">Constituencies</span>
+      </nav>
+
+      <div class="constituency-hero-art" aria-hidden="true"><span class="constituency-landmark-left"></span><span class="constituency-landmark-right"></span></div>
+
+      <div class="constituency-hero-copy">
+        <h1 id="constituencyHeading">Constituency <em>Directory</em></h1>
+        <p>Search, filter and explore constituencies across Karnataka.</p>
+      </div>
+
+      <form class="constituency-filters" id="constituencyFilters" role="search" aria-label="Find a constituency">
+        <div class="constituency-filter-field">
+          <label for="constituencyDistrictFilter">District</label>
+          <div class="constituency-select-wrap">
+            <svg aria-hidden="true"><use href="#constituency-pin"/></svg>
+            <select id="constituencyDistrictFilter" name="district">
+              <option value="">All Districts</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="constituency-filter-field">
+          <label for="constituencyFilter">Constituency</label>
+          <div class="constituency-select-wrap">
+            <svg aria-hidden="true"><use href="#constituency-building"/></svg>
+            <select id="constituencyFilter" name="constituency">
+              <option value="">All Constituencies</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="constituency-filter-field constituency-search-field">
+          <label for="constituencySearch">Search by Name</label>
+          <div class="constituency-search-wrap">
+            <svg aria-hidden="true"><use href="#constituency-search"/></svg>
+            <input id="constituencySearch" name="q" type="search" placeholder="e.g. Chamaraja, Udupi, Hubballi..." autocomplete="off">
+          </div>
+        </div>
+
+        <div class="constituency-filter-actions">
+          <button type="button" class="constituency-reset" id="constituencyReset">
+            <svg aria-hidden="true"><use href="#constituency-reset"/></svg>
+            Reset
+          </button>
+          <button type="submit" class="constituency-submit">
+            <svg aria-hidden="true"><use href="#constituency-search"/></svg>
+            Search
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="constituency-results" aria-labelledby="constituencyResultsHeading">
+      <div class="constituency-results-toolbar">
+        <h2 id="constituencyResultsHeading">
+          <span class="constituency-count-icon" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <strong id="constituencyResultCount">0</strong> Constituencies Found
+        </h2>
+        <div class="constituency-tabs" role="group" aria-label="Constituency information category">
+          <button type="button" aria-pressed="true" data-category="all">All (0)</button>
+          <button type="button" aria-pressed="false" data-category="published">Published</button>
+          <button type="button" aria-pressed="false" data-category="updates">Local Updates</button>
+          <button type="button" aria-pressed="false" data-category="leadership">Leadership Info</button>
+        </div>
+        <div class="constituency-view-toggle" aria-label="Change result view">
+          <button type="button" class="is-active" data-view="grid" aria-label="Grid view" aria-pressed="true">
+            <span aria-hidden="true"></span>
+          </button>
+          <button type="button" data-view="list" aria-label="List view" aria-pressed="false">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <p class="constituency-status" id="constituencyStatus" role="status" aria-live="polite"></p>
+      <div class="constituency-card-grid" id="constituencyCards"></div>
+
+      <div class="constituency-empty" id="constituencyEmpty" hidden>
+        <svg aria-hidden="true"><use href="#constituency-search"/></svg>
+        <h3>No matching constituencies</h3>
+        <p>Try a different district, constituency name or search term.</p>
+        <button type="button" id="constituencyEmptyReset">Reset filters</button>
+      </div>
+
+      <div class="constituency-loading" id="constituencyLoading" hidden>
+        <span aria-hidden="true"></span>
+        <p>Loading constituency records…</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <dialog class="constituency-dialog" id="constituencyDialog" aria-labelledby="constituencyDialogTitle">
+    <button type="button" id="constituencyDialogClose" aria-label="Close information">×</button>
+    <span class="constituency-dialog-eyebrow">CONSTITUENCY INFORMATION</span>
+    <h2 id="constituencyDialogTitle"></h2>
+    <div id="constituencyDialogContent"></div>
+  </dialog>
+
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../membership/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+
+</body>
+</html>

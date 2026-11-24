@@ -1,0 +1,104 @@
+.gr-confirmation {
+    grid-template-columns: minmax(0, 27.4fr) minmax(0, 72.6fr);
+    gap: 0;
+    padding: 0 clamp(5px, .4vw, 9px) 0 0;
+    border-radius: 0;
+    background: linear-gradient(165deg, #084e61, #034366 50%, #007249);
+}
+.gr-confirmation .gr-submission-intro {
+    padding: clamp(8px, .7vw, 14px) clamp(12px, 1.3vw, 26px) clamp(80px, 7vw, 145px);
+    background: #085961 url("grievance-confirmation-landmark.png") center bottom / 100% 100% no-repeat;
+}
+.gr-confirmation .gr-submission-brand { margin-bottom: clamp(12px, 1vw, 20px); }
+.gr-confirmation .gr-submission-brand strong::after { box-shadow: 0 .05em #129736; }
+.gr-confirmation .gr-submission-headline, .gr-confirmation .gr-submission-copy { margin-left: clamp(6px, 2.4vw, 49px); }
+.gr-confirmation .gr-submission-headline { font-size: clamp(1.75rem, 2.8vw, 3.6rem); }
+.gr-confirmation .gr-submission-copy { margin-block: .45em; font-size: clamp(.95rem, 1.25vw, 1.6rem); }
+.gr-confirmation-card {
+    display: grid;
+    gap: clamp(8px, .75vw, 15px);
+    min-width: 0;
+    margin-block: clamp(4px, .3vw, 6px);
+    padding: clamp(9px, .85vw, 18px);
+    padding-block: clamp(15px, 1.25vw, 26px);
+    border-radius: clamp(16px, 1.55vw, 31px);
+    background: #fbfdff;
+    box-shadow: 0 5px 15px #00283566;
+    font-size: clamp(.92rem, 1.21vw, 1.55rem);
+}
+.gr-confirmation-card header { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: .65em; border-bottom: 1px solid #e0eaf4; }
+.gr-confirmation-card h1, .gr-confirmation-card h2 { margin: 0; color: inherit; font-size: clamp(1.4rem, 2vw, 2.6rem); }
+.gr-confirmation-card h1 { display: flex; align-items: center; gap: .45em; }
+.gr-confirmation-card h1 svg { color: #110e72; }
+.gr-confirmation-progress { display: flex; flex: 1 1 15em; justify-content: space-between; padding: 0 0 .35em; margin: 0; list-style: none; font-size: .77em; font-weight: 800; text-align: center; }
+.gr-confirmation-progress li { position: relative; flex: 1; }
+.gr-confirmation-progress li + li::before { content: ""; position: absolute; inset: .95em calc(50% + 1.2em) auto auto; width: calc(100% - 2.4em); height: 2px; background: #a7bbce; }
+.gr-confirmation-progress li span { display: grid; place-items: center; width: 2em; aspect-ratio: 1; margin: 0 auto .3em; border-radius: 50%; color: #fff; background: #557087; }
+.gr-confirmation-progress [aria-current] { color: #074d9b; }
+.gr-confirmation-progress [aria-current] span { background: #0759a0; }
+.gr-confirmation[data-confirmed] .gr-confirmation-progress li:not([aria-current]) span { background: #087d22; }
+.gr-confirmation[data-confirmed] .gr-confirmation-progress li + li::before { background: #087d22; }
+.gr-confirmation-banner { display: flex; align-items: center; gap: clamp(12px, 2.25vw, 46px); padding: clamp(9px, .75vw, 16px) clamp(16px, 3.9vw, 80px); border-radius: .85em; background: #e6f7ea; color: #075f19; }
+.gr-confirmation-banner > span { display: grid; place-items: center; flex: none; width: clamp(2.35rem, 4.5vw, 5.75rem); aspect-ratio: 1; border-radius: 50%; color: #fff; background: linear-gradient(145deg, #39b951, #056417); box-shadow: 0 0 0 .25em #d3f0db; }
+.gr-confirmation-banner > div { border-left: 1px solid #71a780; padding-left: clamp(12px, 2.25vw, 46px); }
+.gr-confirmation-banner h2 { font-size: clamp(1.2rem, 2.12vw, 2.7rem); }
+.gr-confirmation[data-confirmed] .gr-confirmation-banner > span svg { width: 59%; height: 59%; stroke-width: 4; }
+.gr-confirmation-banner p { margin: .25em 0 0; color: #102b3c; }
+.gr-receipt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(10px, 2.75vw, 56px); margin: 0; }
+.gr-receipt > div { display: flex; align-items: center; gap: .65em; min-width: 0; padding: .55em .8em; border-radius: .75em; background: #eaf4fd; }
+.gr-receipt-reference { justify-content: space-between; }
+.gr-receipt dt { font-weight: 750; }
+.gr-receipt dd { margin: .12em 0 0; font-size: 1.32em; font-weight: 850; overflow-wrap: anywhere; }
+.gr-receipt-reference dd { font-size: clamp(1.1rem, 2.35vw, 3rem); }
+.gr-receipt > div > svg { box-sizing: content-box; width: 1.75em; height: 1.75em; padding: .45em; border-radius: .65em; color: #075d9c; background: #f7fcff; box-shadow: 0 2px 4px #173f6625; }
+.gr-receipt button { display: grid; flex: none; place-items: center; padding: .45em; border: 1px solid #a4c9f5; border-radius: .55em; background: #dcecff; color: #06498d; font: inherit; cursor: pointer; }
+.gr-receipt button:disabled { opacity: .55; cursor: not-allowed; }
+.gr-confirmation-note { display: flex; align-items: center; gap: .6em; margin: 0; padding: .5em .9em; border: 1px solid #bdd1e7; border-radius: .7em; background: #ecf5fd; }
+#gr-copy-feedback { margin: 0; }
+#gr-copy-feedback:empty { display: none; }
+.gr-confirmation-actions { display: grid; grid-template-columns: 1.15fr 1.2fr .95fr; gap: .75em; }
+.gr-confirmation-actions a { display: flex; align-items: center; justify-content: center; gap: .5em; min-height: 44px; padding: .55em; border: 1px solid #75afe9; border-radius: .75em; color: #084783; font-weight: 800; text-align: center; text-decoration: none; }
+.gr-confirmation-actions a:first-child { background: #064b8d; color: #fff; }
+.gr-confirmation-actions a:last-child { border-color: #83d492; background: #e4f8e8; color: #07551a; }
+.gr-confirmation[data-confirmed] .gr-confirmation-progress li:not([aria-current]) { color: #004a15; }
+.gr-confirmation[data-confirmed] .gr-confirmation-progress li:not([aria-current]) span {
+    background: linear-gradient(145deg, #32bd48, #007811);
+    box-shadow: 0 0 0 .18em #e9f8eb;
+}
+.gr-confirmation[data-confirmed] .gr-confirmation-progress li:last-child::before {
+    background: linear-gradient(90deg, #008c20 50%, #087da8 50%);
+}
+.gr-confirmation-progress [aria-current] { color: #073bdb; }
+.gr-confirmation-progress [aria-current] span { color: white; background: linear-gradient(145deg, #087ec5, #004c8d); }
+.gr-confirmation[data-confirmed] .gr-confirmation-progress svg { stroke-width: 3.5; }
+.gr-confirmation-banner {
+    background: linear-gradient(105deg, #e8f8ed, #e1f6e8);
+}
+.gr-confirmation-banner > span {
+    background: linear-gradient(145deg, #58d25c 0%, #21a438 48%, #006813 84%);
+    box-shadow: 0 0 0 .42em #d4f1dc;
+}
+.gr-confirmation-banner > div { border-left-color: #236f43; }
+.gr-confirmation-banner h2 { font-weight: 850; letter-spacing: -.025em; }
+.gr-receipt > div {
+    padding-inline: clamp(12px, 2.5vw, 52px);
+    border: 1px solid #dcedff;
+    background: linear-gradient(115deg, #f1f8fd, #e5f1fc);
+}
+.gr-receipt-reference dd { color: #061c57; letter-spacing: -.025em; }
+.gr-receipt button {
+    padding: .55em;
+    color: #1712c2;
+    background: linear-gradient(#f2f8ff, #b6d2fb);
+    box-shadow: inset 0 1px 0 #fff8;
+}
+.gr-confirmation .gr-receipt button svg { width: 1.7em; height: 1.7em; }
+.gr-receipt-preview { margin: .65em 0 0 clamp(6px, 2.4vw, 49px); color: #e2faff; font-size: .85rem; }
+.gr-receipt-preview[hidden] { display: none; }
+@media (max-width: 850px) {
+    .gr-confirmation { grid-template-columns: minmax(0, 1fr); }
+    .gr-confirmation .gr-submission-intro { background-size: cover; }
+}
+@media (max-width: 520px) {
+    .gr-receipt, .gr-confirmation-actions { grid-template-columns: minmax(0, 1fr); }
+}

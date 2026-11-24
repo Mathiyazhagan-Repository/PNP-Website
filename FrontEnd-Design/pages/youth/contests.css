@@ -1,0 +1,56 @@
+.contest-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 43fr) minmax(0, 57fr);
+    gap: clamp(8px, 1vw, 20px);
+    padding: clamp(8px, .85vw, 18px);
+    padding-block: clamp(20px, 2vw, 42px);
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 9% 100%, #c741e78c, transparent 42%),
+        linear-gradient(105deg, #2f246cd9 8%, #342079a3 40%, #071e47 60%, #073c56 100%),
+        #181947 url("youth-registration-hero.png") left 72% / 60% auto no-repeat;
+}
+.contest-intro { align-self: center; padding: 0 clamp(8px, 2.85vw, 60px) 0 clamp(10px, 2.8vw, 58px); }
+.contest-intro nav { display: flex; align-items: center; flex-wrap: wrap; gap: .48em; font-size: clamp(.72rem, .9vw, 1rem); font-weight: 700; }
+.contest-intro nav a:hover { text-decoration: underline; }
+.contest-intro h1 { margin: .28em 0 0; color: #fff; font-size: clamp(1.65rem, 4vw, 5rem); font-weight: 800; font-style: italic; line-height: 1.04; letter-spacing: -.05em; }
+.contest-intro h1 > span { display: block; font-size: .78em; }
+.contest-intro h1 em { color: #ffe000; }
+.contest-intro p { margin: .65em 0; font-size: clamp(.85rem, 1.25vw, 1.55rem); line-height: 1.2; }
+.contest-explore { display: inline-flex; align-items: center; gap: .55em; padding: .3em 1.1em; min-height: 36px; border: 1px solid #e2d9ff; border-radius: 2em; background: #1d2157a0; color: #fff; font-size: clamp(.8rem, 1vw, 1.2rem); font-weight: 800; }
+.contest-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 1.55vw, 28px); scroll-margin-top: 8rem; }
+.contest-card {
+    --contest-glow: #ec69cb;
+    --contest-icon: #ff83d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .46em;
+    min-width: 0;
+    min-height: clamp(255px, 24vw, 460px);
+    padding: 1.2em .36em 1.3em;
+    border: 1px solid var(--contest-glow);
+    border-radius: .9em;
+    background: radial-gradient(ellipse at 40% 0%, color-mix(in srgb, var(--contest-glow) 25%, transparent), transparent 52%), linear-gradient(150deg, #172249, #091734 65%, #13275d);
+    box-shadow: 0 0 .65em color-mix(in srgb, var(--contest-glow) 55%, transparent), inset 0 0 .6em color-mix(in srgb, var(--contest-glow) 22%, transparent);
+    text-align: center;
+    font-size: clamp(.85rem, 1.25vw, 1.5rem);
+}
+.contest-debate { --contest-glow: #268fdd; --contest-icon: #40c2ff; }
+.contest-hackathon { --contest-glow: #42c1d9; --contest-icon: #68edfa; }
+.contest-card > svg { width: 2.7em; height: 2.7em; color: var(--contest-icon); filter: drop-shadow(0 0 7px var(--contest-glow)); }
+.contest-card h2 { display: grid; place-content: center; min-height: 2.08em; margin: 0; color: white; font-size: 1.35em; line-height: 1.03; font-style: italic; font-weight: 800; }
+.contest-card p { margin: 0 0 .65em; color: #e3edff; line-height: 1.14; }
+.contest-card :is(button, a) { display: inline-flex; justify-content: center; align-items: center; gap: .35em; min-height: 36px; max-width: 100%; margin-top: auto; padding: .28em .7em; border: 0; border-radius: 2em; color: #101830; background: #ffe000; font-size: .83em; font-weight: 800; line-height: 1.15; }
+.contest-card :is(button, a) svg, .contest-explore svg { width: 1em; height: 1em; }
+.contest-card :is(button, a):hover { background: #fff066; }
+.contest-dialog { width: min(90%, 420px); padding: 1rem; border: 1px solid #a6c2e2; border-radius: .85rem; color: #0a254d; }
+.contest-dialog::backdrop { background: #061b36aa; }
+.contest-dialog form { float: right; margin-left: .45rem; }
+.contest-dialog button { padding: .2em .55em; border: 1px solid #b9cfe5; border-radius: .35rem; background: white; color: inherit; }
+.contest-dialog h2 { margin: 0; }
+@media (max-width: 760px) {
+    .contest-banner { grid-template-columns: minmax(0, 1fr); background-size: auto, auto, cover; }
+    .contest-intro { padding-block: .5em; }
+}
+@media (max-width: 350px) { .contest-cards { grid-template-columns: minmax(0, 1fr); } }

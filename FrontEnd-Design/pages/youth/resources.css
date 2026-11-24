@@ -1,0 +1,54 @@
+.resources-hub {
+    display: grid;
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+    gap: clamp(6px, .9vw, 20px);
+    padding: clamp(14px, 1.4vw, 28px) clamp(7px, 1vw, 20px);
+    color: white;
+    background: radial-gradient(ellipse at 49% 35%, #60367e, transparent 55%), linear-gradient(145deg, #26265c, #201443);
+}
+.resources-hero {
+    isolation: isolate;
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: clamp(280px, 28vw, 525px);
+    background: linear-gradient(90deg, #24265bdb, #24265b62 47%, transparent 74%), url("youth-resources-hero.png") right center / cover no-repeat;
+}
+.resources-intro { padding-block: .3em .7em; }
+.resources-intro h1 { font-size: clamp(1.85rem, 4.25vw, 5.2rem); }
+.resources-intro > p:not(.fellowship-brand) { max-width: 19ch; }
+.resources-explore { display: inline-flex; justify-content: center; align-items: center; gap: .7em; min-height: 44px; padding: .35em 1.3em; border: 0; border-radius: 2em; background: #ffe000; color: #151c40; font-size: clamp(.82rem, 1.12vw, 1.3rem); font-weight: 800; }
+.resources-credit { position: absolute; right: .45em; bottom: .28em; margin: 0; color: #fff; background: #101738c9; padding: .05em .35em; border-radius: .3em; font-size: .7rem; }
+.resources-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(7px, 1vw, 20px); min-width: 0; }
+.resources-tile {
+    --resource-icon: #68e5ff;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: .43em;
+    min-width: 0;
+    padding: .75em .25em;
+    border: 1px solid #aa79bb;
+    border-radius: clamp(10px, 1.35vw, 24px);
+    background: linear-gradient(150deg, #9155a56b, #342258 73%);
+    color: white;
+    box-shadow: inset 0 0 12px #d49ce029, 0 3px 6px #100b2d65;
+    font-family: var(--font-heading);
+    font-size: clamp(.84rem, 1.4vw, 1.7rem);
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+}
+.resources-tile:hover { background: linear-gradient(150deg, #a763b6a6, #48306f); }
+.resources-grid .resources-tile svg { width: 2.7em; height: 2.7em; color: var(--resource-icon); }
+.resources-policy, .resources-all { --resource-icon: #ffda44; }
+.resources-campus, .resources-videos { --resource-icon: #f6bde7; }
+.resources-downloads { --resource-icon: #55cbec; }
+.resources-dialog { width: min(90%, 420px); padding: 1rem; border: 1px solid #c0c8e1; border-radius: .9em; color: #0a1740; }
+.resources-dialog::backdrop { background: #090d2eaf; }
+.resources-dialog form { float: right; margin-left: .5em; }
+.resources-dialog button { padding: .2em .55em; border: 1px solid #b5c7e0; border-radius: .4em; background: white; color: inherit; }
+.resources-dialog h2 { margin: 0; }
+.resources-dialog a { color: #104c8b; text-decoration: underline; }
+@media (max-width: 760px) { .resources-hub { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 460px) { .resources-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

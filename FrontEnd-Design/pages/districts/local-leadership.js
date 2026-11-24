@@ -1,0 +1,21 @@
+(() => {
+  'use strict';
+  const $=id=>document.getElementById('ll'+id);
+  if(!$('Profiles'))return;
+  const config=window.PNPGeography||{},districts=window.PNPGeographyData?.districts||[];
+  const preview=!Array.isArray(config.leaders)&&config.designPreview!==false;
+  const examples=[{id:'preview-ramesh',name:'Ramesh Gowda',designation:'District President',district_id:'mysuru',level:'district',portrait:0},{id:'preview-lakshmi',name:'Lakshmi Devi',designation:'District Convener',district_id:'bengaluru-urban',level:'district',portrait:1},{id:'preview-suresh',name:'Suresh Kumar',designation:'Constituency In-charge',district_id:'mandya',level:'constituency',portrait:2}];
+  const published=r=>r?.approved===true&&r.publication_status==='published';
+  let records=preview?examples:(config.leaders||[]).filter(published),level='all';
+  const selectedDistrict=new URLSearchParams(location.search).get('district');
+  if(selectedDistrict&&districts.some(d=>d.id===selectedDistrict))records=records.filter(r=>r.district_id===selectedDistrict);
+  const el=(tag,text,attrs={})=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));return n;};
+  function safe(v){try{if(!v)return null;const u=new URL(v,location.href);return !u.username&&!u.password&&(u.protocol==='https:'||u.origin===location.origin)?u.href:null;}catch{return null;}}
+  function profile(r){const link=!preview&&safe(r.canonical_url);if(link){window.location.assign(link);return;}$('DialogTitle').textContent=r.name;$('DialogContent').replaceChildren(el('p',preview?'Illustrative profile for the design. This name, portrait and role do not represent an approved PNP appointment.':r.biography||'The full approved leadership profile has not been published yet.'),el('a','Browse Leadership Directory →',{href:'../leadership/leadership.html'}));$('Dialog').showModal();}
+  function render(){const current=level==='all'?records:records.filter(r=>r.level===level);$('AllCount').textContent='('+records.length+')';$('DistrictCount').textContent='('+records.filter(r=>r.level==='district').length+')';$('ConstituencyCount').textContent='('+records.filter(r=>r.level==='constituency').length+')';$('Preview').hidden=!preview;$('Profiles').replaceChildren();
+    current.forEach(r=>{const district=districts.find(d=>d.id===r.district_id),card=el('article',undefined,{class:'ll-profile'}),photo=el('div',undefined,{class:'ll-profile-art '+(preview?'portrait-'+r.portrait:'no-photo')});if(!preview&&safe(r.photo_url)){photo.classList.remove('no-photo');photo.append(el('img',undefined,{src:safe(r.photo_url),alt:'Portrait of '+r.name,loading:'lazy'}));}else if(!preview)photo.textContent=(r.name||'?').slice(0,1);photo.setAttribute('aria-hidden',String(preview));const body=el('div',undefined,{class:'ll-profile-body'}),location=el('p',undefined,{class:'ll-profile-location'}),icon=document.createElementNS('http://www.w3.org/2000/svg','svg'),use=document.createElementNS('http://www.w3.org/2000/svg','use');use.setAttribute('href','#ll-pin');icon.setAttribute('aria-hidden','true');icon.append(use);location.append(icon,el('span',district?.name||'Location not supplied'));const button=el('button',undefined,{type:'button',class:'ll-profile-action'});button.append(el('span','View Profile'),el('span','→',{'aria-hidden':'true'}));button.addEventListener('click',()=>profile(r));body.append(el('h3',r.name),el('p',r.designation||'Role not supplied',{class:'ll-profile-role'}),location,button);card.append(photo,body);$('Profiles').append(card);});
+    if(!current.length)$('Profiles').append(el('p','No published profiles match this category.',{class:'ll-empty'}));
+    $('Status').textContent=level==='all'?'':current.length+' '+(current.length===1?'profile':'profiles')+' in this category';document.querySelectorAll('[data-ll-level]').forEach(button=>{const active=button.dataset.llLevel===level;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+  }
+  document.querySelectorAll('[data-ll-level]').forEach(button=>button.addEventListener('click',()=>{level=button.dataset.llLevel;render();}));$('Close').addEventListener('click',()=>$('Dialog').close());render();
+})();

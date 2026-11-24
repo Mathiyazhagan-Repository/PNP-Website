@@ -1,0 +1,13 @@
+{
+  "title": "Karnataka district boundaries",
+  "source": "Local Government Directory, snapshot 2024",
+  "upstream": "https://lgdirectory.gov.in/",
+  "publisher": "https://github.com/yashveeeeeeer/india-geodata",
+  "distributor": "https://bharatlas.com/layers",
+  "endpoint": "https://bharatlas.com/api/v1/layers/lgd_districts/export?where=state_lgd=29&format=geojson",
+  "licence": "CC0-1.0 / CC-BY-4.0 (as supplied by distributor)",
+  "retrieved": "2026-11-24",
+  "sha256": "6f0b1424b6de3629465d9f8ff83c6ad81bb888c3c265f26f6f751294a4dba3ac",
+  "districts": 31,
+  "transform": "Web Mercator projection to local SVG viewBox480x740; subpixel vertex thinning; interior label points. No new district boundaries drawn. Ramanagara display alias updated to Bengaluru South; original source properties preserved."
+}

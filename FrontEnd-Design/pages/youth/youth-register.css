@@ -1,0 +1,42 @@
+.youth-register {
+    display: grid;
+    grid-template-columns: minmax(0, 56fr) minmax(0, 44fr);
+    align-items: center;
+    gap: clamp(12px, 2vw, 40px);
+    padding: clamp(16px, 3vw, 55px);
+    padding-block: clamp(8px, .85vw, 18px);
+    color: white;
+    background: linear-gradient(90deg, #061b5438, #061b5438), #052052 url("youth-registration-hero.png") center / cover no-repeat;
+}
+.youth-register-intro { display: flex; flex-direction: column; align-self: stretch; }
+.youth-register-brand { display: flex; align-items: center; gap: .55em; margin: 0 0 .6em; font-family: var(--font-heading); font-size: clamp(1rem, 1.65vw, 2.1rem); font-weight: 800; }
+.youth-register-brand strong { position: relative; font-size: 2.2em; font-style: italic; line-height: 1; }
+.youth-register-brand strong::after { content: ""; position: absolute; inset: auto 0 -.22em; height: .15em; background: linear-gradient(105deg, #eb0071 40%, #ffdf00 41% 75%, #049b29 76%); transform: skewY(-6deg); }
+.youth-register-brand span { padding-left: .55em; border-left: 2px solid white; }
+.youth-register h1 { margin: .18em 0 0; color: white; font-size: clamp(2.1rem, 5vw, 6rem); font-style: italic; font-weight: 800; line-height: 1.02; }
+.youth-register h1 em { display: block; color: #ffe300; }
+.youth-register h1 em::after { content: ""; display: block; width: 55%; height: .2em; margin: .12em 0 0 22%; border-top: .11em solid #ef087b; border-radius: 50%; transform: rotate(-2deg); }
+.youth-register-copy { max-width: 22em; margin: .38em 0 clamp(20px, 3.8vw, 80px); font-size: clamp(1rem, 1.95vw, 2.4rem); line-height: 1.25; }
+.youth-register-benefits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: auto 0 0; padding: .6em .35em; border: 1px solid #d6e6ff; border-radius: 1.15em; background: #0b2454d9; list-style: none; text-align: center; }
+.youth-register-benefits li { display: grid; align-content: start; justify-items: center; gap: .3em; padding: 0 .3em; font-size: clamp(.77rem, 1.25vw, 1.55rem); font-weight: 800; line-height: 1.15; }
+.youth-register-benefits li + li { border-left: 1px solid #c9dbfd; }
+.youth-register-benefits svg { width: 2.1em; height: 2.1em; }
+.youth-register-credit { margin: .35em 0 0; color: #e1eeff; font-size: .72rem; }
+.youth-register-card { overflow: hidden; min-width: 0; border: 2px solid white; border-radius: clamp(14px, 1.9vw, 32px); background: linear-gradient(145deg, #fff, #f1f8ff); color: #081640; box-shadow: 0 8px 24px #030d2c6b; }
+.youth-register-card h2 { display: flex; align-items: center; gap: .55em; margin: 0; padding: .35em .75em; background: #08295d; color: white; font-size: clamp(1.25rem, 2vw, 2.5rem); }
+.youth-register-body { display: grid; gap: clamp(6px, .55vw, 12px); padding: clamp(7px, .65vw, 14px) clamp(12px, 1.5vw, 30px); font-size: clamp(.85rem, 1.05vw, 1.3rem); }
+.youth-register-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55em .65em; }
+.youth-register-field { position: relative; display: flex; min-width: 0; }
+.youth-register-field svg { position: absolute; inset: 50% auto auto .65em; transform: translateY(-50%); color: #10336b; pointer-events: none; }
+.youth-register-field :is(input, select) { width: 100%; min-width: 0; min-height: 44px; padding: .5em .45em .5em 2.35em; border: 1px solid #acb9d2; border-radius: .55em; background: #f6faff; color: #081640; }
+.youth-register-field input::placeholder { color: #25344e; }
+.youth-register-consent { display: flex; gap: .6em; align-items: start; line-height: 1.35; }
+.youth-register-consent input { flex: none; width: 1.1em; height: 1.1em; margin: .12em 0 0; accent-color: #bc005f; }
+.youth-register-body button { display: flex; justify-content: center; align-items: center; gap: .55em; min-height: 44px; padding: .38em; border: 0; border-radius: .48em; color: white; background: #bd0061; font-size: clamp(.95rem, 1.45vw, 1.8rem); font-weight: 800; }
+#youth-register-status { margin: 0; color: #354b69; font-size: .82em; line-height: 1.3; }
+.youth-register-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 850px) {
+    .youth-register { grid-template-columns: minmax(0, 1fr); background-position: 40% center; }
+    .youth-register-copy { margin-bottom: 26px; }
+}
+@media (max-width: 400px) { .youth-register-fields { grid-template-columns: minmax(0, 1fr); } }

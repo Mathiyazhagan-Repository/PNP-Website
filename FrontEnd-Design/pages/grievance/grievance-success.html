@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grievance Confirmation | Praja Nishchaya Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="grievance.css">
+    <link rel="stylesheet" href="submit-grievance.css">
+    <link rel="stylesheet" href="grievance-success.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <script src="grievance-success.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="grievance-page">
+        <section class="gr-submission gr-confirmation" aria-labelledby="gr-confirmation-title">
+            <div class="gr-submission-intro">
+                <div class="gr-submission-brand"><strong>PNP</strong><span>Praja Nishchaya Party</span></div>
+                <p class="gr-submission-headline" id="gr-confirmation-headline">Grievance <strong>Confirmation</strong></p>
+                <p class="gr-submission-copy" id="gr-confirmation-copy">Once your grievance is received, you can track its status using your reference number.</p>
+                <p class="gr-receipt-preview" id="gr-receipt-preview" hidden>Design preview · Sample receipt</p>
+            </div>
+            <div class="gr-confirmation-card">
+                <header>
+                    <h1 id="gr-confirmation-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8m-8 4h8"/></svg> Grievance Confirmation</h1>
+                    <ol class="gr-confirmation-progress" aria-label="Submission steps">
+                        <li><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span>Grievance Details</li>
+                        <li><span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span>Verify (OTP)</li>
+                        <li aria-current="step"><span>3</span>Confirmation</li>
+                    </ol>
+                </header>
+                <div class="gr-confirmation-banner">
+                    <span id="gr-confirmation-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM12 11v6m0-10h.01"/></svg></span>
+                    <div>
+                        <h2 id="gr-confirmation-status">Awaiting a confirmed submission</h2>
+                        <p id="gr-confirmation-message">This is a preview. No OTP was verified and no grievance was submitted. Your tracking reference and submission date will appear here after a confirmed submission.</p>
+                    </div>
+                </div>
+                <dl class="gr-receipt">
+                    <div class="gr-receipt-reference">
+                        <div><dt>Tracking Reference Number</dt><dd id="gr-receipt-number">—</dd></div>
+                        <button type="button" id="gr-copy-reference" aria-label="Copy tracking reference" disabled><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7h12v14H8zM4 17V3h12"/></svg></button>
+                    </div>
+                    <div>
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM7 2v6m10-6v6M3 10h18m-14 4h2m3 0h2m3 0h1m-11 3h2m3 0h2"/></svg>
+                        <div><dt>Submission Date &amp; Time</dt><dd><time id="gr-receipt-date">—</time></dd></div>
+                    </div>
+                </dl>
+                <p class="gr-confirmation-note"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM12 11v6m0-10h.01"/></svg> <span>Keep your reference number safe. You can use it to track the status of your grievance.</span></p>
+                <p id="gr-copy-feedback" role="status"></p>
+                <nav class="gr-confirmation-actions" aria-label="Confirmation actions">
+                    <a href="track-grievance.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 16l6 6M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg> Track Your Grievance</a>
+                    <a href="grievance.html#gr-submission"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8m-8 4h8"/></svg> Submit Another Grievance</a>
+                    <a href="../../index.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 11 12 3l10 8M5 10v11h5v-6h4v6h5V10"/></svg> Go to Home</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <div data-site-footer></div>
+</body>
+</html>

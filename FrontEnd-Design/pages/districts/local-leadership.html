@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e8f3fa"><title>Local Leadership | PNP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="./local-leadership.css"><script src="../../shared-layout.js" defer></script><script src="../../script.js" defer></script><script src="./geography-data.js" defer></script><script src="./local-leadership.js" defer></script>
+</head><body class="local-leadership-page"><a class="skip-link" href="#main-content">Skip to main content</a><div data-site-header></div>
+<svg class="ll-icon-defs" aria-hidden="true"><defs>
+<symbol id="ll-chart" viewBox="0 0 32 32"><path d="M3 29h27M6 27V18h5v9M15 27V11h5v16M24 27V5h5v22M3 14 12 6l7 2L29 1M23 1h6v6"/></symbol>
+<symbol id="ll-people" viewBox="0 0 32 32"><circle cx="16" cy="7" r="4"/><circle cx="5" cy="11" r="3"/><circle cx="27" cy="11" r="3"/><path d="M8 30v-7a8 8 0 0 1 16 0v7ZM1 28v-7a5 5 0 0 1 6-5M31 28v-7a5 5 0 0 0-6-5"/></symbol>
+<symbol id="ll-building" viewBox="0 0 32 32"><path d="m2 10 14-8 14 8ZM4 28h24M2 31h28M6 13v12M13 13v12M20 13v12M27 13v12"/></symbol>
+<symbol id="ll-pin" viewBox="0 0 32 32"><path d="M27 12c0 8-11 18-11 18S5 20 5 12a11 11 0 1 1 22 0Z"/><circle cx="16" cy="12" r="4"/></symbol>
+</defs></svg>
+<main id="main-content"><section class="local-leadership-section" aria-labelledby="localLeadershipHeading">
+<div class="ll-intro"><div class="ll-copy"><h1 id="localLeadershipHeading">PNP<br>Local<br><span>Leadership</span></h1><i class="ll-underline" aria-hidden="true"></i><ul class="ll-points"><li><span aria-hidden="true">✓</span>District Leadership</li><li><span aria-hidden="true">✓</span>Constituency Leadership</li><li><span aria-hidden="true">✓</span>Organisation Team</li></ul></div><img class="ll-map" src="../../assets/geography/karnataka-district-outline.svg" alt="Karnataka district boundaries" width="480" height="740"><img class="ll-building" src="../../assets/hero/our-vision-reference.png" alt="" aria-hidden="true" width="1752" height="897"><svg class="ll-wave" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0c210 85 410 52 600 72v8H0Z" fill="#ffdf00"/></svg></div>
+<div class="ll-explorer"><header class="ll-heading"><h2><svg aria-hidden="true"><use href="#ll-chart"/></svg>Explore Local Leadership</h2><span id="llPreview" class="ll-preview" hidden>Illustrative profiles</span></header><div class="ll-browser"><nav class="ll-categories" aria-label="Leadership category"><button type="button" class="ll-category active" data-ll-level="all" aria-pressed="true"><svg aria-hidden="true"><use href="#ll-people"/></svg><span>All Leaders <b id="llAllCount">(0)</b></span></button><button type="button" class="ll-category" data-ll-level="district" aria-pressed="false"><svg aria-hidden="true"><use href="#ll-building"/></svg><span>District Leaders <b id="llDistrictCount">(0)</b></span></button><button type="button" class="ll-category" data-ll-level="constituency" aria-pressed="false"><svg aria-hidden="true"><use href="#ll-pin"/></svg><span>Constituency Leaders <b id="llConstituencyCount">(0)</b></span></button></nav><div class="ll-profiles" id="llProfiles" aria-label="Local leadership profiles"></div></div><p id="llStatus" class="ll-status" role="status" aria-live="polite"></p><a class="ll-back" href="./districts.html">← District Directory</a></div>
+</section></main><div data-site-footer></div>
+<dialog class="ll-dialog" id="llDialog" aria-labelledby="llDialogTitle"><button type="button" id="llClose" aria-label="Close leadership profile">×</button><span>LOCAL LEADERSHIP</span><h2 id="llDialogTitle"></h2><div id="llDialogContent"></div></dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../membership/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+
+
+</body></html>

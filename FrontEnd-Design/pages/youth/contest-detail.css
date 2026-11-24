@@ -1,0 +1,52 @@
+.hackathon {
+    display: grid;
+    grid-template-columns: minmax(0, 72fr) minmax(0, 28fr);
+    align-items: start;
+    gap: clamp(8px, 1.3vw, 26px);
+    padding: clamp(8px, .9vw, 18px);
+    padding-block: clamp(14px, 1.4vw, 28px);
+    background: radial-gradient(ellipse at 91% 95%, #472078, transparent 35%), #071633;
+    color: #fff;
+    font-size: clamp(.8rem, .95vw, 1.12rem);
+    line-height: 1.28;
+}
+.hackathon-top { display: grid; grid-template-columns: minmax(0, 72fr) minmax(0, 28fr); }
+.hackathon-hero { display: grid; align-items: center; position: relative; min-height: clamp(250px, 22vw, 450px); background: linear-gradient(90deg, transparent 52%, #061632 62%), url("hackathon-hero.png") left center / 64% auto no-repeat; }
+.hackathon-intro { margin-left: 56%; padding: .4em .5em; }
+.hackathon-label { display: inline-block; margin: 0; padding: .06em .55em; color: white; background: #d70879; font-size: 1.2em; font-weight: 800; font-style: italic; transform: rotate(-3deg); }
+.hackathon-hero h1 { margin: .14em 0; color: white; font-size: clamp(1.5rem, 3vw, 4rem); line-height: .99; font-weight: 800; font-style: italic; text-transform: uppercase; }
+.hackathon-hero h1 span, .hackathon-benefits h2 svg, .hackathon-facts h2 svg { color: #ffdf00; }
+.hackathon h2 { margin: 0; color: inherit; font-size: 1.08em; }
+.hackathon-intro > p:last-child { margin: .5em 0 0; line-height: 1.35; }
+.hackathon-benefits { padding: .45em .45em .35em .75em; }
+.hackathon-benefits h2, .hackathon-facts h2 { display: flex; align-items: center; gap: .38em; }
+.hackathon-benefits ul { list-style: none; margin: .25em 0 .55em; padding: 0; }
+.hackathon-benefits ul li { display: flex; gap: .4em; }
+.hackathon-benefits li::before { content: "✓"; color: #ffdf00; font-weight: 800; }
+.hackathon-prizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .2em; list-style: none; margin: .43em 0; padding: 0; text-align: center; }
+.hackathon-prizes li { border-inline: 2px solid #f6cd00; border-radius: 45%; font-size: .9em; }
+.hackathon-prizes li::before { content: none; }
+.hackathon-prizes strong { display: block; }
+.hackathon-facts { display: grid; grid-template-columns: 1.15fr .92fr 1.05fr 1.4fr 1fr; margin-top: .55em; padding: .75em .48em; border: 1px solid #36517b; border-radius: .85em; background: linear-gradient(145deg, #101f3f, #0d1a37); }
+.hackathon-facts section { min-width: 0; padding: 0 .45em; }
+.hackathon-facts section + section { border-left: 1px solid #47618c; }
+.hackathon-facts p { margin: .35em 0 0; color: #e7efff; font-size: .88em; line-height: 1.35; }
+.hackathon-preview { margin: .4em 0 0; color: #d8e7ff; font-size: .8em; line-height: 1.35; }
+.hackathon-form { display: grid; gap: .8em; padding: 1.05em .86em; border: 1px solid #cbd9e8; border-radius: 1em; background: #fbfdff; color: #0b1d40; box-shadow: 0 5px 18px #01041560; }
+.hackathon-form h2 { display: flex; align-items: center; gap: .5em; font-size: 1.24em; }
+.hackathon-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45em .65em; }
+.hackathon-fields label { min-width: 0; font-weight: 800; font-size: .9em; }
+.hackathon-fields b { color: #a81039; }
+.hackathon-fields :is(input, select) { display: block; width: 100%; min-height: 29px; margin-top: .18em; padding: .15em .4em; border: 1px solid #becfe2; border-radius: .3em; background: #f6faff; color: inherit; font-weight: 500; }
+.hackathon-wide { grid-column: 1 / -1; }
+.hackathon-consent { display: flex; align-items: flex-start; gap: .45em; font-size: .88em; }
+.hackathon-consent input { flex: none; margin-top: .15em; accent-color: #143e7a; }
+.hackathon-form > button { display: flex; align-items: center; justify-content: center; gap: .5em; min-height: 38px; border: 0; border-radius: .6em; background: #ffdc00; color: #10213f; font-weight: 800; }
+#hackathon-feedback { margin: 0; font-size: .79em; line-height: 1.25; }
+@media (max-width: 1000px) { .hackathon { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) {
+    .hackathon-top { grid-template-columns: minmax(0, 1fr); }
+    .hackathon-hero { min-height: 220px; }
+    .hackathon-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65em 0; }
+    .hackathon-facts section:nth-child(odd) { border-left: 0; }
+}

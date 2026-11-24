@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grievance &amp; Hotline | Praja Nishchaya Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="grievance.css">
+    <link rel="stylesheet" href="submit-grievance.css">
+    <script src="../../shared-layout.js" defer></script>
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <div data-site-header></div>
+    <main id="main-content" class="grievance-page">
+        <svg class="gr-icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="gr-icon-laptop" viewBox="0 0 24 24"><path d="M4 4h16v13H4zm0 13-2 3h20l-2-3"/></symbol>
+            <symbol id="gr-icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+            <symbol id="gr-icon-user" viewBox="0 0 24 24"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+            <symbol id="gr-icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></symbol>
+            <symbol id="gr-icon-grid" viewBox="0 0 24 24"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></symbol>
+            <symbol id="gr-icon-pen" viewBox="0 0 24 24"><path d="m3 21 5-1L21 7l-5-5L3 15zm11-17 5 5"/></symbol>
+            <symbol id="gr-icon-clip" viewBox="0 0 24 24"><path d="m8 13 7-7a2 2 0 0 1 3 3l-9 9a4 4 0 0 1-6-6L13 2a6 6 0 0 1 8 8L11 20"/></symbol>
+            <symbol id="gr-icon-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M3 15v6h18v-6"/></symbol>
+            <symbol id="gr-icon-send" viewBox="0 0 24 24"><path d="M22 2 2 10l8 4 4 8 8-20ZM10 14l7-7"/></symbol>
+            <symbol id="gr-icon-mobile" viewBox="0 0 24 24"><path d="M15 6V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-3M8 5h3m-2 14h1M10 8h11v8h-6l-3 2v-2h-2z"/></symbol>
+            <symbol id="gr-icon-lock" viewBox="0 0 24 24"><path d="M12 2c3 2 6 3 10 3v6c0 6-4 9-10 12-6-3-10-6-10-12V5c4 0 7-1 10-3ZM8 11h8v7H8zm2 0V9a2 2 0 0 1 4 0v2"/></symbol>
+            <symbol id="gr-icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+            <symbol id="gr-icon-file" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8m-8 4h8m-8 3h8"/></symbol>
+            <symbol id="gr-icon-search" viewBox="0 0 24 24"><path d="M16 16l6 6M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></symbol>
+            <symbol id="gr-icon-phone" viewBox="0 0 24 24"><path d="M5 3 2 6c0 8 8 16 16 16l4-4-5-4-3 3a14 14 0 0 1-7-7l3-3-4-5zM14 3a8 8 0 0 1 7 7m-7-3a4 4 0 0 1 3 3"/></symbol>
+            <symbol id="gr-icon-gear" viewBox="0 0 24 24"><path d="M9 3h6l1 3 3 1 2 4-2 2v3l-3 3-3-1-2 3-4-1-1-3-3-1-1-4 3-2V7l3-1zM15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></symbol>
+            <symbol id="gr-icon-id" viewBox="0 0 24 24"><path d="M2 5h20v14H2zM13 9h6m-6 5h6M10 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-5 6c0-4 6-4 6 0"/></symbol>
+            <symbol id="gr-icon-shield" viewBox="0 0 24 24"><path d="M12 2c3 2 6 3 10 3v6c0 6-4 9-10 12-6-3-10-6-10-12V5c4 0 7-1 10-3Zm-4 10 3 3 6-6"/></symbol>
+            <symbol id="gr-icon-folder" viewBox="0 0 24 24"><path d="M3 19V5h6l3 3h9v3M3 19l4-9h16l-4 9z"/></symbol>
+            <symbol id="gr-icon-headset" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2M3 13h3v7H3zm15 0h3v7h-3zm1 7c0 2-3 3-7 3"/></symbol>
+            <symbol id="gr-icon-help" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0ZM9 8c1-3 7-3 7 1 0 2-4 2-4 5m0 3h.01"/></symbol>
+            <symbol id="gr-icon-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+        </svg>
+        <div class="gr-layout">
+            <section class="gr-hero" aria-labelledby="gr-title">
+                <p class="gr-eyebrow">Grievance &amp; Support</p>
+                <h1 id="gr-title">Grievance &amp; Hotline</h1>
+                <p class="gr-intro">Submit grievances, track your submissions, and access support information for assistance and proper guidance.</p>
+                <nav class="gr-actions" aria-label="Grievance actions">
+                    <a class="gr-action gr-submit" href="#gr-submission"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg><span>Submit a Grievance</span><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></a>
+                    <a class="gr-action gr-track" href="track-grievance.html"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-search"></use></svg><span>Track a Grievance</span><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></a>
+                    <a class="gr-action gr-hotline" href="hotline.html"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-phone"></use></svg><span>Hotline &amp; Support</span><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></a>
+                </nav>
+            </section>
+            <section class="gr-panel gr-process" aria-labelledby="gr-process-title">
+                <h2 id="gr-process-title"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-gear"></use></svg> How the Process Works</h2>
+                <ol>
+                    <li><span class="gr-number" aria-hidden="true">1</span><div><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg><span>Submit Your<br>Grievance</span></div></li>
+                    <li><span class="gr-number" aria-hidden="true">2</span><div><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-id"></use></svg><span>Receive a<br>Tracking Reference</span></div></li>
+                    <li><span class="gr-number" aria-hidden="true">3</span><div><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-search"></use></svg><span>Check Status<br>and Updates</span></div></li>
+                    <li><span class="gr-number" aria-hidden="true">4</span><div><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-shield"></use></svg><span>View the<br>Recorded Outcome</span></div></li>
+                </ol>
+            </section>
+            <div class="gr-sidebar">
+                <section class="gr-panel gr-categories" aria-labelledby="gr-categories-title">
+                    <h2 id="gr-categories-title"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Complaint Categories (Preview)</h2>
+                    <ul>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Water</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Roads</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Power</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Pensions</li>
+                    </ul>
+                    <details class="gr-more-categories">
+                        <summary>
+                            <span class="gr-view-categories">View all categories</span>
+                            <span class="gr-hide-categories">Show fewer categories</span>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg>
+                        </summary>
+                        <ul>
+                            <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Certificates</li>
+                            <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Corruption or bribery</li>
+                            <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-folder"></use></svg> Other</li>
+                        </ul>
+                    </details>
+                </section>
+                <section class="gr-panel gr-support" id="gr-hotline-info" aria-labelledby="gr-support-title">
+                    <h2 id="gr-support-title"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-phone"></use></svg> Hotline &amp; Support (Preview)</h2>
+                    <div class="gr-support-body">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-headset"></use></svg>
+                        <ul>
+                            <li>Hotline: +91 80 4890 0999</li>
+                            <li>Monday – Saturday, 9:00 AM – 6:00 PM</li>
+                            <li>Sunday closed</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="gr-panel gr-faq" aria-labelledby="gr-faq-title">
+                    <h2 id="gr-faq-title"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-help"></use></svg> Frequently Asked Questions</h2>
+                    <details>
+                        <summary>How do I submit a grievance?<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></summary>
+                        <p>Use Submit a Grievance to provide the category, district, description and broad location when online submission opens. Online submission is currently unavailable.</p>
+                    </details>
+                    <details id="gr-track-info">
+                        <summary>How can I track my submission?<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></summary>
+                        <p>Tracking uses your ticket number and a one-time code sent to your mobile. Online tracking is currently unavailable.</p>
+                    </details>
+                    <details>
+                        <summary>Can I attach supporting documents?<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></summary>
+                        <p>You can include an optional photo or voice note with your grievance.</p>
+                    </details>
+                    <details>
+                        <summary>How will I receive updates?<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-arrow"></use></svg></summary>
+                        <p>Acknowledgements and status updates are sent by SMS or WhatsApp.</p>
+                    </details>
+                </section>
+            </div>
+        </div>
+        <section class="gr-submission" id="gr-submission" aria-labelledby="gr-form-title" hidden>
+            <div class="gr-submission-intro">
+                <div class="gr-submission-brand"><strong>PNP</strong><span>Praja Nishchaya Party</span></div>
+                <p class="gr-submission-headline">Submit a <strong>Grievance</strong></p>
+                <p class="gr-submission-copy">Share your concern, upload details and help us take appropriate action.</p>
+                <ol class="gr-submission-guide">
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-laptop"></use></svg><span>Fill the Form</span></li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg><span>Attach Documents</span></li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-check"></use></svg><span>Submit Securely</span></li>
+                </ol>
+                <img class="gr-submission-landmark" src="submit-grievance-landmark.png" alt="" loading="lazy">
+            </div>
+            <form class="gr-submission-form" aria-describedby="gr-form-status">
+                <div class="gr-form-heading">
+                    <h2 id="gr-form-title" tabindex="-1"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg> Submit a Grievance</h2>
+                    <span>Variant 3</span>
+                </div>
+                <ol class="gr-form-progress" aria-label="Submission progress">
+                    <li aria-current="step"><span>1</span>Grievance Details</li>
+                    <li><span>2</span>Verify (OTP)</li>
+                    <li><span>3</span>Confirmation</li>
+                </ol>
+                <div class="gr-form-fields">
+                    <label class="gr-form-field">
+                        <span>Full Name <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-user"></use></svg><input type="text" autocomplete="name" placeholder="Enter your full name" required></span>
+                    </label>
+                    <label class="gr-form-field">
+                        <span>Mobile Number <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-phone"></use></svg><input id="gr-mobile" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="[0-9]{10}" maxlength="10" title="Enter 10 digits" placeholder="Enter 10-digit mobile number" required></span>
+                    </label>
+                    <label class="gr-form-field">
+                        <span>District <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-pin"></use></svg><select required>
+                                <option value="">Select District</option>
+                                <option>Bagalkot</option>
+                                <option>Ballari</option>
+                                <option>Belagavi</option>
+                                <option>Bengaluru Rural</option>
+                                <option>Bengaluru Urban</option>
+                                <option>Bidar</option>
+                                <option>Chamarajanagar</option>
+                                <option>Chikkaballapur</option>
+                                <option>Chikkamagaluru</option>
+                                <option>Chitradurga</option>
+                                <option>Dakshina Kannada</option>
+                                <option>Davanagere</option>
+                                <option>Dharwad</option>
+                                <option>Gadag</option>
+                                <option>Hassan</option>
+                                <option>Haveri</option>
+                                <option>Kalaburagi</option>
+                                <option>Kodagu</option>
+                                <option>Kolar</option>
+                                <option>Koppal</option>
+                                <option>Mandya</option>
+                                <option>Mysuru</option>
+                                <option>Raichur</option>
+                                <option>Ramanagara</option>
+                                <option>Shivamogga</option>
+                                <option>Tumakuru</option>
+                                <option>Udupi</option>
+                                <option>Uttara Kannada</option>
+                                <option>Vijayapura</option>
+                                <option>Vijayanagara</option>
+                                <option>Yadgir</option>
+                            </select></span>
+                    </label>
+                    <label class="gr-form-field">
+                        <span>Category <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-grid"></use></svg><select required>
+                                <option value="">Select Category</option>
+                                <option>Water</option>
+                                <option>Roads</option>
+                                <option>Power</option>
+                                <option>Pensions</option>
+                                <option>Certificates</option>
+                                <option>Corruption or bribery</option>
+                                <option>Other</option>
+                            </select></span>
+                    </label>
+                    <label class="gr-form-field gr-form-wide">
+                        <span>Subject <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-pen"></use></svg><input type="text" placeholder="Enter subject of your grievance" required></span>
+                    </label>
+                    <label class="gr-form-field gr-form-wide">
+                        <span>Grievance Description <span aria-hidden="true">*</span></span>
+                        <span class="gr-field-control"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg><textarea rows="2" placeholder="Describe your concern in detail..." required></textarea></span>
+                    </label>
+                </div>
+                <div class="gr-form-upload">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-clip"></use></svg>
+                    <label for="gr-attachment"><strong>Attach Supporting Document (Optional)</strong><span id="gr-attachment-help">PDF, JPG, PNG (Max 5 MB each)</span></label>
+                    <label class="gr-file-picker">
+                        <input id="gr-attachment" type="file" accept=".pdf,.jpg,.jpeg,.png" aria-describedby="gr-attachment-help">
+                        <span><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-upload"></use></svg> Choose File</span>
+                    </label>
+                    <span class="gr-file-name" id="gr-file-name" aria-live="polite"></span>
+                </div>
+                <div class="gr-form-consent">
+                    <label><input type="checkbox" required> I confirm that the information provided is genuine and agree to the privacy terms.</label>
+                    <a href="#gr-form-status">Privacy notice</a>
+                </div>
+                <div class="gr-form-actions">
+                    <p id="gr-form-status" tabindex="-1">Preview only. Form entries stay on this page.</p>
+                    <button type="reset">Cancel</button>
+                    <button type="submit" class="gr-form-submit" disabled><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-send"></use></svg> Submit Grievance</button>
+                </div>
+            </form>
+        </section>
+        <section class="gr-submission gr-otp" id="gr-otp" aria-labelledby="gr-otp-title" hidden>
+            <div class="gr-submission-intro">
+                <div class="gr-submission-brand"><strong>PNP</strong><span>Praja Nishchaya Party</span></div>
+                <p class="gr-otp-portal">Grievance &amp; Hotline Portal</p>
+                <h2 class="gr-submission-headline" id="gr-otp-title">OTP Verification &amp; <strong>Consent</strong></h2>
+                <p class="gr-submission-copy">Your mobile number must be verified before the grievance is submitted.</p>
+                <ol class="gr-submission-guide">
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-mobile"></use></svg><span>Secure<br>Verification</span></li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-lock"></use></svg><span>Privacy<br>Protected</span></li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-check"></use></svg><span>Continue<br>Submission</span></li>
+                </ol>
+                <img class="gr-submission-landmark" src="submit-grievance-landmark.png" alt="" loading="lazy">
+            </div>
+            <div class="gr-submission-form gr-otp-card">
+                <div class="gr-form-heading">
+                    <h3><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-file"></use></svg> Submit a Grievance</h3>
+                    <span>Step 2 of 3</span>
+                </div>
+                <ol class="gr-form-progress" aria-label="Verification step preview">
+                    <li class="gr-otp-complete"><span><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-check"></use></svg></span>Grievance Details</li>
+                    <li aria-current="step"><span>2</span>Verify OTP</li>
+                    <li><span>3</span>Confirmation</li>
+                </ol>
+                <div class="gr-otp-body">
+                    <h4>Verify OTP</h4>
+                    <div class="gr-otp-message">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-mobile"></use></svg>
+                        <p id="gr-otp-status" tabindex="-1">OTP verification is currently unavailable. No code was sent. You can <a id="gr-confirmation-preview" href="grievance-success.html">preview the confirmation screen</a> without submitting a grievance.</p>
+                    </div>
+                    <fieldset class="gr-otp-code" aria-label="Six-digit verification code" aria-describedby="gr-otp-status">
+                        <input type="text" inputmode="numeric" autocomplete="one-time-code" aria-label="Digit 1" placeholder="–">
+                        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2" placeholder="–">
+                        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3" placeholder="–">
+                        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4" placeholder="–">
+                        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5" placeholder="–">
+                        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6" placeholder="–">
+                    </fieldset>
+                    <div class="gr-otp-resend">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-clock"></use></svg> <span>Resend OTP in <strong>—</strong></span>
+                        <button type="button" id="gr-otp-resend">Resend OTP</button>
+                    </div>
+                    <div class="gr-otp-consent">
+                        <input id="gr-otp-consent" type="checkbox" aria-describedby="gr-otp-required">
+                        <div><label for="gr-otp-consent">I agree to the privacy terms and consent to the use of my information for grievance processing, communication and updates.</label> <a href="#gr-form-status">Privacy notice</a></div>
+                        <span id="gr-otp-required">* Consent is mandatory</span>
+                    </div>
+                    <div class="gr-otp-security">
+                        <strong><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-shield"></use></svg> Secure Verification</strong>
+                        <p>Your OTP is confidential and helps us securely verify your mobile number.</p>
+                    </div>
+                    <div class="gr-otp-actions">
+                        <a href="#gr-mobile"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-pen"></use></svg> Edit Mobile Number</a>
+                        <button type="button" id="gr-otp-verify"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#gr-icon-check"></use></svg> Verify OTP</button>
+                    </div>
+                    <p class="gr-otp-feedback" id="gr-otp-feedback" role="status" tabindex="-1"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="grievance.js" defer></script>
+    <script src="submit-grievance.js" defer></script>
+</body>
+</html>
