@@ -1,0 +1,66 @@
+﻿.cs-defs { position:absolute; width:0; height:0; overflow:hidden; }
+.cs-page { position:relative; isolation:isolate; min-height:clamp(440px,40vw,650px); padding:12px clamp(14px,3vw,48px) 24px; color:#10234c; background:linear-gradient(155deg,#faf6fb,#fff 55%,#fbf2fa); }
+.cs-page svg { width:21px; height:21px; flex:none; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.cs-page::before { position:absolute; z-index:-1; inset:auto auto 0 0; width:min(30%,390px); height:140px; background:url("../../assets/hero/navbar-vidhana.png") left bottom / contain no-repeat; filter:sepia(1) saturate(.6); opacity:.34; content:""; }
+.cs-page::after { position:absolute; z-index:-1; inset:auto 0 0; height:38px; background:linear-gradient(180deg,#ffde44,#ffc600); clip-path:polygon(0 84%,11% 93%,44% 100%,84% 100%,94% 71%,100% 8%,100% 100%,0 100%); content:""; }
+.cs-breadcrumb { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:16px; font-size:.87rem; font-weight:800; }
+.cs-breadcrumb a { display:flex; align-items:center; gap:8px; }
+.cs-breadcrumb [aria-current] { color:#ac0043; }
+.cs-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,3.25fr); gap:clamp(12px,2vw,34px); }
+.cs-intro { align-self:start; padding:5px 16px 10px 0; border-right:1px solid #d4dce9; }
+.cs-illustration { position:relative; display:grid; place-items:center; width:clamp(78px,13vw,155px); aspect-ratio:1; margin:0 auto 10px; border-radius:50%; background:linear-gradient(#f7dce9,#fff0f8); }
+.cs-illustration > svg { width:64%; height:64%; padding:5px; border-radius:8px; background:#fff; color:#99073f; filter:drop-shadow(0 3px 3px #972b5a48); transform:rotate(-10deg); }
+.cs-illustration > span { position:absolute; right:12%; bottom:24%; display:grid; place-items:center; width:29%; aspect-ratio:1; border-radius:50%; background:#158526; color:#fff; }
+.cs-intro h1 { margin:0 0 7px; font:800 clamp(1.45rem,3vw,3.25rem)/1 var(--font-heading); letter-spacing:-.045em; }
+.cs-intro h1 span { display:block; color:#b6004d; }
+.cs-intro h1::after { display:block; width:43%; height:5px; margin-top:10px; border-radius:40%; background:#ffd000; transform:rotate(-4deg); content:""; }
+.cs-intro p { margin:0; font-weight:650; font-size:clamp(.86rem,1.12vw,1.07rem); }
+.cs-columns { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:clamp(8px,1.7vw,22px); align-items:stretch; }
+.cs-receipt { display:grid; gap:12px; min-width:0; }
+.cs-reference { display:flex; align-items:center; gap:9px; min-width:0; min-height:56px; padding-right:9px; border-radius:12px; background:linear-gradient(120deg,#173567,#09234e); color:#fff; }
+.cs-reference div { min-width:0; flex:1; overflow-wrap:anywhere; }
+.cs-reference small,.cs-reference strong { display:block; }
+.cs-reference strong { font:800 clamp(.95rem,1.65vw,1.45rem) var(--font-heading); }
+.cs-bookmark { align-self:stretch; display:grid; place-items:center; width:41px; flex:none; border-radius:12px 0 0 12px; background:#ffd100; color:#122d54; }
+.cs-badge { display:inline-flex; align-items:center; gap:4px; padding:3px 8px; border-radius:22px; background:#e0f4de; color:#176629; font-size:.76rem; font-weight:800; }
+.cs-badge svg { width:14px; height:14px; }
+.cs-card,.cs-notes { min-width:0; border:1px solid #e8e1eb; border-radius:13px; background:#fcfcfe; box-shadow:0 3px 8px #26365812; overflow:hidden; }
+.cs-card h2 { display:flex; align-items:center; gap:8px; margin:0; padding:7px 12px; background:linear-gradient(90deg,#fff0f7,#f9dce9); font:800 clamp(.91rem,1.45vw,1.35rem) var(--font-heading); }
+.cs-card h2 svg { color:#a80041; }
+.cs-card dl { margin:0; padding:4px 10px; }
+.cs-card dl > div { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:8px; align-items:center; padding:5px 0; border-bottom:1px solid #e0e4ed; }
+.cs-card dl > div:last-child { border-bottom:0; }
+.cs-card dt { display:flex; align-items:center; gap:6px; font-weight:800; }
+.cs-card dt svg { width:15px; height:15px; }
+.cs-card dd { margin:0; overflow-wrap:anywhere; }
+.cs-card dl,.cs-next ol { font-size:clamp(.76rem,1vw,.98rem); }
+.cs-next ol { margin:0; padding:10px 13px; list-style:none; }
+.cs-next li { position:relative; display:grid; grid-template-columns:19px 1fr; gap:10px; padding-bottom:12px; }
+.cs-next li:last-child { padding-bottom:0; }
+.cs-next li:not(:last-child)::before { position:absolute; top:14px; bottom:0; left:8px; border-left:1px solid #bec8db; content:""; }
+.cs-marker { position:relative; display:grid; place-items:center; width:17px; height:17px; border:1px solid #9daac5; border-radius:50%; background:#fff; color:transparent; }
+.cs-marker svg { width:12px; height:12px; }
+.is-received .cs-marker { background:#188933; color:#fff; border-color:#188933; }
+.cs-next p { margin:1px 0 0; line-height:1.25; }
+.cs-notes { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:11px; padding:7px 12px; }
+.cs-notes p { display:flex; align-items:center; gap:7px; margin:0; font-size:.8rem; }
+.cs-notes p:first-child { padding-right:10px; border-right:1px solid #bdcadf; font-weight:800; }
+.cs-notes p:first-child svg { color:#ad0045; }
+.cs-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:14px; }
+.cs-actions a { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-height:42px; padding:6px 16px; border:1px solid #15356a; border-radius:9px; background:#fff; font-weight:800; }
+.cs-actions a:first-child { border-color:#a80041; background:linear-gradient(#d31b68,#a90046); color:#fff; }
+.cs-page [hidden] { display:none; }
+.cs-page a:focus-visible { outline:3px solid #1657ad; outline-offset:3px; }
+@media(max-width:770px) { .cs-layout { grid-template-columns:1fr; } .cs-intro { border:0; } .cs-illustration { margin-inline:0; } }
+@media(max-width:520px) { .cs-columns,.cs-notes { grid-template-columns:1fr; } .cs-notes p:first-child { border:0; } }
+
+.cs-page:not(:has(.is-received)) .cs-illustration > span { display:none; }
+
+.cs-preview-note { margin:0 0 12px; padding:5px 10px; border-radius:7px; background:#f4e9f4; color:#762044; font-size:.78rem; font-weight:800; }
+.cs-layout { grid-template-columns:minmax(0,1fr) minmax(0,3.15fr); }
+.cs-columns { grid-template-columns:minmax(0,1.31fr) minmax(0,1fr); }
+.cs-illustration::after { position:absolute; top:12%; right:-8%; width:13px; height:13px; border-top:3px solid #ffcb00; border-right:3px solid #ffcb00; border-radius:0 4px 0 0; transform:rotate(19deg); content:""; }
+.cs-page::before { width:min(33%,480px); background-image:url("../../assets/hero/navbar-vidhana.png"); }
+.cs-page { background:linear-gradient(145deg,#fbf9fc 15%,#fff 54%,#faf0f7); }
+@media(max-width:770px) { .cs-layout { grid-template-columns:1fr; } }
+@media(max-width:520px) { .cs-columns { grid-template-columns:1fr; } }

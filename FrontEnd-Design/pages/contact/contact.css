@@ -1,0 +1,147 @@
+.cu-defs { position:absolute; width:0; height:0; overflow:hidden; }
+.cu-page { position:relative; isolation:isolate; padding:8px clamp(12px,2.1vw,36px) 16px; background:linear-gradient(145deg,#fff9fb,#f6faff 54%,#fff); color:#101939; }
+.cu-page::after { position:absolute; z-index:-1; inset:auto auto 0 0; width:min(32%,390px); height:70px; background:linear-gradient(11deg,#a50037 0 24%,#e3004f 25% 42%,#ffd000 43% 65%,#ffeb61 66%); clip-path:polygon(0 0,19% 39%,46% 69%,76% 78%,100% 100%,0 100%); pointer-events:none; content:""; }
+.cu-page svg:not(.cu-defs) { width:24px; height:24px; flex:none; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.cu-breadcrumb { display:flex; align-items:center; gap:8px; font-size:.82rem; font-weight:800; }
+.cu-breadcrumb a { display:inline-flex; align-items:center; gap:5px; }
+.cu-breadcrumb a svg { width:15px; height:15px; }
+.cu-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.95fr) minmax(0,1.8fr) minmax(0,1.07fr); align-items:start; gap:clamp(9px,1.2vw,18px); }
+.cu-intro { position:relative; isolation:isolate; align-self:stretch; min-height:295px; padding-top:21px; }
+.cu-intro::after { position:absolute; z-index:-1; inset:auto -6px 10px -10px; height:52%; background:url("../../assets/hero/navbar-vidhana.png") center bottom / contain no-repeat; filter:grayscale(1); opacity:.75; content:""; }
+.cu-intro h1 { margin:0 0 8px; font:800 clamp(1.9rem,3.65vw,4rem)/1.08 var(--font-heading); letter-spacing:-.07em; }
+.cu-intro p { margin:0; max-width:29ch; font-size:.89rem; font-weight:650; line-height:1.35; }
+.cu-methods,.cu-panel { border:1px solid #e0e8f2; border-radius:16px; background:#fbfdff; box-shadow:0 2px 7px #19335813; }
+.cu-methods { margin-top:10px; }
+.cu-method { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:8px; width:100%; min-height:61px; padding:7px 9px; border:0; border-bottom:1px solid #e5edf5; background:transparent; color:inherit; font:inherit; text-align:start; }
+button.cu-method { cursor:pointer; }
+.cu-method:last-child { border-bottom:0; }
+.cu-phone { position:relative; border:1px solid #f3cbd9; border-radius:14px; background:#fff0f5; }
+.cu-phone::after { position:absolute; right:-5px; top:calc(50% - 5px); width:9px; height:9px; transform:rotate(45deg); background:#fff0f5; border-top:1px solid #f3cbd9; border-right:1px solid #f3cbd9; content:""; }
+.cu-round { display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:var(--cu-icon,#cd2261); color:#fff; }
+.cu-round svg { width:18px !important; height:18px !important; }
+.cu-mail { --cu-icon:#006cca; } .cu-chat { --cu-icon:#128524; } .cu-pin { --cu-icon:#d95a00; }
+.cu-method strong,.cu-method small { display:block; line-height:1.2; }
+.cu-method small { font-size:.72rem; }
+.cu-arrow { font-weight:800; }
+.cu-enquiry,.cu-office { padding:10px 12px; }
+.cu-panel h2 { display:flex; align-items:center; gap:8px; margin:0 0 6px; font:800 clamp(1rem,1.65vw,1.55rem)/1.15 var(--font-heading); letter-spacing:-.04em; }
+.cu-panel h2 svg,.cu-hotline > svg { color:#b60038; }
+.cu-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 10px; }
+.cu-form label { display:block; font-size:.75rem; font-weight:800; }
+.cu-form b { color:#b60038; }
+.cu-form :is(input:not([type=checkbox]),select,textarea) { display:block; width:100%; min-width:0; min-height:33px; padding:4px 8px; border:1px solid #b9c7d9; border-radius:7px; color:#101939; background:#f8fbfe; font:600 .78rem var(--font-body); }
+.cu-form textarea { resize:vertical; }
+.cu-wide { grid-column:1/-1; }
+.cu-form .cu-consent { display:flex; align-items:center; gap:7px; }
+.cu-consent a { color:#9e0036; text-decoration:underline; }
+.cu-send,.cu-office button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:36px; border-radius:9px; font:800 .85rem var(--font-body); cursor:pointer; }
+.cu-send { width:min(82%,365px); justify-self:center; border:0; background:linear-gradient(#d1004b,#ad003c); color:#fff; }
+.cu-status { margin:0; font-size:.78rem; } .cu-status:empty { display:none; }
+.cu-aside { display:grid; gap:8px; padding-top:5px; }
+.cu-office p { margin:0 0 0 32px; font-size:.83rem; font-weight:650; line-height:1.3; }
+.cu-map { position:relative; width:min(100%,190px); margin:5px auto; aspect-ratio:1.9; }
+.cu-map svg:first-child { width:100%; height:100%; stroke-width:0; filter:drop-shadow(0 4px 2px #172d4329); }
+.cu-map svg:last-child { position:absolute; inset:0 auto auto 38%; width:29%; height:59%; color:#b50029; fill:#ffdddd; }
+.cu-office button { width:100%; padding:3px; border:1px solid #862449; background:#fff; color:#331331; }
+.cu-hotline { display:flex; align-items:center; gap:9px; padding:10px; background:#fff0f5; color:#88052f; }
+.cu-hotline small { display:block; font-size:.72rem; color:#101939; }
+#cuDirectory { position:fixed; inset:0; margin:auto; width:min(92%,590px); max-height:85vh; padding:20px; border:1px solid #cbd7e7; border-radius:14px; color:#101939; }
+#cuDirectory::backdrop { background:#10193988; }
+#cuDirectory form { float:right; }
+#cuOffices article { margin:12px 0; padding:9px; border:1px solid #e0e8f2; border-radius:8px; }
+#cuOffices a { text-decoration:underline; }
+.cu-page :focus-visible { outline:3px solid #315e9a; outline-offset:2px; }
+@media(max-width:850px) { .cu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .cu-grid { grid-template-columns:1fr; } .cu-intro { min-height:170px; } .cu-intro::after { opacity:.32; } .cu-page::after { display:none; } }
+
+.cu-field { display:block; position:relative; }
+.cu-field > svg { position:absolute; top:50%; left:8px; transform:translateY(-50%); max-width:15px; max-height:15px; pointer-events:none; }
+.cu-form .cu-field input { padding-inline-start:29px; }
+@media (max-width:430px) { .cu-form { grid-template-columns:1fr; } }
+
+/* Contact hero and quick actions */
+.cu-page { padding:0 clamp(12px,2.2vw,40px) 13px; background:linear-gradient(135deg,#edf4fb,#f6fbff); }
+.cu-page::after { display:none; }
+.cu-breadcrumb { position:relative; z-index:2; width:fit-content; padding:3px 12px; border-radius:0 0 24px 0; background:#fff; }
+.cu-breadcrumb a { color:#a0002d; }
+.cu-grid { grid-template-columns:minmax(0,1.16fr) minmax(0,1fr); gap:clamp(14px,2.2vw,34px); }
+.cu-left,.cu-right { min-width:0; display:grid; gap:8px; align-content:start; }
+.cu-right { margin-top:-14px; }
+.cu-intro { min-height:clamp(132px,15vw,255px); padding:12px 35% 30px 5%; color:#fff; }
+.cu-intro::before { position:absolute; z-index:-2; inset:-24px -9px -25px -5%; border-radius:0 0 30px 0; background:linear-gradient(105deg,#082958 17%,#0e3c73 62%,#42678f); content:""; }
+.cu-intro::after { z-index:-1; inset:0 -8px -18px 0; height:auto; filter:none; opacity:1;
+  background:url("../../assets/hero/navbar-karnataka-flag.png") 93% top / min(43%,255px) auto no-repeat,
+             linear-gradient(90deg,#082958 4%,#082958c9 32%,#08295826 77%),
+             url("../../assets/hero/navbar-vidhana.png") right bottom / 86% auto no-repeat; }
+.cu-intro h1 { margin:0 0 5px; font-size:clamp(1.9rem,4vw,4.2rem); }
+.cu-intro h1 span { color:#ffdb00; }
+.cu-intro p { color:#fff; font-size:clamp(.8rem,1.38vw,1.4rem); }
+.cu-methods { position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin: -20px 0 0; border:0; background:none; box-shadow:none; }
+.cu-method { position:relative; display:flex; flex-direction:column; justify-content:center; gap:3px; min-height:67px; padding:6px 3px; border:1px solid #dce7f1; border-radius:11px; background:#fbfdff; box-shadow:0 3px 7px #14294f29; text-align:center; }
+.cu-method:last-child { border-bottom:1px solid #dce7f1; }
+.cu-phone { --cu-icon:#c00039; }
+.cu-phone::after,.cu-arrow { display:none; }
+.cu-round { width:29px; height:29px; }
+.cu-method strong { font-size:clamp(.72rem,1.1vw,1.06rem); }
+.cu-method small { font-size:clamp(.58rem,.78vw,.86rem); }
+.cu-office { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(85px,1fr) minmax(32px,.5fr) auto; align-items:center; gap:8px; }
+.cu-office h2 { margin:0 0 3px; font-size:clamp(.86rem,1.47vw,1.5rem); }
+.cu-office p { margin-left:0; font-size:clamp(.64rem,.86vw,.9rem); }
+.cu-office select { width:100%; min-width:0; min-height:30px; padding-inline:5px; border:1px solid #b9c7d9; border-radius:5px; background:#fbfdff; color:inherit; font:700 .76rem var(--font-body); }
+.cu-state-map { height:60px; background:linear-gradient(155deg,#ffda00 50%,#d70036 50%); mask:url("../../assets/hero/karnataka-silhouette.svg") center / contain no-repeat; }
+.cu-office button,.cu-hotline a { width:auto; min-height:30px; padding:3px 8px; border:1px solid #a62d49; border-radius:8px; background:#fff; color:#94052c; font:800 clamp(.65rem,.8vw,.88rem) var(--font-body); text-align:center; }
+.cu-enquiry { background:#fcfdff; }
+.cu-form { align-items:center; }
+.cu-form .cu-consent { font-size:clamp(.65rem,.83vw,.9rem); }
+.cu-send { width:100%; justify-self:end; }
+.cu-hotline { background:#fff5d9; }
+.cu-hotline a { margin-inline-start:auto; flex:none; }
+@media(max-width:850px) { .cu-grid { grid-template-columns:minmax(0,1fr); } .cu-right { margin-top:0; } .cu-intro::after { background-size:min(38%,190px) auto,100% 100%,86% auto; } }
+@media(max-width:480px) { .cu-office { grid-template-columns:1fr 1fr; } .cu-state-map { display:none; } .cu-office button { grid-column:2; } .cu-hotline { flex-wrap:wrap; } }
+
+/* Contact Our Team */
+.cu-page { background:#f8f5f7; }
+.cu-grid { grid-template-columns:minmax(0,1.1fr) minmax(110px,.54fr) minmax(0,1.74fr); min-height:clamp(320px,26vw,455px); gap:clamp(8px,1.25vw,22px); align-items:stretch; }
+.cu-left { display:block; }
+.cu-right { margin-top:0; align-content:center; }
+.cu-intro { min-height:100%; padding:clamp(14px,2vw,30px) 26% 42px 10%; overflow:hidden; border-radius:16px 0 0 16px; }
+.cu-intro::before {
+  inset:0 7% 0 0;
+  border-radius:0 46% 58% 0 / 0 12% 100% 0;
+  border-right:clamp(6px,1vw,14px) solid #ffd400;
+  background:linear-gradient(180deg,#650820 12%,#880d2a 50%,#b8002e15 100%),
+             url("../../assets/hero/participation.png") center bottom / cover no-repeat;
+  box-shadow:8px 10px 24px #a20c3530;
+}
+.cu-intro::after { display:none; }
+.cu-brand { display:flex; align-items:center; gap:9px; margin-bottom:clamp(10px,1.8vw,23px); }
+.cu-brand strong { font:800 clamp(1.1rem,2.3vw,2.5rem)/1 var(--font-heading); }
+.cu-brand span { border-inline-start:1px solid #ffffff87; padding-inline-start:8px; font-size:clamp(.59rem,.85vw,.88rem); font-weight:800; }
+.cu-intro h1 { font-size:clamp(1.85rem,4vw,4.4rem); letter-spacing:-.06em; }
+.cu-intro h1 span { display:block; }
+.cu-intro h1::after { display:block; width:42px; height:3px; margin:12px 0; border-radius:3px; background:#ffd400; content:""; }
+.cu-intro p { font-size:clamp(.83rem,1.2vw,1.19rem); }
+.cu-topic-links { display:grid; align-content:center; gap:clamp(6px,.75vw,10px); min-width:0; }
+.cu-topic-links a { display:flex; align-items:center; gap:7px; min-height:44px; padding:4px 6px 4px 4px; border-radius:40px 10px 10px 40px; background:#fff; box-shadow:0 3px 9px #24112317; font-weight:800; font-size:clamp(.72rem,1.05vw,1rem); }
+.cu-topic-links a > span { display:grid; place-items:center; flex:none; width:clamp(29px,3.5vw,48px); aspect-ratio:1; border:3px solid #fff; border-radius:50%; background:#b9003a; color:#fff; box-shadow:0 1px 5px #9e00294d; }
+.cu-topic-links a:nth-child(2) { margin-inline-end:6%; }
+.cu-topic-links a:nth-child(3) { margin-inline-end:11%; }
+.cu-topic-links a:nth-child(4) { margin-inline-end:15%; }
+.cu-enquiry { padding:clamp(10px,1.2vw,17px); }
+.cu-form { gap:6px 12px; scroll-margin-top:5rem; }
+.cu-form :is(input:not([type=checkbox]),select) { min-height:36px; }
+.cu-form textarea { min-height:clamp(62px,6vw,96px); }
+.cu-send { min-height:42px; }
+.cu-resources { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:14px; margin-top:14px; }
+.cu-resources .cu-methods { margin:0; }
+@media(max-width:900px) {
+  .cu-grid { grid-template-columns:minmax(0,1fr) minmax(105px,.47fr); }
+  .cu-intro { min-height:210px; }
+  .cu-right { grid-column:1/-1; }
+}
+@media(max-width:600px) {
+  .cu-resources { grid-template-columns:1fr; }
+  .cu-intro { padding-inline-end:16%; }
+  .cu-topic-links a { margin-inline-end:0 !important; }
+  .cu-topic-links svg { width:17px !important; height:17px !important; }
+}

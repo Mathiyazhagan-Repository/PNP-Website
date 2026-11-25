@@ -47,12 +47,14 @@
     animationFrame=requestAnimationFrame(frame);
   }
   function wheel(e){
+    // Upward wheel input immediately cancels a downward transition and stays native.
+    if(e.deltaY<0){cancelMotion();lastWheel=0;return;}
     if(innerWidth<768||e.ctrlKey||e.metaKey||e.shiftKey||Math.abs(e.deltaX)>Math.abs(e.deltaY)||nestedScroll(e.target)||document.querySelector('dialog[open],.modal[aria-hidden="false"]'))return;
     if(!e.deltaY)return;
     const now=performance.now();if(now-lastWheel>220)total=0;lastWheel=now;
     if(busy){e.preventDefault();unlock();return;}
-    const points=stops(),y=scrollY,direction=Math.sign(e.deltaY);
-    const next=direction>0?points.find(p=>p>y+8):[...points].reverse().find(p=>p<y-8);
+    const points=stops(),y=scrollY;
+    const next=points.find(p=>p>y+8);
     if(next===undefined)return;
     const target=next;
     e.preventDefault();total+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);

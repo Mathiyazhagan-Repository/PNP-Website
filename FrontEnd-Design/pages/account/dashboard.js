@@ -21,3 +21,5 @@ document.querySelectorAll("[data-account-feature]").forEach((button) => {
         dashboardDialog.showModal();
     });
 });
+
+document.querySelector('.dashboard-exit')?.addEventListener('click',()=>sessionStorage.removeItem('pnp-account-preview'));

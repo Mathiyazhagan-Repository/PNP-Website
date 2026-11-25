@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse published corrections, responses, updates and clarifications from PNP.">
+  <title>Official Clarifications | PNP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./clarifications.css">
+  <script src="../../shared-layout.js" defer></script>
+  <script src="../../script.js" defer></script>
+  <script src="./clarifications.js" defer></script>
+</head>
+<body class="clarifications-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-site-header></div>
+  <svg class="oc-defs" aria-hidden="true"><defs>
+    <symbol id="oc-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></symbol>
+    <symbol id="oc-stack" viewBox="0 0 24 24"><path d="m2 8 10-5 10 5-10 5-10-5Zm0 4 10 5 10-5M2 16l10 5 10-5"/></symbol>
+    <symbol id="oc-document" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5ZM14 2v6h5M8 12h8m-8 4h8"/></symbol>
+    <symbol id="oc-bubble" viewBox="0 0 24 24"><path d="M22 11a10 8 0 0 1-10 8H8l-5 3 1-6a10 8 0 1 1 18-5Z"/></symbol>
+    <symbol id="oc-info" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0-11v6m0-10v.1"/></symbol>
+    <symbol id="oc-update" viewBox="0 0 24 24"><path d="M21 3v6h-6M3 21v-6h6M4 9a8 8 0 0 1 13-5l4 5M3 15l4 5a8 8 0 0 0 13-5"/></symbol>
+    <symbol id="oc-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 4-4 8-9 10-5-2-9-6-9-10V6Zm-4 10 3 3 5-6"/></symbol>
+    <symbol id="oc-search" viewBox="0 0 24 24"><path d="M17 10a7 7 0 1 0-14 0 7 7 0 0 0 14 0Zm-2 5 6 6"/></symbol>
+    <symbol id="oc-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  </defs></svg>
+  <main id="main-content" class="oc-page">
+    <nav class="oc-breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html"><svg aria-hidden="true"><use href="#oc-home"/></svg> Home</a><span aria-hidden="true">/</span>
+      <a href="./fact-check.html">Fact Check &amp; FAQs</a><span aria-hidden="true">/</span>
+      <span aria-current="page">Official Clarifications</span>
+    </nav>
+    <header class="oc-heading">
+      <h1>Official Clarifications</h1>
+      <p class="oc-ribbon"><span>Corrections · Responses · Updates · Clarifications</span></p>
+      <p>A dedicated hub for published corrections, responses, updates, and clarifications from Praja Nishchaya Party (PNP).</p>
+    </header>
+    <div class="oc-filters" role="group" aria-label="Filter by publication type">
+      <button type="button" data-oc-type="" aria-pressed="true"><svg aria-hidden="true"><use href="#oc-stack"/></svg> All</button>
+      <button type="button" data-oc-type="correction" aria-pressed="false"><svg aria-hidden="true"><use href="#oc-document"/></svg> Corrections</button>
+      <button type="button" data-oc-type="response" aria-pressed="false"><svg aria-hidden="true"><use href="#oc-bubble"/></svg> Responses</button>
+      <button type="button" data-oc-type="clarification" aria-pressed="false"><svg aria-hidden="true"><use href="#oc-info"/></svg> Clarifications</button>
+      <button type="button" data-oc-type="update" aria-pressed="false"><svg aria-hidden="true"><use href="#oc-update"/></svg> Updates</button>
+    </div>
+    <div class="oc-layout">
+      <section class="oc-panel" aria-label="Published clarifications">
+        <form id="ocSearchForm" class="oc-search" role="search" aria-label="Search official clarifications">
+          <label for="ocSearch"><svg aria-hidden="true"><use href="#oc-search"/></svg><span class="sr-only">Search official clarifications</span>
+            <input id="ocSearch" type="search" placeholder="Search in official clarifications…">
+          </label>
+          <button class="oc-action" type="submit">Search</button>
+        </form>
+        <div class="oc-table-scroll" role="region" aria-label="Clarification records" tabindex="0">
+          <table class="oc-table">
+            <thead><tr><th scope="col">No.</th><th scope="col">Title</th><th scope="col">Type</th><th scope="col">Published</th><th scope="col">Updated</th><th scope="col">Status</th><th scope="col">Action</th></tr></thead>
+            <tbody id="ocRows"></tbody>
+          </table>
+        </div>
+        <p class="oc-status" id="ocStatus" role="status">Loading official clarifications…</p>
+        <button class="oc-action oc-retry" type="button" id="ocRetry" hidden>Try again</button>
+      </section>
+      <aside class="oc-panel oc-transparency" aria-labelledby="ocTransparency">
+        <svg aria-hidden="true"><use href="#oc-shield"/></svg>
+        <div>
+          <h2 id="ocTransparency">Transparency &amp; Published Updates</h2>
+          <p>This section brings together published corrections, responses, updates, and clarifications on statements, reports, and public information related to PNP.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#oc-check"/></svg> Official and on-record clarifications</li>
+            <li><svg aria-hidden="true"><use href="#oc-check"/></svg> Links to original statements, where available</li>
+            <li><svg aria-hidden="true"><use href="#oc-check"/></svg> <a href="../newsroom/corrections-log.html">Related newsroom corrections and updates</a></li>
+            <li><svg aria-hidden="true"><use href="#oc-check"/></svg> A public record for future reference</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div data-site-footer></div>
+  <dialog class="oc-detail" id="ocDetail" aria-labelledby="ocDetailTitle">
+    <form method="dialog"><button class="oc-action" type="submit">Close</button></form>
+    <h2 id="ocDetailTitle"></h2>
+    <div id="ocDetailContent"></div>
+  </dialog>
+<nav class="mobile-sticky-bar"
+       aria-label="Quick mobile actions">
+
+    <a href="#contact"
+       data-next="Call Hotline">
+      <span aria-hidden="true">☎</span>
+      <span>Call</span>
+    </a>
+
+    <a href="#contact"
+       data-next="WhatsApp integration">
+      <span aria-hidden="true">◉</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="../../pages/donate.html">
+      <span aria-hidden="true">₹</span>
+      <span>Donate</span>
+    </a>
+
+  </nav>
+
+  <!-- =========================================
+       16. LOGIN / SIGN UP MODAL
+  ========================================== -->
+
+  <div class="modal-overlay"
+       id="loginModal"
+       hidden>
+
+    <div class="login-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="loginModalTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="loginClose"
+              aria-label="Close login">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-logo">PNP</div>
+
+        <h2 id="loginModalTitle">
+          Login / Sign Up
+        </h2>
+
+        <p>
+          Continue securely using your mobile number.
+        </p>
+      </div>
+
+      <!-- MOBILE ENTRY -->
+      <form id="loginMobileForm"
+            class="login-form">
+
+        <label for="loginMobile">
+          Mobile Number
+        </label>
+
+        <div class="mobile-input-group">
+          <span>+91</span>
+
+          <input type="tel"
+                 id="loginMobile"
+                 name="mobile"
+                 inputmode="numeric"
+                 autocomplete="tel-national"
+                 maxlength="10"
+                 pattern="[0-9]{10}"
+                 placeholder="Enter 10-digit number"
+                 required>
+        </div>
+
+        <div class="captcha-placeholder">
+          CAPTCHA verification will be integrated here.
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Send OTP
+        </button>
+
+      </form>
+
+      <!-- OTP STEP -->
+      <form id="loginOtpForm"
+            class="login-form"
+            hidden>
+
+        <p class="otp-description">
+          Enter the six-digit OTP sent to your mobile.
+        </p>
+
+        <label for="loginOtp">
+          Verification Code
+        </label>
+
+        <input type="text"
+               id="loginOtp"
+               name="otp"
+               maxlength="6"
+               inputmode="numeric"
+               pattern="[0-9]{6}"
+               autocomplete="one-time-code"
+               placeholder="Enter 6-digit OTP"
+               required>
+
+        <button type="button"
+                id="resendOtp"
+                class="resend-otp"
+                disabled>
+          Resend OTP
+        </button>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Verify &amp; Continue
+        </button>
+
+      </form>
+
+      <div class="modal-footer-note">
+        <p>
+          New to PNP?
+          <a href="../membership/join.html">
+            Join PNP
+          </a>
+        </p>
+
+        <p>
+          By continuing, you can review the applicable
+          <a href="../../pages/privacy-policy.html">
+            Privacy Policy
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       17. COOKIE CONSENT BANNER
+  ========================================== -->
+
+  <div class="cookie-banner"
+       id="cookieBanner"
+       role="region"
+       aria-label="Cookie preferences"
+       hidden>
+
+    <div class="container cookie-banner-inner">
+
+      <div class="cookie-message">
+        <h3>Your Privacy Matters</h3>
+
+        <p>
+          Essential cookies support basic website functions.
+          Optional analytics and social media embeds
+          require your consent.
+          <a href="../../pages/privacy-policy.html">
+            Read Privacy Policy
+          </a>
+        </p>
+      </div>
+
+      <div class="cookie-actions">
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieReject">
+          Reject Optional
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="cookieCustomize">
+          Customise
+        </button>
+
+        <button type="button"
+                class="btn btn-primary"
+                id="cookieAccept">
+          Accept All
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div class="modal-overlay"
+       id="cookiePreferencesModal"
+       hidden>
+
+    <div class="cookie-preferences-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="cookiePreferencesTitle">
+
+      <button type="button"
+              class="modal-close"
+              id="cookiePreferencesClose"
+              aria-label="Close cookie preferences">
+        ×
+      </button>
+
+      <h2 id="cookiePreferencesTitle">
+        Cookie Preferences
+      </h2>
+
+      <p>
+        Manage optional cookie categories.
+      </p>
+
+      <form id="cookiePreferencesForm">
+
+        <label class="preference-row">
+          <span>
+            <strong>Essential Cookies</strong>
+            <small>Required for basic website functionality</small>
+          </span>
+          <input type="checkbox" checked disabled>
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand website usage</small>
+          </span>
+          <input type="checkbox"
+                 id="analyticsConsent">
+        </label>
+
+        <label class="preference-row">
+          <span>
+            <strong>Social Media Embeds</strong>
+            <small>Allow embedded video and social content</small>
+          </span>
+          <input type="checkbox"
+                 id="socialConsent">
+        </label>
+
+        <button type="submit"
+                class="btn btn-primary btn-full">
+          Save Preferences
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       18. TOAST / UI NOTIFICATION
+  ========================================== -->
+
+  <div class="toast-notification"
+       id="toast"
+       role="status"
+       aria-live="polite"
+       hidden>
+  </div>
+
+  <!-- END OF HOMEPAGE -->
+
+
+
+
+</body></html>

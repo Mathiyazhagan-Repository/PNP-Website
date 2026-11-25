@@ -114,6 +114,7 @@ verifyForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (localPreview && !verifyForm.hidden) {
         if (code.value === previewCode) {
+            sessionStorage.setItem("pnp-account-preview", "1");
             location.assign("dashboard.html");
         } else {
             verifyStatus.textContent = `Use test code ${previewCode} to open the local dashboard preview.`;

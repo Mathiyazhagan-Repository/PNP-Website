@@ -3004,7 +3004,7 @@ p {
 @media (prefers-reduced-motion: reduce) { .quick-actions-section .quick-action-card { transition: none; } .quick-actions-section .quick-action-card:hover { transform: none; } }
 /* Compact participation section with softly blended collage edges. */
 .quick-actions-section {
-  padding: 22px 0 38px;
+  padding: 16px 0 24px;
   background: radial-gradient(ellipse at 88% 45%, #eeebfc 0%, #f7f5ff 35%, #fff 72%);
 }
 .quick-actions-section .section-heading { margin-bottom: 17px; }
@@ -3032,7 +3032,7 @@ p {
 }
 .participation-wave { height: 36px; }
 @media (max-width: 750px) {
-  .quick-actions-section { padding: 20px 0 32px; }
+  .quick-actions-section { padding: 16px 0 24px; }
   .quick-actions-section .section-heading h2 { font-size: 28px; }
   .quick-actions-section .section-heading p { font-size: 13px; }
   .quick-actions-section .quick-action-card { min-height: 87px; padding: 11px 40px 11px 12px; }

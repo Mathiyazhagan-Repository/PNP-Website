@@ -1,0 +1,31 @@
+.account-deletion { background:linear-gradient(125deg,#fff,#f6faff); }
+.deletion-main { padding-bottom:14px; }
+.deletion-main::after { position:absolute; inset:auto 0 4px auto; width:160px; height:100px; background:url("../../assets/hero/navbar-vidhana.png") right bottom / contain no-repeat; opacity:.32; pointer-events:none; content:""; }
+.deletion-content { position:relative; z-index:1; display:grid; grid-template-columns:minmax(150px, .8fr) minmax(0, 2fr); gap:16px; align-items:center; }
+.deletion-art { position:relative; width:min(100%,245px); aspect-ratio: .88; margin:auto; }
+.deletion-sun { position:absolute; inset:2% 3% auto; aspect-ratio:1; border-radius:50%; background:linear-gradient(#ffe596,#ffd874); }
+.deletion-machine { position:absolute; inset:53% 11% 18%; border-radius:13px; background:linear-gradient(150deg,#5299f3,#003575 75%); box-shadow:0 7px 9px #61180f26,inset 0 -8px #00295660; }
+.deletion-paper { position:absolute; inset:12% 20% 39%; padding:8%; background:linear-gradient(135deg,#fff,#e9edf2); clip-path:polygon(0 0,80% 0,100% 21%,100% 100%,0 100%); filter:drop-shadow(0 3px 4px #31394a45); }
+.deletion-paper::after { position:absolute; top:0; right:0; width:20%; aspect-ratio:1; background:#d5dbe2; content:""; }
+.deletion-paper span { position:relative; display:block; width:35%; height:35%; margin:10% auto 13%; border-radius:45% 45% 8% 8%; background:#7f8797; transform:translateY(32%) scaleY(.55); }
+.deletion-paper span::before { position:absolute; inset:-100% 16% auto; aspect-ratio:1; border-radius:50%; background:#7f8797; content:""; }
+.deletion-paper i { display:block; width:100%; height:4%; margin:7% 0; border-radius:8px; background:#9aa3b0; }
+.deletion-paper i:last-child { width:64%; }
+.deletion-slot { position:absolute; inset:63% 8% 25%; border-radius:6px; background:linear-gradient(#65a8ff,#0047AB); box-shadow:inset 0 3px #b7d9ff70,0 3px 4px #70000039; }
+.deletion-strips { position:absolute; inset:75% 23% 3%; display:flex; gap:5%; }
+.deletion-strips i { flex:1; height:92%; border-radius:0 0 4px 4px; background:linear-gradient(90deg,#cdd1d8,#fff 60%,#e1e4e8); box-shadow:1px 4px 5px #39445430; }
+.deletion-strips i:nth-child(2n) { height:83%; }
+.deletion-strips i:nth-child(3n) { height:100%; }
+.deletion-form { overflow:hidden; border:1px solid #dbe6f4; border-radius:14px; background:#fff; box-shadow:0 3px 8px #25273918; }
+.deletion-form h2 { margin:0; padding:8px 15px; background:linear-gradient(90deg,#eef5ff,#dfedff); color:#003575; font:800 1.02rem var(--font-heading); }
+.deletion-fields { display:grid; gap:5px; padding:9px 15px 12px; }
+.deletion-fields > label { font-size:.83rem; font-weight:800; }
+.deletion-fields > label > span[aria-hidden] { color:#0047AB; }
+.deletion-fields :is(select,textarea) { width:100%; min-height:36px; margin-bottom:4px; padding:6px 9px; border:1px solid #d1d7e2; border-radius:7px; background:#fafbfc; color:#101939; font:inherit; font-size:.87rem; }
+.deletion-fields textarea { resize:vertical; }
+.deletion-count { margin:-6px 0 0; color:#4d5a6d; text-align:right; font-size:.75rem; }
+.deletion-confirm { display:flex; align-items:flex-start; gap:8px; line-height:1.25; }
+.deletion-confirm input { width:17px; height:17px; flex:none; margin:0; accent-color:#0047AB; }
+.deletion-fields .as-actions { justify-content:flex-start; margin-top:4px; flex-wrap:wrap; }
+.deletion-fields a { color:#0047AB; text-decoration:underline; }
+@media(max-width:620px) { .deletion-content { grid-template-columns:1fr; gap:8px; } .deletion-art { width:145px; } }

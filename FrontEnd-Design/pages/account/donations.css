@@ -1,0 +1,49 @@
+.ad-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.account-donations { background: linear-gradient(125deg,#fff,#f5f9ff); }
+.account-donations::after { display: none; }
+.account-donations .dashboard-layout { grid-template-columns: minmax(155px,16fr) minmax(0,84fr); gap: 0; }
+.account-donations .dashboard-sidebar { position: relative; overflow: hidden; padding-bottom: 36px; }
+.account-donations .dashboard-sidebar::after { position: absolute; inset: auto 0 0; height: 28px; background: #0047AB; border-top: 8px solid #ffc900; clip-path: polygon(0 0,28% 51%,53% 65%,75% 49%,100% 100%,0 100%); content: ""; pointer-events: none; }
+.ad-main { min-width: 0; padding: 0 clamp(10px,1.4vw,24px) 12px; }
+.ad-heading { position: relative; display: flex; align-items: flex-start; isolation: isolate; gap: 12px; min-height: 83px; padding: 7px 0 19px; }
+.ad-heading::before { position: absolute; z-index: -1; inset: 0 calc(-1 * clamp(10px,1.4vw,24px)) 0 auto; width: 50%; background: linear-gradient(90deg,#f5f9ff,transparent 42%),url("../../assets/hero/mysuru-palace-banner.png") center 55% / cover no-repeat; mask-image: linear-gradient(#000 70%,transparent); content: ""; }
+.ad-heading svg { width: 37px; height: 37px; color: #0047AB; }
+.ad-heading h1 { margin: 0; font: 800 clamp(1.3rem,2.3vw,2.12rem)/1.13 var(--font-heading); letter-spacing: -.035em; }
+.ad-heading p { margin: 2px 0 0; max-width: 53ch; font-size: .86rem; font-weight: 700; }
+.ad-overview { display: grid; grid-template-columns: minmax(0,3fr) minmax(120px,.9fr); gap: 15px; align-items: center; }
+.ad-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; margin: 0; }
+.ad-stats > div { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 0 10px; padding: 9px 11px; border: 1px solid #dbe6f4; border-radius: 12px; background: #fff; box-shadow: 0 3px 7px #2c191a16; }
+.ad-stats svg { grid-row: span 2; width: 34px; height: 34px; padding: 5px; border-radius: 50%; background: #fff6e5; color: #b65a00; }
+.ad-stats > div:nth-child(2) svg { background: #e8f1ff; color: #0047AB; }
+.ad-stats > div:nth-child(3) svg { background: #e9f7e8; color: #147524; }
+.ad-stats dt { font-size: .78rem; font-weight: 800; line-height: 1.2; }
+.ad-stats dd { margin: 0; font: 800 clamp(.95rem,1.7vw,1.5rem)/1.2 var(--font-heading); }
+.ad-active { color: #146520; }
+.ad-donate, .ad-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border-radius: 8px; font: inherit; font-weight: 800; text-decoration: none; cursor: pointer; }
+.ad-donate { min-height: 44px; padding: 6px 8px; background: linear-gradient(#075cc7,#003575); color: #fff; }
+.ad-secondary { min-height: 33px; padding: 3px 9px; border: 1px solid #c8daf2; background: #e8f1ff; color: #003575; font-size: .82rem; white-space: nowrap; }
+.ad-status { margin: 7px 0; color: #47566a; font-size: .78rem; }
+.ad-content { display: grid; grid-template-columns: minmax(0,2fr) minmax(175px,1fr); gap: 14px; }
+.ad-panel { min-width: 0; padding: 8px 11px; border: 1px solid #dbe6f4; border-radius: 13px; background: #fff; box-shadow: 0 2px 5px #632d2113; }
+.ad-panel h2 { margin: 0 0 6px; font: 800 clamp(.95rem,1.4vw,1.2rem)/1.25 var(--font-heading); }
+.ad-table-scroll { overflow-x: auto; border: 1px solid #dbe6f4; border-radius: 8px; }
+.ad-panel table { width: 100%; min-width: 418px; border-collapse: collapse; font-size: .83rem; }
+.ad-panel th, .ad-panel td { padding: 4px 8px; text-align: start; }
+.ad-panel thead { background: #e8f1ff; }
+.ad-panel td { border-top: 1px solid #e9eaf0; font-weight: 650; }
+.ad-panel td:nth-child(1), .ad-panel td:nth-child(3) { white-space: nowrap; }
+.ad-panel tbody tr:nth-child(odd) { background: #fcfcfe; }
+.ad-plan { background: #f6faff; }
+.ad-plan h2 { display: flex; align-items: center; gap: 8px; }
+.ad-plan h2 svg { color: #0047AB; }
+.ad-plan dl { display: grid; grid-template-columns: minmax(0,auto) 1fr; gap: 6px 10px; margin: 9px 0; font-size: .84rem; }
+.ad-plan dt { display: flex; justify-content: space-between; gap: 8px; }
+.ad-plan dt::after { content: ":"; }
+.ad-plan dd { margin: 0; font-weight: 800; }
+.ad-plan dd.ad-active { justify-self: start; padding: 0 8px; border-radius: 20px; background: #d8f1d2; }
+.ad-plan .ad-secondary { width: 100%; }
+#adRetry { margin-top: 8px; }
+.ad-dialog { position: fixed; inset: 0; margin: auto; }
+@media(max-width: 900px) { .ad-content { grid-template-columns: minmax(0,1fr); } }
+@media(max-width: 780px) { .account-donations .dashboard-layout { grid-template-columns: minmax(0,1fr); } .account-donations .dashboard-sidebar { padding-bottom: 18px; } }
+@media(max-width: 560px) { .ad-overview { grid-template-columns: minmax(0,1fr); gap: 8px; } .ad-stats { gap: 5px; } .ad-stats > div { grid-template-columns: 1fr; padding: 6px; } .ad-stats svg { grid-row: auto; width: 26px; height: 26px; } .ad-heading::before { opacity: .25; } }
