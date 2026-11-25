@@ -1,7 +1,7 @@
 .account-dashboard { color:#101939; background:#f6faff; font-family:var(--font-body); }
 .account-dashboard svg { width:1.35em; height:1.35em; flex:none; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
 .dashboard-layout { display:grid; grid-template-columns:minmax(155px,19fr) minmax(0,81fr); gap:clamp(8px,1.25vw,24px); }
-.dashboard-sidebar { display:grid; align-content:start; gap:.18em; padding:.75em; border-radius:0 .85em .85em 0; background:#fbfcff; box-shadow:0 3px 10px #20264524; }
+.dashboard-sidebar { display:grid; align-content:start; gap:.18em; padding:.75em; border-radius:0 .85em .85em 0; background:#fbfcff; box-shadow:0 3px 10px #20264524; font-size:13px; }
 .dashboard-sidebar :is(a,button), .dashboard-quick :is(a,button) { display:flex; align-items:center; gap:.65em; min-height:38px; padding:.3em .6em; border:0; border-radius:.65em; background:transparent; color:inherit; font:inherit; font-weight:800; text-align:left; }
 .dashboard-sidebar [aria-current="page"],
 .dashboard-sidebar a:not(.dashboard-exit):is(:hover,:focus-visible) { background:#0047AB; color:white; }

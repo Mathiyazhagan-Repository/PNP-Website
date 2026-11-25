@@ -44,10 +44,15 @@
                 <form id="account-verify-form" aria-labelledby="account-verify-title" hidden>
                     <h2 id="account-verify-title" tabindex="-1">Verify Your Mobile Number</h2>
                     <p id="account-verify-description">Enter the six-digit OTP to continue.</p>
-                    <label class="account-mobile">
-                        <span class="account-sr">Six-digit OTP</span>
-                        <input id="account-otp-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Enter six-digit OTP" required aria-describedby="account-verify-description">
-                    </label>
+                    <input id="account-otp-code" type="hidden" pattern="[0-9]{6}" maxlength="6" required>
+                    <div class="account-otp" role="group" aria-label="Six-digit OTP" aria-describedby="account-verify-description">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]" maxlength="1" aria-label="OTP digit 1">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="OTP digit 2">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="OTP digit 3">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="OTP digit 4">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="OTP digit 5">
+                        <input class="account-otp-cell" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="OTP digit 6">
+                    </div>
                     <button class="account-submit" type="submit" disabled>Verify &amp; Continue</button>
                     <button class="account-edit-mobile" id="account-edit-mobile" type="button">Change mobile number</button>
                 </form>

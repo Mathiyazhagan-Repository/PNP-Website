@@ -15,6 +15,27 @@
 .district-browser-bottom{margin-top:17px}
 @media(min-width:1600px){.district-directory,.district-hero-panel{min-height:500px}.district-card-art{height:110px}}
 @media(max-width:700px){.district-directory{min-height:0}.district-hero-panel{min-height:330px}.district-browser{padding-top:24px;padding-bottom:25px}.district-card-art{height:105px}}
+.district-card-grid {
+  max-height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  scrollbar-gutter: stable;
+}
+
+.district-card-grid::-webkit-scrollbar {
+  width: 7px;
+}
+
+.district-card-grid::-webkit-scrollbar-track {
+  background: #e8f1f8;
+  border-radius: 10px;
+}
+
+.district-card-grid::-webkit-scrollbar-thumb {
+  background: #88afd1;
+  border-radius: 10px;
+}
 
 .district-map-preview, .district-map-preview * { pointer-events: none; }
 .district-map-preview-shape path { fill: #d6eeff; stroke: #073f83; stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }

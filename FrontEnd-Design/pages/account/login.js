@@ -11,6 +11,7 @@ const code = document.getElementById("account-otp-code");
 const editMobile = document.getElementById("account-edit-mobile");
 const requestButton = accountForm.querySelector(".account-submit");
 const verifyButton = verifyForm.querySelector(".account-submit");
+const otpCells = [...document.querySelectorAll(".account-otp-cell")];
 // Deployment supplies same-origin endpoints through PNPAccount. The server
 // owns the OTP challenge and establishes the authenticated cookie session.
 const accountConfig = window.PNPAccount || {};
@@ -50,6 +51,7 @@ async function requestAccountOtp(endpoint, body) {
 function returnToMobile() {
     challengeSent = false;
     code.value = "";
+    otpCells.forEach((cell) => { cell.value = ""; });
     verifyStatus.textContent = "";
     verifyForm.hidden = true;
     accountForm.hidden = false;
@@ -59,8 +61,40 @@ function showOtpCard(message) {
     accountForm.hidden = true;
     verifyForm.hidden = false;
     verifyStatus.textContent = message;
+    otpCells.forEach((cell) => { cell.value = ""; });
+    code.value = "";
+    verifyButton.disabled = true;
     verifyTitle.focus();
 }
+
+function syncOtpCode() {
+    code.value = otpCells.map((cell) => cell.value).join("");
+    verifyButton.disabled = code.value.length !== otpCells.length;
+}
+
+otpCells.forEach((cell, index) => {
+    cell.addEventListener("input", () => {
+        cell.value = cell.value.replace(/\D/g, "").slice(-1);
+        if (cell.value && index < otpCells.length - 1) otpCells[index + 1].focus();
+        syncOtpCode();
+    });
+    cell.addEventListener("keydown", (event) => {
+        if (event.key === "Backspace" && !cell.value && index > 0) {
+            otpCells[index - 1].focus();
+            otpCells[index - 1].value = "";
+            syncOtpCode();
+        }
+    });
+    cell.addEventListener("paste", (event) => {
+        event.preventDefault();
+        const digits = event.clipboardData.getData("text").replace(/\D/g, "").slice(0, otpCells.length);
+        digits.split("").forEach((digit, digitIndex) => {
+            otpCells[digitIndex].value = digit;
+        });
+        otpCells[Math.min(digits.length, otpCells.length - 1)].focus();
+        syncOtpCode();
+    });
+});
 
 accountModes.forEach((button) => button.addEventListener("click", () => {
     mode = button.dataset.accountMode;

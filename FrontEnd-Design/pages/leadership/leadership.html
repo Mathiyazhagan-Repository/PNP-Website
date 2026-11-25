@@ -25,12 +25,12 @@
 <div class="directory-content">
 <h2 class="merged-filter-heading">Leadership Filters</h2><form class="directory-filters" id="directoryFilters" role="search" aria-label="Filter leadership profiles">
 <label class="directory-search"><span class="sr-only">Search by leader name</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><input id="leaderSearch" type="search" placeholder="Search by leader name…" autocomplete="off"></label>
-<label>District<select id="leaderDistrict"><option value="">All Districts</option><option value="unassigned">Not assigned</option></select></label>
-<label>Role<select id="leaderRole"><option value="">All Roles</option><option value="unassigned">Not assigned</option></select></label>
-<label>Organisational Level<select id="leaderLevel"><option value="">All Levels</option><option value="state">State Leadership</option><option value="district">District Leadership</option><option value="constituency">Constituency Leadership</option></select></label>
+<label><span class="sr-only">District</span><select id="leaderDistrict" aria-label="District"><option value="">All Districts</option><option value="unassigned">Not assigned</option></select></label>
+<label><span class="sr-only">Role</span><select id="leaderRole" aria-label="Role"><option value="">All Roles</option><option value="unassigned">Not assigned</option></select></label>
+<label><span class="sr-only">Organisational Level</span><select id="leaderLevel" aria-label="Organisational Level"><option value="">All Levels</option><option value="state">State Leadership</option><option value="district">District Leadership</option><option value="constituency">Constituency Leadership</option></select></label>
 <button class="directory-reset" type="reset"><span aria-hidden="true">⟲</span> Reset Filters</button>
 </form>
-<div class="merged-active-filters"><strong>Active Filters:</strong><div id="leaderFilterChips"></div></div><div class="directory-results-bar"><p id="leaderResults" role="status" aria-live="polite"></p><div class="directory-level-tabs" role="group" aria-label="Browse by leadership level"><button type="button" data-level="state" aria-pressed="false">State Leadership</button><button type="button" data-level="district" aria-pressed="false">District Leadership</button><button type="button" data-level="constituency" aria-pressed="false">Constituency Leadership</button></div></div>
+<div class="merged-active-filters"><strong>Active Filters:</strong><div id="leaderFilterChips"></div></div><div class="directory-results-bar"><p id="leaderResults" role="status" aria-live="polite"></p></div>
 <div class="leadership-card-grid" id="leadershipCards"></div>
 <div class="directory-empty" id="directoryEmpty" hidden><h2>No matching profiles</h2><p>Try a different search or reset your filters.</p><button type="button" id="emptyReset">Reset filters →</button></div>
 <noscript><p class="directory-noscript">Enable JavaScript to browse and filter the leadership directory.</p></noscript>

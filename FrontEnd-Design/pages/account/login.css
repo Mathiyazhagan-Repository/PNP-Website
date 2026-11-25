@@ -44,6 +44,28 @@
 .account-prefix i::before { content: ""; width: .27em; aspect-ratio: 1; border: 1px solid #14347c; border-radius: 50%; }
 .account-mobile input { width: 100%; min-width: 0; padding: .32em .6em; border: 0; background: transparent; color: inherit; }
 .account-mobile input:focus-visible { outline: none; }
+.account-otp {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 7px;
+}
+.account-otp-cell {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    border: 1px solid #c9d1e0;
+    border-radius: 8px;
+    background: #fafbfd;
+    color: #0d173a;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+.account-otp-cell:focus {
+    border-color: #2054a1;
+    outline: 2px solid #2054a1;
+    outline-offset: 1px;
+}
 .account-submit { width: 100%; margin-top: .85em; }
 #account-status, #account-verification-status { margin: .5em 0 0; color: #842022; }
 #account-status:empty, #account-verification-status:empty { display: none; }
